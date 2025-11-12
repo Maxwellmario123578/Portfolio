@@ -1,0 +1,32 @@
+<section class="container mx-auto py-16 sm:py-24 bg-gray-900" id="projects">
+  <h2 class="text-gray-100 text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-8 text-center">
+    Projects
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+    @for (project of projects; track project.id) {
+      <div 
+        (click)="navigateToProject(project.id)"
+        class="bg-white dark:bg-gray-900/40 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-800 cursor-pointer hover:scale-105">
+        <img [alt]="project.title" [src]="project.imageUrl" class="w-full h-48 object-cover" />
+        <div class="p-6">
+          <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-bold text-gray-100">{{ project.title }}</h3>
+            <span 
+              [class]="project.status === 'en cours' ? 'bg-red-500' : 'bg-green-500'"
+              class="text-white text-xs font-semibold py-1 px-3 rounded-full whitespace-nowrap ml-2">
+              {{ project.status }}
+            </span>
+          </div>
+          <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">{{ project.description }}</p>
+          <div class="flex flex-wrap gap-2">
+            @for (tech of project.technologies; track tech) {
+              <span class="text-xs font-semibold bg-primary/20 text-primary py-1 px-3 rounded-full">
+                {{ tech }}
+              </span>
+            }
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>

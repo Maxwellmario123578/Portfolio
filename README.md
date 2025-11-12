@@ -1,59 +1,91 @@
-# MonPortfolio
+# Portfolio KONMENECK - Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
+Portfolio personnel développé avec Angular 20, suivant les principes de Clean Architecture et le pattern MVC.
 
-## Development server
+## 🏗️ Architecture
 
-To start a local development server, run:
+Ce projet implémente une architecture propre et maintenable :
 
-```bash
-ng serve
+- **Clean Architecture** : Séparation claire entre la logique métier et la présentation
+- **Pattern MVC** : Models, Views, Controllers bien définis
+- **Composants Standalone** : Utilisation de l'approche moderne d'Angular 20
+- **Services Injectables** : Gestion centralisée des données
+
+Consultez [ARCHITECTURE.md](./ARCHITECTURE.md) pour plus de détails.
+
+## 📁 Structure du Projet
+
+```
+src/app/
+├── core/                    # Logique métier
+│   ├── models/             # Modèles de données
+│   └── services/           # Services métier
+├── features/               # Fonctionnalités
+│   ├── hero/
+│   ├── about/
+│   ├── projects/
+│   ├── skills/
+│   ├── education/
+│   └── contact/
+└── layout/                 # Composants de mise en page
+    ├── header/
+    └── footer/
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🚀 Démarrage
 
-## Code scaffolding
+### Prérequis
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Node.js (v18+)
+- npm ou yarn
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Installation
 
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
-
-To build the project run:
+### Serveur de développement
 
 ```bash
-ng build
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Ouvrez votre navigateur sur `http://localhost:4200/`
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### Build de production
 
 ```bash
-ng test
+npm run build
 ```
 
-## Running end-to-end tests
+Les fichiers de build seront dans le dossier `dist/`
 
-For end-to-end (e2e) testing, run:
+## 🎨 Technologies
+
+- **Angular 20** - Framework frontend
+- **TypeScript** - Langage de programmation
+- **Tailwind CSS** - Framework CSS
+- **RxJS** - Programmation réactive
+- **SCSS** - Préprocesseur CSS
+
+## 📦 Fonctionnalités
+
+- ✅ Section Hero avec présentation
+- ✅ À propos avec photo et description
+- ✅ Projets avec cartes interactives
+- ✅ Compétences techniques organisées
+- ✅ Timeline formation et expérience
+- ✅ Formulaire de contact avec validation
+- ✅ Design responsive
+- ✅ Mode sombre
+
+## 🧪 Tests
 
 ```bash
-ng e2e
+npm test
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📝 Licence
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Ce projet est sous licence MIT.
