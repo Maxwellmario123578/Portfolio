@@ -190,7 +190,7 @@ export class PortfolioDataService {
       },
       {
         title: 'Data Science',
-        skills: ['Numpy', 'PyTorch', 'Scikit-learn', 'Pandas'],
+        skills: ['Numpy', 'Scikit-learn', 'Pandas'],
       },
       {
         title: 'Tools & Platforms',
