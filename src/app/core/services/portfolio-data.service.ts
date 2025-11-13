@@ -15,7 +15,13 @@ export class PortfolioDataService {
         description:
           "Un tableau de bord interactif pour visualiser les données de vente, suivre les indicateurs clés de performance et identifier les tendances à l'aide de flux de données en temps réel.",
         imageUrl:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuC0Na9rS2sUnmMCbWNycGCxdWoc83kIajvDT_P6Xd768cmiGAB3jAFYmb6HT7wCDNUtzOd6TeBvV7WfVUKWm0wwn4XNIv557HWXVJfptUDif-f5GutnvCGBszfgCotI37UANH4nW5E6skGf6fiocqFtyi3NRUuyn7z1S8PJhE3q-6BgUHK4LZ4byC0QYM7EJ2WEgzcmlHCReUXNErdCrG3bcg9nlpFJR6kJkn4EOXvQMAeF8AMFBmKe7zipfP1PT0h2WnHK9c9guXiB',
+          'Projet_images/Tableau_bord/Tableau_bord_1.png',
+        images: [
+          'Projet_images/Tableau_bord/Tableau_bord_1.png',
+          'Projet_images/Tableau_bord/Tableau_bord_2.png',
+          'Projet_images/Tableau_bord/Tableau_bord_3.png',
+          'Projet_images/Tableau_bord/Tableau_bord_4.png',
+        ],
         technologies: ['Charts.js', 'HTML/CSS', 'Tailwindcss', 'JavaScript'],
         fullDescription:
           'A comprehensive analytics platform that provides real-time insights into sales performance. Built with modern web technologies and powered by advanced data processing algorithms.',
@@ -35,7 +41,10 @@ export class PortfolioDataService {
         description:
           "Modèle d'apprentissage automatique prédisant l'audience d'un contenu à partir de données générées par l'IA, pour anticiper si un film plaira à un public Afrodescendant",
         imageUrl:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuClwx3WQum2T0mlBYXTZ5gN9yXiC-FmSNrpeKNdMgLjbsKMHPX5QY3Z5mR5npuTFjWosgh9R2o4ihzyUt-mq5WB32r8wjjKHkF8yCIZ2WYNc0Zwsiau-sldyDPYflkfFKYoPpwCCel9VsC1ItzRfZt1Qvm52ShgZIDAD0_d4a2s2f5P_W6HfZ-oyfF2ADmesJ4vtZlBFa3HS4-BoV37r8W3dhO6TQ9ozAP4Uigh5BotXITig_7V7H1NcMYCkeQNUzVxqSShcnX5co_5',
+          'Projet_images/ML_audiance/image.png',
+        images: [
+          'Projet_images/ML_audiance/image.png'
+        ],
         technologies: ['Scikit-learn', 'Numpy', 'Pandas', 'Python'],
         fullDescription:
           'An advanced NLP system that processes text data to extract sentiment, emotions, and key insights. Trained on millions of data points for high accuracy.',
@@ -54,7 +63,7 @@ export class PortfolioDataService {
         description:
           "Développement collaboratif(En équipe de 3) d'une application web de gestion du cycle de vie des équipements, centralisant les données, automatisant le suivi des maintenances et assurant la traçabilité des opérations.",
         imageUrl:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuClwx3WQum2T0mlBYXTZ5gN9yXiC-FmSNrpeKNdMgLjbsKMHPX5QY3Z5mR5npuTFjWosgh9R2o4ihzyUt-mq5WB32r8wjjKHkF8yCIZ2WYNc0Zwsiau-sldyDPYflkfFKYoPpwCCel9VsC1ItzRfZt1Qvm52ShgZIDAD0_d4a2s2f5P_W6HfZ-oyfF2ADmesJ4vtZlBFa3HS4-BoV37r8W3dhO6TQ9ozAP4Uigh5BotXITig_7V7H1NcMYCkeQNUzVxqSShcnX5co_5',
+          'Projet_images/En_cours/Perdu.jpg',
         technologies: ['SpringBoot', 'Thymeleaf', 'GitHub'],
         fullDescription:
           "Développement venu après une longue période de modélisation et en équipe de 3 personnes, d'une application web permettant de gérer le cycle de vie des équipements au sein d'une organisation (matériel informatique, véhicules, machines, etc.). Le projet visait à centraliser les informations sur les équipements, automatiser le suivi des maintenances, et améliorer la traçabilité des opérations. La collaboration en équipe a permis de répartir les tâches entre le développement backend, frontend, la conception de la base de données et les tests fonctionnels.",
@@ -74,7 +83,13 @@ export class PortfolioDataService {
         description:
           'Application Python intuitive de gestion des notes, permettant la saisie, la mise à jour et le classement automatique des étudiants, avec visualisation graphique interactive et exportation des résultats.',
         imageUrl:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuDEzNp6gF5Q4ucf9Pb1Ss1e9YtRL_sK_OZ2qhj7wBpt6K0SC2akcsVl8U09l77wagHjoo5MqNKkxzOIyeXq77G_jrk2OIGDUz3j9fzV3Xprxn7fQMCo-EOERnDi-ovn9mBLzRs6Afy8qe-BPBCI4YTHKGeKYURwjs_61XfhI_LD951hBZlCXEOcR074GO-c9o6KGYJtLvq4Q_Gp9qxdGioimWKV6J-CrEMCED11dhusrMpjTb7ItJJP0PvDf2HJT5OFCzDNp1j-TLk9',
+          'Projet_images/Gestion_notes/Gestion_notes.png',
+        images: [
+          'Projet_images/Gestion_notes/Gestion_notes.png',
+          'Projet_images/Gestion_notes/Saisie_note.png',
+          'Projet_images/Gestion_notes/Modifier_user.png',
+          'Projet_images/Gestion_notes/Voir_note.png'
+        ],
         technologies: ['Python', 'Matplotlib', 'csv'],
         fullDescription:
           "Application de gestion des notes développée en Python, conçue pour offrir une expérience fluide et visuelle dans le suivi des performances des étudiants. Elle permet d'ajouter, modifier et classer les notes, tout en générant des visualisations dynamiques (diagrammes circulaires et radars) grâce à Matplotlib. Les résultats peuvent être facilement exportés en CSV, et une version exécutable (.exe) a été créée pour une utilisation simple, sans installation préalable. Un projet alliant simplicité, efficacité et analyse visuelle.",
@@ -94,7 +109,7 @@ export class PortfolioDataService {
         description:
           "Développement, en équipe de 3, d'une application web de gestion des emplois du temps, avec SCRUM, CI/CD et gestion des tâches sur Trello.",
         imageUrl:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuC0Na9rS2sUnmMCbWNycGCxdWoc83kIajvDT_P6Xd768cmiGAB3jAFYmb6HT7wCDNUtzOd6TeBvV7WfVUKWm0wwn4XNIv557HWXVJfptUDif-f5GutnvCGBszfgCotI37UANH4nW5E6skGf6fiocqFtyi3NRUuyn7z1S8PJhE3q-6BgUHK4LZ4byC0QYM7EJ2WEgzcmlHCReUXNErdCrG3bcg9nlpFJR6kJkn4EOXvQMAeF8AMFBmKe7zipfP1PT0h2WnHK9c9guXiB',
+          'Projet_images/En_cours/A_venir.jpg',
         technologies: ['SpringBoot', 'Thymleaf', 'MySQL', 'Docker', 'GitHub'],
         fullDescription:
           "Nous mettons en œuvre une architecture microservices, afin de garantir une meilleure scalabilité, une modularité du code et une maintenance facilitée. Chaque service (gestion des enseignants, des classes, des salles, des cours, etc.) est développé et déployé indépendamment, favorisant une grande flexibilité technique. Grâce à une approche CI/CD (Intégration et Déploiement Continus), les mises à jour et les tests sont automatisés, assurant un déploiement fluide et fiable. Le développement s'appuie sur un environnement Spring Boot / Thymeleaf pour le back-end et le front-end, avec MySQL pour la base de données, le tout conteneurisé via Docker et versionné sur GitHub. Un projet qui met en avant la rigueur technique, la collaboration agile et une architecture moderne basée sur les microservices.",
@@ -109,7 +124,7 @@ export class PortfolioDataService {
         description:
           "Développement, en équipe de 5, d'une application mobile de transport sécurisée pour mototaxis, facilitant les déplacements étudiants entre Eyang et Nkolbisson avec la méthodologie SCRUM",
         imageUrl:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuDEzNp6gF5Q4ucf9Pb1Ss1e9YtRL_sK_OZ2qhj7wBpt6K0SC2akcsVl8U09l77wagHjoo5MqNKkxzOIyeXq77G_jrk2OIGDUz3j9fzV3Xprxn7fQMCo-EOERnDi-ovn9mBLzRs6Afy8qe-BPBCI4YTHKGeKYURwjs_61XfhI_LD951hBZlCXEOcR074GO-c9o6KGYJtLvq4Q_Gp9qxdGioimWKV6J-CrEMCED11dhusrMpjTb7ItJJP0PvDf2HJT5OFCzDNp1j-TLk9',
+          'Projet_images/En_cours/A_venir.jpg',
         technologies: ['Flutter', 'Firebase', 'Google Maps API', 'GitLab', 'SCRUM'],
         fullDescription:
           "Conception et développement, en équipe de 5, d'une application mobile innovante dédiée aux étudiants pour faciliter leurs déplacements en toute sécurité entre Eyang et Nkolbisson à Yaoundé. L'application permet aux utilisateurs de réserver une course, de localiser les mototaxis disponibles en temps réel, et de suivre le trajet de manière interactive grâce à OpenStreet Maps. Elle intègre des fonctionnalités de sécurité telles que le partage de trajet en direct, la vérification des conducteurs et le suivi GPS permanent. Le projet est développé selon la méthodologie agile SCRUM, avec des sprints réguliers, une gestion des tâches via GitLab et des revues hebdomadaires pour assurer un avancement coordonné et itératif.",
@@ -132,7 +147,7 @@ export class PortfolioDataService {
         description:
           "Projet en cours de réflexion visant à développer un système de détection automatisée des déchets à l'aide de techniques de Deep Learning. L'idée est encore en phase de conceptualisation et de modélisation.",
         imageUrl:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuC0Na9rS2sUnmMCbWNycGCxdWoc83kIajvDT_P6Xd768cmiGAB3jAFYmb6HT7wCDNUtzOd6TeBvV7WfVUKWm0wwn4XNIv557HWXVJfptUDif-f5GutnvCGBszfgCotI37UANH4nW5E6skGf6fiocqFtyi3NRUuyn7z1S8PJhE3q-6BgUHK4LZ4byC0QYM7EJ2WEgzcmlHCReUXNErdCrG3bcg9nlpFJR6kJkn4EOXvQMAeF8AMFBmKe7zipfP1PT0h2WnHK9c9guXiB',
+          'Projet_images/En_cours/A_venir.jpg',
         technologies: [
           'En cours de définition : recherche sur les frameworks Deep Learning adaptés',
         ],
@@ -154,7 +169,7 @@ export class PortfolioDataService {
         description:
           "Développement, en équipe de 4, d'une application full-stack d'évaluation académique intelligente, avec Scrum, Trello, maquettes UI/UX et CI/CD.",
         imageUrl:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuClwx3WQum2T0mlBYXTZ5gN9yXiC-FmSNrpeKNdMgLjbsKMHPX5QY3Z5mR5npuTFjWosgh9R2o4ihzyUt-mq5WB32r8wjjKHkF8yCIZ2WYNc0Zwsiau-sldyDPYflkfFKYoPpwCCel9VsC1ItzRfZt1Qvm52ShgZIDAD0_d4a2s2f5P_W6HfZ-oyfF2ADmesJ4vtZlBFa3HS4-BoV37r8W3dhO6TQ9ozAP4Uigh5BotXITig_7V7H1NcMYCkeQNUzVxqSShcnX5co_5',
+          'Projet_images/En_cours/A_venir.jpg',
         technologies: ['React', 'Node.js', 'GitLab', 'CI/CD', 'Trello', 'Agile Scrum'],
         fullDescription:
           "Conception et développement, en équipe de 4, d'une application académique intelligente permettant d'évaluer les étudiants de manière automatisée et personnalisée. Le projet inclut la création de maquettes de conception pour l'interface utilisateur, l'implémentation d'un backend robuste avec Node.js et d'un frontend interactif avec React. Le workflow est géré via Trello, suivant la méthodologie agile Scrum avec des sprints réguliers. De plus, des pipelines CI/CD ont été mis en place pour automatiser les tests et le déploiement, garantissant un cycle de développement rapide et fiable.",
@@ -233,7 +248,9 @@ export class PortfolioDataService {
         issuer: 'IBM',
         date: 'Certifié',
         imageUrl:
-          'https://s3.amazonaws.com/coursera-course-photos/fb/40e3a0b67611e8a95cbf6c0c5d88a3/IBM-DS-Logo.png',
+          '/Certifs_image/IBM_Certifs/IBM_image.png',
+        credentialUrl:
+          'https://www.credly.com/badges/cf1b2b0f-2c83-4cf8-af20-4862333cf5b2/public_url',
         skills: ['Data Science', 'Python', 'SQL', 'Data Analysis', 'Machine Learning'],
       },
       {
@@ -243,6 +260,8 @@ export class PortfolioDataService {
         date: 'En cours',
         imageUrl:
           'https://s3.amazonaws.com/coursera-course-photos/1b/03f7b04fc511e8a7b7bb5c9e6b0e1e/Google-DA-Logo.png',
+        // credentialUrl:
+        //   '#education',
         skills: ['Data Analysis', 'Spreadsheets', 'SQL', 'Tableau', 'R Programming'],
       },
       {
@@ -252,6 +271,8 @@ export class PortfolioDataService {
         date: 'Certifié',
         imageUrl:
           'https://learn.microsoft.com/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg',
+        credentialUrl:
+          'https://www.credly.com/badges/e39ff19f-0de4-4c61-b14d-c7420685b1d0/public_url',
         skills: ['Microsoft Word', 'Document Formatting', 'Office 2019', 'Productivity'],
       },
     ]);

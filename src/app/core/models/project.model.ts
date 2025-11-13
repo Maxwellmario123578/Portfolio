@@ -3,6 +3,7 @@ export interface Project {
   title: string;
   description: string;
   imageUrl: string;
+  images?: string[];
   technologies: string[];
   fullDescription?: string;
   features?: string[];

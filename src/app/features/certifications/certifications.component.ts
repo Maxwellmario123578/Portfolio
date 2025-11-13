@@ -20,4 +20,9 @@ export class CertificationsComponent implements OnInit {
       data => this.certifications = data
     );
   }
+
+  openCredential(url?: string): void {
+    if (!url) return;
+    window.open(url, '_blank', 'noopener');
+  }
 }
