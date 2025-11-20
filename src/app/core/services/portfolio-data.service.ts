@@ -14,8 +14,7 @@ export class PortfolioDataService {
         title: 'Tableau de bord du Site e-KIOSQUE',
         description:
           "Un tableau de bord interactif pour visualiser les données de vente, suivre les indicateurs clés de performance et identifier les tendances à l'aide de flux de données en temps réel.",
-        imageUrl:
-          'Projet_images/Tableau_bord/Tableau_bord_1.png',
+        imageUrl: 'Projet_images/Tableau_bord/Tableau_bord_1.png',
         images: [
           'Projet_images/Tableau_bord/Tableau_bord_1.png',
           'Projet_images/Tableau_bord/Tableau_bord_2.png',
@@ -40,11 +39,8 @@ export class PortfolioDataService {
         title: "Modèle de prédiction d'audience basé sur des données générées par l'IA",
         description:
           "Modèle d'apprentissage automatique prédisant l'audience d'un contenu à partir de données générées par l'IA, pour anticiper si un film plaira à un public Afrodescendant",
-        imageUrl:
-          'Projet_images/ML_audiance/image.png',
-        images: [
-          'Projet_images/ML_audiance/image.png'
-        ],
+        imageUrl: 'Projet_images/ML_audiance/image.png',
+        images: ['Projet_images/ML_audiance/image.png'],
         technologies: ['Scikit-learn', 'Numpy', 'Pandas', 'Python'],
         fullDescription:
           'An advanced NLP system that processes text data to extract sentiment, emotions, and key insights. Trained on millions of data points for high accuracy.',
@@ -62,8 +58,7 @@ export class PortfolioDataService {
         title: 'Application de Gestion des équipements',
         description:
           "Développement collaboratif(En équipe de 3) d'une application web de gestion du cycle de vie des équipements, centralisant les données, automatisant le suivi des maintenances et assurant la traçabilité des opérations.",
-        imageUrl:
-          'Projet_images/En_cours/Perdu.jpg',
+        imageUrl: 'Projet_images/En_cours/Perdu.jpg',
         technologies: ['SpringBoot', 'Thymeleaf', 'GitHub'],
         fullDescription:
           "Développement venu après une longue période de modélisation et en équipe de 3 personnes, d'une application web permettant de gérer le cycle de vie des équipements au sein d'une organisation (matériel informatique, véhicules, machines, etc.). Le projet visait à centraliser les informations sur les équipements, automatiser le suivi des maintenances, et améliorer la traçabilité des opérations. La collaboration en équipe a permis de répartir les tâches entre le développement backend, frontend, la conception de la base de données et les tests fonctionnels.",
@@ -82,13 +77,12 @@ export class PortfolioDataService {
         title: 'Application de gestion des notes',
         description:
           'Application Python intuitive de gestion des notes, permettant la saisie, la mise à jour et le classement automatique des étudiants, avec visualisation graphique interactive et exportation des résultats.',
-        imageUrl:
-          'Projet_images/Gestion_notes/Gestion_notes.png',
+        imageUrl: 'Projet_images/Gestion_notes/Gestion_notes.png',
         images: [
           'Projet_images/Gestion_notes/Gestion_notes.png',
           'Projet_images/Gestion_notes/Saisie_note.png',
           'Projet_images/Gestion_notes/Modifier_user.png',
-          'Projet_images/Gestion_notes/Voir_note.png'
+          'Projet_images/Gestion_notes/Voir_note.png',
         ],
         technologies: ['Python', 'Matplotlib', 'csv'],
         fullDescription:
@@ -108,8 +102,7 @@ export class PortfolioDataService {
         title: 'Application de gestion des Emplois du Temps dans un établissement',
         description:
           "Développement, en équipe de 3, d'une application web de gestion des emplois du temps, avec SCRUM, CI/CD et gestion des tâches sur Trello.",
-        imageUrl:
-          'Projet_images/En_cours/A_venir.jpg',
+        imageUrl: 'Projet_images/En_cours/A_venir.jpg',
         technologies: ['SpringBoot', 'Thymleaf', 'MySQL', 'Docker', 'GitHub'],
         fullDescription:
           "Nous mettons en œuvre une architecture microservices, afin de garantir une meilleure scalabilité, une modularité du code et une maintenance facilitée. Chaque service (gestion des enseignants, des classes, des salles, des cours, etc.) est développé et déployé indépendamment, favorisant une grande flexibilité technique. Grâce à une approche CI/CD (Intégration et Déploiement Continus), les mises à jour et les tests sont automatisés, assurant un déploiement fluide et fiable. Le développement s'appuie sur un environnement Spring Boot / Thymeleaf pour le back-end et le front-end, avec MySQL pour la base de données, le tout conteneurisé via Docker et versionné sur GitHub. Un projet qui met en avant la rigueur technique, la collaboration agile et une architecture moderne basée sur les microservices.",
@@ -123,8 +116,7 @@ export class PortfolioDataService {
         title: 'Application de transport pour mototaxis entre Eyang et Nkolbisson à Yaoundé',
         description:
           "Développement, en équipe de 5, d'une application mobile de transport sécurisée pour mototaxis, facilitant les déplacements étudiants entre Eyang et Nkolbisson avec la méthodologie SCRUM",
-        imageUrl:
-          'Projet_images/En_cours/A_venir.jpg',
+        imageUrl: 'Projet_images/En_cours/A_venir.jpg',
         technologies: ['Flutter', 'Firebase', 'Google Maps API', 'GitLab', 'SCRUM'],
         fullDescription:
           "Conception et développement, en équipe de 5, d'une application mobile innovante dédiée aux étudiants pour faciliter leurs déplacements en toute sécurité entre Eyang et Nkolbisson à Yaoundé. L'application permet aux utilisateurs de réserver une course, de localiser les mototaxis disponibles en temps réel, et de suivre le trajet de manière interactive grâce à OpenStreet Maps. Elle intègre des fonctionnalités de sécurité telles que le partage de trajet en direct, la vérification des conducteurs et le suivi GPS permanent. Le projet est développé selon la méthodologie agile SCRUM, avec des sprints réguliers, une gestion des tâches via GitLab et des revues hebdomadaires pour assurer un avancement coordonné et itératif.",
@@ -146,8 +138,7 @@ export class PortfolioDataService {
         title: 'Application full-stack multi-plateforme de type évaluation académique intelligente',
         description:
           "Développement, en équipe de 4, d'une application full-stack d'évaluation académique intelligente, avec Scrum, Trello, maquettes UI/UX et CI/CD.",
-        imageUrl:
-          'Projet_images/En_cours/A_venir.jpg',
+        imageUrl: 'Projet_images/En_cours/A_venir.jpg',
         technologies: ['React', 'Node.js', 'GitLab', 'CI/CD', 'Trello', 'Agile Scrum'],
         fullDescription:
           "Conception et développement, en équipe de 4, d'une application académique intelligente permettant d'évaluer les étudiants de manière automatisée et personnalisée. Le projet inclut la création de maquettes de conception pour l'interface utilisateur, l'implémentation d'un backend robuste avec Node.js et d'un frontend interactif avec React. Le workflow est géré via Trello, suivant la méthodologie agile Scrum avec des sprints réguliers. De plus, des pipelines CI/CD ont été mis en place pour automatiser les tests et le déploiement, garantissant un cycle de développement rapide et fiable.",
@@ -225,8 +216,7 @@ export class PortfolioDataService {
         title: 'IBM Data Science Professional Certificate',
         issuer: 'IBM',
         date: 'Certifié',
-        imageUrl:
-          '/Certifs_image/IBM_Certifs/IBM_image.png',
+        imageUrl: '/Certifs_image/IBM_Certifs/IBM_image.png',
         credentialUrl:
           'https://www.credly.com/badges/cf1b2b0f-2c83-4cf8-af20-4862333cf5b2/public_url',
         skills: ['Data Science', 'Python', 'SQL', 'Data Analysis', 'Machine Learning'],
@@ -237,7 +227,7 @@ export class PortfolioDataService {
         issuer: 'Google',
         date: 'En cours',
         imageUrl:
-          'https://s3.amazonaws.com/coursera-course-photos/1b/03f7b04fc511e8a7b7bb5c9e6b0e1e/Google-DA-Logo.png',
+          'https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/1b/03f7b04fc511e8a7b7bb5c9e6b0e1e/Google-DA-Logo.png',
         // credentialUrl:
         //   '#education',
         skills: ['Data Analysis', 'Spreadsheets', 'SQL', 'Tableau', 'R Programming'],
