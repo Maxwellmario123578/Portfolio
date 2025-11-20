@@ -143,28 +143,6 @@ export class PortfolioDataService {
       },
       {
         id: '7',
-        title: 'Détection des déchets',
-        description:
-          "Projet en cours de réflexion visant à développer un système de détection automatisée des déchets à l'aide de techniques de Deep Learning. L'idée est encore en phase de conceptualisation et de modélisation.",
-        imageUrl:
-          'Projet_images/En_cours/A_venir.jpg',
-        technologies: [
-          'En cours de définition : recherche sur les frameworks Deep Learning adaptés',
-        ],
-        fullDescription:
-          "Projet exploratoire visant à concevoir un système intelligent capable de détecter et classer automatiquement les déchets dans différents environnements à l'aide du Deep Learning. Le projet est actuellement en phase de réflexion et de modélisation, où l'équipe analyse les besoins, les types de données à collecter et les approches techniques possibles. L'objectif futur est de développer une solution pratique et évolutive pour la surveillance environnementale et le nettoyage automatique.",
-        features: [
-          'Identification automatique des déchets via imagerie ou vidéo',
-          'Prototype de détection basé sur des modèles de Deep Learning',
-          'Collecte et annotation des données pour entraîner le modèle',
-          "Phase exploratoire pour définir l'architecture et les technologies à utiliser",
-        ],
-        category: 'Deep Learning',
-        date: 'en cours',
-        status: 'en cours',
-      },
-      {
-        id: '8',
         title: 'Application full-stack multi-plateforme de type évaluation académique intelligente',
         description:
           "Développement, en équipe de 4, d'une application full-stack d'évaluation académique intelligente, avec Scrum, Trello, maquettes UI/UX et CI/CD.",
