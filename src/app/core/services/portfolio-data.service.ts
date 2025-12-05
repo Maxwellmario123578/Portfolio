@@ -117,7 +117,7 @@ export class PortfolioDataService {
         description:
           "Développement, en équipe de 5, d'une application mobile de transport sécurisée pour mototaxis, facilitant les déplacements étudiants entre Eyang et Nkolbisson avec la méthodologie SCRUM",
         imageUrl: 'Projet_images/En_cours/A_venir.jpg',
-        technologies: ['Flutter', 'Firebase', 'Google Maps API', 'GitLab', 'SCRUM'],
+        technologies: ['React Native','Node.js', 'SQLite', 'Google Maps API', 'GitLab', 'SCRUM'],
         fullDescription:
           "Conception et développement, en équipe de 5, d'une application mobile innovante dédiée aux étudiants pour faciliter leurs déplacements en toute sécurité entre Eyang et Nkolbisson à Yaoundé. L'application permet aux utilisateurs de réserver une course, de localiser les mototaxis disponibles en temps réel, et de suivre le trajet de manière interactive grâce à OpenStreet Maps. Elle intègre des fonctionnalités de sécurité telles que le partage de trajet en direct, la vérification des conducteurs et le suivi GPS permanent. Le projet est développé selon la méthodologie agile SCRUM, avec des sprints réguliers, une gestion des tâches via GitLab et des revues hebdomadaires pour assurer un avancement coordonné et itératif.",
         features: [
@@ -139,7 +139,7 @@ export class PortfolioDataService {
         description:
           "Développement, en équipe de 4, d'une application full-stack d'évaluation académique intelligente, avec Scrum, Trello, maquettes UI/UX et CI/CD.",
         imageUrl: 'Projet_images/En_cours/A_venir.jpg',
-        technologies: ['React', 'Node.js', 'GitLab', 'CI/CD', 'Trello', 'Agile Scrum'],
+        technologies: ['React native', 'Node.js', 'GitLab', 'CI/CD', 'Trello', 'Agile Scrum'],
         fullDescription:
           "Conception et développement, en équipe de 4, d'une application académique intelligente permettant d'évaluer les étudiants de manière automatisée et personnalisée. Le projet inclut la création de maquettes de conception pour l'interface utilisateur, l'implémentation d'un backend robuste avec Node.js et d'un frontend interactif avec React. Le workflow est géré via Trello, suivant la méthodologie agile Scrum avec des sprints réguliers. De plus, des pipelines CI/CD ont été mis en place pour automatiser les tests et le déploiement, garantissant un cycle de développement rapide et fiable.",
         features: [
@@ -166,7 +166,7 @@ export class PortfolioDataService {
     return of([
       {
         title: 'Languages',
-        skills: ['Python', 'JavaScript', 'SQL', 'Java'],
+        skills: ['Python', 'SQL', 'Java'],
       },
       {
         title: 'Frameworks',
