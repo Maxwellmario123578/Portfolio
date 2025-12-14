@@ -99,6 +99,34 @@ export class PortfolioDataService {
       },
       {
         id: '5',
+        title: 'Plateforme Bancaire Distribuée WillBank',
+        description:
+          "Développement d'une application bancaire complète(en équipe de 4) basée sur une architecture microservices, incluant backend Spring Boot, frontend Angular, application mobile et infrastructure Dockerisée.",
+        imageUrl: 'Projet_images/WillBank/willbank1.png',
+        images: [
+          'Projet_images/WillBank/willbank1.png',
+          'Projet_images/WillBank/willbank2.png',
+          'Projet_images/WillBank/willbank3.png',
+          'Projet_images/WillBank/willbank4.png',
+        ],
+        technologies: ['Java Spring Boot', 'Angular', 'Docker', 'MySQL', 'RabbitMQ', 'Redis', 'Microservices'],
+        fullDescription:
+          "Conception et mise en œuvre d'une solution bancaire moderne reposant sur une architecture microservices distribuée. Le projet intègre un backend robuste développé avec Spring Boot, où chaque service (Client, Transaction, Notification) fonctionne de manière autonome et communique via REST ou RabbitMQ. L'interface utilisateur est assurée par une application web Angular et une application mobile, offrant une expérience client fluide. L'architecture intégrant des services de découverte (Eureka) et une passerelle API (Gateway) pour une gestion centralisée et sécurisée des requêtes.",
+        features: [
+          'Architecture microservices modulaire et scalable (Spring Boot)',
+          'Gestion complète des clients, comptes et authentification',
+          'Traitement des transactions bancaires (virements, dépôts, retraits)',
+          'Système de notifications asynchrones via RabbitMQ',
+          'Persistance des données avec MySQL et mise en cache Redis',
+          'Orchestration et conteneurisation via Docker et Docker Compose',
+          'Interfaces Web (Angular) et Mobile intuitives et responsives',
+        ],
+        category: 'Développement Full-stack/ Finance',
+        date: '2024-2025',
+        status: 'terminé',
+      },
+      {
+        id: '6',
         title: 'Application de gestion des Emplois du Temps dans un établissement',
         description:
           "Développement, en équipe de 3, d'une application web de gestion des emplois du temps, avec SCRUM, CI/CD et gestion des tâches sur Trello.",
@@ -112,12 +140,12 @@ export class PortfolioDataService {
         status: 'en cours',
       },
       {
-        id: '6',
+        id: '7',
         title: 'Application de transport pour mototaxis entre Eyang et Nkolbisson à Yaoundé',
         description:
           "Développement, en équipe de 5, d'une application mobile de transport sécurisée pour mototaxis, facilitant les déplacements étudiants entre Eyang et Nkolbisson avec la méthodologie SCRUM",
         imageUrl: 'Projet_images/En_cours/A_venir.jpg',
-        technologies: ['React Native','Node.js', 'SQLite', 'Google Maps API', 'GitLab', 'SCRUM'],
+        technologies: ['React Native', 'Node.js', 'SQLite', 'Google Maps API', 'GitLab', 'SCRUM'],
         fullDescription:
           "Conception et développement, en équipe de 5, d'une application mobile innovante dédiée aux étudiants pour faciliter leurs déplacements en toute sécurité entre Eyang et Nkolbisson à Yaoundé. L'application permet aux utilisateurs de réserver une course, de localiser les mototaxis disponibles en temps réel, et de suivre le trajet de manière interactive grâce à OpenStreet Maps. Elle intègre des fonctionnalités de sécurité telles que le partage de trajet en direct, la vérification des conducteurs et le suivi GPS permanent. Le projet est développé selon la méthodologie agile SCRUM, avec des sprints réguliers, une gestion des tâches via GitLab et des revues hebdomadaires pour assurer un avancement coordonné et itératif.",
         features: [
@@ -134,7 +162,7 @@ export class PortfolioDataService {
         status: 'en cours',
       },
       {
-        id: '7',
+        id: '8',
         title: 'Application full-stack multi-plateforme de type évaluation académique intelligente',
         description:
           "Développement, en équipe de 4, d'une application full-stack d'évaluation académique intelligente, avec Scrum, Trello, maquettes UI/UX et CI/CD.",
