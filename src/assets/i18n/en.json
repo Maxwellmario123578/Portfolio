@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "whoami": "Whoami ?",
+    "education": "Education & Certificates",
+    "skills": "Skills",
+    "projects": "Projects",
+    "volunteers": "Volunteering",
+    "contact": "Contact"
+  },
+  "whoami": {
+    "title": "Whoami ?",
+    "intro1": "Computer Engineering student at Saint Jean Ingénieur, passionate about data science and software development.",
+    "intro2": "I love designing intelligent solutions combining data analysis, AI and modern web technology.",
+    "intro3": "My goal is to create efficient and useful applications, while continuing to learn and innovate."
+  },
+  "education": {
+    "title": "Education and Certificates",
+    "selectItem": "Select an education or certification",
+    "viewCredential": "View credential"
+  },
+  "skills": {
+    "title": "Skills",
+    "languages": "Languages",
+    "frameworks": "Frameworks",
+    "dataScience": "Data Science",
+    "toolsPlatforms": "Tools and Platforms"
+  },
+  "projects": {
+    "title": "Projects",
+    "inProgress": "In Progress",
+    "completed": "Completed",
+    "projectInProgress": "PROJECT IN PROGRESS"
+  },
+  "volunteers": {
+    "title": "Volunteering",
+    "subtitle": "My community and associative commitments"
+  },
+  "contact": {
+    "title": "Contacts",
+    "send": "Send"
+  }
+}

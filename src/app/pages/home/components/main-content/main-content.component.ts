@@ -1,14 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject, effect } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PortfolioDataService } from '../../../../core/services/portfolio-data.service';
 import { SkillCategory, TimelineItem, Project, Volunteer, Certification } from '../../../../core/models';
 import { HttpClientModule } from '@angular/common/http';
-// Import other necessary modules if needed
+import { ThemeService } from '../../../../core/services/theme.service';
+import { LanguageService } from '../../../../core/services/language.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-main-content',
     standalone: true,
-    imports: [CommonModule, HttpClientModule],
+    imports: [CommonModule, HttpClientModule, TranslateModule],
     templateUrl: './main-content.component.html',
     styleUrls: ['./main-content.component.scss']
 })
@@ -17,38 +19,62 @@ export class MainContentComponent implements OnInit {
     education: TimelineItem[] = [];
     projects: Project[] = [];
     volunteers: Volunteer[] = [];
+    certifications: Certification[] = [];
 
     activeSection = 'whoami';
     mobileMenuOpen = false;
     selectedEducationId: string | null = null;
 
-    certifications: any[] = []; // Using any/Certification for now
+    themeService = inject(ThemeService);
+    languageService = inject(LanguageService);
 
-    constructor(private portfolioDataService: PortfolioDataService) { }
+    constructor(private portfolioDataService: PortfolioDataService) {
+        // Écouter les changements de langue et recharger les données
+        effect(() => {
+            const currentLang = this.languageService.currentLanguage();
+            this.loadAllData();
+        });
+    }
 
     displayedText = '';
-    fullText = "Mon objectif est de créer des applications performantes et utiles, tout en continuant à apprendre et à innover.";
+    fullText = '';
 
     ngOnInit(): void {
-        this.portfolioDataService.getSkills().subscribe(data => this.skills = data);
+        this.loadAllData();
+
+        // Attendre que les traductions soient chargées
+        setTimeout(() => {
+            this.startTypingEffect();
+        }, 200);
+    }
+
+    loadAllData(): void {
         this.portfolioDataService.getTimeline().subscribe(data => this.education = data);
+        this.portfolioDataService.getCertifications().subscribe(data => this.certifications = data);
+        this.portfolioDataService.getSkills().subscribe(data => this.skills = data);
         this.portfolioDataService.getProjects().subscribe(data => this.projects = data);
         this.portfolioDataService.getVolunteers().subscribe(data => this.volunteers = data);
-        this.portfolioDataService.getCertifications().subscribe(data => this.certifications = data);
+    }
 
-        this.startTypingEffect();
+    loadEducationData(): void {
+        this.portfolioDataService.getTimeline().subscribe(data => this.education = data);
+        this.portfolioDataService.getCertifications().subscribe(data => this.certifications = data);
     }
 
     startTypingEffect() {
-        let i = 0;
-        const typeWriter = () => {
-            if (i < this.fullText.length) {
-                this.displayedText += this.fullText.charAt(i);
-                i++;
-                setTimeout(typeWriter, 50); // Adjust speed here (lower is faster)
-            }
-        };
-        typeWriter();
+        this.displayedText = '';
+        this.languageService.translate.get('whoami.intro3').subscribe((text: string) => {
+            this.fullText = text;
+            let i = 0;
+            const typeWriter = () => {
+                if (i < this.fullText.length) {
+                    this.displayedText += this.fullText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            };
+            typeWriter();
+        });
     }
 
     toggleMobileMenu() {
@@ -61,7 +87,7 @@ export class MainContentComponent implements OnInit {
 
     scrollTo(sectionId: string): void {
         this.activeSection = sectionId;
-        this.mobileMenuOpen = false; // Close mobile menu after navigation
+        this.mobileMenuOpen = false;
         const element = document.getElementById(sectionId);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
@@ -78,5 +104,26 @@ export class MainContentComponent implements OnInit {
             'Gestion notes': ['React', 'Firebase'],
         };
         return techMap[projectTitle] || [];
+    }
+
+    openCredential(url: string): void {
+        window.open(url, '_blank', 'noopener');
+    }
+
+    toggleTheme(): void {
+        console.log('Toggle theme clicked, current:', this.themeService.isDarkMode());
+        this.themeService.toggleTheme();
+    }
+
+    toggleLanguage(): void {
+        this.languageService.toggleLanguage();
+        // Redémarrer l'effet de frappe avec le nouveau texte
+        setTimeout(() => {
+            this.startTypingEffect();
+        }, 100);
+    }
+
+    t(key: string): string {
+        return key;
     }
 }
