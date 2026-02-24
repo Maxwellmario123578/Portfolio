@@ -1,0 +1,450 @@
+<div class="main-content-container bg-white min-h-screen text-gray-800 pt-12 font-grotesk selection:bg-green-500/30">
+
+    <!-- Fixed Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-lg md:shadow-none">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo/Title (optional) -->
+            <div class="text-xl font-syne font-bold text-[#1e5543]">Portfolio</div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex bg-[#1e5543] text-white rounded-full px-10 py-4 gap-10 items-center">
+                <button (click)="scrollTo('whoami')" [class.font-bold]="activeSection === 'whoami'"
+                    [class.opacity-100]="activeSection === 'whoami'"
+                    class="opacity-80 hover:opacity-100 hover:bg-white hover:text-[#1e5543] transition-all text-base font-medium whitespace-nowrap px-4 py-4 -my-4 flex items-center rounded-full">Whoami
+                    ?</button>
+                <button (click)="scrollTo('education')" [class.font-bold]="activeSection === 'education'"
+                    [class.opacity-100]="activeSection === 'education'"
+                    class="opacity-80 hover:opacity-100 hover:bg-white hover:text-[#1e5543] transition-all text-base font-medium whitespace-nowrap px-4 py-4 -my-4 flex items-center rounded-full">Formation
+                    & Certificats</button>
+                <button (click)="scrollTo('skills')" [class.font-bold]="activeSection === 'skills'"
+                    [class.opacity-100]="activeSection === 'skills'"
+                    class="opacity-80 hover:opacity-100 hover:bg-white hover:text-[#1e5543] transition-all text-base font-medium whitespace-nowrap px-4 py-4 -my-4 flex items-center rounded-full">Compétences</button>
+                <button (click)="scrollTo('projects')" [class.font-bold]="activeSection === 'projects'"
+                    [class.opacity-100]="activeSection === 'projects'"
+                    class="opacity-80 hover:opacity-100 hover:bg-white hover:text-[#1e5543] transition-all text-base font-medium whitespace-nowrap px-4 py-4 -my-4 flex items-center rounded-full">Projets</button>
+                <button (click)="scrollTo('volunteers')" [class.font-bold]="activeSection === 'volunteers'"
+                    [class.opacity-100]="activeSection === 'volunteers'"
+                    class="opacity-80 hover:opacity-100 hover:bg-white hover:text-[#1e5543] transition-all text-base font-medium whitespace-nowrap px-4 py-4 -my-4 flex items-center rounded-full">Bénévolats</button>
+            </div>
+
+            <!-- Mobile Burger Button -->
+            <button (click)="toggleMobileMenu()"
+                class="md:hidden flex flex-col gap-1.5 p-2 hover:bg-gray-100 rounded-lg transition-colors">
+                <span class="w-6 h-0.5 bg-[#1e5543] transition-all" [class.rotate-45]="mobileMenuOpen"
+                    [class.translate-y-2]="mobileMenuOpen"></span>
+                <span class="w-6 h-0.5 bg-[#1e5543] transition-all" [class.opacity-0]="mobileMenuOpen"></span>
+                <span class="w-6 h-0.5 bg-[#1e5543] transition-all" [class.-rotate-45]="mobileMenuOpen"
+                    [class.-translate-y-2]="mobileMenuOpen"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div *ngIf="mobileMenuOpen"
+            class="md:hidden absolute top-full left-0 right-0 bg-white shadow-2xl border-t border-gray-200">
+            <div class="flex flex-col p-6 gap-4">
+                <button (click)="scrollTo('whoami')" [class.font-bold]="activeSection === 'whoami'"
+                    class="text-left px-4 py-3 rounded-lg hover:bg-[#1e5543] hover:text-white transition-all text-base font-medium"
+                    [class.bg-[#1e5543]]="activeSection === 'whoami'"
+                    [class.text-white]="activeSection === 'whoami'">Whoami ?</button>
+                <button (click)="scrollTo('education')" [class.font-bold]="activeSection === 'education'"
+                    class="text-left px-4 py-3 rounded-lg hover:bg-[#1e5543] hover:text-white transition-all text-base font-medium"
+                    [class.bg-[#1e5543]]="activeSection === 'education'"
+                    [class.text-white]="activeSection === 'education'">Formation & Certificats</button>
+                <button (click)="scrollTo('skills')" [class.font-bold]="activeSection === 'skills'"
+                    class="text-left px-4 py-3 rounded-lg hover:bg-[#1e5543] hover:text-white transition-all text-base font-medium"
+                    [class.bg-[#1e5543]]="activeSection === 'skills'"
+                    [class.text-white]="activeSection === 'skills'">Compétences</button>
+                <button (click)="scrollTo('projects')" [class.font-bold]="activeSection === 'projects'"
+                    class="text-left px-4 py-3 rounded-lg hover:bg-[#1e5543] hover:text-white transition-all text-base font-medium"
+                    [class.bg-[#1e5543]]="activeSection === 'projects'"
+                    [class.text-white]="activeSection === 'projects'">Projets</button>
+                <button (click)="scrollTo('volunteers')" [class.font-bold]="activeSection === 'volunteers'"
+                    class="text-left px-4 py-3 rounded-lg hover:bg-[#1e5543] hover:text-white transition-all text-base font-medium"
+                    [class.bg-[#1e5543]]="activeSection === 'volunteers'"
+                    [class.text-white]="activeSection === 'volunteers'">Bénévolats</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-6 max-w-6xl pb-32 space-y-2 pt-32">
+
+        <!-- Whoami Section -->
+        <section id="whoami" class="scroll-mt-32 relative">
+            <!-- Decorative Vector Background - Fixed Position -->
+            <div class="absolute pointer-events-none block z-0 hidden md:block"
+                style="position: absolute; width: 280px; height: 270px; right: 0px; top: 120px; transform: rotate(5deg); overflow: visible;">
+                <!-- Layer 1: Opacity 0.6 -->
+                <svg width="350" height="375" viewBox="0 0 577 620" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="w-full h-full absolute">
+                    <path opacity="0.8"
+                        d="M213.522 195.817C238.503 200.969 257.096 201.59 257.096 201.59C260.814 196.523 260.751 188.514 259.968 184.092C258.295 177.212 247.675 156.867 247.675 156.867C225.673 110.783 237.013 104.742 237.706 91.1357C238.45 76.558 236.187 49.9648 257.369 31.4764C270.756 19.7921 328.498 3.65967 370.731 2.17504C394.449 1.34124 411.53 -0.195665 416.703 2.6191C423.17 6.13775 435.399 10.323 438.05 25.7086C442.79 53.2195 444.7 76.1743 444.555 86.089C444.351 99.9931 437.695 124.933 423.466 141.373C414.261 152.01 405.922 162.726 405.335 174.481C404.802 185.173 396.042 199.159 403.635 211.049C409.807 220.714 441.988 256.21 485.935 255.699C510.636 255.411 526.177 250.479 551.4 275.761C567.135 291.534 582.862 329.421 572.495 350.554C562.343 371.248 554.04 386.504 543.551 398.299C525.963 418.076 514.209 425.876 500.103 429.748C485.079 433.871 459.65 436.32 432.57 437.316C403.004 438.403 361.804 437.967 331.762 441.561C272.746 448.621 255.691 454.758 249.446 465.845C242.902 477.464 239.308 490.653 240.576 507.749C243.106 541.864 238.711 554.826 238.005 573.632C237.483 587.54 236.752 600.636 229.148 609.941C227.132 612.409 224.956 615.577 215.837 616.439C172.553 620.53 159.306 618.844 144.041 615.422C131.156 612.534 114.133 608.555 94.9055 598.213C75.8443 587.96 64.7302 582.865 52.5076 570.698C42.822 561.056 31.5626 555.17 23.1574 542.112C9.75294 521.289 -1.86571 508.827 1.62824 491.865C4.20623 479.349 4.94313 468.089 9.1389 458.255C14.3161 446.12 17.5441 435.145 21.4656 424.787C25.789 413.368 32.6076 401.469 40.6445 391.91C49.58 381.282 87.5603 375.907 86.4424 345.535C85.0411 307.459 74.6896 272.926 78.4131 248.888C80.7536 233.779 85.9566 218.412 93.8169 207.385C95.8011 204.602 104.267 193.619 123.431 186.902C142.596 180.184 198.754 192.771 213.522 195.817Z"
+                        stroke="url(#p1)" stroke-width="2" stroke-linecap="round" />
+                </svg>
+
+                <svg width="344" height="378" viewBox="0 0 569 625" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 translate-x-1 translate-y-1">
+                    <path opacity="0.7"
+                        d="M201.979 201.533C227.014 205.792 245.535 205.764 245.535 205.764C249.059 200.593 248.718 192.626 247.785 188.253C245.881 181.465 234.607 161.59 234.607 161.59C211.114 116.499 222.187 110.093 222.404 96.5302C222.637 81.9988 219.461 55.6159 239.895 36.4831C252.809 24.3916 309.702 6.333 351.672 3.38852C375.242 1.73486 392.185 -0.387854 397.43 2.23324C403.987 5.50979 416.3 9.2495 419.472 24.4668C425.145 51.6768 427.843 74.4516 428.043 84.3223C428.323 98.1646 422.568 123.212 408.982 140.066C400.192 150.969 392.267 161.922 392.092 173.639C391.932 184.297 383.703 198.518 391.671 210.086C398.147 219.488 431.402 253.691 475.11 251.655C499.679 250.51 514.971 245.062 540.945 269.344C557.15 284.492 574.116 321.645 564.535 343.033C555.153 363.978 547.421 379.446 537.395 391.547C520.582 411.837 509.158 420.007 495.256 424.35C480.451 428.975 455.235 432.295 428.324 434.227C398.944 436.335 357.935 437.333 328.168 441.953C269.692 451.028 252.936 457.728 247.108 468.977C241 480.765 237.882 494.014 239.738 510.982C243.441 544.839 239.518 557.889 239.469 576.628C239.433 590.485 239.161 603.541 231.919 613.064C229.998 615.59 227.944 618.818 218.9 619.993C175.974 625.567 162.735 624.349 147.427 621.475C134.506 619.049 117.43 615.68 97.9395 606.058C78.6173 596.518 67.3817 591.834 54.7972 580.152C44.8251 570.895 33.4173 565.429 24.6004 552.728C10.5393 532.473 -1.4544 520.476 1.4326 503.477C3.56277 490.934 3.90466 479.704 7.73767 469.772C12.4672 457.517 15.2977 446.485 18.8396 436.042C22.7445 424.529 29.1156 412.452 36.7801 402.661C45.3016 391.776 82.9052 385.108 80.7374 354.925C78.0199 317.086 66.52 283.084 69.3895 259.036C71.1932 243.92 75.8361 228.448 83.274 217.203C85.1515 214.364 93.1931 203.142 112.028 195.792C130.863 188.442 187.179 199.016 201.979 201.533Z"
+                        stroke="url(#p2)" stroke-width="2" stroke-linecap="round" />
+                </svg>
+
+                <svg width="338" height="381" viewBox="0 0 560 630" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 translate-x-2 translate-y-2">
+                    <path opacity="0.6"
+                        d="M190.319 207.049C215.376 210.417 233.804 209.745 233.804 209.745C237.131 204.478 236.514 196.562 235.434 192.244C233.304 185.555 221.395 166.17 221.395 166.17C196.453 122.12 207.248 115.361 206.993 101.858C206.719 87.391 202.643 61.2495 222.309 41.502C234.738 29.022 290.718 9.07673 332.375 4.68892C355.77 2.22466 372.553 -0.476049 377.863 1.9498C384.501 4.98228 396.882 8.27567 400.567 23.3071C407.157 50.1848 410.633 72.7527 411.175 82.5674C411.936 96.3312 407.079 121.454 394.147 138.696C385.781 149.85 378.276 161.024 378.509 172.689C378.72 183.299 371.026 197.735 379.357 208.969C386.127 218.1 420.403 250.977 463.822 247.433C488.228 245.441 503.253 239.489 529.942 262.747C546.592 277.257 564.763 313.636 555.974 335.251C547.367 356.417 540.212 372.077 530.656 384.466C514.632 405.24 503.55 413.766 489.869 418.57C475.299 423.686 450.324 427.866 423.616 430.723C394.456 433.842 353.688 436.259 324.23 441.89C266.363 452.952 249.924 460.2 244.516 471.596C238.849 483.538 236.207 496.828 238.643 513.647C243.504 547.208 240.055 560.33 240.657 578.977C241.103 592.766 241.286 605.767 234.411 615.494C232.588 618.074 230.656 621.358 221.699 622.841C179.182 629.879 165.967 629.127 150.636 626.799C137.696 624.833 120.588 622.075 100.861 613.177C81.304 604.356 69.962 600.086 57.0347 588.899C46.7909 580.034 35.2504 574.991 26.0363 562.66C11.3418 542.994 -1.00861 531.474 1.27311 514.459C2.95667 501.904 2.90656 490.718 6.37517 480.702C10.6551 468.344 13.0879 457.268 16.2492 446.754C19.7344 435.163 25.6537 422.925 32.9395 412.916C41.04 401.789 78.2231 393.848 75.0172 363.89C70.9983 326.334 58.3744 292.9 60.3937 268.872C61.663 253.769 65.7449 238.212 72.7546 226.764C74.5241 223.875 82.1353 212.429 100.621 204.461C119.106 196.493 175.506 205.058 190.319 207.049Z"
+                        stroke="url(#p3)" stroke-width="2" stroke-linecap="round" />
+                </svg>
+
+                <svg width="332" height="383" viewBox="0 0 550 634" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 translate-x-3 translate-y-3">
+                    <path opacity="0.5"
+                        d="M178.559 212.323C203.608 214.804 221.919 213.495 221.919 213.495C225.046 208.139 224.157 200.284 222.933 196.024C220.581 189.443 208.058 170.569 208.058 170.569C181.711 127.604 192.216 120.505 191.493 107.078C190.719 92.6922 185.754 66.8228 204.635 46.4907C216.568 33.6412 271.572 11.851 312.867 6.03804C336.058 2.77342 352.663 -0.496804 358.031 1.73249C364.741 4.51925 377.174 7.36614 381.363 22.1946C388.854 48.7093 393.097 71.0437 393.977 80.7906C395.212 94.4594 391.253 119.625 378.985 137.23C371.048 148.62 363.97 159.999 364.607 171.598C365.186 182.147 358.033 196.779 366.712 207.667C373.766 216.517 409.012 248.039 452.089 243.005C476.302 240.175 491.045 233.731 518.407 255.946C535.478 269.805 554.822 305.371 546.828 327.183C539 348.543 532.425 364.374 523.348 377.033C508.127 398.259 497.397 407.127 483.952 412.383C469.633 417.98 444.93 423.007 418.455 426.777C389.55 430.893 349.072 434.714 319.958 441.34C262.767 454.357 246.663 462.14 241.678 473.667C236.454 485.746 234.287 499.062 237.296 515.713C243.299 548.937 240.323 562.113 241.571 580.646C242.493 594.351 243.127 607.281 236.625 617.199C234.901 619.829 233.093 623.163 224.232 624.95C182.174 633.429 169 633.141 153.664 631.356C140.721 629.85 123.604 627.7 103.667 619.532C83.9019 611.434 72.4686 607.579 59.2176 596.897C48.7173 588.432 37.0597 583.816 27.4634 571.866C12.1594 552.808 -0.529177 541.775 1.14969 524.765C2.38843 512.215 1.94981 501.086 5.05285 491C8.88172 478.555 10.9174 467.45 13.6972 456.879C16.762 445.224 22.2262 432.841 29.1275 422.63C36.8004 411.276 73.5203 402.084 69.2893 372.386C63.9854 335.157 50.263 302.328 51.4371 278.35C52.1751 263.278 55.6958 247.658 62.2724 236.024C63.9325 233.087 71.1075 221.434 89.2228 212.864C107.338 204.293 163.752 210.857 178.559 212.323Z"
+                        stroke="url(#p4)" stroke-width="2" stroke-linecap="round" />
+                </svg>
+
+                <svg width="293" height="293" viewBox="0 0 485 485" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 translate-x-4 translate-y-4">
+                    <path opacity="0.7"
+                        d="M266.232 483.227C246.515 482.509 216.283 483.843 210.462 481.089C201.233 477.435 198.464 474.733 194.912 473.087C191.359 471.44 187.15 470.866 182.992 470.698C166.521 470.399 140.688 479.426 131.214 468.288C126.702 462.983 121.053 457.506 113.577 452.583C98.5686 442.701 83.6138 435.029 68.1947 425.265C48.4074 412.736 25.3627 395.814 11.885 301.99C8.52634 278.609 4.47955 266.082 2.97294 224.471C-0.285614 134.472 0.776282 73.7355 4.08756 65.1448C7.66141 55.8729 13.0424 46.2398 21.8792 36.6445C32.1014 25.5449 62.0758 7.66345 103.757 2.85546C128.417 0.0107561 149.697 -0.774074 170.503 9.53161C212.426 30.298 233.876 37.6808 262.704 77.3217C281.504 103.173 288.02 120.554 294.106 135.949C305.896 165.773 316.215 220.706 342.95 235.306C351.96 240.227 360.53 244.322 370.852 245.539C393.056 248.157 411.537 241.096 431.697 245.43C444.174 248.112 457.278 254.626 463.39 266.045C471.75 281.663 499.033 299.071 471.201 371.096C459.491 401.4 442.66 426.505 425.201 438.265C406.648 450.763 375.609 464.569 358.325 471.918C351.534 473.785 339.235 477.166 333.771 477.776C328.308 478.386 324.099 477.812 318.97 477.91C297.99 479.743 281.89 483.797 266.232 483.227Z"
+                        stroke="url(#p5)" stroke-width="2" stroke-linecap="round" />
+                </svg>
+
+                <svg width="296" height="288" viewBox="0 0 490 476" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 translate-x-5 translate-y-5">
+                    <path opacity="0.6"
+                        d="M279.56 474.012C259.96 473.888 230.003 476.104 224.114 473.553C214.804 470.213 211.947 467.623 208.354 466.099C204.762 464.576 200.56 464.133 196.425 464.09C180.063 464.284 154.785 473.98 144.93 463.244C140.237 458.131 134.408 452.881 126.788 448.234C111.491 438.904 96.3362 431.759 80.6359 422.56C60.4878 410.754 36.9289 394.7 19.761 302.295C15.4828 279.268 10.9598 266.998 7.78381 225.883C0.914617 136.959 -0.484089 76.8501 2.45596 68.2545C5.62914 58.9772 10.5816 49.289 18.966 39.5356C28.6649 28.2531 57.6972 9.67595 98.878 3.68273C123.243 0.136799 144.335 -1.27132 165.404 8.30471C207.859 27.6008 229.449 34.2666 259.667 72.621C279.373 97.6332 286.542 114.632 293.205 129.679C306.113 158.829 318.575 212.859 345.703 226.507C354.846 231.106 363.519 234.902 373.814 235.8C395.96 237.73 414.021 230.197 434.208 233.886C446.702 236.168 459.972 242.222 466.501 253.336C475.431 268.536 503.216 284.945 478.497 357.013C468.097 387.336 452.403 412.668 435.548 424.819C417.635 437.732 387.381 452.309 370.521 460.091C363.855 462.14 351.783 465.849 346.384 466.615C340.985 467.381 336.784 466.938 331.696 467.187C310.945 469.623 295.127 474.111 279.56 474.012Z"
+                        stroke="url(#p6)" stroke-width="2" stroke-linecap="round" />
+                </svg>
+
+                <svg width="299" height="283" viewBox="0 0 495 468" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 translate-x-6 translate-y-6">
+                    <path opacity="0.5"
+                        d="M293.264 464.417C273.803 464.875 244.157 467.954 238.208 465.605C228.832 462.577 225.891 460.1 222.263 458.7C218.635 457.3 214.447 456.986 210.341 457.066C194.107 457.742 169.408 468.081 159.191 457.754C154.326 452.836 148.328 447.817 140.576 443.446C125.014 434.672 109.682 428.054 93.7251 419.421C73.2478 408.341 49.2129 393.161 28.4314 302.279C23.2526 279.631 18.2663 267.629 13.4495 227.059C3.03149 139.314 -0.790003 79.9061 1.78039 71.3176C4.55463 62.0481 9.07836 52.3196 17.0061 42.4248C26.1767 30.9788 54.2428 11.7456 94.8769 4.59845C118.918 0.369826 139.798 -1.64755 161.099 7.19944C204.021 25.0265 225.723 30.9797 257.269 68.0184C277.842 92.1726 285.647 108.773 292.87 123.457C306.863 151.905 321.42 204.973 348.9 217.668C358.161 221.946 366.924 225.444 377.18 226.026C399.241 227.28 416.863 219.295 437.05 222.345C449.544 224.232 462.962 229.826 469.892 240.625C479.371 255.394 507.616 270.8 485.997 342.81C476.9 373.108 462.348 398.627 446.109 411.144C428.851 424.446 399.411 439.759 382.99 447.955C376.456 450.178 364.624 454.205 359.295 455.122C353.967 456.039 349.779 455.726 344.739 456.123C324.239 459.147 308.719 464.054 293.264 464.417Z"
+                        stroke="url(#p7)" stroke-width="2" stroke-linecap="round" />
+                </svg>
+
+                <svg width="303" height="277" viewBox="0 0 501 459" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 translate-x-7 translate-y-7">
+                    <path opacity="0.4"
+                        d="M306.716 454.45C287.418 455.477 258.117 459.398 252.116 457.251C242.687 454.534 239.668 452.171 236.01 450.894C232.352 449.616 228.182 449.43 224.11 449.63C208.024 450.778 183.927 461.732 173.368 451.822C168.339 447.102 162.182 442.315 154.31 438.222C138.507 430.005 123.02 423.914 106.832 415.847C86.0568 405.496 61.5842 391.194 37.2696 301.933C31.2104 279.689 25.7741 267.967 19.347 227.99C5.44625 141.524 -0.757201 82.8882 1.44568 74.319C3.82324 65.0702 7.91871 55.3159 15.3862 45.2965C24.0244 33.7064 51.1019 13.8572 91.1446 5.5886C114.836 0.696497 135.479 -1.91544 156.981 6.20413C200.308 22.5654 222.09 27.8114 254.906 63.5075C276.306 86.7862 284.726 102.972 292.491 117.28C307.534 144.999 324.136 197.049 351.928 208.791C361.294 212.748 370.134 215.948 380.337 216.221C402.285 216.809 419.452 208.392 439.614 210.811C452.092 212.309 465.637 217.445 472.954 227.919C482.962 242.244 511.622 256.645 493.085 328.495C485.285 358.726 471.876 384.393 456.265 397.25C439.675 410.915 411.075 426.928 395.108 435.519C388.713 437.91 377.132 442.242 371.88 443.306C366.629 444.371 362.459 444.184 357.473 444.726C337.247 448.322 322.042 453.634 306.716 454.45Z"
+                        stroke="url(#p8)" stroke-width="2" stroke-linecap="round" />
+                </svg>
+
+                <svg width="306" height="273" viewBox="0 0 506 451" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="absolute inset-0 translate-x-8 translate-y-8">
+                    <path opacity="0.3"
+                        d="M319.715 444.119C300.602 445.704 271.679 450.445 265.636 448.498C256.167 446.09 253.074 443.842 249.391 442.687C245.708 441.532 241.562 441.47 237.528 441.789C221.609 443.398 198.137 454.94 187.253 445.451C182.07 440.933 175.764 436.381 167.784 432.566C151.765 424.907 136.146 419.34 119.75 411.841C98.7089 402.218 73.8372 388.798 46.0739 301.254C39.1553 279.438 33.2829 268.008 25.278 228.668C7.96467 143.581 -0.577004 85.7845 1.26099 77.2463C3.24474 68.0312 6.91303 58.2654 13.9174 48.1382C22.02 36.4233 48.0886 15.9982 87.4967 6.64203C110.813 1.10636 131.196 -2.08481 152.867 5.30996C196.537 20.2108 218.37 24.7559 252.393 59.0847C274.58 81.4717 283.596 97.2278 291.885 111.146C307.943 138.112 326.538 189.089 354.6 199.88C364.058 203.517 372.961 206.421 383.1 206.39C404.908 206.324 421.605 197.495 441.715 199.293C454.161 200.406 467.814 205.085 475.502 215.226C486.018 229.096 515.05 242.491 499.573 314.083C493.061 344.205 480.795 369.979 465.824 383.153C449.913 397.153 422.177 413.83 406.679 422.795C400.428 425.348 389.109 429.972 383.94 431.18C378.771 432.387 374.625 432.326 369.698 433.009C349.77 437.16 334.893 442.861 319.715 444.119Z"
+                        stroke="url(#p9)" stroke-width="2" stroke-linecap="round" />
+                </svg>
+
+                <svg width="0" height="0" class="absolute">
+                    <defs>
+                        <linearGradient id="p1" x1="247.2" y1="14.3" x2="308.1" y2="606.9"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#369B81" />
+                            <stop offset="1" stop-color="#08D71F" />
+                        </linearGradient>
+                        <linearGradient id="p2" x1="229.1" y1="19.8" x2="310.3" y2="607.3"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#369B81" />
+                            <stop offset="1" stop-color="#08D71F" />
+                        </linearGradient>
+                        <linearGradient id="p3" x1="211" y1="25.3" x2="312.2" y2="607" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#369B81" />
+                            <stop offset="1" stop-color="#08D71F" />
+                        </linearGradient>
+                        <linearGradient id="p4" x1="192.8" y1="30.7" x2="313.8" y2="606.1"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#369B81" />
+                            <stop offset="1" stop-color="#08D71F" />
+                        </linearGradient>
+                        <linearGradient id="p5" x1="6.7" y1="297.9" x2="447.6" y2="176.7"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#369B81" />
+                            <stop offset="1" stop-color="#08D71F" />
+                        </linearGradient>
+                        <linearGradient id="p6" x1="14.4" y1="298.4" x2="445.7" y2="160.7"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#369B81" />
+                            <stop offset="1" stop-color="#08D71F" />
+                        </linearGradient>
+                        <linearGradient id="p7" x1="23" y1="298.6" x2="443.9" y2="145" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#369B81" />
+                            <stop offset="1" stop-color="#08D71F" />
+                        </linearGradient>
+                        <linearGradient id="p8" x1="31.7" y1="298.4" x2="441.4" y2="129.7"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#369B81" />
+                            <stop offset="1" stop-color="#08D71F" />
+                        </linearGradient>
+                        <linearGradient id="p9" x1="40.4" y1="297.9" x2="438.3" y2="114.9"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#369B81" />
+                            <stop offset="1" stop-color="#08D71F" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <h2 class="text-5xl font-syne font-bold mb-16 text-black">Whoami ?</h2>
+            <div class="grid md:grid-cols-3 gap-24 items-start">
+
+                <!-- Terminal (Black, Controls on Right) -->
+                <div
+                    class="terminal-window md:col-span-2 bg-black rounded-xl shadow-2xl overflow-hidden border border-gray-800 transform rotate-1">
+                    <div
+                        class="terminal-header bg-white/5 px-4 py-3 flex justify-end gap-2 border-b border-white/10 group">
+                        <div class="w-3 h-3 rounded-full bg-[#ef4444] macos-btn close flex items-center justify-center">
+                        </div> <!-- Red -->
+                        <div
+                            class="w-3 h-3 rounded-full bg-[#fcd34d] macos-btn minimize flex items-center justify-center">
+                        </div> <!-- Yellow -->
+                        <div
+                            class="w-3 h-3 rounded-full bg-[#27c93f] macos-btn maximize flex items-center justify-center">
+                        </div> <!-- Green -->
+                    </div>
+                    <div class="terminal-body p-8 font-mono text-white text-base leading-relaxed">
+                        <p class="mb-4">>_ Etudiant en ingénierie de conception en informatique à Saint Jean Ingénieur,
+                            passionné par la science de données et le développement logiciel.</p>
+                        <p class="mb-4">J'aime concevoir des solutions intelligentes mêlant analyse de données, IA et la
+                            technologie web modernes.</p>
+                        <p class="typing-effect">{{ displayedText }}</p>
+                        <span class="animate-pulse inline-block w-2.5 h-5 bg-white align-middle ml-1"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formations et Certificats Section -->
+        <section id="education" class="scroll-mt-32">
+            <h2 class="text-4xl font-syne font-bold mb-16 text-black">Formations et Certificats</h2>
+            <div class="grid md:grid-cols-2 gap-20 items-start relative">
+
+                <!-- Items List (Left) -->
+                <div class="space-y-4">
+                    @for (item of education; track item.id) {
+                    <div class="relative bg-white rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md"
+                        [class.shadow-lg]="selectedEducationId === item.id">
+                        <!-- Header (clickable) -->
+                        <div (click)="toggleEducation(item.id)"
+                            class="p-5 flex justify-between items-start cursor-pointer hover:bg-gray-50/50 transition-colors">
+                            <div class="flex-1">
+                                <h3 class="font-bold text-gray-900 text-base mb-1">{{ item.title }}</h3>
+                                <p class="text-xs text-gray-500">{{ item.period }} | {{ item.organization }} | Yaoundé
+                                </p>
+                            </div>
+                            <div class="ml-4 flex-shrink-0">
+                                <div class="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-green-500 transition-transform duration-300"
+                                    [class.rotate-180]="selectedEducationId === item.id"></div>
+                            </div>
+                        </div>
+
+                        <!-- Expandable Details (if needed) -->
+                        @if (selectedEducationId === item.id && item.description) {
+                        <div class="px-5 pb-5 pt-2 border-t border-gray-100 animate-slideDown">
+                            <p class="text-sm text-gray-600 leading-relaxed">{{ item.description }}</p>
+                        </div>
+                        }
+                    </div>
+                    }
+                </div>
+
+                <!-- Vertical green line separator between columns -->
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-green-500 -translate-x-1/2"></div>
+
+                <!-- Right Side - Dynamic Certificate/Image Display -->
+                <div
+                    class="h-80 bg-gray-100 rounded-2xl w-full shadow-sm flex items-center justify-center overflow-hidden transition-all duration-500 border border-gray-200">
+                    @if (selectedEducationId) {
+                    @for (item of education; track item.id) {
+                    @if (item.id === selectedEducationId) {
+                    <div class="p-8 text-center animate-fadeIn">
+                        <div
+                            class="w-24 h-24 mx-auto mb-4 bg-green-500/10 rounded-full flex items-center justify-center">
+                            <span class="material-symbols-outlined text-green-600 text-5xl">school</span>
+                        </div>
+                        <h3 class="font-syne font-bold text-2xl text-gray-800 mb-2">{{ item.title }}</h3>
+                        <p class="text-gray-600 font-medium">{{ item.organization }}</p>
+                        <p class="text-sm text-gray-500 mt-2">{{ item.period }}</p>
+                    </div>
+                    }
+                    }
+                    } @else {
+                    <span class="text-gray-400 font-syne text-lg opacity-40">Sélectionnez une formation</span>
+                    }
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="scroll-mt-32 relative py-40 overflow-hidden">
+
+            <div class="container mx-auto px-6 relative z-10">
+                <!-- Title with Precise 100% matching Underline -->
+                <div class="mb-12">
+                    <h2 class="text-4xl font-syne font-bold text-black relative inline-block">
+                        Compétences
+                        <div class="absolute -bottom-1 left-0 w-[550%] h-[1.5px] bg-[#22c55e]"></div>
+                    </h2>
+                </div>
+
+                <!-- Floating Card (Faithful to Image 100%) -->
+                <div
+                    class="bg-white/80 border border-[#22c55e]/60 rounded-[4px] p-6 md:p-7 shadow-sm max-w-xs mt-12 ml-16 backdrop-blur-sm">
+                    <ul class="space-y-8">
+                        <li
+                            class="text-lg font-syne font-medium text-black cursor-pointer px-6 py-4 rounded-md transition-all duration-300 hover:bg-[#4FE8D3] hover:text-[#1e5543]">
+                            Langages</li>
+                        <li
+                            class="text-lg font-syne font-medium text-black cursor-pointer px-6 py-4 rounded-md transition-all duration-300 hover:bg-[#4FE8D3] hover:text-[#1e5543]">
+                            Frameworks</li>
+                        <li
+                            class="text-lg font-syne font-medium text-black cursor-pointer px-6 py-4 rounded-md transition-all duration-300 hover:bg-[#4FE8D3] hover:text-[#1e5543]">
+                            Data Science</li>
+                        <li
+                            class="text-lg font-syne font-medium text-black cursor-pointer px-6 py-4 rounded-md transition-all duration-300 hover:bg-[#4FE8D3] hover:text-[#1e5543]">
+                            Outils et Plateformes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="scroll-mt-32">
+            <h2 class="text-4xl font-syne font-bold mb-12 text-black">Projets</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                @for (project of projects; track project.title) {
+                <div
+                    class="bg-white flex flex-col rounded-[16px] shadow-sm border border-gray-100 p-5 hover:shadow-md transition-shadow duration-200">
+
+                    <!-- 1. Image ou Spinner (en cours) -->
+                    @if (project.status === 'en cours') {
+                    <div class="flex flex-col items-center justify-center h-[110px] mb-3 rounded-[10px] bg-gray-50">
+                        <svg width="44" height="44" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="26" cy="26" r="18" stroke="#4FE8D3" stroke-width="3.5" stroke-linecap="round"
+                                stroke-dasharray="7 7">
+                                <animateTransform attributeName="transform" type="rotate" from="0 26 26" to="360 26 26"
+                                    dur="2s" repeatCount="indefinite" />
+                            </circle>
+                        </svg>
+                        <p class="text-[#4FE8D3] font-syne font-bold tracking-widest mt-2 text-[12px]">PROJET EN COURS
+                        </p>
+                    </div>
+                    } @else {
+                    <div class="h-[110px] mb-3 rounded-[10px] overflow-hidden bg-gray-100">
+                        <img [src]="project.imageUrl" [alt]="project.title" class="w-full h-full object-cover">
+                    </div>
+                    }
+
+                    <!-- 2. Badge Terminé/En cours -->
+                    <div class="mb-3">
+                        @if (project.status === 'en cours') {
+                        <span
+                            class="inline-flex items-center text-white text-[11px] font-syne font-semibold px-3 py-0.5 rounded-full" style="background: #D98600;">En
+                            cours</span>
+                        } @else {
+                        <span
+                            class="inline-flex items-center text-white text-[11px] font-syne font-semibold px-3 py-0.5 rounded-full" style="background: #24CF37;">Terminé</span>
+                        }
+                    </div>
+
+                    <!-- 3. Titre du projet -->
+                    <h3 class="font-syne font-medium text-[19px] leading-[100%]  text-gray-900 mb-3">{{ project.title }}
+                    </h3>
+
+                    <!-- 4. Compétences (tags) -->
+                    <div class="flex flex-row gap-2" [class.flex-wrap]="project.technologies.length > 4">
+                        @for (tech of project.technologies; track tech) {
+                        <span
+                            class="border border-[#22c55e] text-gray-800 text-[11px] font-syne px-3 py-1 rounded-full whitespace-nowrap flex-shrink-0">{{
+                            tech }}</span>
+                        }
+                    </div>
+                </div>
+                }
+            </div>
+        </section>
+
+        <!-- Volunteers Section -->
+        <section id="volunteers" class="scroll-mt-32">
+            <!-- Title with green underline -->
+            <div class="mb-2">
+                <h2 class="font-syne font-bold text-[28px] text-black inline-block relative">
+                    Bénévolats
+                    <span class="absolute -bottom-1 left-0 w-full h-[2.5px] bg-[#22c55e] rounded-full"></span>
+                </h2>
+            </div>
+            <p class="text-gray-500 text-[13px] mb-10 mt-4">Mes engagements associatifs et communautaires</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                @for (vol of volunteers; track vol.id) {
+                <div
+                    class="bg-white flex flex-col rounded-[14px] overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200">
+
+                    <!-- Image placeholder -->
+                    <div class="w-full h-[160px] bg-gray-300 flex-shrink-0"></div>
+
+                    <!-- Card body -->
+                    <div class="p-5 flex flex-col gap-2">
+                        <!-- Titre en vert -->
+                        <h3 class="font-syne font-bold text-[14px] text-[#22c55e] leading-snug">{{ vol.title }}</h3>
+
+                        <!-- Organisation -->
+                        <p class="text-gray-500 text-[11px]">{{ vol.organization }}</p>
+
+                        <!-- Badge + Période sur la même ligne -->
+                        <div class="flex flex-row items-center gap-2">
+                            @if (vol.status === 'en cours') {
+                            <span
+                                class="inline-flex items-center bg-[#f97316] text-white text-[11px] font-syne font-semibold px-3 py-0.5 rounded-full whitespace-nowrap">En
+                                cours</span>
+                            } @else {
+                            <span
+                                class="inline-flex items-center bg-[#22c55e] text-white text-[11px] font-syne font-semibold px-3 py-0.5 rounded-full whitespace-nowrap">Terminé</span>
+                            }
+                            <span class="text-gray-500 text-[11px]">{{ vol.period }}</span>
+                        </div>
+
+                        <!-- Description -->
+                        @if (vol.description) {
+                        <p class="text-gray-500 text-[11px] leading-relaxed project-desc-clamp">{{ vol.description }}
+                        </p>
+                        }
+                    </div>
+                </div>
+                }
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Contact Section - Full Width -->
+    <section id="contact" class="w-full mt-16 px-0">
+        <div class="bg-[#2aaa8a] px-8 md:px-20 py-14 flex flex-col md:flex-row items-start gap-10 md:gap-0">
+
+            <!-- Gauche : Titre -->
+            <div class="flex-1 flex flex-col justify-start pt-2">
+                <h2 class="font-syne font-bold text-white text-[28px] mb-2 inline-block relative">
+                    Contacts
+                </h2>
+                <div class="w-[220px] h-[1.5px] bg-white/60 mt-1"></div>
+            </div>
+
+            <!-- Droite : Formulaire -->
+            <div class="flex-1 flex flex-col gap-3 w-full">
+                <input type="text" placeholder="Nom"
+                    class="w-full bg-transparent border border-white/40 text-white placeholder-white/70 text-[13px] font-syne px-4 py-3 rounded-[6px] outline-none focus:border-white transition-colors" />
+                <input type="email" placeholder="Email"
+                    class="w-full bg-transparent border border-white/40 text-white placeholder-white/70 text-[13px] font-syne px-4 py-3 rounded-[6px] outline-none focus:border-white transition-colors" />
+                <textarea placeholder="Message" rows="5"
+                    class="w-full bg-transparent border border-white/40 text-white placeholder-white/70 text-[13px] font-syne px-4 py-3 rounded-[6px] outline-none focus:border-white transition-colors resize-none"></textarea>
+                <button type="button"
+                    class="w-full bg-white text-gray-800 font-syne font-semibold text-[14px] py-3 rounded-[6px] hover:bg-gray-100 transition-colors cursor-pointer">
+                    Envoyer
+                </button>
+            </div>
+        </div>
+    </section>
+
+</div>

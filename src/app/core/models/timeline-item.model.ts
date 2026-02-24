@@ -4,4 +4,6 @@ export interface TimelineItem {
   organization: string;
   period: string;
   position: 'left' | 'right';
+  description?: string;
 }
+

@@ -13,3 +13,4 @@ export interface Project {
   date?: string;
   status: 'en cours' | 'terminé';
 }
+

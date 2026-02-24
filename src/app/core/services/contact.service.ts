@@ -10,3 +10,4 @@ export class ContactService {
     return of(true).pipe(delay(1000));
   }
 }
+

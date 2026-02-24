@@ -23,7 +23,7 @@ export class PortfolioDataService {
         ],
         technologies: ['Charts.js', 'HTML/CSS', 'Tailwindcss', 'JavaScript'],
         fullDescription:
-          'A comprehensive analytics platform that provides real-time insights into sales performance. Built with modern web technologies and powered by advanced data processing algorithms.',
+          'Développement d’un tableau de bord interactif pour le site e-KIOSQUE, permettant de visualiser les données de vente, suivre les indicateurs clés de performance (KPI) et identifier les tendances grâce à des flux de données en temps réel. Le projet a impliqué la collecte et l’intégration de données provenant de différentes sources, la création de visualisations dynamiques avec Charts.js, et la mise en place d’une interface utilisateur responsive utilisant HTML/CSS et Tailwindcss. Ce tableau de bord offre une vue d’ensemble complète des performances du site, facilitant la prise de décisions éclairées pour améliorer les ventes et l’expérience utilisateur.',
         features: [
           'Visualisation de données en temps réel avec graphiques interactifs',
           'Suivi et alertes personnalisables des indicateurs clés (KPI)',
@@ -215,23 +215,26 @@ export class PortfolioDataService {
     return of([
       {
         id: '1',
-        title: "Etudiant en Informatique et Système d'information",
-        organization: 'Institut Universitaire Saint Jean',
-        period: "2021 - Aujourd'hui",
+        title: "Ingénierie des Systèmes d'Information",
+        organization: 'Saint Jean Ingénieur | Yaoundé',
+        period: "2022 - 2027",
+        description: "Cycle ingénieur en conception de systèmes d'information, focalisé sur le développement logiciel, la data science et l'architecture web.",
         position: 'right',
       },
       {
         id: '2',
-        title: '3ème à Terminale D',
-        organization: 'Collège Vogt',
-        period: '2017 - 2021',
+        title: "Formation Préparatoire Ingénieur",
+        organization: 'Institut Universitaire Saint Jean',
+        period: "2021 - 2022",
+        description: "Classes préparatoires intégrées (Mathématiques, Physique, Informatique).",
         position: 'left',
       },
       {
         id: '3',
-        title: 'Élève de 6ème à 4ème',
-        organization: "Collège Adventiste d'ODZA",
-        period: '2014 - 2017',
+        title: 'Baccalauréat D (Mathématiques et SVT)',
+        organization: 'Collège Vogt',
+        period: '2021',
+        description: "Obtention du Baccalauréat scientifique avec mention.",
         position: 'right',
       },
     ]);
@@ -280,7 +283,7 @@ export class PortfolioDataService {
         id: '1',
         title: "Responsable de l'atelier ML",
         organization: 'Club Robotique de Saint Jean Ingénieur',
-        period: '2024 - Présent',
+        period: '2025 - Présent',
         description:
           "Animation et coordination de l'atelier Machine Learning, formation des membres aux concepts et outils de ML",
         status: 'en cours',
@@ -297,3 +300,4 @@ export class PortfolioDataService {
     ]);
   }
 }
+

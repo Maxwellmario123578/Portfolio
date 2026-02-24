@@ -8,3 +8,4 @@ export interface Certification {
   imageUrl?: string;
   skills?: string[];
 }
+

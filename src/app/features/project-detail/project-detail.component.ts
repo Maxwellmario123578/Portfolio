@@ -44,3 +44,4 @@ export class ProjectDetailComponent implements OnInit {
     this.router.navigate(['/']);
   }
 }
+

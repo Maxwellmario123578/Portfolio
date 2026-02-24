@@ -6,3 +6,4 @@ export interface Volunteer {
   description?: string;
   status: 'en cours' | 'terminé';
 }
+
