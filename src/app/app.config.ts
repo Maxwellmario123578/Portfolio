@@ -10,9 +10,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideHttpClient(),
     importProvidersFrom(
-      TranslateModule.forRoot({
-        defaultLanguage: 'fr'
-      })
+      TranslateModule.forRoot()
     )
   ]
 };
