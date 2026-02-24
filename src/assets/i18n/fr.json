@@ -11,7 +11,8 @@
     "title": "Whoami ?",
     "intro1": "Etudiant en ingénierie de conception en informatique à Saint Jean Ingénieur, passionné par la science de données et le développement logiciel.",
     "intro2": "J'aime concevoir des solutions intelligentes mêlant analyse de données, IA et la technologie web modernes.",
-    "intro3": "Mon objectif est de créer des applications performantes et utiles, tout en continuant à apprendre et à innover."
+    "intro3": "Mon objectif est de créer des applications performantes et utiles, tout en continuant à apprendre et à innover.",
+    "downloadCV": "Télécharger mon CV"
   },
   "education": {
     "title": "Formations et Certificats",

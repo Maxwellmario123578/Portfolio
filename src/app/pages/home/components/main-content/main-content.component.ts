@@ -24,6 +24,7 @@ export class MainContentComponent implements OnInit {
     activeSection = 'whoami';
     mobileMenuOpen = false;
     selectedEducationId: string | null = null;
+    educationFilter: 'all' | 'education' | 'certifications' = 'education';
 
     themeService = inject(ThemeService);
     languageService = inject(LanguageService);
@@ -33,11 +34,13 @@ export class MainContentComponent implements OnInit {
         effect(() => {
             const currentLang = this.languageService.currentLanguage();
             this.loadAllData();
+            this.startTypingEffect();
         });
     }
 
     displayedText = '';
     fullText = '';
+    private typingTimeout: any = null;
 
     ngOnInit(): void {
         this.loadAllData();
@@ -62,19 +65,30 @@ export class MainContentComponent implements OnInit {
     }
 
     startTypingEffect() {
+        // Annuler l'effet de frappe en cours s'il existe
+        if (this.typingTimeout) {
+            clearTimeout(this.typingTimeout);
+        }
+        
+        // Réinitialiser le texte affiché
         this.displayedText = '';
-        this.languageService.translate.get('whoami.intro3').subscribe((text: string) => {
-            this.fullText = text;
-            let i = 0;
-            const typeWriter = () => {
-                if (i < this.fullText.length) {
-                    this.displayedText += this.fullText.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, 50);
-                }
-            };
-            typeWriter();
-        });
+        
+        // Attendre un peu pour que la traduction soit chargée
+        setTimeout(() => {
+            this.languageService.translate.get('whoami.intro3').subscribe((text: string) => {
+                this.fullText = text;
+                this.displayedText = ''; // Réinitialiser à nouveau pour être sûr
+                let i = 0;
+                const typeWriter = () => {
+                    if (i < this.fullText.length) {
+                        this.displayedText += this.fullText.charAt(i);
+                        i++;
+                        this.typingTimeout = setTimeout(typeWriter, 50);
+                    }
+                };
+                typeWriter();
+            });
+        }, 50);
     }
 
     toggleMobileMenu() {
@@ -83,6 +97,39 @@ export class MainContentComponent implements OnInit {
 
     toggleEducation(id: string) {
         this.selectedEducationId = this.selectedEducationId === id ? null : id;
+    }
+
+    setEducationFilter(filter: 'all' | 'education' | 'certifications') {
+        this.educationFilter = filter;
+        this.selectedEducationId = null; // Réinitialiser la sélection
+    }
+
+    get filteredEducation() {
+        if (this.educationFilter === 'all') {
+            return this.education;
+        }
+        return [];
+    }
+
+    get filteredCertifications() {
+        if (this.educationFilter === 'all') {
+            return this.certifications;
+        }
+        return [];
+    }
+
+    get displayedEducation() {
+        if (this.educationFilter === 'education') {
+            return this.education;
+        }
+        return [];
+    }
+
+    get displayedCertifications() {
+        if (this.educationFilter === 'certifications') {
+            return this.certifications;
+        }
+        return [];
     }
 
     scrollTo(sectionId: string): void {
@@ -111,16 +158,16 @@ export class MainContentComponent implements OnInit {
     }
 
     toggleTheme(): void {
-        console.log('Toggle theme clicked, current:', this.themeService.isDarkMode());
         this.themeService.toggleTheme();
     }
 
     toggleLanguage(): void {
         this.languageService.toggleLanguage();
         // Redémarrer l'effet de frappe avec le nouveau texte
+        // Le délai permet à la langue de changer avant de relancer l'effet
         setTimeout(() => {
             this.startTypingEffect();
-        }, 100);
+        }, 150);
     }
 
     t(key: string): string {

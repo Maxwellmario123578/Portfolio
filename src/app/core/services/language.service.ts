@@ -52,12 +52,15 @@ export class LanguageService {
         title: 'Whoami ?',
         intro1: 'Etudiant en ingénierie de conception en informatique à Saint Jean Ingénieur, passionné par la science de données et le développement logiciel.',
         intro2: 'J\'aime concevoir des solutions intelligentes mêlant analyse de données, IA et la technologie web modernes.',
-        intro3: 'Mon objectif est de créer des applications performantes et utiles, tout en continuant à apprendre et à innover.'
+        intro3: 'Mon objectif est de créer des applications performantes et utiles, tout en continuant à apprendre et à innover.',
+        downloadCV: 'Télécharger mon CV'
       },
       education: {
         title: 'Formations et Certificats',
         selectItem: 'Sélectionnez une formation ou certification',
-        viewCredential: 'Voir le certificat'
+        viewCredential: 'Voir le certificat',
+        formations: 'Formations',
+        certifications: 'Certifications'
       },
       skills: {
         title: 'Compétences',
@@ -105,12 +108,15 @@ export class LanguageService {
         title: 'Whoami ?',
         intro1: 'Computer Engineering student at Saint Jean Ingénieur, passionate about data science and software development.',
         intro2: 'I love designing intelligent solutions combining data analysis, AI and modern web technology.',
-        intro3: 'My goal is to create efficient and useful applications, while continuing to learn and innovate.'
+        intro3: 'My goal is to create efficient and useful applications, while continuing to learn and innovate.',
+        downloadCV: 'Download my CV'
       },
       education: {
         title: 'Education and Certificates',
         selectItem: 'Select an education or certification',
-        viewCredential: 'View credential'
+        viewCredential: 'View credential',
+        formations: 'Education',
+        certifications: 'Certifications'
       },
       skills: {
         title: 'Skills',

@@ -170,6 +170,27 @@ export class PortfolioDataService {
           date: 'in progress',
           status: 'en cours',
         },
+        {
+          id: '9',
+          title: "AI-Powered Transaction Fraud Detection: End-to-End MLOps Pipeline and Real-Time Monitoring",
+          description: "Development of a complete MLOps pipeline for fraud detection using AI, with Cloud architecture, Docker containerization, and real-time monitoring via Grafana dashboard.",
+          imageUrl: 'Projet_images/En_cours/A_venir.jpg',
+          images: ['Projet_images/En_cours/A_venir.jpg'],
+          technologies: ['Python', 'Docker', 'FastAPI', 'Grafana', 'MLOps', 'Cloud', 'Machine Learning', 'Prometheus'],
+          fullDescription: "Implementation of an end-to-end MLOps pipeline for AI-powered transaction fraud detection. The project combines Cloud services, virtualization, and machine learning to ensure model performance in production. Using Docker for process isolation and resource management, the system guarantees multiplatform deployment with low downtime. A Grafana dashboard provides real-time monitoring of system metrics and model performance, ensuring complete observability of the fraud detection pipeline.",
+          features: [
+            'Complete MLOps pipeline with versioning and CI/CD',
+            'Real-time fraud detection using machine learning models',
+            'Docker containerization for process isolation',
+            'Cloud architecture for scalability and reliability',
+            'Grafana dashboard for real-time metrics monitoring',
+            'Model performance tracking in production',
+            'Low downtime deployment strategy',
+          ],
+          category: 'MLOps / Cloud Architecture / Data Science',
+          date: 'in progress',
+          status: 'en cours',
+        },
       ];
     }
 
@@ -331,6 +352,27 @@ export class PortfolioDataService {
         date: 'en cours',
         status: 'en cours',
       },
+      {
+        id: '9',
+        title: "Détection de Fraude aux Transactions par IA : Pipeline MLOps End-to-End et Monitoring Temps Réel",
+        description: "Développement d'un pipeline MLOps complet pour la détection de fraude par IA, avec architecture Cloud, conteneurisation Docker, et monitoring temps réel via tableau de bord Grafana.",
+        imageUrl: 'Projet_images/En_cours/A_venir.jpg',
+        images: ['Projet_images/En_cours/A_venir.jpg'],
+        technologies: ['Python', 'Docker', 'FastAPI', 'Grafana', 'MLOps', 'Cloud', 'Machine Learning', 'Prometheus'],
+        fullDescription: "Mise en œuvre d'un pipeline MLOps end-to-end pour la détection de fraude aux transactions par IA. Le projet combine services Cloud, virtualisation et machine learning pour garantir la performance du modèle en production. Utilisant Docker pour l'isolation des processus et la gestion des ressources, le système assure un déploiement multiplateforme avec un faible temps d'arrêt. Un tableau de bord Grafana fournit un monitoring en temps réel des métriques système et des performances du modèle, assurant une observabilité complète du pipeline de détection de fraude.",
+        features: [
+          'Pipeline MLOps complet avec versioning et CI/CD',
+          'Détection de fraude en temps réel utilisant des modèles de machine learning',
+          'Conteneurisation Docker pour l\'isolation des processus',
+          'Architecture Cloud pour scalabilité et fiabilité',
+          'Tableau de bord Grafana pour le monitoring des métriques en temps réel',
+          'Suivi des performances du modèle en production',
+          'Stratégie de déploiement à faible temps d\'arrêt',
+        ],
+        category: 'MLOps / Architecture Cloud / Data Science',
+        date: 'en cours',
+        status: 'en cours',
+      },
     ];
   }
 
@@ -393,7 +435,7 @@ export class PortfolioDataService {
     if (lang === 'en') {
       return of([
         {
-          id: '1',
+          id: 'edu-1',
           title: "Information Systems Engineering",
           organization: 'Saint Jean Ingénieur | Yaoundé',
           period: "2022 - 2027",
@@ -401,7 +443,7 @@ export class PortfolioDataService {
           position: 'right',
         },
         {
-          id: '2',
+          id: 'edu-2',
           title: "Preparatory Engineering Training",
           organization: 'Saint Jean University Institute',
           period: "2021 - 2022",
@@ -409,7 +451,7 @@ export class PortfolioDataService {
           position: 'left',
         },
         {
-          id: '3',
+          id: 'edu-3',
           title: 'Baccalaureate D (Mathematics and Life Sciences)',
           organization: 'Collège Vogt',
           period: '2021',
@@ -421,7 +463,7 @@ export class PortfolioDataService {
     
     return of([
       {
-        id: '1',
+        id: 'edu-1',
         title: "Ingénierie des Systèmes d'Information",
         organization: 'Saint Jean Ingénieur | Yaoundé',
         period: "2022 - 2027",
@@ -429,7 +471,7 @@ export class PortfolioDataService {
         position: 'right',
       },
       {
-        id: '2',
+        id: 'edu-2',
         title: "Formation Préparatoire Ingénieur",
         organization: 'Institut Universitaire Saint Jean',
         period: "2021 - 2022",
@@ -437,7 +479,7 @@ export class PortfolioDataService {
         position: 'left',
       },
       {
-        id: '3',
+        id: 'edu-3',
         title: 'Baccalauréat D (Mathématiques et SVT)',
         organization: 'Collège Vogt',
         period: '2021',
@@ -453,7 +495,7 @@ export class PortfolioDataService {
     if (lang === 'en') {
       return of([
         {
-          id: '1',
+          id: 'cert-1',
           title: 'IBM Data Science Professional Certificate',
           issuer: 'IBM',
           date: 'Certified',
@@ -462,7 +504,7 @@ export class PortfolioDataService {
           skills: ['Data Science', 'Python', 'SQL', 'Data Analysis', 'Machine Learning'],
         },
         {
-          id: '2',
+          id: 'cert-2',
           title: 'Google Data Analytics',
           issuer: 'Google',
           date: 'In Progress',
@@ -470,7 +512,7 @@ export class PortfolioDataService {
           skills: ['Data Analysis', 'Spreadsheets', 'SQL', 'Tableau', 'R Programming'],
         },
         {
-          id: '3',
+          id: 'cert-3',
           title: 'Microsoft Office Specialist: Word Associate (Office 2019)',
           issuer: 'Microsoft',
           date: 'Certified',
@@ -483,7 +525,7 @@ export class PortfolioDataService {
     
     return of([
       {
-        id: '1',
+        id: 'cert-1',
         title: 'IBM Data Science Professional Certificate',
         issuer: 'IBM',
         date: 'Certifié',
@@ -492,7 +534,7 @@ export class PortfolioDataService {
         skills: ['Data Science', 'Python', 'SQL', 'Data Analysis', 'Machine Learning'],
       },
       {
-        id: '2',
+        id: 'cert-2',
         title: 'Google Data Analytics',
         issuer: 'Google',
         date: 'En cours',
@@ -500,7 +542,7 @@ export class PortfolioDataService {
         skills: ['Data Analysis', 'Spreadsheets', 'SQL', 'Tableau', 'R Programming'],
       },
       {
-        id: '3',
+        id: 'cert-3',
         title: 'Microsoft Office Specialist: Word Associate (Office 2019)',
         issuer: 'Microsoft',
         date: 'Certifié',
