@@ -431,23 +431,44 @@
                     <div class="w-[40%] h-[3px] bg-[#22c55e] mt-2"></div>
                 </div>
 
-                <!-- Floating Card (Faithful to Image 100%) -->
-                <div
-                    class="bg-white/80 dark:bg-gray-800/80 border border-[#22c55e]/60 rounded-[4px] p-6 md:p-7 shadow-sm max-w-xs mt-12 ml-16 backdrop-blur-sm">
-                    <ul class="space-y-8">
-                        <li
-                            class="text-lg font-syne font-medium text-black dark:text-white cursor-pointer px-6 py-4 rounded-md transition-all duration-300 hover:bg-[#4FE8D3] hover:text-[#1e5543]">
-                            {{ 'skills.languages' | translate }}</li>
-                        <li
-                            class="text-lg font-syne font-medium text-black dark:text-white cursor-pointer px-6 py-4 rounded-md transition-all duration-300 hover:bg-[#4FE8D3] hover:text-[#1e5543]">
-                            {{ 'skills.frameworks' | translate }}</li>
-                        <li
-                            class="text-lg font-syne font-medium text-black dark:text-white cursor-pointer px-6 py-4 rounded-md transition-all duration-300 hover:bg-[#4FE8D3] hover:text-[#1e5543]">
-                            {{ 'skills.dataScience' | translate }}</li>
-                        <li
-                            class="text-lg font-syne font-medium text-black dark:text-white cursor-pointer px-6 py-4 rounded-md transition-all duration-300 hover:bg-[#4FE8D3] hover:text-[#1e5543]">
-                            {{ 'skills.toolsPlatforms' | translate }}</li>
-                    </ul>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <!-- Left: Category Buttons -->
+                    <div class="bg-white/80 dark:bg-gray-800/80 border border-[#22c55e]/60 rounded-[4px] p-6 md:p-7 shadow-sm backdrop-blur-sm">
+                        <ul class="space-y-8">
+                            <li (click)="setSkillCategory('languages')"
+                                [class.bg-[#4FE8D3]]="selectedSkillCategory === 'languages'"
+                                [class.text-[#1e5543]]="selectedSkillCategory === 'languages'"
+                                class="text-lg font-syne font-medium text-black dark:text-white cursor-pointer px-6 py-4 rounded-md transition-all duration-300 hover:bg-[#4FE8D3] hover:text-[#1e5543]">
+                                {{ 'skills.languages' | translate }}
+                            </li>
+                            <li (click)="setSkillCategory('frameworks')"
+                                [class.bg-[#4FE8D3]]="selectedSkillCategory === 'frameworks'"
+                                [class.text-[#1e5543]]="selectedSkillCategory === 'frameworks'"
+                                class="text-lg font-syne font-medium text-black dark:text-white cursor-pointer px-6 py-4 rounded-md transition-all duration-300 hover:bg-[#4FE8D3] hover:text-[#1e5543]">
+                                {{ 'skills.frameworks' | translate }}
+                            </li>
+                            <li (click)="setSkillCategory('dataScience')"
+                                [class.bg-[#4FE8D3]]="selectedSkillCategory === 'dataScience'"
+                                [class.text-[#1e5543]]="selectedSkillCategory === 'dataScience'"
+                                class="text-lg font-syne font-medium text-black dark:text-white cursor-pointer px-6 py-4 rounded-md transition-all duration-300 hover:bg-[#4FE8D3] hover:text-[#1e5543]">
+                                {{ 'skills.dataScience' | translate }}
+                            </li>
+                            <li (click)="setSkillCategory('tools')"
+                                [class.bg-[#4FE8D3]]="selectedSkillCategory === 'tools'"
+                                [class.text-[#1e5543]]="selectedSkillCategory === 'tools'"
+                                class="text-lg font-syne font-medium text-black dark:text-white cursor-pointer px-6 py-4 rounded-md transition-all duration-300 hover:bg-[#4FE8D3] hover:text-[#1e5543]">
+                                {{ 'skills.toolsPlatforms' | translate }}
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Right: Orbiting Skills Animation -->
+                    <div class="flex items-center justify-center">
+                        <app-orbiting-skills 
+                            [skills]="filteredSkills"
+                            [category]="selectedSkillCategory">
+                        </app-orbiting-skills>
+                    </div>
                 </div>
             </div>
         </section>

@@ -392,11 +392,11 @@ export class PortfolioDataService {
       return of([
         {
           title: 'Languages',
-          skills: ['Python', 'SQL', 'Java'],
+          skills: ['Python', 'JavaScript', 'SQL', 'Java', 'R'],
         },
         {
           title: 'Frameworks',
-          skills: ['React', 'Node.js', 'SpringBoot', 'Angular', 'TailWindcss'],
+          skills: ['React Native', 'Node.js', 'SpringBoot', 'Angular', 'TailWindcss'],
         },
         {
           title: 'Data Science',
@@ -404,7 +404,7 @@ export class PortfolioDataService {
         },
         {
           title: 'Tools & Platforms',
-          skills: ['Docker', 'Trello', 'GitLab & GitHub', 'Figma'],
+          skills: ['Docker', 'Trello', 'GitLab & GitHub', 'Figma', 'Google BigQuery', 'Excel', 'Google Sheets'],
         },
       ]);
     }
@@ -412,11 +412,11 @@ export class PortfolioDataService {
     return of([
       {
         title: 'Langages',
-        skills: ['Python', 'SQL', 'Java'],
+        skills: ['Python', 'JavaScript', 'SQL', 'Java', 'R'],
       },
       {
         title: 'Frameworks',
-        skills: ['React', 'Node.js', 'SpringBoot', 'Angular', 'TailWindcss'],
+        skills: ['React Native', 'Node.js', 'SpringBoot', 'Angular', 'TailWindcss'],
       },
       {
         title: 'Data Science',
@@ -424,7 +424,7 @@ export class PortfolioDataService {
       },
       {
         title: 'Outils & Plateformes',
-        skills: ['Docker', 'Trello', 'GitLab & GitHub', 'Figma'],
+        skills: ['Docker', 'Trello', 'GitLab & GitHub', 'Figma', 'Google BigQuery', 'Excel', 'Google Sheets'],
       },
     ]);
   }
@@ -443,18 +443,10 @@ export class PortfolioDataService {
           position: 'right',
         },
         {
-          id: 'edu-2',
-          title: "Preparatory Engineering Training",
-          organization: 'Saint Jean University Institute',
-          period: "2021 - 2022",
-          description: "Integrated preparatory classes (Mathematics, Physics, Computer Science).",
-          position: 'left',
-        },
-        {
           id: 'edu-3',
           title: 'Baccalaureate D (Mathematics and Life Sciences)',
           organization: 'Collège Vogt',
-          period: '2021',
+          period: '2022',
           description: "Obtained scientific Baccalaureate with honors.",
           position: 'right',
         },
@@ -471,18 +463,10 @@ export class PortfolioDataService {
         position: 'right',
       },
       {
-        id: 'edu-2',
-        title: "Formation Préparatoire Ingénieur",
-        organization: 'Institut Universitaire Saint Jean',
-        period: "2021 - 2022",
-        description: "Classes préparatoires intégrées (Mathématiques, Physique, Informatique).",
-        position: 'left',
-      },
-      {
         id: 'edu-3',
         title: 'Baccalauréat D (Mathématiques et SVT)',
         organization: 'Collège Vogt',
-        period: '2021',
+        period: '2022',
         description: "Obtention du Baccalauréat scientifique avec mention.",
         position: 'right',
       },

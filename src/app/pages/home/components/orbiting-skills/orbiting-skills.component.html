@@ -1,0 +1,53 @@
+<div class="relative w-full h-[500px] flex items-center justify-center"
+     (mouseenter)="pauseAnimation()"
+     (mouseleave)="resumeAnimation()">
+  
+  <!-- Central Icon -->
+  <div class="w-20 h-20 bg-gradient-to-br from-[#1e5543] to-[#22c55e] rounded-full flex items-center justify-center z-10 relative shadow-2xl">
+    <div class="absolute inset-0 rounded-full bg-[#22c55e]/30 blur-xl animate-pulse"></div>
+    <div class="absolute inset-0 rounded-full bg-[#22c55e]/20 blur-2xl animate-pulse" style="animation-delay: 1s;"></div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="relative z-10">
+      <polyline points="16 18 22 12 16 6"></polyline>
+      <polyline points="8 6 2 12 8 18"></polyline>
+    </svg>
+  </div>
+
+  <!-- Orbit Paths -->
+  @for (orbit of orbits; track $index) {
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none"
+         [style.width.px]="orbit.radius * 2"
+         [style.height.px]="orbit.radius * 2">
+      <div class="absolute inset-0 rounded-full animate-pulse border border-[#22c55e]/20"
+           [style.box-shadow]="'0 0 40px ' + orbit.glowColor + ', inset 0 0 40px ' + orbit.glowColor"
+           [style.background]="'radial-gradient(circle, transparent 30%, ' + orbit.glowColor + ' 70%, ' + orbit.glowColor + ' 100%)'"></div>
+    </div>
+  }
+
+  <!-- Orbiting Skills -->
+  @for (orbit of orbits; track orbitIndex; let orbitIndex = $index) {
+    @for (skill of getSkillsForOrbit(orbitIndex); track skillIndex; let skillIndex = $index) {
+      <div class="absolute top-1/2 left-1/2 w-16 h-16 transition-all duration-300"
+           [style]="getSkillPosition(skillIndex, orbitIndex)">
+        <div class="relative w-full h-full p-2 bg-gray-800/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-125 transition-all duration-300 cursor-pointer group"
+             [style.box-shadow]="'0 0 20px ' + skill.color + '40'">
+          <div class="w-full h-full flex items-center justify-center" [innerHTML]="getSkillIcon(skill.name)"></div>
+          
+          <!-- Tooltip avec nom et niveau -->
+          <div class="absolute -bottom-16 left-1/2 -translate-x-1/2 px-3 py-2 bg-gray-900/95 backdrop-blur-sm rounded-lg text-xs text-white whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity z-20 min-w-[120px]">
+            <div class="font-semibold text-center mb-1">{{ skill.name }}</div>
+            @if (skill.level) {
+              <div class="flex items-center gap-2">
+                <div class="flex-1 h-2 bg-gray-700 rounded-full overflow-hidden">
+                  <div class="h-full rounded-full transition-all duration-500"
+                       [style.width.%]="skill.level"
+                       [style.background-color]="skill.color"></div>
+                </div>
+                <span class="text-xs font-bold" [style.color]="skill.color">{{ skill.level }}%</span>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    }
+  }
+</div>

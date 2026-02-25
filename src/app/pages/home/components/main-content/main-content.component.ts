@@ -6,11 +6,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { ThemeService } from '../../../../core/services/theme.service';
 import { LanguageService } from '../../../../core/services/language.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { OrbitingSkillsComponent } from '../orbiting-skills/orbiting-skills.component';
 
 @Component({
     selector: 'app-main-content',
     standalone: true,
-    imports: [CommonModule, HttpClientModule, TranslateModule],
+    imports: [CommonModule, HttpClientModule, TranslateModule, OrbitingSkillsComponent],
     templateUrl: './main-content.component.html',
     styleUrls: ['./main-content.component.scss']
 })
@@ -25,6 +26,10 @@ export class MainContentComponent implements OnInit {
     mobileMenuOpen = false;
     selectedEducationId: string | null = null;
     educationFilter: 'all' | 'education' | 'certifications' = 'education';
+    
+    // Filtrage des compétences
+    selectedSkillCategory: string = 'languages';
+    filteredSkills: any[] = [];
 
     themeService = inject(ThemeService);
     languageService = inject(LanguageService);
@@ -54,7 +59,10 @@ export class MainContentComponent implements OnInit {
     loadAllData(): void {
         this.portfolioDataService.getTimeline().subscribe(data => this.education = data);
         this.portfolioDataService.getCertifications().subscribe(data => this.certifications = data);
-        this.portfolioDataService.getSkills().subscribe(data => this.skills = data);
+        this.portfolioDataService.getSkills().subscribe(data => {
+            this.skills = data;
+            this.filterSkillsByCategory(this.selectedSkillCategory);
+        });
         this.portfolioDataService.getProjects().subscribe(data => this.projects = data);
         this.portfolioDataService.getVolunteers().subscribe(data => this.volunteers = data);
     }
@@ -62,6 +70,103 @@ export class MainContentComponent implements OnInit {
     loadEducationData(): void {
         this.portfolioDataService.getTimeline().subscribe(data => this.education = data);
         this.portfolioDataService.getCertifications().subscribe(data => this.certifications = data);
+    }
+
+    setSkillCategory(category: string): void {
+        this.selectedSkillCategory = category;
+        this.filterSkillsByCategory(category);
+    }
+
+    filterSkillsByCategory(category: string): void {
+        const lang = this.languageService.currentLanguage();
+        
+        const categoryMapFr: { [key: string]: string } = {
+            'languages': 'Langages',
+            'frameworks': 'Frameworks',
+            'dataScience': 'Data Science',
+            'tools': 'Outils & Plateformes'
+        };
+        
+        const categoryMapEn: { [key: string]: string } = {
+            'languages': 'Languages',
+            'frameworks': 'Frameworks',
+            'dataScience': 'Data Science',
+            'tools': 'Tools & Platforms'
+        };
+
+        const categoryMap = lang === 'en' ? categoryMapEn : categoryMapFr;
+        const categoryName = categoryMap[category];
+        const skillCategory = this.skills.find(cat => cat.title === categoryName);
+        
+        if (skillCategory) {
+            this.filteredSkills = skillCategory.skills.map((skill: string) => ({
+                name: skill,
+                color: this.getColorForCategory(category),
+                level: this.getSkillLevel(skill, category)
+            }));
+        } else {
+            this.filteredSkills = [];
+        }
+    }
+
+    getSkillLevel(skillName: string, category: string): number {
+        // Niveaux pour Data Science (bons niveaux)
+        const dataScienceLevels: { [key: string]: number } = {
+            'Numpy': 85,
+            'Scikit-learn': 80,
+            'Pandas': 85
+        };
+
+        // Niveaux pour Frameworks (assez bons niveaux)
+        const frameworkLevels: { [key: string]: number } = {
+            'React Native': 75,
+            'Node.js': 70,
+            'SpringBoot': 75,
+            'Angular': 80,
+            'TailWindcss': 85
+        };
+
+        // Niveaux pour Langages
+        const languageLevels: { [key: string]: number } = {
+            'Python': 85,
+            'JavaScript': 80,
+            'SQL': 75,
+            'Java': 75,
+            'R': 70
+        };
+
+        // Niveaux pour Outils & Plateformes (très bons niveaux)
+        const toolsLevels: { [key: string]: number } = {
+            'Docker': 90,
+            'Trello': 95,
+            'GitLab & GitHub': 90,
+            'Figma': 85,
+            'Google BigQuery': 90,
+            'Excel': 95,
+            'Google Sheets': 95
+        };
+
+        if (category === 'dataScience') {
+            return dataScienceLevels[skillName] || 75;
+        } else if (category === 'frameworks') {
+            return frameworkLevels[skillName] || 70;
+        } else if (category === 'languages') {
+            return languageLevels[skillName] || 75;
+        } else if (category === 'tools') {
+            return toolsLevels[skillName] || 85;
+        }
+        
+        return 75; // Niveau par défaut
+    }
+
+    getColorForCategory(category: string): string {
+        const colorMap: { [key: string]: string } = {
+            'languages': '#22c55e',
+            'frameworks': '#3b82f6',
+            'dataScience': '#a855f7',
+            'tools': '#f59e0b'
+        };
+        return colorMap[category] || '#22c55e';
     }
 
     startTypingEffect() {
