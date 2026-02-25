@@ -32,19 +32,9 @@
              [style.box-shadow]="'0 0 20px ' + skill.color + '40'">
           <div class="w-full h-full flex items-center justify-center" [innerHTML]="getSkillIcon(skill.name)"></div>
           
-          <!-- Tooltip avec nom et niveau -->
-          <div class="absolute -bottom-16 left-1/2 -translate-x-1/2 px-3 py-2 bg-gray-900/95 backdrop-blur-sm rounded-lg text-xs text-white whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity z-20 min-w-[120px]">
-            <div class="font-semibold text-center mb-1">{{ skill.name }}</div>
-            @if (skill.level) {
-              <div class="flex items-center gap-2">
-                <div class="flex-1 h-2 bg-gray-700 rounded-full overflow-hidden">
-                  <div class="h-full rounded-full transition-all duration-500"
-                       [style.width.%]="skill.level"
-                       [style.background-color]="skill.color"></div>
-                </div>
-                <span class="text-xs font-bold" [style.color]="skill.color">{{ skill.level }}%</span>
-              </div>
-            }
+          <!-- Tooltip avec nom -->
+          <div class="absolute -bottom-12 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-gray-900/95 backdrop-blur-sm rounded-lg text-xs text-white whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity z-20">
+            <div class="font-semibold text-center">{{ skill.name }}</div>
           </div>
         </div>
       </div>
