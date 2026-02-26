@@ -1,9 +1,13 @@
-import { Component, ElementRef, ViewChild, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, OnDestroy, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ThemeService } from '../../core/services/theme.service';
+import { LanguageService } from '../../core/services/language.service';
 
 @Component({
   selector: 'app-intro',
   standalone: true,
+  imports: [CommonModule],
   templateUrl: './intro.component.html',
   styleUrls: ['./intro.component.scss']
 })
@@ -13,6 +17,9 @@ export class IntroComponent implements AfterViewInit, OnDestroy {
   mouseX: number = 0;
   mouseY: number = 0;
   private animationFrameId: number | null = null;
+
+  themeService = inject(ThemeService);
+  languageService = inject(LanguageService);
 
   constructor(private router: Router) {}
 
@@ -93,6 +100,14 @@ export class IntroComponent implements AfterViewInit, OnDestroy {
       this.animationFrameId = requestAnimationFrame(updateWaves);
     };
     updateWaves();
+  }
+
+  toggleTheme(): void {
+    this.themeService.toggleTheme();
+  }
+
+  toggleLanguage(): void {
+    this.languageService.toggleLanguage();
   }
 
   startPortfolio(): void {

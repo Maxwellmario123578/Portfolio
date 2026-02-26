@@ -1,4 +1,40 @@
-<div class="fixed inset-0 h-screen w-screen bg-white flex flex-col" style="overflow: hidden; z-index: 9999;">
+<div class="fixed inset-0 h-screen w-screen bg-white dark:bg-gray-900 flex flex-col transition-colors duration-300" style="overflow: hidden; z-index: 9999;">
+
+  <!-- Theme and Language Buttons - Top Right -->
+  <div class="absolute top-6 right-6 z-50 flex items-center gap-3">
+    <!-- Language Toggle Button -->
+    <button 
+      (click)="toggleLanguage()"
+      class="flex items-center justify-center w-[40px] h-[40px] md:w-[50px] md:h-[50px] rounded-lg bg-[#1e5543] text-white font-semibold text-xs md:text-sm hover:bg-[#164433] transition-all shadow-[0_2px_8px_rgba(0,0,0,0.1)]"
+      [attr.aria-label]="'Changer la langue'">
+      <span class="w-[25px] h-[25px] md:w-[31px] md:h-[31px] flex items-center justify-center">
+        {{ languageService.currentLanguage() === 'fr' ? 'FR' : 'EN' }}
+      </span>
+    </button>
+
+    <!-- Theme Toggle Button -->
+    <button 
+      (click)="toggleTheme()"
+      class="flex items-center justify-center w-[40px] h-[40px] md:w-[50px] md:h-[50px] rounded-lg bg-white dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-all shadow-[0_2px_8px_rgba(0,0,0,0.1)]"
+      [attr.aria-label]="'Changer le thème'">
+      <!-- Sun Icon (Light Mode) -->
+      <svg *ngIf="!themeService.isDarkMode()" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#369B81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="md:w-[31px] md:h-[31px]">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2"></path>
+        <path d="M12 20v2"></path>
+        <path d="m4.93 4.93 1.41 1.41"></path>
+        <path d="m17.66 17.66 1.41 1.41"></path>
+        <path d="M2 12h2"></path>
+        <path d="M20 12h2"></path>
+        <path d="m6.34 17.66-1.41 1.41"></path>
+        <path d="m19.07 4.93-1.41 1.41"></path>
+      </svg>
+      <!-- Moon Icon (Dark Mode) -->
+      <svg *ngIf="themeService.isDarkMode()" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#369B81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="md:w-[31px] md:h-[31px]">
+        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+      </svg>
+    </button>
+  </div>
 
   <!-- Top Geometric Patterns - SVG network on the left -->
   <div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0" style="overflow: visible;">
@@ -81,27 +117,28 @@
   <!-- Main Content - Centered -->
   <div class="relative z-10 flex-1 flex items-center justify-center px-4">
     <div class="text-center space-y-3 animate-fade-in max-w-4xl w-full">
-      <p class="text-black text-center mx-auto"
-        style="width: 100%; opacity: 1; font-family: 'Syne', sans-serif; font-weight: 500; font-size: 24px; line-height: 100%; letter-spacing: 0%; color: #000000;">
-        Salut, moi c'est
+      <p class="text-black dark:text-white text-center mx-auto transition-colors duration-300"
+        style="width: 100%; opacity: 1; font-family: 'Syne', sans-serif; font-weight: 500; font-size: 24px; line-height: 100%; letter-spacing: 0%;">
+        {{ languageService.currentLanguage() === 'fr' ? 'Salut, moi c\'est' : 'Hi, I\'m' }}
       </p>
       <h1 class="text-center" style="margin-bottom: 0; line-height: 1;">
         <span
-          style="width: 100%; opacity: 1; font-family: 'Syne', sans-serif; font-weight: 700; font-style: normal; font-size: 36px; line-height: 1; letter-spacing: 0%; text-align: center; color: #000000; display: block;">
+          class="text-black dark:text-white transition-colors duration-300"
+          style="width: 100%; opacity: 1; font-family: 'Syne', sans-serif; font-weight: 700; font-style: normal; font-size: 36px; line-height: 1; letter-spacing: 0%; text-align: center; display: block;">
           KONMENECK Masewell-Mathurin
         </span>
       </h1>
 
-      <p class="text-black text-sm max-w-3xl mx-auto font-light text-center"
+      <p class="text-black dark:text-gray-300 text-sm max-w-3xl mx-auto font-light text-center transition-colors duration-300"
         style="margin-top: 0.5em; line-height: 1.2; font-family: 'Space Grotesk', sans-serif; font-size: 14px;">
-        Certifié Data Science & Étudiant en Informatique et Système d'Information
+        {{ languageService.currentLanguage() === 'fr' ? 'Certifié Data Science & Étudiant en Informatique et Système d\'Information' : 'Data Science Certified & Computer Science and Information Systems Student' }}
       </p>
 
       <div style="margin-top: 0.75em;">
         <button (click)="startPortfolio()"
           class="start-button px-8 py-2 font-medium text-sm transition-all duration-300 shadow-md hover:shadow-lg"
           style="border-radius: 50px;">
-          Commencer
+          {{ languageService.currentLanguage() === 'fr' ? 'Commencer' : 'Start' }}
         </button>
       </div>
     </div>

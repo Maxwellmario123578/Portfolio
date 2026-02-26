@@ -1,12 +1,12 @@
-<div class="relative w-full h-[500px] flex items-center justify-center"
+<div class="relative w-full h-[400px] md:h-[500px] flex items-center justify-center"
      (mouseenter)="pauseAnimation()"
      (mouseleave)="resumeAnimation()">
   
   <!-- Central Icon -->
-  <div class="w-20 h-20 bg-gradient-to-br from-[#1e5543] to-[#22c55e] rounded-full flex items-center justify-center z-10 relative shadow-2xl">
+  <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-[#1e5543] to-[#22c55e] rounded-full flex items-center justify-center z-10 relative shadow-2xl">
     <div class="absolute inset-0 rounded-full bg-[#22c55e]/30 blur-xl animate-pulse"></div>
     <div class="absolute inset-0 rounded-full bg-[#22c55e]/20 blur-2xl animate-pulse" style="animation-delay: 1s;"></div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="relative z-10">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="relative z-10 md:w-9 md:h-9">
       <polyline points="16 18 22 12 16 6"></polyline>
       <polyline points="8 6 2 12 8 18"></polyline>
     </svg>
@@ -26,14 +26,14 @@
   <!-- Orbiting Skills -->
   @for (orbit of orbits; track orbitIndex; let orbitIndex = $index) {
     @for (skill of getSkillsForOrbit(orbitIndex); track skillIndex; let skillIndex = $index) {
-      <div class="absolute top-1/2 left-1/2 w-16 h-16 transition-all duration-300"
+      <div class="absolute top-1/2 left-1/2 w-12 h-12 md:w-16 md:h-16 transition-all duration-300"
            [style]="getSkillPosition(skillIndex, orbitIndex)">
-        <div class="relative w-full h-full p-2 bg-gray-800/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-125 transition-all duration-300 cursor-pointer group"
+        <div class="relative w-full h-full p-1.5 md:p-2 bg-gray-800/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-125 transition-all duration-300 cursor-pointer group"
              [style.box-shadow]="'0 0 20px ' + skill.color + '40'">
           <div class="w-full h-full flex items-center justify-center" [innerHTML]="getSkillIcon(skill.name)"></div>
           
           <!-- Tooltip avec nom -->
-          <div class="absolute -bottom-12 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-gray-900/95 backdrop-blur-sm rounded-lg text-xs text-white whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity z-20">
+          <div class="absolute -bottom-10 md:-bottom-12 left-1/2 -translate-x-1/2 px-2 py-1 md:px-3 md:py-1.5 bg-gray-900/95 backdrop-blur-sm rounded-lg text-[10px] md:text-xs text-white whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity z-20">
             <div class="font-semibold text-center">{{ skill.name }}</div>
           </div>
         </div>

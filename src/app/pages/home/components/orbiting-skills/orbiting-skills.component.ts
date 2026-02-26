@@ -29,22 +29,47 @@ export class OrbitingSkillsComponent implements OnInit, OnDestroy, OnChanges {
   time: number = 0;
   private animationFrameId?: number;
   isPaused: boolean = false;
+  isMobile: boolean = false;
   
   // Configuration des orbites
-  orbits: OrbitConfig[] = [
-    { radius: 120, speed: 0.5, glowColor: 'rgba(34, 197, 94, 0.3)' },
-    { radius: 200, speed: -0.3, glowColor: 'rgba(34, 197, 94, 0.2)' }
-  ];
+  orbits: OrbitConfig[] = [];
 
-  constructor(private sanitizer: DomSanitizer) {}
+  constructor(private sanitizer: DomSanitizer) {
+    this.updateOrbits();
+  }
 
   ngOnInit() {
+    this.checkMobile();
     this.startAnimation();
+    window.addEventListener('resize', () => this.checkMobile());
   }
 
   ngOnDestroy() {
     if (this.animationFrameId) {
       cancelAnimationFrame(this.animationFrameId);
+    }
+    window.removeEventListener('resize', () => this.checkMobile());
+  }
+
+  checkMobile() {
+    const wasMobile = this.isMobile;
+    this.isMobile = window.innerWidth < 768;
+    if (wasMobile !== this.isMobile) {
+      this.updateOrbits();
+    }
+  }
+
+  updateOrbits() {
+    if (this.isMobile || window.innerWidth < 768) {
+      this.orbits = [
+        { radius: 80, speed: 0.5, glowColor: 'rgba(34, 197, 94, 0.3)' },
+        { radius: 140, speed: -0.3, glowColor: 'rgba(34, 197, 94, 0.2)' }
+      ];
+    } else {
+      this.orbits = [
+        { radius: 120, speed: 0.5, glowColor: 'rgba(34, 197, 94, 0.3)' },
+        { radius: 200, speed: -0.3, glowColor: 'rgba(34, 197, 94, 0.2)' }
+      ];
     }
   }
 
