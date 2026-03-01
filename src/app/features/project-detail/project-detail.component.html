@@ -36,29 +36,21 @@
             {{ project.fullDescription || project.description }}
           </p>
 
-          <!-- Boutons d'action -->
+          <!-- Boutons d'action - Toujours afficher les deux boutons -->
           <div class="flex flex-wrap gap-3">
-            @if (project.githubUrl) {
-            <a [href]="project.githubUrl" target="_blank"
-              class="px-5 py-2.5 bg-[#1e5543] text-white text-sm font-medium rounded-full hover:bg-[#164433] transition-colors">
+            <button class="px-5 py-2.5 bg-[#1e5543] text-white text-sm font-medium rounded-full hover:bg-[#164433] transition-colors">
               Accéder au dépôt Git
-            </a>
-            }
-            @if (project.liveUrl) {
-            <a [href]="project.liveUrl" target="_blank"
-              class="px-5 py-2.5 bg-[#1e5543] text-white text-sm font-medium rounded-full hover:bg-[#164433] transition-colors">
+            </button>
+            <button class="px-5 py-2.5 bg-[#1e5543] text-white text-sm font-medium rounded-full hover:bg-[#164433] transition-colors">
               Maquette Figma
-            </a>
-            }
+            </button>
           </div>
 
           <!-- Statut -->
           <div>
-            <p class="text-[15px] text-gray-700 dark:text-gray-300">
-              <span class="font-semibold">Statut :</span> 
-              <span class="font-semibold" [class.text-green-600]="project.status === 'terminé'" [class.text-orange-600]="project.status === 'en cours'">
-                {{ project.status === 'en cours' ? 'En cours' : 'Terminé' }}
-              </span>
+            <p class="text-[15px] text-black dark:text-white">
+              <span class="font-bold">Statut : </span>
+              <span class="font-bold">{{ project.status === 'en cours' ? 'En cours' : 'Terminé' }}</span>
             </p>
           </div>
 
