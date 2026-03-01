@@ -101,6 +101,13 @@ ${message}
     return res.status(500).json({
       success: false,
       message: 'Erreur lors de l\'envoi de l\'email',
+      error: error.message,
+      details: {
+        host: process.env.SMTP_HOST,
+        port: process.env.SMTP_PORT,
+        user: process.env.SMTP_USER ? 'configuré' : 'manquant',
+        pass: process.env.SMTP_PASS ? 'configuré' : 'manquant',
+      }
     });
   }
 };
