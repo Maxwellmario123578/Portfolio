@@ -1,6 +1,9 @@
-import { Component, OnInit, inject, effect } from '@angular/core';
+import { Component, OnInit, inject, effect, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { PortfolioDataService } from '../../../../core/services/portfolio-data.service';
+import { ContactService, ContactForm } from '../../../../core/services/contact.service';
 import { SkillCategory, TimelineItem, Project, Volunteer, Certification } from '../../../../core/models';
 import { HttpClientModule } from '@angular/common/http';
 import { ThemeService } from '../../../../core/services/theme.service';
@@ -11,11 +14,11 @@ import { OrbitingSkillsComponent } from '../orbiting-skills/orbiting-skills.comp
 @Component({
     selector: 'app-main-content',
     standalone: true,
-    imports: [CommonModule, HttpClientModule, TranslateModule, OrbitingSkillsComponent],
+    imports: [CommonModule, HttpClientModule, TranslateModule, OrbitingSkillsComponent, FormsModule],
     templateUrl: './main-content.component.html',
     styleUrls: ['./main-content.component.scss']
 })
-export class MainContentComponent implements OnInit {
+export class MainContentComponent implements OnInit, OnDestroy {
     skills: SkillCategory[] = [];
     education: TimelineItem[] = [];
     projects: Project[] = [];
@@ -31,10 +34,33 @@ export class MainContentComponent implements OnInit {
     selectedSkillCategory: string = 'languages';
     filteredSkills: any[] = [];
 
+    // Slideshow pour les écoles
+    currentSchoolImage = 0;
+    isTransitioning = false;
+    private schoolImageInterval: any = null;
+
+    // Lightbox pour les images de certification
+    selectedCertImage: string | null = null;
+
+    // Formulaire de contact
+    contactFormData: ContactForm = {
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    };
+    isSubmitting = false;
+    contactError: string | null = null;
+    contactSuccess: string | null = null;
+
     themeService = inject(ThemeService);
     languageService = inject(LanguageService);
 
-    constructor(private portfolioDataService: PortfolioDataService) {
+    constructor(
+        private portfolioDataService: PortfolioDataService,
+        private router: Router,
+        private contactService: ContactService
+    ) {
         // Écouter les changements de langue et recharger les données
         effect(() => {
             const currentLang = this.languageService.currentLanguage();
@@ -54,6 +80,19 @@ export class MainContentComponent implements OnInit {
         setTimeout(() => {
             this.startTypingEffect();
         }, 200);
+
+        // Démarrer le slideshow automatique
+        this.startSchoolImageSlideshow();
+    }
+
+    ngOnDestroy(): void {
+        // Nettoyer l'intervalle du slideshow
+        if (this.schoolImageInterval) {
+            clearInterval(this.schoolImageInterval);
+        }
+        if (this.typingTimeout) {
+            clearTimeout(this.typingTimeout);
+        }
     }
 
     loadAllData(): void {
@@ -202,6 +241,9 @@ export class MainContentComponent implements OnInit {
 
     toggleEducation(id: string) {
         this.selectedEducationId = this.selectedEducationId === id ? null : id;
+        // Réinitialiser le slideshow quand on change d'école
+        this.currentSchoolImage = 0;
+        this.isTransitioning = false;
     }
 
     setEducationFilter(filter: 'all' | 'education' | 'certifications') {
@@ -277,5 +319,76 @@ export class MainContentComponent implements OnInit {
 
     t(key: string): string {
         return key;
+    }
+
+    navigateToProject(projectId: string): void {
+        this.router.navigate(['/project', projectId]);
+    }
+
+    startSchoolImageSlideshow(): void {
+        this.schoolImageInterval = setInterval(() => {
+            this.isTransitioning = true;
+            setTimeout(() => {
+                this.currentSchoolImage = (this.currentSchoolImage + 1) % 2;
+                this.isTransitioning = false;
+            }, 300);
+        }, 4000); // Change d'image toutes les 4 secondes
+    }
+
+    setSchoolImage(index: number): void {
+        if (this.currentSchoolImage !== index) {
+            this.isTransitioning = true;
+            setTimeout(() => {
+                this.currentSchoolImage = index;
+                this.isTransitioning = false;
+            }, 300);
+        }
+    }
+
+    openCertImage(imageUrl: string): void {
+        this.selectedCertImage = imageUrl;
+    }
+
+    closeCertImage(): void {
+        this.selectedCertImage = null;
+    }
+
+    onSubmitContact(): void {
+        if (this.isSubmitting) return;
+
+        this.isSubmitting = true;
+        this.contactError = null;
+        this.contactSuccess = null;
+
+        this.contactService.sendEmail(this.contactFormData).subscribe({
+            next: (response) => {
+                this.isSubmitting = false;
+                if (response.success) {
+                    this.contactSuccess = this.languageService.currentLanguage() === 'fr' 
+                        ? 'Message envoyé avec succès!' 
+                        : 'Message sent successfully!';
+                    // Réinitialiser le formulaire
+                    this.contactFormData = {
+                        name: '',
+                        email: '',
+                        subject: '',
+                        message: ''
+                    };
+                    // Effacer le message de succès après 5 secondes
+                    setTimeout(() => {
+                        this.contactSuccess = null;
+                    }, 5000);
+                } else {
+                    this.contactError = response.message;
+                }
+            },
+            error: (error) => {
+                this.isSubmitting = false;
+                this.contactError = this.languageService.currentLanguage() === 'fr'
+                    ? 'Erreur lors de l\'envoi du message. Veuillez réessayer.'
+                    : 'Error sending message. Please try again.';
+                console.error('Error sending email:', error);
+            }
+        });
     }
 }

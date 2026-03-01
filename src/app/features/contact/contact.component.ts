@@ -29,7 +29,11 @@ export class ContactComponent {
   onSubmit(): void {
     if (this.contactForm.valid && !this.isSubmitting) {
       this.isSubmitting = true;
-      this.contactService.submitContactForm(this.contactForm.value).subscribe({
+      const formData = {
+        ...this.contactForm.value,
+        subject: 'Contact depuis le portfolio'
+      };
+      this.contactService.sendEmail(formData).subscribe({
         next: () => {
           this.submitSuccess = true;
           this.contactForm.reset();

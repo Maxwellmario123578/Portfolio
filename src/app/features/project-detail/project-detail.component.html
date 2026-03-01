@@ -1,4 +1,7 @@
-<div class="min-h-screen bg-gray-50 dark:bg-gray-950">
+<div class="min-h-screen bg-white dark:bg-gray-900 pt-20 font-grotesk">
+  <!-- Header de navigation réutilisé -->
+  <app-header></app-header>
+
   @if (loading) {
   <div class="flex items-center justify-center min-h-screen">
     <div class="text-center">
@@ -8,206 +11,125 @@
     </div>
   </div>
   } @else if (project) {
-  <!-- Header fixe avec navigation -->
-  <header
-    class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-gray-800">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <button (click)="goBack()"
-          class="group inline-flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-all">
-          <div class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 group-hover:bg-primary/10 transition-colors">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-          </div>
-          <span class="font-semibold hidden sm:inline">Tous les projets</span>
-        </button>
 
-        <div class="flex items-center gap-3">
-          <span
-            [class]="project.status === 'en cours' ? 'bg-red-500/10 text-red-600 dark:text-red-400 ring-1 ring-red-500/20' : 'bg-green-500/10 text-green-600 dark:text-green-400 ring-1 ring-green-500/20'"
-            class="text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
-            {{ project.status }}
-          </span>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero avec image immersive -->
-  <section
-    class="relative bg-gradient-to-br from-primary/5 via-white to-primary/5 dark:from-primary/10 dark:via-gray-900 dark:to-primary/10">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <!-- Contenu -->
-        <div class="order-2 lg:order-1">
-          <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 dark:bg-primary/20 rounded-full mb-6">
-            <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
-              <path
-                d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z" />
-            </svg>
-            <span class="text-sm font-semibold text-primary">{{ project.category }}</span>
-          </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white mb-6 leading-tight">
+  <!-- Contenu principal -->
+  <section class="bg-white dark:bg-gray-900 py-8">
+    <div class="container mx-auto px-6 lg:px-12">
+      <div class="grid lg:grid-cols-[1fr_1.2fr] gap-12 items-start">
+        
+        <!-- Colonne gauche - Informations du projet -->
+        <div class="space-y-6">
+          <!-- Titre -->
+          <h1 class="text-[32px] leading-[1.1] font-bold text-black dark:text-white uppercase tracking-tight">
             {{ project.title }}
           </h1>
 
-          <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-            {{ project.description }}
-          </p>
-
-          <div class="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-500 mb-8">
-            <div class="flex items-center gap-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <span class="font-medium">{{ project.date }}</span>
-            </div>
-            <div class="w-1 h-1 rounded-full bg-gray-400"></div>
-            <div class="flex items-center gap-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-              </svg>
-              <span class="font-medium">{{ project.technologies.length }} technologies</span>
-            </div>
+          <!-- Badge catégorie -->
+          <div class="inline-block">
+            <span class="px-4 py-1.5 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full border border-gray-300 dark:border-gray-600">
+              {{ project.category }}
+            </span>
           </div>
 
-          <div class="flex flex-wrap gap-2">
-            @for (tech of project.technologies; track tech) {
-            <span
-              class="px-4 py-2 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-lg shadow-sm hover:shadow-md hover:scale-105 transition-all cursor-default border border-gray-200 dark:border-gray-700">
-              {{ tech }}
-            </span>
+          <!-- Description -->
+          <p class="text-[15px] leading-[1.6] text-gray-700 dark:text-gray-300">
+            {{ project.fullDescription || project.description }}
+          </p>
+
+          <!-- Boutons d'action -->
+          <div class="flex flex-wrap gap-3">
+            @if (project.githubUrl) {
+            <a [href]="project.githubUrl" target="_blank"
+              class="px-5 py-2.5 bg-[#1e5543] text-white text-sm font-medium rounded-full hover:bg-[#164433] transition-colors">
+              Accéder au dépôt Git
+            </a>
             }
+            @if (project.liveUrl) {
+            <a [href]="project.liveUrl" target="_blank"
+              class="px-5 py-2.5 bg-[#1e5543] text-white text-sm font-medium rounded-full hover:bg-[#164433] transition-colors">
+              Maquette Figma
+            </a>
+            }
+          </div>
+
+          <!-- Statut -->
+          <div>
+            <p class="text-[15px] text-gray-700 dark:text-gray-300">
+              <span class="font-semibold">Statut :</span> 
+              <span class="font-semibold" [class.text-green-600]="project.status === 'terminé'" [class.text-orange-600]="project.status === 'en cours'">
+                {{ project.status === 'en cours' ? 'En cours' : 'Terminé' }}
+              </span>
+            </p>
+          </div>
+
+          <!-- Technologies -->
+          <div>
+            <h3 class="text-[15px] font-semibold text-gray-700 dark:text-gray-300 mb-3">Technologies</h3>
+            <div class="flex flex-wrap gap-2">
+              @for (tech of project.technologies; track tech) {
+              <span class="px-4 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full border border-gray-300 dark:border-gray-600">
+                {{ tech }}
+              </span>
+              }
+            </div>
           </div>
         </div>
 
-        <!-- Image -->
-        <div class="order-1 lg:order-2">
-          <div class="relative group">
-            <div
-              class="absolute -inset-4 bg-gradient-to-r from-primary/20 to-primary/10 rounded-3xl blur-2xl group-hover:blur-3xl transition-all opacity-50">
-            </div>
-            <div
-              class="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl ring-1 ring-gray-200 dark:ring-gray-800">
-              <img [src]="project.imageUrl" [alt]="project.title"
-                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
-            </div>
-          </div>
+        <!-- Colonne droite - Images -->
+        <div class="grid grid-cols-2 gap-4">
+          @for (img of (project.images && project.images.length > 0 ? project.images.slice(0, 3) : [project.imageUrl, project.imageUrl, project.imageUrl]); track img; let i = $index) {
+            @if (i === 0) {
+              <!-- Grande image à gauche -->
+              <div (click)="openImage(img)" class="col-span-1 row-span-2 rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700 cursor-pointer hover:opacity-90 transition-opacity">
+                <img [src]="img" [alt]="project.title" class="w-full h-full object-cover" />
+              </div>
+            } @else {
+              <!-- Petites images à droite -->
+              <div (click)="openImage(img)" class="col-span-1 rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700 aspect-[4/3] cursor-pointer hover:opacity-90 transition-opacity">
+                <img [src]="img" [alt]="project.title" class="w-full h-full object-cover" />
+              </div>
+            }
+          }
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contenu principal -->
-  <section class="py-16 lg:py-24">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-5xl mx-auto">
+  <!-- Section Aperçu visuel -->
+  <section class="py-12 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-6 lg:px-12">
+      <div class="mb-8">
+        <h2 class="text-[28px] font-bold text-black dark:text-white mb-2">Aperçu visuel</h2>
+        <div class="w-full h-[3px] bg-[#22c55e]"></div>
+      </div>
 
-        <!-- Description -->
-        <div
-          class="bg-white dark:bg-gray-900 rounded-3xl p-8 lg:p-12 shadow-xl mb-12 border border-gray-200 dark:border-gray-800">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="p-3 bg-primary/10 rounded-xl">
-              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h2 class="text-3xl font-bold text-gray-900 dark:text-white">À propos du projet</h2>
-          </div>
-          <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-            {{ project.fullDescription }}
-          </p>
-        </div>
-
-        <!-- Fonctionnalités -->
-        @if (project.features && project.features.length > 0) {
-        <div class="mb-12">
-          <div class="flex items-center gap-3 mb-8">
-            <div class="p-3 bg-primary/10 rounded-xl">
-              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Fonctionnalités clés</h2>
-          </div>
-
-          <div class="grid md:grid-cols-2 gap-6">
-            @for (feature of project.features; track feature; let i = $index) {
-            <div
-              class="group relative bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-800 hover:border-primary/50 dark:hover:border-primary/50">
-              <div class="flex items-start gap-4">
-                <div
-                  class="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-primary to-primary/70 rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-lg">
-                  {{ i + 1 }}
-                </div>
-                <p class="text-gray-700 dark:text-gray-300 leading-relaxed pt-0.5">{{ feature }}</p>
-              </div>
-            </div>
-            }
-          </div>
+      <!-- Grille d'images -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        @for (img of (project.images && project.images.length > 0 ? project.images : [project.imageUrl]); track img) {
+        <div (click)="openImage(img)" class="rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700 aspect-video cursor-pointer hover:opacity-90 transition-opacity">
+          <img [src]="img" [alt]="project.title" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
         </div>
         }
-
-        <!-- Galerie d'images / Captures d'écran -->
-        <div class="mb-12">
-          <div class="flex items-center gap-3 mb-8">
-            <div class="p-3 bg-primary/10 rounded-xl">
-              <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Aperçu visuel</h2>
+        @if (project.images && project.images.length === 4) {
+          <!-- 5ème image plus grande si nécessaire -->
+          <div (click)="openImage(project.images[0])" class="col-span-2 md:col-span-2 rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700 aspect-video cursor-pointer hover:opacity-90 transition-opacity">
+            <img [src]="project.images[0]" [alt]="project.title" class="w-full h-full object-cover" />
           </div>
-
-          <div class="grid md:grid-cols-2 gap-6">
-            @for (img of (project.images && project.images.length > 0 ? project.images : [project.imageUrl]); track img;
-            let i = $index) {
-            <div
-              class="group relative aspect-video rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-              <img [src]="img" [alt]="project.title + ' - Vue ' + (i + 1)"
-                class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div class="absolute bottom-4 left-4 right-4">
-                  <p class="text-white font-semibold">Vue {{ i + 1 }}</p>
-                </div>
-              </div>
-            </div>
-            }
-          </div>
-        </div>
-
-        <!-- CTA Final -->
-        <div
-          class="relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-primary/80 rounded-2xl p-6 text-center shadow-xl">
-          <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent_50%)]">
-          </div>
-          <div class="relative">
-            <h2 class="text-xl font-bold text-white mb-2">
-              Intéressé par ce type de projet ?
-            </h2>
-            <p class="text-sm text-white/90 mb-4 max-w-xl mx-auto">
-              Discutons de vos besoins et voyons comment je peux vous aider à réaliser vos objectifs.
-            </p>
-            <button (click)="goBack()"
-              class="group inline-flex items-center justify-center gap-2 bg-white text-primary px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
-              <svg class="w-4 h-4 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor"
-                viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-              Voir tous les projets
-            </button>
-          </div>
-        </div>
+        }
       </div>
     </div>
   </section>
+  }
+
+  <!-- Lightbox pour afficher l'image en plein écran -->
+  @if (selectedImage) {
+  <div (click)="closeImage()" class="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 animate-fadeIn">
+    <button (click)="closeImage()" class="absolute top-4 right-4 z-[101] w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <img [src]="selectedImage" [alt]="project?.title" class="max-w-full max-h-full object-contain rounded-lg" (click)="$event.stopPropagation()" />
+  </div>
   }
 </div>

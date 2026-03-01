@@ -6,7 +6,8 @@
     @for (project of projects; track project.id) {
       <div 
         (click)="navigateToProject(project.id)"
-        class="bg-white dark:bg-gray-900/40 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-800 cursor-pointer hover:scale-105">
+        style="cursor: pointer;"
+        class="bg-white dark:bg-gray-900/40 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-800 hover:scale-105">
         <img [alt]="project.title" [src]="project.imageUrl" class="w-full h-48 object-cover" />
         <div class="p-6">
           <div class="flex justify-between items-start mb-2">

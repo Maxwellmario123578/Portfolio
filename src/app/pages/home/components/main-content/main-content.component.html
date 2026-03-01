@@ -269,7 +269,7 @@
         </section>
 
         <!-- Formations et Certificats Section -->
-        <section id="education" class="scroll-mt-32 py-20">
+        <section id="education" class="scroll-mt-32 py-12">
             <div class="mb-16">
                 <h2 class="text-4xl font-syne font-bold text-black dark:text-white inline-block">
                     {{ 'education.title' | translate }}
@@ -381,33 +381,80 @@
                     @if (selectedEducationId) {
                     @for (item of education; track item.id) {
                     @if (item.id === selectedEducationId) {
-                    <div class="p-8 text-center animate-fadeIn">
-                        <div
-                            class="w-24 h-24 mx-auto mb-4 bg-green-500/10 rounded-full flex items-center justify-center">
-                            <span class="material-symbols-outlined text-green-600 text-5xl">school</span>
+                    <!-- Slideshow pour les écoles -->
+                    <div class="relative w-full h-full">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            @if (item.organization.includes('Saint-Jean') || item.organization.includes('Saint Jean')) {
+                                <img [src]="currentSchoolImage === 0 ? 'Ecole/SaintJean.jpg' : 'Ecole/SaintJean_1.jpg'" 
+                                     [alt]="item.title" 
+                                     class="max-h-full max-w-full object-contain transition-opacity duration-500"
+                                     [class.opacity-0]="isTransitioning"
+                                     [class.opacity-100]="!isTransitioning">
+                            } @else if (item.organization.includes('Vogt')) {
+                                <img [src]="currentSchoolImage === 0 ? 'Ecole/Vogt.png' : 'Ecole/Vogt_1.jpeg'" 
+                                     [alt]="item.title" 
+                                     class="max-h-full max-w-full object-contain transition-opacity duration-500"
+                                     [class.opacity-0]="isTransitioning"
+                                     [class.opacity-100]="!isTransitioning">
+                            } @else {
+                                <!-- Fallback pour autres écoles -->
+                                <div class="p-8 text-center">
+                                    <div class="w-24 h-24 mx-auto mb-4 bg-green-500/10 rounded-full flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-green-600 text-5xl">school</span>
+                                    </div>
+                                    <h3 class="font-syne font-bold text-2xl text-gray-800 dark:text-gray-200 mb-2">{{ item.title }}</h3>
+                                    <p class="text-gray-600 dark:text-gray-400 font-medium">{{ item.organization }}</p>
+                                    <p class="text-sm text-gray-500 dark:text-gray-500 mt-2">{{ item.period }}</p>
+                                </div>
+                            }
                         </div>
-                        <h3 class="font-syne font-bold text-2xl text-gray-800 dark:text-gray-200 mb-2">{{ item.title }}</h3>
-                        <p class="text-gray-600 dark:text-gray-400 font-medium">{{ item.organization }}</p>
-                        <p class="text-sm text-gray-500 dark:text-gray-500 mt-2">{{ item.period }}</p>
+                        
+                        <!-- Indicateurs de slide -->
+                        @if (item.organization.includes('Saint-Jean') || item.organization.includes('Saint Jean') || item.organization.includes('Vogt')) {
+                        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                            <button (click)="setSchoolImage(0)" 
+                                    class="w-2 h-2 rounded-full transition-all"
+                                    [class.bg-green-600]="currentSchoolImage === 0"
+                                    [class.w-6]="currentSchoolImage === 0"
+                                    [class.bg-gray-400]="currentSchoolImage !== 0"></button>
+                            <button (click)="setSchoolImage(1)" 
+                                    class="w-2 h-2 rounded-full transition-all"
+                                    [class.bg-green-600]="currentSchoolImage === 1"
+                                    [class.w-6]="currentSchoolImage === 1"
+                                    [class.bg-gray-400]="currentSchoolImage !== 1"></button>
+                        </div>
+                        }
                     </div>
                     }
                     }
                     @for (cert of certifications; track cert.id) {
                     @if (cert.id === selectedEducationId) {
-                    <div class="p-8 text-center animate-fadeIn">
+                    <div class="w-full h-full flex items-center justify-center animate-fadeIn">
                         @if (cert.imageUrl) {
-                        <div class="w-full h-48 mb-4 flex items-center justify-center">
+                        <!-- Afficher uniquement l'image si elle existe (cliquable) -->
+                        <div (click)="openCertImage(cert.imageUrl)" class="relative w-full h-full flex items-center justify-center p-4 cursor-pointer hover:opacity-90 transition-opacity">
                             <img [src]="cert.imageUrl" [alt]="cert.title" class="max-h-full max-w-full object-contain">
+                            <!-- Badge "En cours" si la certification est en cours -->
+                            @if (cert.date.includes('cours') || cert.date.includes('Progress')) {
+                            <div class="absolute top-8 right-8 bg-orange-500 text-white px-4 py-2 rounded-full font-semibold text-sm shadow-lg flex items-center gap-2">
+                                <svg class="w-4 h-4 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                                </svg>
+                                <span>{{ cert.date }}</span>
+                            </div>
+                            }
                         </div>
                         } @else {
-                        <div
-                            class="w-24 h-24 mx-auto mb-4 bg-green-500/10 rounded-full flex items-center justify-center">
-                            <span class="material-symbols-outlined text-green-600 text-5xl">workspace_premium</span>
+                        <!-- Afficher l'icône et le texte si pas d'image -->
+                        <div class="p-8 text-center">
+                            <div class="w-24 h-24 mx-auto mb-4 bg-green-500/10 rounded-full flex items-center justify-center">
+                                <span class="material-symbols-outlined text-green-600 text-5xl">workspace_premium</span>
+                            </div>
+                            <h3 class="font-syne font-bold text-2xl text-gray-800 dark:text-gray-200 mb-2">{{ cert.title }}</h3>
+                            <p class="text-gray-600 dark:text-gray-400 font-medium">{{ cert.issuer }}</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-500 mt-2">{{ cert.date }}</p>
                         </div>
                         }
-                        <h3 class="font-syne font-bold text-2xl text-gray-800 dark:text-gray-200 mb-2">{{ cert.title }}</h3>
-                        <p class="text-gray-600 dark:text-gray-400 font-medium">{{ cert.issuer }}</p>
-                        <p class="text-sm text-gray-500 dark:text-gray-500 mt-2">{{ cert.date }}</p>
                     </div>
                     }
                     }
@@ -420,7 +467,7 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="scroll-mt-32 relative py-20 overflow-hidden">
+        <section id="skills" class="scroll-mt-32 relative py-12 overflow-hidden">
 
             <div class="container mx-auto px-6 relative z-10">
                 <!-- Title with Precise 100% matching Underline -->
@@ -474,7 +521,7 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="scroll-mt-32 py-20">
+        <section id="projects" class="scroll-mt-32 py-12">
             <div class="mb-12">
                 <h2 class="text-4xl font-syne font-bold text-black dark:text-white inline-block">
                     {{ 'projects.title' | translate }}
@@ -484,7 +531,14 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 @for (project of projects; track project.title) {
                 <div
-                    class="bg-white dark:bg-gray-800 flex flex-col rounded-[16px] shadow-sm border border-gray-100 dark:border-gray-700 p-5 hover:shadow-md transition-all duration-200">
+                    (click)="navigateToProject(project.id)"
+                    (keydown.enter)="navigateToProject(project.id)"
+                    (keydown.space)="navigateToProject(project.id); $event.preventDefault()"
+                    tabindex="0"
+                    role="button"
+                    [attr.aria-label]="'Voir le projet ' + project.title"
+                    style="cursor: pointer;"
+                    class="bg-white dark:bg-gray-800 flex flex-col rounded-[16px] shadow-sm border border-gray-100 dark:border-gray-700 p-5 hover:shadow-md transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:ring-offset-2 dark:focus:ring-offset-gray-900">
 
                     <!-- 1. Image ou Spinner (en cours) -->
                     @if (project.status === 'en cours') {
@@ -533,7 +587,7 @@
         </section>
 
         <!-- Volunteers Section -->
-        <section id="volunteers" class="scroll-mt-32 py-20">
+        <section id="volunteers" class="scroll-mt-32 py-12">
             <!-- Title with green underline -->
             <div class="mb-2">
                 <h2 class="font-syne font-bold text-[28px] text-black dark:text-white inline-block">
@@ -609,19 +663,58 @@
             </div>
 
             <!-- Droite : Formulaire -->
-            <div class="flex-1 flex flex-col gap-3 w-full">
-                <input type="text" [placeholder]="'contact.name' | translate"
+            <form (ngSubmit)="onSubmitContact()" #contactForm="ngForm" class="flex-1 flex flex-col gap-3 w-full">
+                <input type="text" name="name" [(ngModel)]="contactFormData.name" required
+                    [placeholder]="'contact.name' | translate"
                     class="w-full bg-transparent border border-white/40 text-white placeholder-white/70 text-[13px] font-syne px-4 py-3 rounded-[6px] outline-none focus:border-white transition-colors" />
-                <input type="email" [placeholder]="'contact.email' | translate"
+                <input type="email" name="email" [(ngModel)]="contactFormData.email" required email
+                    [placeholder]="'contact.email' | translate"
                     class="w-full bg-transparent border border-white/40 text-white placeholder-white/70 text-[13px] font-syne px-4 py-3 rounded-[6px] outline-none focus:border-white transition-colors" />
-                <textarea [placeholder]="'contact.message' | translate" rows="5"
+                <input type="text" name="subject" [(ngModel)]="contactFormData.subject" required
+                    [placeholder]="'contact.subject' | translate"
+                    class="w-full bg-transparent border border-white/40 text-white placeholder-white/70 text-[13px] font-syne px-4 py-3 rounded-[6px] outline-none focus:border-white transition-colors" />
+                <textarea name="message" [(ngModel)]="contactFormData.message" required rows="5"
+                    [placeholder]="'contact.message' | translate"
                     class="w-full bg-transparent border border-white/40 text-white placeholder-white/70 text-[13px] font-syne px-4 py-3 rounded-[6px] outline-none focus:border-white transition-colors resize-none"></textarea>
-                <button type="button"
-                    class="w-full bg-white text-gray-800 font-syne font-semibold text-[14px] py-3 rounded-[6px] hover:bg-gray-100 transition-colors cursor-pointer">
-                    {{ 'contact.send' | translate }}
+                
+                @if (contactError) {
+                <div class="text-red-200 text-sm bg-red-500/20 px-4 py-2 rounded-[6px] border border-red-500/30">
+                    {{ contactError }}
+                </div>
+                }
+                
+                @if (contactSuccess) {
+                <div class="text-green-200 text-sm bg-green-500/20 px-4 py-2 rounded-[6px] border border-green-500/30">
+                    {{ contactSuccess }}
+                </div>
+                }
+                
+                <button type="submit" [disabled]="!contactForm.valid || isSubmitting"
+                    class="w-full bg-white text-gray-800 font-syne font-semibold text-[14px] py-3 rounded-[6px] hover:bg-gray-100 transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
+                    @if (isSubmitting) {
+                        <svg class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        <span>{{ 'contact.sending' | translate }}</span>
+                    } @else {
+                        <span>{{ 'contact.send' | translate }}</span>
+                    }
                 </button>
-            </div>
+            </form>
         </div>
     </section>
+
+    <!-- Lightbox pour afficher l'image de certification en plein écran -->
+    @if (selectedCertImage) {
+    <div (click)="closeCertImage()" class="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 animate-fadeIn">
+        <button (click)="closeCertImage()" class="absolute top-4 right-4 z-[101] w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <img [src]="selectedCertImage" alt="Certification" class="max-w-full max-h-full object-contain rounded-lg" (click)="$event.stopPropagation()" />
+    </div>
+    }
 
 </div>
