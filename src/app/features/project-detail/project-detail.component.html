@@ -38,12 +38,27 @@
 
           <!-- Boutons d'action - Toujours afficher les deux boutons -->
           <div class="flex flex-wrap gap-3">
-            <button class="px-5 py-2.5 bg-[#1e5543] text-white text-sm font-medium rounded-full hover:bg-[#164433] transition-colors">
+            @if (project.githubUrl) {
+            <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer"
+              class="px-5 py-2.5 bg-[#1e5543] text-white text-sm font-medium rounded-full hover:bg-[#164433] transition-colors inline-block">
               Accéder au dépôt Git
-            </button>
-            <button class="px-5 py-2.5 bg-[#1e5543] text-white text-sm font-medium rounded-full hover:bg-[#164433] transition-colors">
+            </a>
+            } @else {
+            <span class="px-5 py-2.5 bg-gray-400 text-white text-sm font-medium rounded-full cursor-not-allowed inline-block">
+              Accéder au dépôt Git
+            </span>
+            }
+            
+            @if (project.liveUrl) {
+            <a [href]="project.liveUrl" target="_blank" rel="noopener noreferrer"
+              class="px-5 py-2.5 bg-[#1e5543] text-white text-sm font-medium rounded-full hover:bg-[#164433] transition-colors inline-block">
               Maquette Figma
-            </button>
+            </a>
+            } @else {
+            <span class="px-5 py-2.5 bg-gray-400 text-white text-sm font-medium rounded-full cursor-not-allowed inline-block">
+              Maquette Figma
+            </span>
+            }
           </div>
 
           <!-- Statut -->
