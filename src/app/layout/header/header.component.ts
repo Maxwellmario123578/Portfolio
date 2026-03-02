@@ -34,7 +34,16 @@ export class HeaderComponent {
   navigateToHome(section?: string): void {
     this.mobileMenuOpen = false;
     if (section) {
-      this.router.navigate(['/portfolio'], { fragment: section });
+      // Naviguer vers la page d'accueil avec le fragment
+      this.router.navigate(['/portfolio'], { fragment: section }).then(() => {
+        // Attendre que la navigation soit terminée, puis scroller
+        setTimeout(() => {
+          const element = document.getElementById(section);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
+      });
     } else {
       this.router.navigate(['/portfolio']);
     }

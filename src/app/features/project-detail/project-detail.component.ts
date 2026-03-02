@@ -43,7 +43,15 @@ export class ProjectDetailComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(['/portfolio'], { fragment: 'projects' });
+    this.router.navigate(['/portfolio'], { fragment: 'projects' }).then(() => {
+      // Attendre que la navigation soit terminée, puis scroller vers la section projets
+      setTimeout(() => {
+        const element = document.getElementById('projects');
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    });
   }
 
   openImage(imageUrl: string): void {

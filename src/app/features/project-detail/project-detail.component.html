@@ -12,6 +12,22 @@
   </div>
   } @else if (project) {
 
+  <!-- Bouton Retour -->
+  <section class="bg-white dark:bg-gray-900 pt-4 pb-2">
+    <div class="container mx-auto px-6 lg:px-12">
+      <button (click)="goBack()"
+              (keydown.enter)="goBack()"
+              (keydown.space)="goBack(); $event.preventDefault()"
+              aria-label="Retour à la liste des projets"
+              class="inline-flex items-center gap-2 px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-[#1e5543] dark:hover:text-[#22c55e] transition-colors group focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:ring-offset-2 rounded-lg">
+        <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+        </svg>
+        <span class="font-medium">Retour aux projets</span>
+      </button>
+    </div>
+  </section>
+
   <!-- Contenu principal -->
   <section class="bg-white dark:bg-gray-900 py-8">
     <div class="container mx-auto px-6 lg:px-12">
@@ -154,13 +170,22 @@
 
   <!-- Lightbox pour afficher l'image en plein écran -->
   @if (selectedImage) {
-  <div (click)="closeImage()" class="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 animate-fadeIn">
-    <button (click)="closeImage()" class="absolute top-4 right-4 z-[101] w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors">
-      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <div (click)="closeImage()"
+       (keydown.escape)="closeImage()"
+       role="dialog"
+       aria-modal="true"
+       aria-label="Visualisation de l'image en plein écran"
+       class="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 animate-fadeIn">
+    <button (click)="closeImage()"
+            (keydown.enter)="closeImage()"
+            (keydown.space)="closeImage(); $event.preventDefault()"
+            aria-label="Fermer la visualisation"
+            class="absolute top-4 right-4 z-[101] w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white">
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
-    <img [src]="selectedImage" [alt]="project?.title" class="max-w-full max-h-full object-contain rounded-lg" (click)="$event.stopPropagation()" />
+    <img [src]="selectedImage" [alt]="project?.title + ' - Image en plein écran'" class="max-w-full max-h-full object-contain rounded-lg" (click)="$event.stopPropagation()" />
   </div>
   }
 </div>
