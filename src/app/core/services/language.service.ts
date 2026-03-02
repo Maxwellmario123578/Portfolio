@@ -97,7 +97,13 @@ export class LanguageService {
         technologies: 'Technologies',
         visualPreview: 'Aperçu visuel',
         viewImageFullscreen: 'Voir l\'image en plein écran',
-        closeVisualization: 'Fermer la visualisation'
+        closeVisualization: 'Fermer la visualisation',
+        workInProgress: 'Projet en développement',
+        comingSoonTitle: 'Bientôt disponible',
+        comingSoonMessage: 'Ce projet est actuellement en cours de développement. Les détails complets et les captures d\'écran seront disponibles prochainement.',
+        lookLikeLost: 'On dirait que vous êtes perdu',
+        pageNotAvailable: 'La page que vous recherchez n\'est pas disponible !',
+        goToHome: 'Retour à l\'accueil'
       },
       common: {
         inProgress: 'En cours',
@@ -166,7 +172,13 @@ export class LanguageService {
         technologies: 'Technologies',
         visualPreview: 'Visual Preview',
         viewImageFullscreen: 'View image fullscreen',
-        closeVisualization: 'Close visualization'
+        closeVisualization: 'Close visualization',
+        workInProgress: 'Project in development',
+        comingSoonTitle: 'Coming Soon',
+        comingSoonMessage: 'This project is currently under development. Full details and screenshots will be available soon.',
+        lookLikeLost: 'Look like you\'re lost',
+        pageNotAvailable: 'The page you are looking for is not available!',
+        goToHome: 'Go to Home'
       },
       common: {
         inProgress: 'In Progress',

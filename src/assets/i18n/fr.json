@@ -56,6 +56,12 @@
     "technologies": "Technologies",
     "visualPreview": "Aperçu visuel",
     "viewImageFullscreen": "Voir l'image en plein écran",
-    "closeVisualization": "Fermer la visualisation"
+    "closeVisualization": "Fermer la visualisation",
+    "workInProgress": "Projet en développement",
+    "comingSoonTitle": "Bientôt disponible",
+    "comingSoonMessage": "Ce projet est actuellement en cours de développement. Les détails complets et les captures d'écran seront disponibles prochainement.",
+    "lookLikeLost": "On dirait que vous êtes perdu",
+    "pageNotAvailable": "La page que vous recherchez n'est pas encore disponible !",
+    "goToHome": "Retour à l'accueil"
   }
 }

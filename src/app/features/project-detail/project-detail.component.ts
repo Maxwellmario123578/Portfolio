@@ -92,5 +92,13 @@ export class ProjectDetailComponent implements OnInit {
   closeImage(): void {
     this.selectedImage = null;
   }
+
+  isInProgress(): boolean {
+    return this.project?.status === 'en cours';
+  }
+
+  getStatusTranslationKey(): string {
+    return this.isInProgress() ? 'projects.inProgress' : 'projects.completed';
+  }
 }
 

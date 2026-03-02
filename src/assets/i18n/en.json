@@ -56,6 +56,12 @@
     "technologies": "Technologies",
     "visualPreview": "Visual Preview",
     "viewImageFullscreen": "View image fullscreen",
-    "closeVisualization": "Close visualization"
+    "closeVisualization": "Close visualization",
+    "workInProgress": "Project in development",
+    "comingSoonTitle": "Coming Soon",
+    "comingSoonMessage": "This project is currently under development. Full details and screenshots will be available soon.",
+    "lookLikeLost": "Look like you're lost",
+    "pageNotAvailable": "The page you are looking for is not yet available!",
+    "goToHome": "Go to Home"
   }
 }
