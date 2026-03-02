@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, inject, effect } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Project } from '../../core/models';
 import { PortfolioDataService } from '../../core/services/portfolio-data.service';
+import { LanguageService } from '../../core/services/language.service';
 import { HeaderComponent } from '../../layout/header/header.component';
 
 @Component({
@@ -16,17 +17,35 @@ export class ProjectDetailComponent implements OnInit {
   project?: Project;
   loading = true;
   selectedImage: string | null = null;
+  private projectId: string | null = null;
+  
+  languageService = inject(LanguageService);
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private portfolioDataService: PortfolioDataService
-  ) {}
+  ) {
+    // Écouter les changements de langue avec effect
+    effect(() => {
+      const currentLang = this.languageService.currentLanguage();
+      // Recharger le projet quand la langue change
+      if (this.projectId) {
+        this.loadProject();
+      }
+    });
+  }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.portfolioDataService.getProjectById(id).subscribe({
+    this.projectId = this.route.snapshot.paramMap.get('id');
+    // Charger le projet initial
+    this.loadProject();
+  }
+
+  private loadProject(): void {
+    if (this.projectId) {
+      this.loading = true;
+      this.portfolioDataService.getProjectById(this.projectId).subscribe({
         next: (project) => {
           this.project = project;
           this.loading = false;
