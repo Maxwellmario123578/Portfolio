@@ -23,14 +23,6 @@ const handler = async (req, res) => {
     return res.status(405).json({ success: false, message: 'Method not allowed' });
   }
 
-  // Debug: Log des variables d'environnement
-  console.log('Environment variables:', {
-    SMTP_HOST: process.env.SMTP_HOST || 'NOT SET',
-    SMTP_PORT: process.env.SMTP_PORT || 'NOT SET',
-    SMTP_USER: process.env.SMTP_USER || 'NOT SET',
-    SMTP_PASS: process.env.SMTP_PASS ? 'SET' : 'NOT SET',
-  });
-
   const { name, email, subject, message } = req.body;
 
   // Validation
@@ -49,8 +41,8 @@ const handler = async (req, res) => {
     });
   }
 
-  // Configuration du transporteur SMTP avec les variables d'environnement Vercel
-  const smtpConfig = {
+  // Configuration du transporteur SMTP
+  const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST || 'smtp.gmail.com',
     port: parseInt(process.env.SMTP_PORT || '587'),
     secure: process.env.SMTP_SECURE === 'true',
@@ -58,17 +50,7 @@ const handler = async (req, res) => {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS,
     },
-  };
-
-  console.log('SMTP Config:', {
-    host: smtpConfig.host,
-    port: smtpConfig.port,
-    secure: smtpConfig.secure,
-    user: smtpConfig.auth.user ? 'SET' : 'NOT SET',
-    pass: smtpConfig.auth.pass ? 'SET' : 'NOT SET',
   });
-
-  const transporter = nodemailer.createTransport(smtpConfig);
 
   const mailOptions = {
     from: `"${name}" <${process.env.SMTP_FROM}>`,
@@ -114,18 +96,11 @@ ${message}
       message: 'Email envoyé avec succès',
     });
   } catch (error) {
-    console.error('Erreur lors de l\'envoi de l\'email:', error);
+    console.error('Erreur lors de l\'envoi de l\'email');
     
     return res.status(500).json({
       success: false,
-      message: 'Erreur lors de l\'envoi de l\'email',
-      error: error.message,
-      details: {
-        host: process.env.SMTP_HOST,
-        port: process.env.SMTP_PORT,
-        user: process.env.SMTP_USER ? 'configuré' : 'manquant',
-        pass: process.env.SMTP_PASS ? 'configuré' : 'manquant',
-      }
+      message: 'Erreur lors de l\'envoi de l\'email. Veuillez réessayer plus tard.',
     });
   }
 };

@@ -24,9 +24,7 @@ export class ContactService {
     ? 'http://localhost:3000/api/contact'
     : '/api/contact';
 
-  constructor(private http: HttpClient) {
-    console.log('Contact API URL:', this.apiUrl);
-  }
+  constructor(private http: HttpClient) {}
 
   sendEmail(formData: ContactForm): Observable<ContactResponse> {
     return this.http.post<ContactResponse>(this.apiUrl, formData);

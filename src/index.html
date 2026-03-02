@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>KONMENECK - Etudiant en Informatique et Systeme d'Information</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Masewell Mathurin KONMENECK - Étudiant en Ingénierie des Systèmes d'Information, spécialisé en développement logiciel, data science et intelligence artificielle" />
+  <meta name="keywords" content="portfolio, développeur, data science, intelligence artificielle, ingénieur informatique" />
+  <meta name="author" content="Masewell Mathurin KONMENECK" />
+  <title>KONMENECK - Étudiant en Informatique et Système d'Information</title>
   <base href="/" />
   <link rel="icon" type="image/x-icon" href="favicon.ico?v=2" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -52,10 +55,33 @@
     body {
       min-height: max(884px, 100dvh);
     }
+
+    /* Amélioration du focus pour l'accessibilité */
+    *:focus-visible {
+      outline: 2px solid #22c55e;
+      outline-offset: 2px;
+    }
+
+    /* Skip to main content link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #22c55e;
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
   </style>
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
   <app-root></app-root>
 </body>
 

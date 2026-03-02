@@ -387,7 +387,6 @@ export class MainContentComponent implements OnInit, OnDestroy {
                 this.contactError = this.languageService.currentLanguage() === 'fr'
                     ? 'Erreur lors de l\'envoi du message. Veuillez réessayer.'
                     : 'Error sending message. Please try again.';
-                console.error('Error sending email:', error);
             }
         });
     }
