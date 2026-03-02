@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { PortfolioDataService } from '../../../../core/services/portfolio-data.service';
 import { ContactService, ContactForm } from '../../../../core/services/contact.service';
+import { FormSecurityService } from '../../../../core/services/form-security.service';
 import { SkillCategory, TimelineItem, Project, Volunteer, Certification } from '../../../../core/models';
 import { HttpClientModule } from '@angular/common/http';
 import { ThemeService } from '../../../../core/services/theme.service';
@@ -59,7 +60,8 @@ export class MainContentComponent implements OnInit, OnDestroy {
     constructor(
         private portfolioDataService: PortfolioDataService,
         private router: Router,
-        private contactService: ContactService
+        private contactService: ContactService,
+        private formSecurityService: FormSecurityService
     ) {
         // Écouter les changements de langue et recharger les données
         effect(() => {
@@ -356,11 +358,33 @@ export class MainContentComponent implements OnInit, OnDestroy {
     onSubmitContact(): void {
         if (this.isSubmitting) return;
 
-        this.isSubmitting = true;
+        // Vérifier le rate limiting
+        if (!this.formSecurityService.canSubmit()) {
+            const remainingTime = this.formSecurityService.getRemainingTime();
+            this.contactError = this.languageService.currentLanguage() === 'fr'
+                ? `Veuillez attendre ${remainingTime} secondes avant de renvoyer un message.`
+                : `Please wait ${remainingTime} seconds before sending another message.`;
+            return;
+        }
+
         this.contactError = null;
         this.contactSuccess = null;
 
-        this.contactService.sendEmail(this.contactFormData).subscribe({
+        // Valider et nettoyer les données
+        const validation = this.formSecurityService.validateAndSanitizeForm(this.contactFormData);
+
+        if (!validation.isValid) {
+            // Afficher les erreurs de validation
+            this.contactError = validation.errors.join(' | ');
+            return;
+        }
+
+        // Utiliser les données nettoyées
+        const sanitizedData = validation.sanitizedData;
+
+        this.isSubmitting = true;
+
+        this.contactService.sendEmail(sanitizedData).subscribe({
             next: (response) => {
                 this.isSubmitting = false;
                 if (response.success) {
