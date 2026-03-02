@@ -24,7 +24,7 @@
         (click)="toggleLanguage()"
         class="flex items-center justify-center w-[50px] h-[50px] rounded-lg bg-[#1e5543] text-white font-semibold text-sm hover:bg-[#164433] transition-all shadow-[0_2px_8px_rgba(0,0,0,0.1)]"
         [attr.aria-label]="'Changer la langue en ' + (languageService.currentLanguage() === 'fr' ? 'anglais' : 'français')">
-        <span class="w-[31px] h-[31px] flex items-center justify-center" translate="no">
+        <span class="w-[31px] h-[31px] flex items-center justify-center" [attr.translate]="'no'">
           {{ languageService.currentLanguage() === 'fr' ? 'FR' : 'EN' }}
         </span>
       </button>
