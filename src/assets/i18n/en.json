@@ -17,7 +17,9 @@
   "education": {
     "title": "Education and Certificates",
     "selectItem": "Select an education or certification",
-    "viewCredential": "View credential"
+    "viewCredential": "View credential",
+    "formations": "Education",
+    "certifications": "Certifications"
   },
   "skills": {
     "title": "Skills",
@@ -38,6 +40,22 @@
   },
   "contact": {
     "title": "Contacts",
-    "send": "Send"
+    "send": "Send",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "sending": "Sending..."
+  },
+  "projectDetail": {
+    "backToProjects": "Back to projects",
+    "loading": "Loading project...",
+    "accessGitRepo": "Access Git Repository",
+    "figmaMockup": "Figma Mockup",
+    "status": "Status",
+    "technologies": "Technologies",
+    "visualPreview": "Visual Preview",
+    "viewImageFullscreen": "View image fullscreen",
+    "closeVisualization": "Close visualization"
   }
 }

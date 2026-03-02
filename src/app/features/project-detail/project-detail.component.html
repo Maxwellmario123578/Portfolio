@@ -7,7 +7,7 @@
     <div class="text-center">
       <div class="inline-block animate-spin rounded-full h-16 w-16 border-4 border-primary/30 border-t-primary mb-4">
       </div>
-      <p class="text-gray-600 dark:text-gray-400 font-medium">Chargement du projet...</p>
+      <p class="text-gray-600 dark:text-gray-400 font-medium">{{ 'projectDetail.loading' | translate }}</p>
     </div>
   </div>
   } @else if (project) {
@@ -18,12 +18,12 @@
       <button (click)="goBack()"
               (keydown.enter)="goBack()"
               (keydown.space)="goBack(); $event.preventDefault()"
-              aria-label="Retour à la liste des projets"
+              [attr.aria-label]="'projectDetail.backToProjects' | translate"
               class="inline-flex items-center gap-2 px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-[#1e5543] dark:hover:text-[#22c55e] transition-colors group focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:ring-offset-2 rounded-lg">
         <svg class="w-5 h-5 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
         </svg>
-        <span class="font-medium">Retour aux projets</span>
+        <span class="font-medium">{{ 'projectDetail.backToProjects' | translate }}</span>
       </button>
     </div>
   </section>
@@ -57,22 +57,22 @@
             @if (project.githubUrl) {
             <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer"
               class="px-5 py-2.5 bg-[#1e5543] text-white text-sm font-medium rounded-full hover:bg-[#164433] transition-colors inline-block">
-              Accéder au dépôt Git
+              {{ 'projectDetail.accessGitRepo' | translate }}
             </a>
             } @else {
             <span class="px-5 py-2.5 bg-gray-400 text-white text-sm font-medium rounded-full cursor-not-allowed inline-block">
-              Accéder au dépôt Git
+              {{ 'projectDetail.accessGitRepo' | translate }}
             </span>
             }
             
             @if (project.liveUrl) {
             <a [href]="project.liveUrl" target="_blank" rel="noopener noreferrer"
               class="px-5 py-2.5 bg-[#1e5543] text-white text-sm font-medium rounded-full hover:bg-[#164433] transition-colors inline-block">
-              Maquette Figma
+              {{ 'projectDetail.figmaMockup' | translate }}
             </a>
             } @else {
             <span class="px-5 py-2.5 bg-gray-400 text-white text-sm font-medium rounded-full cursor-not-allowed inline-block">
-              Maquette Figma
+              {{ 'projectDetail.figmaMockup' | translate }}
             </span>
             }
           </div>
@@ -80,14 +80,14 @@
           <!-- Statut -->
           <div>
             <p class="text-[15px] text-black dark:text-white">
-              <span class="font-bold">Statut : </span>
-              <span class="font-bold">{{ project.status === 'en cours' ? 'En cours' : 'Terminé' }}</span>
+              <span class="font-bold">{{ 'projectDetail.status' | translate }} : </span>
+              <span class="font-bold">{{ project.status === 'en cours' ? ('projects.inProgress' | translate) : ('projects.completed' | translate) }}</span>
             </p>
           </div>
 
           <!-- Technologies -->
           <div>
-            <h3 class="text-[15px] font-semibold text-gray-700 dark:text-gray-300 mb-3">Technologies</h3>
+            <h3 class="text-[15px] font-semibold text-gray-700 dark:text-gray-300 mb-3">{{ 'projectDetail.technologies' | translate }}</h3>
             <div class="flex flex-wrap gap-2">
               @for (tech of project.technologies; track tech) {
               <span class="px-4 py-1.5 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm font-medium rounded-full border border-gray-300 dark:border-gray-600">
@@ -134,7 +134,7 @@
   <section class="py-12 bg-white dark:bg-gray-900">
     <div class="container mx-auto px-6 lg:px-12">
       <div class="mb-8">
-        <h2 class="text-[28px] font-bold text-black dark:text-white mb-2">Aperçu visuel</h2>
+        <h2 class="text-[28px] font-bold text-black dark:text-white mb-2">{{ 'projectDetail.visualPreview' | translate }}</h2>
         <div class="w-full h-[3px] bg-[#22c55e]"></div>
       </div>
 
@@ -146,7 +146,7 @@
              (keydown.space)="openImage(img); $event.preventDefault()"
              tabindex="0"
              role="button"
-             [attr.aria-label]="'Voir l\'image ' + (i + 1) + ' en plein écran'"
+             [attr.aria-label]="('projectDetail.viewImageFullscreen' | translate) + ' ' + (i + 1)"
              class="rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700 aspect-video cursor-pointer hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:ring-offset-2">
           <img [src]="img" [alt]="project.title + ' - Aperçu ' + (i + 1)" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
         </div>
@@ -174,12 +174,12 @@
        (keydown.escape)="closeImage()"
        role="dialog"
        aria-modal="true"
-       aria-label="Visualisation de l'image en plein écran"
+       [attr.aria-label]="'projectDetail.viewImageFullscreen' | translate"
        class="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 animate-fadeIn">
     <button (click)="closeImage()"
             (keydown.enter)="closeImage()"
             (keydown.space)="closeImage(); $event.preventDefault()"
-            aria-label="Fermer la visualisation"
+            [attr.aria-label]="'projectDetail.closeVisualization' | translate"
             class="absolute top-4 right-4 z-[101] w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white">
       <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />

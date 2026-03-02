@@ -17,7 +17,9 @@
   "education": {
     "title": "Formations et Certificats",
     "selectItem": "Sélectionnez une formation ou certification",
-    "viewCredential": "Voir le certificat"
+    "viewCredential": "Voir le certificat",
+    "formations": "Formations",
+    "certifications": "Certifications"
   },
   "skills": {
     "title": "Compétences",
@@ -38,6 +40,22 @@
   },
   "contact": {
     "title": "Contacts",
-    "send": "Envoyer"
+    "send": "Envoyer",
+    "name": "Nom",
+    "email": "Email",
+    "subject": "Sujet",
+    "message": "Message",
+    "sending": "Envoi en cours..."
+  },
+  "projectDetail": {
+    "backToProjects": "Retour aux projets",
+    "loading": "Chargement du projet...",
+    "accessGitRepo": "Accéder au dépôt Git",
+    "figmaMockup": "Maquette Figma",
+    "status": "Statut",
+    "technologies": "Technologies",
+    "visualPreview": "Aperçu visuel",
+    "viewImageFullscreen": "Voir l'image en plein écran",
+    "closeVisualization": "Fermer la visualisation"
   }
 }

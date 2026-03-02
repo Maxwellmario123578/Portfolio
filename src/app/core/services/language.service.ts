@@ -84,7 +84,20 @@ export class LanguageService {
         send: 'Envoyer',
         name: 'Nom',
         email: 'Email',
-        message: 'Message'
+        subject: 'Sujet',
+        message: 'Message',
+        sending: 'Envoi en cours...'
+      },
+      projectDetail: {
+        backToProjects: 'Retour aux projets',
+        loading: 'Chargement du projet...',
+        accessGitRepo: 'Accéder au dépôt Git',
+        figmaMockup: 'Maquette Figma',
+        status: 'Statut',
+        technologies: 'Technologies',
+        visualPreview: 'Aperçu visuel',
+        viewImageFullscreen: 'Voir l\'image en plein écran',
+        closeVisualization: 'Fermer la visualisation'
       },
       common: {
         inProgress: 'En cours',
@@ -140,7 +153,20 @@ export class LanguageService {
         send: 'Send',
         name: 'Name',
         email: 'Email',
-        message: 'Message'
+        subject: 'Subject',
+        message: 'Message',
+        sending: 'Sending...'
+      },
+      projectDetail: {
+        backToProjects: 'Back to projects',
+        loading: 'Loading project...',
+        accessGitRepo: 'Access Git Repository',
+        figmaMockup: 'Figma Mockup',
+        status: 'Status',
+        technologies: 'Technologies',
+        visualPreview: 'Visual Preview',
+        viewImageFullscreen: 'View image fullscreen',
+        closeVisualization: 'Close visualization'
       },
       common: {
         inProgress: 'In Progress',

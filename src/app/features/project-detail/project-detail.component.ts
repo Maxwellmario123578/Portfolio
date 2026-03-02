@@ -19,7 +19,7 @@ export class ProjectDetailComponent implements OnInit {
   loading = true;
   selectedImage: string | null = null;
   private projectId: string | null = null;
-  private isInitialized = false;
+  private skipFirstLoad = true;
   
   languageService = inject(LanguageService);
 
@@ -33,8 +33,14 @@ export class ProjectDetailComponent implements OnInit {
       // Lire le signal pour déclencher l'effect
       const currentLang = this.languageService.currentLanguage();
       
-      // Recharger le projet seulement si déjà initialisé
-      if (this.isInitialized && this.projectId) {
+      // Ignorer le premier appel (au chargement initial)
+      if (this.skipFirstLoad) {
+        this.skipFirstLoad = false;
+        return;
+      }
+      
+      // Recharger le projet quand la langue change
+      if (this.projectId) {
         console.log('Language changed to:', currentLang, '- Reloading project');
         this.loadProject();
       }
@@ -45,8 +51,6 @@ export class ProjectDetailComponent implements OnInit {
     this.projectId = this.route.snapshot.paramMap.get('id');
     // Charger le projet initial
     this.loadProject();
-    // Marquer comme initialisé après le premier chargement
-    this.isInitialized = true;
   }
 
   private loadProject(): void {
@@ -56,7 +60,7 @@ export class ProjectDetailComponent implements OnInit {
         next: (project) => {
           this.project = project;
           this.loading = false;
-          console.log('Project loaded:', project?.title);
+          console.log('Project loaded:', project?.title, 'Category:', project?.category);
           if (!project) {
             this.router.navigate(['/']);
           }
