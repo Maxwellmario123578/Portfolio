@@ -1,19 +1,19 @@
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg md:shadow-none transition-colors duration-300">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg md:shadow-none transition-colors duration-300" role="navigation" aria-label="Navigation principale">
   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
     <!-- Logo/Title -->
-    <div class="text-xl font-syne font-bold text-[#1e5543]">Portfolio</div>
+    <h1 class="text-xl font-syne font-bold text-[#1e5543]">Portfolio</h1>
 
     <!-- Desktop Menu -->
-    <div class="hidden md:flex bg-[#1e5543] text-white rounded-full px-10 py-4 gap-10 items-center">
-      <button (click)="navigateToHome('whoami')"
+    <div class="hidden md:flex bg-[#1e5543] text-white rounded-full px-10 py-4 gap-10 items-center" role="menubar">
+      <button (click)="navigateToHome('whoami')" role="menuitem"
         class="opacity-80 hover:opacity-100 hover:bg-white hover:text-[#1e5543] transition-all text-base font-medium whitespace-nowrap px-4 py-4 -my-4 flex items-center rounded-full">{{ 'nav.whoami' | translate }}</button>
-      <button (click)="navigateToHome('education')"
+      <button (click)="navigateToHome('education')" role="menuitem"
         class="opacity-80 hover:opacity-100 hover:bg-white hover:text-[#1e5543] transition-all text-base font-medium whitespace-nowrap px-4 py-4 -my-4 flex items-center rounded-full">{{ 'nav.education' | translate }}</button>
-      <button (click)="navigateToHome('skills')"
+      <button (click)="navigateToHome('skills')" role="menuitem"
         class="opacity-80 hover:opacity-100 hover:bg-white hover:text-[#1e5543] transition-all text-base font-medium whitespace-nowrap px-4 py-4 -my-4 flex items-center rounded-full">{{ 'nav.skills' | translate }}</button>
-      <button (click)="navigateToHome('projects')"
+      <button (click)="navigateToHome('projects')" role="menuitem"
         class="opacity-80 hover:opacity-100 hover:bg-white hover:text-[#1e5543] transition-all text-base font-medium whitespace-nowrap px-4 py-4 -my-4 flex items-center rounded-full">{{ 'nav.projects' | translate }}</button>
-      <button (click)="navigateToHome('volunteers')"
+      <button (click)="navigateToHome('volunteers')" role="menuitem"
         class="opacity-80 hover:opacity-100 hover:bg-white hover:text-[#1e5543] transition-all text-base font-medium whitespace-nowrap px-4 py-4 -my-4 flex items-center rounded-full">{{ 'nav.volunteers' | translate }}</button>
     </div>
 
@@ -24,7 +24,7 @@
         (click)="toggleLanguage()"
         class="flex items-center justify-center w-[50px] h-[50px] rounded-lg bg-[#1e5543] text-white font-semibold text-sm hover:bg-[#164433] transition-all shadow-[0_2px_8px_rgba(0,0,0,0.1)]"
         [attr.aria-label]="'Changer la langue en ' + (languageService.currentLanguage() === 'fr' ? 'anglais' : 'français')">
-        <span class="w-[31px] h-[31px] flex items-center justify-center">
+        <span class="w-[31px] h-[31px] flex items-center justify-center" translate="no">
           {{ languageService.currentLanguage() === 'fr' ? 'FR' : 'EN' }}
         </span>
       </button>
@@ -35,7 +35,7 @@
         class="flex items-center justify-center w-[50px] h-[50px] rounded-lg bg-white hover:bg-gray-100 transition-all shadow-[0_2px_8px_rgba(0,0,0,0.1)]"
         [attr.aria-label]="themeService.isDarkMode() ? 'Passer en mode clair' : 'Passer en mode sombre'">
         <!-- Sun Icon (Light Mode) -->
-        <svg *ngIf="!themeService.isDarkMode()" xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 24 24" fill="none" stroke="#369B81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg *ngIf="!themeService.isDarkMode()" xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 24 24" fill="none" stroke="#369B81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="4"></circle>
           <path d="M12 2v2"></path>
           <path d="M12 20v2"></path>
@@ -47,25 +47,28 @@
           <path d="m19.07 4.93-1.41 1.41"></path>
         </svg>
         <!-- Moon Icon (Dark Mode) -->
-        <svg *ngIf="themeService.isDarkMode()" xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 24 24" fill="none" stroke="#369B81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg *ngIf="themeService.isDarkMode()" xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 24 24" fill="none" stroke="#369B81" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
         </svg>
       </button>
 
       <!-- Mobile Burger Button -->
       <button (click)="toggleMobileMenu()"
+        [attr.aria-label]="mobileMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'"
+        [attr.aria-expanded]="mobileMenuOpen"
+        aria-controls="mobile-menu"
         class="md:hidden flex flex-col gap-1.5 p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">
         <span class="w-6 h-0.5 bg-[#1e5543] transition-all" [class.rotate-45]="mobileMenuOpen"
-          [class.translate-y-2]="mobileMenuOpen"></span>
-        <span class="w-6 h-0.5 bg-[#1e5543] transition-all" [class.opacity-0]="mobileMenuOpen"></span>
+          [class.translate-y-2]="mobileMenuOpen" aria-hidden="true"></span>
+        <span class="w-6 h-0.5 bg-[#1e5543] transition-all" [class.opacity-0]="mobileMenuOpen" aria-hidden="true"></span>
         <span class="w-6 h-0.5 bg-[#1e5543] transition-all" [class.-rotate-45]="mobileMenuOpen"
-          [class.-translate-y-2]="mobileMenuOpen"></span>
+          [class.-translate-y-2]="mobileMenuOpen" aria-hidden="true"></span>
       </button>
     </div>
   </div>
 
   <!-- Mobile Menu Panel -->
-  <div *ngIf="mobileMenuOpen"
+  <div *ngIf="mobileMenuOpen" id="mobile-menu"
     class="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-gray-800 shadow-2xl border-t border-gray-200 dark:border-gray-700">
     <div class="flex flex-col p-6 gap-4">
       <button (click)="navigateToHome('whoami')"

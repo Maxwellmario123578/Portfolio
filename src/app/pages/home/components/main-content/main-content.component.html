@@ -1,5 +1,8 @@
 <div id="main-content" class="main-content-container bg-white dark:bg-gray-900 min-h-screen text-gray-800 dark:text-gray-100 pt-12 font-grotesk selection:bg-green-500/30 transition-colors duration-300" role="main">
 
+    <!-- H1 caché pour la structure sémantique -->
+    <h1 class="sr-only">Portfolio de Masewell Mathurin KONMENECK - Étudiant en Ingénierie des Systèmes d'Information</h1>
+
     <!-- Fixed Navbar -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg md:shadow-none transition-colors duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -32,7 +35,7 @@
                     (click)="toggleLanguage()"
                     class="flex items-center justify-center w-[50px] h-[50px] rounded-lg bg-[#1e5543] text-white font-semibold text-sm hover:bg-[#164433] transition-all shadow-[0_2px_8px_rgba(0,0,0,0.1)]"
                     [attr.aria-label]="'Changer la langue en ' + (languageService.currentLanguage() === 'fr' ? 'anglais' : 'français')">
-                    <span class="w-[31px] h-[31px] flex items-center justify-center">
+                    <span class="w-[31px] h-[31px] flex items-center justify-center" translate="no">
                         {{ languageService.currentLanguage() === 'fr' ? 'FR' : 'EN' }}
                     </span>
                 </button>
@@ -103,9 +106,9 @@
     <div class="container mx-auto px-6 max-w-6xl pb-32 space-y-2 pt-32">
 
         <!-- Whoami Section -->
-        <section id="whoami" class="scroll-mt-32 relative pb-20">
+        <section id="whoami" class="scroll-mt-32 relative pb-20" aria-labelledby="whoami-title">
             <!-- Decorative Vector Background - Fixed Position -->
-            <div class="absolute pointer-events-none block z-0 hidden md:block"
+            <div class="absolute pointer-events-none block z-0 hidden md:block" aria-hidden="true"
                 style="position: absolute; width: 280px; height: 270px; right: 0px; top: 120px; transform: rotate(5deg); overflow: visible;">
                 <!-- Layer 1: Opacity 0.6 -->
                 <svg width="350" height="375" viewBox="0 0 577 620" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -221,7 +224,7 @@
             </div>
 
             <div class="mb-16">
-                <h2 class="text-5xl font-syne font-bold text-black dark:text-white inline-block">
+                <h2 id="whoami-title" class="text-5xl font-syne font-bold text-black dark:text-white inline-block">
                     {{ 'whoami.title' | translate }}
                 </h2>
             </div>
@@ -269,12 +272,12 @@
         </section>
 
         <!-- Formations et Certificats Section -->
-        <section id="education" class="scroll-mt-32 py-12">
+        <section id="education" class="scroll-mt-32 py-12" aria-labelledby="education-title">
             <div class="mb-16">
-                <h2 class="text-4xl font-syne font-bold text-black dark:text-white inline-block">
+                <h2 id="education-title" class="text-4xl font-syne font-bold text-black dark:text-white inline-block">
                     {{ 'education.title' | translate }}
                 </h2>
-                <div class="w-[60%] h-[3px] bg-[#22c55e] mt-2"></div>
+                <div class="w-[60%] h-[3px] bg-[#22c55e] mt-2" aria-hidden="true"></div>
                 
                 <!-- Filter Badges -->
                 <div class="flex gap-3 mt-6">
@@ -311,14 +314,20 @@
                         [class.shadow-lg]="selectedEducationId === item.id">
                         <!-- Header (clickable) -->
                         <div (click)="toggleEducation(item.id)"
-                            class="p-5 flex justify-between items-start cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/50 transition-colors">
+                            (keydown.enter)="toggleEducation(item.id)"
+                            (keydown.space)="toggleEducation(item.id); $event.preventDefault()"
+                            tabindex="0"
+                            role="button"
+                            [attr.aria-label]="'Afficher les détails de ' + item.title"
+                            [attr.aria-expanded]="selectedEducationId === item.id"
+                            class="p-5 flex justify-between items-start cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:ring-inset">
                             <div class="flex-1">
                                 <h3 class="font-bold text-gray-900 dark:text-white text-base mb-1">{{ item.title }}</h3>
                                 <p class="text-xs text-gray-500 dark:text-gray-400">{{ item.period }} | {{ item.organization }}</p>
                             </div>
                             <div class="ml-4 flex-shrink-0">
                                 <div class="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-green-500 transition-transform duration-300"
-                                    [class.rotate-180]="selectedEducationId === item.id"></div>
+                                    [class.rotate-180]="selectedEducationId === item.id" aria-hidden="true"></div>
                             </div>
                         </div>
 
@@ -335,14 +344,20 @@
                     <div class="relative bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md border border-gray-100 dark:border-gray-700"
                         [class.shadow-lg]="selectedEducationId === cert.id">
                         <div (click)="toggleEducation(cert.id)"
-                            class="p-5 flex justify-between items-start cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/50 transition-colors">
+                            (keydown.enter)="toggleEducation(cert.id)"
+                            (keydown.space)="toggleEducation(cert.id); $event.preventDefault()"
+                            tabindex="0"
+                            role="button"
+                            [attr.aria-label]="'Afficher les détails de ' + cert.title"
+                            [attr.aria-expanded]="selectedEducationId === cert.id"
+                            class="p-5 flex justify-between items-start cursor-pointer hover:bg-gray-50/50 dark:hover:bg-gray-700/50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:ring-inset">
                             <div class="flex-1">
                                 <h3 class="font-bold text-gray-900 dark:text-white text-base mb-1">{{ cert.title }}</h3>
                                 <p class="text-xs text-gray-500 dark:text-gray-400">{{ cert.date }} | {{ cert.issuer }}</p>
                             </div>
                             <div class="ml-4 flex-shrink-0">
                                 <div class="w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-green-500 transition-transform duration-300"
-                                    [class.rotate-180]="selectedEducationId === cert.id"></div>
+                                    [class.rotate-180]="selectedEducationId === cert.id" aria-hidden="true"></div>
                             </div>
                         </div>
 
@@ -432,7 +447,13 @@
                     <div class="w-full h-full flex items-center justify-center animate-fadeIn">
                         @if (cert.imageUrl) {
                         <!-- Afficher uniquement l'image si elle existe (cliquable) -->
-                        <div (click)="openCertImage(cert.imageUrl)" class="relative w-full h-full flex items-center justify-center p-4 cursor-pointer hover:opacity-90 transition-opacity">
+                        <div (click)="openCertImage(cert.imageUrl)"
+                             (keydown.enter)="openCertImage(cert.imageUrl)"
+                             (keydown.space)="openCertImage(cert.imageUrl); $event.preventDefault()"
+                             tabindex="0"
+                             role="button"
+                             [attr.aria-label]="'Voir le certificat ' + cert.title + ' en plein écran'"
+                             class="relative w-full h-full flex items-center justify-center p-4 cursor-pointer hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:ring-offset-2 rounded-lg">
                             <img [src]="cert.imageUrl" [alt]="cert.title" class="max-h-full max-w-full object-contain">
                             <!-- Badge "En cours" si la certification est en cours -->
                             @if (cert.date.includes('cours') || cert.date.includes('Progress')) {
@@ -467,15 +488,15 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="scroll-mt-32 relative py-12 overflow-hidden">
+        <section id="skills" class="scroll-mt-32 relative py-12 overflow-hidden" aria-labelledby="skills-title">
 
             <div class="container mx-auto px-6 relative z-10">
                 <!-- Title with Precise 100% matching Underline -->
                 <div class="mb-12">
-                    <h2 class="text-4xl font-syne font-bold text-black dark:text-white inline-block">
+                    <h2 id="skills-title" class="text-4xl font-syne font-bold text-black dark:text-white inline-block">
                         {{ 'skills.title' | translate }}
                     </h2>
-                    <div class="w-[40%] h-[3px] bg-[#22c55e] mt-2"></div>
+                    <div class="w-[40%] h-[3px] bg-[#22c55e] mt-2" aria-hidden="true"></div>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -521,12 +542,12 @@
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" class="scroll-mt-32 py-12">
+        <section id="projects" class="scroll-mt-32 py-12" aria-labelledby="projects-title">
             <div class="mb-12">
-                <h2 class="text-4xl font-syne font-bold text-black dark:text-white inline-block">
+                <h2 id="projects-title" class="text-4xl font-syne font-bold text-black dark:text-white inline-block">
                     {{ 'projects.title' | translate }}
                 </h2>
-                <div class="w-[40%] h-[3px] bg-[#22c55e] mt-2"></div>
+                <div class="w-[40%] h-[3px] bg-[#22c55e] mt-2" aria-hidden="true"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 @for (project of projects; track project.title) {
@@ -543,7 +564,7 @@
                     <!-- 1. Image ou Spinner (en cours) -->
                     @if (project.status === 'en cours') {
                     <div class="flex flex-col items-center justify-center h-[110px] mb-3 rounded-[10px] bg-gray-50 dark:bg-gray-700">
-                        <svg width="44" height="44" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="44" height="44" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <circle cx="26" cy="26" r="18" stroke="#4FE8D3" stroke-width="3.5" stroke-linecap="round"
                                 stroke-dasharray="7 7">
                                 <animateTransform attributeName="transform" type="rotate" from="0 26 26" to="360 26 26"
@@ -587,13 +608,13 @@
         </section>
 
         <!-- Volunteers Section -->
-        <section id="volunteers" class="scroll-mt-32 py-12">
+        <section id="volunteers" class="scroll-mt-32 py-12" aria-labelledby="volunteers-title">
             <!-- Title with green underline -->
             <div class="mb-2">
-                <h2 class="font-syne font-bold text-[28px] text-black dark:text-white inline-block">
+                <h2 id="volunteers-title" class="font-syne font-bold text-[28px] text-black dark:text-white inline-block">
                     {{ 'volunteers.title' | translate }}
                 </h2>
-                <div class="w-[40%] h-[3px] bg-[#22c55e] mt-2"></div>
+                <div class="w-[40%] h-[3px] bg-[#22c55e] mt-2" aria-hidden="true"></div>
             </div>
             <p class="text-gray-500 dark:text-gray-400 text-[13px] mb-10 mt-4">{{ 'volunteers.subtitle' | translate }}</p>
 
@@ -639,15 +660,15 @@
     </div>
 
     <!-- Contact Section - Full Width -->
-    <section id="contact" class="w-full mt-16 px-0">
+    <section id="contact" class="w-full mt-16 px-0" aria-labelledby="contact-title">
         <div class="bg-[#2aaa8a] px-8 md:px-20 py-14 flex flex-col md:flex-row items-start gap-10 md:gap-0">
 
             <!-- Gauche : Titre et LinkedIn -->
             <div class="flex-1 flex flex-col justify-start pt-2">
-                <h2 class="font-syne font-bold text-white text-[28px] mb-2 inline-block relative">
+                <h2 id="contact-title" class="font-syne font-bold text-white text-[28px] mb-2 inline-block relative">
                     {{ 'contact.title' | translate }}
                 </h2>
-                <div class="w-[220px] h-[1.5px] bg-white/60 mt-1 mb-6"></div>
+                <div class="w-[220px] h-[1.5px] bg-white/60 mt-1 mb-6" aria-hidden="true"></div>
                 
                 <!-- LinkedIn Link -->
                 <a href="https://www.linkedin.com/in/masewell-mathurin-konmeneck/" target="_blank" rel="noopener noreferrer"
@@ -663,40 +684,52 @@
             </div>
 
             <!-- Droite : Formulaire -->
-            <form (ngSubmit)="onSubmitContact()" #contactForm="ngForm" class="flex-1 flex flex-col gap-3 w-full">
-                <input type="text" name="name" [(ngModel)]="contactFormData.name" required
+            <form (ngSubmit)="onSubmitContact()" #contactForm="ngForm" class="flex-1 flex flex-col gap-3 w-full" role="form" aria-labelledby="contact-title">
+                <label for="contact-name" class="sr-only">Nom complet</label>
+                <input type="text" id="contact-name" name="name" [(ngModel)]="contactFormData.name" required
                     [placeholder]="'contact.name' | translate"
-                    class="w-full bg-transparent border border-white/40 text-white placeholder-white/70 text-[13px] font-syne px-4 py-3 rounded-[6px] outline-none focus:border-white transition-colors" />
-                <input type="email" name="email" [(ngModel)]="contactFormData.email" required email
+                    aria-describedby="name-error"
+                    class="w-full bg-transparent border border-white/40 text-white placeholder-white/70 text-[13px] font-syne px-4 py-3 rounded-[6px] outline-none focus:border-white focus:ring-2 focus:ring-white/50 transition-colors" />
+                
+                <label for="contact-email" class="sr-only">Adresse email</label>
+                <input type="email" id="contact-email" name="email" [(ngModel)]="contactFormData.email" required email
                     [placeholder]="'contact.email' | translate"
-                    class="w-full bg-transparent border border-white/40 text-white placeholder-white/70 text-[13px] font-syne px-4 py-3 rounded-[6px] outline-none focus:border-white transition-colors" />
-                <input type="text" name="subject" [(ngModel)]="contactFormData.subject" required
+                    aria-describedby="email-error"
+                    class="w-full bg-transparent border border-white/40 text-white placeholder-white/70 text-[13px] font-syne px-4 py-3 rounded-[6px] outline-none focus:border-white focus:ring-2 focus:ring-white/50 transition-colors" />
+                
+                <label for="contact-subject" class="sr-only">Sujet du message</label>
+                <input type="text" id="contact-subject" name="subject" [(ngModel)]="contactFormData.subject" required
                     [placeholder]="'contact.subject' | translate"
-                    class="w-full bg-transparent border border-white/40 text-white placeholder-white/70 text-[13px] font-syne px-4 py-3 rounded-[6px] outline-none focus:border-white transition-colors" />
-                <textarea name="message" [(ngModel)]="contactFormData.message" required rows="5"
+                    aria-describedby="subject-error"
+                    class="w-full bg-transparent border border-white/40 text-white placeholder-white/70 text-[13px] font-syne px-4 py-3 rounded-[6px] outline-none focus:border-white focus:ring-2 focus:ring-white/50 transition-colors" />
+                
+                <label for="contact-message" class="sr-only">Votre message</label>
+                <textarea id="contact-message" name="message" [(ngModel)]="contactFormData.message" required rows="5"
                     [placeholder]="'contact.message' | translate"
-                    class="w-full bg-transparent border border-white/40 text-white placeholder-white/70 text-[13px] font-syne px-4 py-3 rounded-[6px] outline-none focus:border-white transition-colors resize-none"></textarea>
+                    aria-describedby="message-error"
+                    class="w-full bg-transparent border border-white/40 text-white placeholder-white/70 text-[13px] font-syne px-4 py-3 rounded-[6px] outline-none focus:border-white focus:ring-2 focus:ring-white/50 transition-colors resize-none"></textarea>
                 
                 @if (contactError) {
-                <div class="text-red-200 text-sm bg-red-500/20 px-4 py-2 rounded-[6px] border border-red-500/30">
+                <div role="alert" aria-live="assertive" class="text-red-200 text-sm bg-red-500/20 px-4 py-2 rounded-[6px] border border-red-500/30">
                     {{ contactError }}
                 </div>
                 }
                 
                 @if (contactSuccess) {
-                <div class="text-green-200 text-sm bg-green-500/20 px-4 py-2 rounded-[6px] border border-green-500/30">
+                <div role="status" aria-live="polite" class="text-green-200 text-sm bg-green-500/20 px-4 py-2 rounded-[6px] border border-green-500/30">
                     {{ contactSuccess }}
                 </div>
                 }
                 
                 <button type="submit" [disabled]="!contactForm.valid || isSubmitting"
-                    class="w-full bg-white text-gray-800 font-syne font-semibold text-[14px] py-3 rounded-[6px] hover:bg-gray-100 transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">
+                    [attr.aria-describedby]="isSubmitting ? 'sending-status' : null"
+                    class="w-full bg-white text-gray-800 font-syne font-semibold text-[14px] py-3 rounded-[6px] hover:bg-gray-100 transition-colors cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 focus:ring-2 focus:ring-white/50">
                     @if (isSubmitting) {
-                        <svg class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+                        <svg class="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24" aria-hidden="true">
                             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                         </svg>
-                        <span>{{ 'contact.sending' | translate }}</span>
+                        <span id="sending-status">{{ 'contact.sending' | translate }}</span>
                     } @else {
                         <span>{{ 'contact.send' | translate }}</span>
                     }
@@ -707,13 +740,22 @@
 
     <!-- Lightbox pour afficher l'image de certification en plein écran -->
     @if (selectedCertImage) {
-    <div (click)="closeCertImage()" class="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 animate-fadeIn">
-        <button (click)="closeCertImage()" class="absolute top-4 right-4 z-[101] w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div (click)="closeCertImage()"
+         (keydown.escape)="closeCertImage()"
+         role="dialog"
+         aria-modal="true"
+         aria-label="Visualisation du certificat en plein écran"
+         class="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 animate-fadeIn">
+        <button (click)="closeCertImage()"
+                (keydown.enter)="closeCertImage()"
+                (keydown.space)="closeCertImage(); $event.preventDefault()"
+                aria-label="Fermer la visualisation"
+                class="absolute top-4 right-4 z-[101] w-12 h-12 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-white">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </button>
-        <img [src]="selectedCertImage" alt="Certification" class="max-w-full max-h-full object-contain rounded-lg" (click)="$event.stopPropagation()" />
+        <img [src]="selectedCertImage" alt="Certificat en plein écran" class="max-w-full max-h-full object-contain rounded-lg" (click)="$event.stopPropagation()" />
     </div>
     }
 

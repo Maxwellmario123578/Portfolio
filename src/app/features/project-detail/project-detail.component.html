@@ -87,12 +87,24 @@
           @for (img of (project.images && project.images.length > 0 ? project.images.slice(0, 3) : [project.imageUrl, project.imageUrl, project.imageUrl]); track img; let i = $index) {
             @if (i === 0) {
               <!-- Grande image à gauche -->
-              <div (click)="openImage(img)" class="col-span-1 row-span-2 rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700 cursor-pointer hover:opacity-90 transition-opacity">
-                <img [src]="img" [alt]="project.title" class="w-full h-full object-cover" />
+              <div (click)="openImage(img)" 
+                   (keydown.enter)="openImage(img)"
+                   (keydown.space)="openImage(img); $event.preventDefault()"
+                   tabindex="0"
+                   role="button"
+                   [attr.aria-label]="'Voir l\'image ' + (i + 1) + ' de ' + project.title + ' en plein écran'"
+                   class="col-span-1 row-span-2 rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700 cursor-pointer hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:ring-offset-2">
+                <img [src]="img" [alt]="project.title + ' - Image ' + (i + 1)" class="w-full h-full object-cover" />
               </div>
             } @else {
               <!-- Petites images à droite -->
-              <div (click)="openImage(img)" class="col-span-1 rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700 aspect-[4/3] cursor-pointer hover:opacity-90 transition-opacity">
+              <div (click)="openImage(img)"
+                   (keydown.enter)="openImage(img)"
+                   (keydown.space)="openImage(img); $event.preventDefault()"
+                   tabindex="0"
+                   role="button"
+                   [attr.aria-label]="'Voir l\'image ' + (i + 1) + ' de ' + project.title + ' en plein écran'"
+                   class="col-span-1 rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700 aspect-[4/3] cursor-pointer hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:ring-offset-2">
                 <img [src]="img" [alt]="project.title" class="w-full h-full object-cover" />
               </div>
             }
@@ -112,15 +124,27 @@
 
       <!-- Grille d'images -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        @for (img of (project.images && project.images.length > 0 ? project.images : [project.imageUrl]); track img) {
-        <div (click)="openImage(img)" class="rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700 aspect-video cursor-pointer hover:opacity-90 transition-opacity">
-          <img [src]="img" [alt]="project.title" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+        @for (img of (project.images && project.images.length > 0 ? project.images : [project.imageUrl]); track img; let i = $index) {
+        <div (click)="openImage(img)"
+             (keydown.enter)="openImage(img)"
+             (keydown.space)="openImage(img); $event.preventDefault()"
+             tabindex="0"
+             role="button"
+             [attr.aria-label]="'Voir l\'image ' + (i + 1) + ' en plein écran'"
+             class="rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700 aspect-video cursor-pointer hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:ring-offset-2">
+          <img [src]="img" [alt]="project.title + ' - Aperçu ' + (i + 1)" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
         </div>
         }
         @if (project.images && project.images.length === 4) {
           <!-- 5ème image plus grande si nécessaire -->
-          <div (click)="openImage(project.images[0])" class="col-span-2 md:col-span-2 rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700 aspect-video cursor-pointer hover:opacity-90 transition-opacity">
-            <img [src]="project.images[0]" [alt]="project.title" class="w-full h-full object-cover" />
+          <div (click)="openImage(project.images[0])"
+               (keydown.enter)="openImage(project.images[0])"
+               (keydown.space)="openImage(project.images[0]); $event.preventDefault()"
+               tabindex="0"
+               role="button"
+               aria-label="Voir l'image en plein écran"
+               class="col-span-2 md:col-span-2 rounded-2xl overflow-hidden bg-gray-200 dark:bg-gray-700 aspect-video cursor-pointer hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-[#22c55e] focus:ring-offset-2">
+            <img [src]="project.images[0]" [alt]="project.title + ' - Vue d\'ensemble'" class="w-full h-full object-cover" />
           </div>
         }
       </div>
