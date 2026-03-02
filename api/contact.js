@@ -23,6 +23,14 @@ const handler = async (req, res) => {
     return res.status(405).json({ success: false, message: 'Method not allowed' });
   }
 
+  // Debug: Log des variables d'environnement
+  console.log('Environment variables:', {
+    SMTP_HOST: process.env.SMTP_HOST || 'NOT SET',
+    SMTP_PORT: process.env.SMTP_PORT || 'NOT SET',
+    SMTP_USER: process.env.SMTP_USER || 'NOT SET',
+    SMTP_PASS: process.env.SMTP_PASS ? 'SET' : 'NOT SET',
+  });
+
   const { name, email, subject, message } = req.body;
 
   // Validation
@@ -42,15 +50,25 @@ const handler = async (req, res) => {
   }
 
   // Configuration du transporteur SMTP avec les variables d'environnement Vercel
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: parseInt(process.env.SMTP_PORT),
+  const smtpConfig = {
+    host: process.env.SMTP_HOST || 'smtp.gmail.com',
+    port: parseInt(process.env.SMTP_PORT || '587'),
     secure: process.env.SMTP_SECURE === 'true',
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS,
     },
+  };
+
+  console.log('SMTP Config:', {
+    host: smtpConfig.host,
+    port: smtpConfig.port,
+    secure: smtpConfig.secure,
+    user: smtpConfig.auth.user ? 'SET' : 'NOT SET',
+    pass: smtpConfig.auth.pass ? 'SET' : 'NOT SET',
   });
+
+  const transporter = nodemailer.createTransport(smtpConfig);
 
   const mailOptions = {
     from: `"${name}" <${process.env.SMTP_FROM}>`,
