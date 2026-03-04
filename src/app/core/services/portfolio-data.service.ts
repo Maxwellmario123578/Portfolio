@@ -70,6 +70,7 @@ export class PortfolioDataService {
           category: 'Software Engineering',
           date: '2024',
           status: 'terminé',
+          isConfidential: true,
         },
         {
           id: '4',
@@ -255,6 +256,7 @@ export class PortfolioDataService {
         category: 'Génie Logiciel',
         date: '2024',
         status: 'terminé',
+        isConfidential: true,
       },
       {
         id: '4',

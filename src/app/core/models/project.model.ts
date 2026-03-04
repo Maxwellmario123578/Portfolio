@@ -12,5 +12,6 @@ export interface Project {
   category?: string;
   date?: string;
   status: 'en cours' | 'terminé';
+  isConfidential?: boolean; // Pour les projets terminés mais sans accès aux images (affiche 403)
 }
 

@@ -13,13 +13,13 @@
   } @else if (project) {
 
   <!-- Contenu principal -->
-  @if (project && isInProgress()) {
-    <!-- Vue spéciale pour les projets en cours - Design 404 haute fidélité ONE PAGE -->
+  @if (project && (isInProgress() || project.isConfidential)) {
+    <!-- Vue spéciale pour les projets en cours OU confidentiels - Design 404/403 haute fidélité ONE PAGE -->
     <div class="fixed inset-0 bg-white dark:bg-gray-900 font-syne flex items-center justify-center pt-20 transition-colors duration-300 overflow-y-auto">
       <div class="container mx-auto px-4 max-w-4xl py-6">
         <div class="w-full text-center">
           
-          @if (project.title.includes('Gestion des équipements') || project.title.includes('Gestion des Équipements')) {
+          @if (project.isConfidential) {
             <!-- SVG 403 pour le projet Gestion des équipements -->
             <svg class="h-[45vh] w-auto max-w-full mx-auto mb-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
               <g id="freepik--background-simple--inject-3">
