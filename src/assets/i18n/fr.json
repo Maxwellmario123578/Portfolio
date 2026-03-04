@@ -62,6 +62,8 @@
     "comingSoonMessage": "Ce projet est actuellement en cours de développement. Les détails complets et les captures d'écran seront disponibles prochainement.",
     "lookLikeLost": "On dirait que vous êtes perdu",
     "pageNotAvailable": "La page que vous recherchez n'est pas encore disponible !",
-    "goToHome": "Retour à l'accueil"
+    "goToHome": "Retour à l'accueil",
+    "notAuthorizedTitle": "Accès non autorisé",
+    "notAuthorizedMessage": "Vous avez tenté d'accéder à une page pour laquelle vous n'avez pas d'autorisation préalable."
   }
 }
