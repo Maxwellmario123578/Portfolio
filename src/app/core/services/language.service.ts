@@ -103,7 +103,9 @@ export class LanguageService {
         comingSoonMessage: 'Ce projet est actuellement en cours de développement. Les détails complets et les captures d\'écran seront disponibles prochainement.',
         lookLikeLost: 'On dirait que vous êtes perdu',
         pageNotAvailable: 'La page que vous recherchez n\'est pas disponible !',
-        goToHome: 'Retour à l\'accueil'
+        goToHome: 'Retour à l\'accueil',
+        notAuthorizedTitle: 'Accès non autorisé',
+        notAuthorizedMessage: 'Vous avez tenté d\'accéder à une page pour laquelle vous n\'avez pas d\'autorisation préalable.'
       },
       common: {
         inProgress: 'En cours',
@@ -178,7 +180,9 @@ export class LanguageService {
         comingSoonMessage: 'This project is currently under development. Full details and screenshots will be available soon.',
         lookLikeLost: 'Look like you\'re lost',
         pageNotAvailable: 'The page you are looking for is not available!',
-        goToHome: 'Go to Home'
+        goToHome: 'Go to Home',
+        notAuthorizedTitle: 'Access Denied',
+        notAuthorizedMessage: 'You tried to access a page you did not have prior authorization for.'
       },
       common: {
         inProgress: 'In Progress',
