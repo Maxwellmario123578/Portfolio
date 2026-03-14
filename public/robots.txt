@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /portfolio
+Allow: /project/
+
+Sitemap: https://portfoliomathurin.vercel.app/sitemap.xml

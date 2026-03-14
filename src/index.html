@@ -4,10 +4,55 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio de Masewell Mathurin KONMENECK - Étudiant en Ingénierie des Systèmes d'Information, spécialisé en développement logiciel, data science et intelligence artificielle" />
-  <meta name="keywords" content="portfolio, développeur, data science, intelligence artificielle, ingénieur informatique" />
+  <title>Masewell Mathurin KONMENECK - Portfolio | Data Science & Engineering</title>
+  <meta name="description"
+    content="Portfolio de Masewell Mathurin KONMENECK - Étudiant en Ingénierie des Systèmes d'Information, certifié IBM Data Science. Spécialiste en IA, Machine Learning et développement Web." />
+  <meta name="keywords"
+    content="Masewell Mathurin KONMENECK, Data Science, Intelligence Artificielle, Machine Learning, Python, Full Stack Developer, Ingénieur Informatique, Saint Jean Ingénieur" />
   <meta name="author" content="Masewell Mathurin KONMENECK" />
-  <title>KONMENECK - Étudiant en Informatique et Système d'Information</title>
+
+  <!-- Open Graph / LinkedIn -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Masewell Mathurin KONMENECK - Portfolio Data Science & Engineering" />
+  <meta property="og:description"
+    content="Découvrez mes projets en IA, Data Science et développement Full-stack. Étudiant ingénieur passionné par l'innovation." />
+  <meta property="og:image" content="https://portfoliomathurin.vercel.app/Moi.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Masewell Mathurin KONMENECK - Portfolio" />
+  <meta name="twitter:description" content="Expertise en Data Science et Ingénierie logicielle." />
+
+  <!-- Structured Data for IA (JSON-LD) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Masewell-Mathurin KONMENECK",
+      "jobTitle": "Étudiant en Ingénierie des Systèmes d'Information & Data Scientist",
+      "url": "https://portfoliomathurin.vercel.app",
+      "sameAs": [
+        "https://linkedin.com/in/masewell-mathurin-konmeneck/",
+        "https://github.com/Maxwellmario123578"
+      ],
+      "description": "Étudiant en ingénierie à Saint Jean Ingénieur, spécialisé en Data Science (Certifié IBM) et développement logiciel.",
+      "knowsAbout": ["Python", "Machine Learning", "Artificial Intelligence", "JavaScript", "Angular", "Spring Boot", "Data Analysis", "MLOps"],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Saint Jean Ingénieur | Yaoundé"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "IBM Data Science Professional Certificate"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Microsoft Office Specialist: Word Associate"
+        }
+      ]
+    }
+  </script>
   <base href="/" />
   <link rel="icon" type="image/x-icon" href="favicon.ico?v=2" />
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -95,6 +140,27 @@
 
 <body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
   <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <!-- IA & SEO Content Fallback (Hidden from users) -->
+  <section class="sr-only">
+    <h1>Masewell Mathurin KONMENECK</h1>
+    <p>Étudiant en Ingénierie des Systèmes d'Information à Saint Jean Ingénieur (2022-2027).</p>
+    <h2>Expertises</h2>
+    <ul>
+      <li>Data Science & Intelligence Artificielle (Certifié IBM)</li>
+      <li>Développement Full-stack : Angular, Spring Boot, Node.js, React Native</li>
+      <li>Langages : Python, JavaScript, Java, SQL, R</li>
+      <li>Outils : Docker, MLOps, GitLab, Figma</li>
+    </ul>
+    <h2>Projets Marquants</h2>
+    <ul>
+      <li>Tableau de bord e-KIOSQUE (Charts.js, JavaScript)</li>
+      <li>Prédiction d'audience de films par IA (Python, Machine Learning)</li>
+      <li>Application bancaire distribuée WillBank (Microservices, Spring Boot, Angular)</li>
+      <li>Pipeline MLOps pour détection de fraude (Docker, Grafana, FastAPI)</li>
+    </ul>
+  </section>
+
   <app-root></app-root>
 </body>
 
