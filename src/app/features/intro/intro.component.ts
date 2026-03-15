@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, OnDestroy, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ThemeService } from '../../core/services/theme.service';
 import { LanguageService } from '../../core/services/language.service';
@@ -7,13 +7,13 @@ import { LanguageService } from '../../core/services/language.service';
 @Component({
   selector: 'app-intro',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './intro.component.html',
   styleUrls: ['./intro.component.scss']
 })
 export class IntroComponent implements AfterViewInit, OnDestroy {
   @ViewChild('waveContainer', { static: false }) waveContainer!: ElementRef;
-  
+
   mouseX: number = 0;
   mouseY: number = 0;
   private animationFrameId: number | null = null;
@@ -21,7 +21,7 @@ export class IntroComponent implements AfterViewInit, OnDestroy {
   themeService = inject(ThemeService);
   languageService = inject(LanguageService);
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
   ngAfterViewInit(): void {
     this.initWaveEffect();
@@ -65,33 +65,33 @@ export class IntroComponent implements AfterViewInit, OnDestroy {
           const rect = this.waveContainer.nativeElement.getBoundingClientRect();
           const centerX = rect.width / 2;
           const centerY = rect.height / 2;
-          
+
           const mouseX = this.mouseX || centerX;
           const mouseY = this.mouseY || centerY;
-          
+
           // Calculate distance from mouse to center
           const deltaX = mouseX - centerX;
           const deltaY = mouseY - centerY;
           const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
           const maxDistance = Math.sqrt(centerX * centerX + centerY * centerY);
           const normalizedDistance = Math.min(distance / maxDistance, 1);
-          
+
           paths.forEach((path: SVGPathElement, index: number) => {
             // Different intensity for each wave layer
             const layerIndex = Math.floor(index / 15);
             const intensity = 1 - (layerIndex * 0.15);
-            
+
             // Calculate wave effect based on mouse position
             const angle = Math.atan2(deltaY, deltaX);
             const waveFrequency = 0.02 + (index % 5) * 0.01;
             const waveAmplitude = normalizedDistance * 40 * intensity;
-            
+
             // Create wave motion
             const time = Date.now() / 1000;
             const waveX = Math.cos(angle) * waveAmplitude * (1 - normalizedDistance * 0.5);
-            const waveY = Math.sin(angle) * waveAmplitude * (1 - normalizedDistance * 0.5) + 
-                         Math.sin(time * 2 + index * waveFrequency) * 8 * intensity;
-            
+            const waveY = Math.sin(angle) * waveAmplitude * (1 - normalizedDistance * 0.5) +
+              Math.sin(time * 2 + index * waveFrequency) * 8 * intensity;
+
             // Apply transform with smooth easing
             path.style.transform = `translate(${waveX}px, ${waveY}px)`;
           });

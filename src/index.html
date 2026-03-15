@@ -36,7 +36,7 @@
         "https://github.com/Maxwellmario123578"
       ],
       "description": "Étudiant en ingénierie à Saint Jean Ingénieur, spécialisé en Data Science (Certifié IBM) et développement logiciel.",
-      "knowsAbout": ["Python", "Machine Learning", "Artificial Intelligence", "JavaScript", "Angular", "Spring Boot", "Data Analysis", "MLOps"],
+      "knowsAbout": ["Python", "Machine Learning", "Artificial Intelligence", "JavaScript", "Angular", "Spring Boot", "Data Analysis", "MLOps", "React Native", "Docker", "SQL", "Tableau"],
       "alumniOf": {
         "@type": "CollegeOrUniversity",
         "name": "Saint Jean Ingénieur | Yaoundé"
@@ -44,12 +44,22 @@
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
-          "name": "IBM Data Science Professional Certificate"
+          "name": "IBM Data Science Professional Certificate",
+          "url": "https://www.credly.com/badges/cf1b2b0f-2c83-4cf8-af20-4862333cf5b2"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Google Data Analytics Certificate"
         },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "Microsoft Office Specialist: Word Associate"
         }
+      ],
+      "workExample": [
+        {"@type": "CreativeWork", "name": "e-KIOSQUE Site Dashboard", "description": "Tableau de bord interactif pour visualiser les données de vente en temps réel."},
+        {"@type": "CreativeWork", "name": "Film Audience Prediction", "description": "Prédiction d'audience via Machine Learning pour films Afro-descendants."},
+        {"@type": "CreativeWork", "name": "WillBank Platform", "description": "Architecture microservices avec Spring Boot et Angular pour services bancaires."}
       ]
     }
   </script>
@@ -141,23 +151,41 @@
 <body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
   <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
-  <!-- IA & SEO Content Fallback (Hidden from users) -->
-  <section class="sr-only">
-    <h1>Masewell Mathurin KONMENECK</h1>
-    <p>Étudiant en Ingénierie des Systèmes d'Information à Saint Jean Ingénieur (2022-2027).</p>
-    <h2>Expertises</h2>
+  <!-- IA & SEO Content Fallback (Full Profile Representation for scrapers) -->
+  <section class="sr-only" style="pointer-events: none;">
+    <h1>Masewell-Mathurin KONMENECK</h1>
+    <p>Ingénieur en Systèmes d'Information (Formation 2022-2027) - Saint Jean Ingénieur, Yaoundé.</p>
+
+    <h2>Expériences & Bénévolat</h2>
     <ul>
-      <li>Data Science & Intelligence Artificielle (Certifié IBM)</li>
-      <li>Développement Full-stack : Angular, Spring Boot, Node.js, React Native</li>
-      <li>Langages : Python, JavaScript, Java, SQL, R</li>
-      <li>Outils : Docker, MLOps, GitLab, Figma</li>
+      <li>Stage KIAMAS : Développement d'un Tableau de Bord Dashboard e-KIOSQUE (Charts.js, Tailwind).</li>
+      <li>Responsable Atelier Machine Learning : Club Robotique (2025-présent).</li>
+      <li>Membre du club liturgique : Université de Saint Jean.</li>
     </ul>
-    <h2>Projets Marquants</h2>
+
+    <h2>Compétences Techniques</h2>
+    <div>
+      <h3>Langages & Frameworks</h3>
+      <p>Python, JavaScript, Java, SQL, R, Angular, Spring Boot, Node.js, React Native, Tailwind CSS.</p>
+      <h3>Data Science & Tools</h3>
+      <p>Pandas, NumPy, Scikit-learn, Matplotlib, Docker, Git, GitLab, Figma, Google BigQuery, MLOps.</p>
+    </div>
+
+    <h2>Projets (Réalisés & En cours)</h2>
     <ul>
-      <li>Tableau de bord e-KIOSQUE (Charts.js, JavaScript)</li>
-      <li>Prédiction d'audience de films par IA (Python, Machine Learning)</li>
-      <li>Application bancaire distribuée WillBank (Microservices, Spring Boot, Angular)</li>
-      <li>Pipeline MLOps pour détection de fraude (Docker, Grafana, FastAPI)</li>
+      <li><strong>Tableau de bord e-KIOSQUE</strong> : Visualisation KPI temps réel (HTML/CSS, JS).</li>
+      <li><strong>Prédiction d'audience de films</strong> : Modèle IA pour public Afro-descendant.</li>
+      <li><strong>WillBank</strong> : Plateforme bancaire distribuée (Java Spring Boot, Docker, RabbitMQ).</li>
+      <li><strong>Gestion des équipements</strong> : Application SpringBoot/Thymeleaf pour maintenance.</li>
+      <li><strong>Gestion des notes</strong> : Application Python/Matplotlib avec export CSV.</li>
+      <li><strong>MLOps Pipeline</strong> : Pipeline de détection de fraude avec Grafana et Prometheus.</li>
+    </ul>
+
+    <h2>Certifications</h2>
+    <ul>
+      <li>IBM Data Science Professional Certificate</li>
+      <li>Google Data Analytics (En cours)</li>
+      <li>Microsoft Office Specialist: Word Associate</li>
     </ul>
   </section>
 
