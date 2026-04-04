@@ -395,7 +395,7 @@ export class PortfolioDataService {
 
   getSkills(): Observable<SkillCategory[]> {
     const lang = this.languageService.currentLanguage();
-    
+
     if (lang === 'en') {
       return of([
         {
@@ -416,7 +416,7 @@ export class PortfolioDataService {
         },
       ]);
     }
-    
+
     return of([
       {
         title: 'Langages',
@@ -439,7 +439,7 @@ export class PortfolioDataService {
 
   getTimeline(): Observable<TimelineItem[]> {
     const lang = this.languageService.currentLanguage();
-    
+
     if (lang === 'en') {
       return of([
         {
@@ -460,7 +460,7 @@ export class PortfolioDataService {
         },
       ]);
     }
-    
+
     return of([
       {
         id: 'edu-1',
@@ -483,7 +483,7 @@ export class PortfolioDataService {
 
   getCertifications(): Observable<Certification[]> {
     const lang = this.languageService.currentLanguage();
-    
+
     if (lang === 'en') {
       return of([
         {
@@ -499,8 +499,8 @@ export class PortfolioDataService {
           id: 'cert-2',
           title: 'Google Data Analytics',
           issuer: 'Google',
-          date: 'In Progress',
-          imageUrl: 'https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/1b/03f7b04fc511e8a7b7bb5c9e6b0e1e/Google-DA-Logo.png',
+          date: 'Certified',
+          imageUrl: '/Certifs_image/IBM_Certifs/Google_certif.png',
           skills: ['Data Analysis', 'Spreadsheets', 'SQL', 'Tableau', 'R Programming'],
         },
         {
@@ -514,7 +514,7 @@ export class PortfolioDataService {
         },
       ]);
     }
-    
+
     return of([
       {
         id: 'cert-1',
@@ -529,8 +529,8 @@ export class PortfolioDataService {
         id: 'cert-2',
         title: 'Google Data Analytics',
         issuer: 'Google',
-        date: 'En cours',
-        imageUrl: 'https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/1b/03f7b04fc511e8a7b7bb5c9e6b0e1e/Google-DA-Logo.png',
+        date: 'Certifié',
+        imageUrl: '/Certifs_image/IBM_Certifs/Google_certif.png',
         skills: ['Data Analysis', 'Spreadsheets', 'SQL', 'Tableau', 'R Programming'],
       },
       {
@@ -547,7 +547,7 @@ export class PortfolioDataService {
 
   getVolunteers(): Observable<Volunteer[]> {
     const lang = this.languageService.currentLanguage();
-    
+
     if (lang === 'en') {
       return of([
         {
@@ -568,7 +568,7 @@ export class PortfolioDataService {
         },
       ]);
     }
-    
+
     return of([
       {
         id: '1',
