@@ -339,11 +339,24 @@
                             </div>
                         </div>
 
-                        <!-- Expandable Details (if needed) -->
-                        @if (selectedEducationId === item.id && item.description) {
+                        <!-- Expandable Details -->
+                        @if (selectedEducationId === item.id) {
                         <div class="px-5 pb-5 pt-2 border-t border-gray-100 dark:border-gray-700 animate-slideDown">
-                            <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">{{ item.description }}
+                            @if (item.description) {
+                            <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed" [class.mb-3]="item.url">
+                                {{ item.description }}
                             </p>
+                            }
+                            @if (item.url) {
+                            <a [href]="item.url" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 transition-colors text-sm">
+                                <span>{{ 'education.viewOrganization' | translate }}</span>
+                                <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </a>
+                            }
                         </div>
                         }
                     </div>

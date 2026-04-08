@@ -12,11 +12,11 @@ export class LanguageService {
   constructor(public translate: TranslateService) {
     // Définir la langue par défaut
     this.translate.setDefaultLang('fr');
-    
+
     // Charger les traductions manuellement
     this.translate.setTranslation('fr', this.getFrenchTranslations());
     this.translate.setTranslation('en', this.getEnglishTranslations());
-    
+
     // Charger la langue depuis localStorage
     const savedLang = localStorage.getItem('language') as Language;
     if (savedLang && (savedLang === 'fr' || savedLang === 'en')) {
@@ -59,6 +59,7 @@ export class LanguageService {
         title: 'Formations et Certificats',
         selectItem: 'Sélectionnez une formation ou certification',
         viewCredential: 'Voir le certificat',
+        viewOrganization: "Voir l'établissement",
         formations: 'Formations',
         certifications: 'Certifications'
       },
@@ -136,6 +137,7 @@ export class LanguageService {
         title: 'Education and Certificates',
         selectItem: 'Select an education or certification',
         viewCredential: 'View credential',
+        viewOrganization: 'Visit website',
         formations: 'Education',
         certifications: 'Certifications'
       },
