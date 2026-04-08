@@ -5,5 +5,6 @@ export interface TimelineItem {
   period: string;
   position: 'left' | 'right';
   description?: string;
+  url?: string;
 }
 

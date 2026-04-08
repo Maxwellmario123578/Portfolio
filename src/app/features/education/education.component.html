@@ -4,25 +4,45 @@
   </h2>
   <div class="relative max-w-3xl mx-auto px-4">
     <div class="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-200 dark:bg-gray-700"></div>
-    
+
     @for (item of timelineItems; track item.id) {
-      <div class="relative mb-12">
-        <div class="absolute left-1/2 -translate-x-1/2 mt-2 w-4 h-4 rounded-full bg-primary border-4 box-content border-background-light dark:border-background-dark"></div>
-        
-        @if (item.position === 'right') {
-          <div class="ml-auto w-[calc(50%-2rem)] text-right">
-            <h3 class="text-lg font-bold text-gray-200">{{ item.title }}</h3>
-            <p class="text-gray-400">{{ item.organization }}</p>
-            <p class="text-sm text-gray-500">{{ item.period }}</p>
-          </div>
-        } @else {
-          <div class="mr-auto w-[calc(50%-2rem)] text-left">
-            <h3 class="text-lg font-bold text-gray-200">{{ item.title }}</h3>
-            <p class="text-gray-400">{{ item.organization }}</p>
-            <p class="text-sm text-gray-500">{{ item.period }}</p>
-          </div>
-        }
+    <div class="relative mb-12">
+      <div
+        class="absolute left-1/2 -translate-x-1/2 mt-2 w-4 h-4 rounded-full bg-primary border-4 box-content border-background-light dark:border-background-dark">
       </div>
+
+      @if (item.position === 'right') {
+      <div class="ml-auto w-[calc(50%-2rem)] text-right">
+        <h3 class="text-lg font-bold text-gray-200">{{ item.title }}</h3>
+        <p class="text-gray-400">
+          @if (item.url) {
+          <a [href]="item.url" target="_blank" rel="noopener noreferrer"
+            class="hover:text-blue-400 underline decoration-dotted transition-colors">
+            {{ item.organization }}
+          </a>
+          } @else {
+          {{ item.organization }}
+          }
+        </p>
+        <p class="text-sm text-gray-500">{{ item.period }}</p>
+      </div>
+      } @else {
+      <div class="mr-auto w-[calc(50%-2rem)] text-left">
+        <h3 class="text-lg font-bold text-gray-200">{{ item.title }}</h3>
+        <p class="text-gray-400">
+          @if (item.url) {
+          <a [href]="item.url" target="_blank" rel="noopener noreferrer"
+            class="hover:text-blue-400 underline decoration-dotted transition-colors">
+            {{ item.organization }}
+          </a>
+          } @else {
+          {{ item.organization }}
+          }
+        </p>
+        <p class="text-sm text-gray-500">{{ item.period }}</p>
+      </div>
+      }
+    </div>
     }
   </div>
 </section>
