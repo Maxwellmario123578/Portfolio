@@ -404,7 +404,14 @@ export class PortfolioDataService {
 
   getProjects(): Observable<Project[]> {
     const lang = this.languageService.currentLanguage();
-    return of(this.getProjectsData(lang));
+    const projects = this.getProjectsData(lang);
+    return of(
+      projects.sort((a, b) => {
+        if (a.status === 'terminé' && b.status !== 'terminé') return -1;
+        if (a.status !== 'terminé' && b.status === 'terminé') return 1;
+        return 0;
+      })
+    );
   }
 
   getProjectById(id: string): Observable<Project | undefined> {
