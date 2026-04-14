@@ -534,15 +534,6 @@ export class PortfolioDataService {
           skills: ['Data Analysis', 'Spreadsheets', 'SQL', 'Tableau', 'R Programming'],
         },
         {
-          id: 'cert-3',
-          title: 'Microsoft Office Specialist: Word Associate (Office 2019)',
-          issuer: 'Microsoft',
-          date: 'Certified',
-          imageUrl: 'Certifs_image/IBM_Certifs/Microsoft_Badge_2019.png',
-          credentialUrl: 'https://www.credly.com/badges/e39ff19f-0de4-4c61-b14d-c7420685b1d0/public_url',
-          skills: ['Microsoft Word', 'Document Formatting', 'Office 2019', 'Productivity'],
-        },
-        {
           id: 'cert-4',
           title: 'Introduction to Model Context Protocol',
           issuer: 'Anthropic',
@@ -572,15 +563,6 @@ export class PortfolioDataService {
         imageUrl: '/Certifs_image/IBM_Certifs/Google_certif.png',
         credentialUrl: 'https://www.coursera.org/account/accomplishments/professional-cert/certificate/7HDM657JEEQF',
         skills: ['Data Analysis', 'Spreadsheets', 'SQL', 'Tableau', 'R Programming'],
-      },
-      {
-        id: 'cert-3',
-        title: 'Microsoft Office Specialist: Word Associate (Office 2019)',
-        issuer: 'Microsoft',
-        date: 'Certifié',
-        imageUrl: 'Certifs_image/IBM_Certifs/Microsoft_Badge_2019.png',
-        credentialUrl: 'https://www.credly.com/badges/e39ff19f-0de4-4c61-b14d-c7420685b1d0/public_url',
-        skills: ['Microsoft Word', 'Document Formatting', 'Office 2019', 'Productivity'],
       },
       {
         id: 'cert-4',
