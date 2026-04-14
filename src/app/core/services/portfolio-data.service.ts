@@ -516,6 +516,15 @@ export class PortfolioDataService {
     if (lang === 'en') {
       return of([
         {
+          id: 'cert-4',
+          title: 'Introduction to Model Context Protocol',
+          issuer: 'Anthropic',
+          date: 'Certified',
+          imageUrl: '/Certifs_image/IBM_Certifs/Antropic_Completion.png',
+          credentialUrl: 'https://verify.skilljar.com/c/67ojdwuubbv9',
+          skills: ['Anthropic', 'MCP', 'Model Context Protocol', 'AI Integration'],
+        },
+        {
           id: 'cert-1',
           title: 'IBM Data Science Professional Certificate',
           issuer: 'IBM',
@@ -533,19 +542,19 @@ export class PortfolioDataService {
           credentialUrl: 'https://www.coursera.org/account/accomplishments/professional-cert/certificate/7HDM657JEEQF',
           skills: ['Data Analysis', 'Spreadsheets', 'SQL', 'Tableau', 'R Programming'],
         },
-        {
-          id: 'cert-4',
-          title: 'Introduction to Model Context Protocol',
-          issuer: 'Anthropic',
-          date: 'Certified',
-          imageUrl: '/Certifs_image/IBM_Certifs/Antropic_Completion.png',
-          credentialUrl: 'https://verify.skilljar.com/c/67ojdwuubbv9',
-          skills: ['Anthropic', 'MCP', 'Model Context Protocol', 'AI Integration'],
-        },
       ]);
     }
 
     return of([
+      {
+        id: 'cert-4',
+        title: 'Introduction au Model Context Protocol',
+        issuer: 'Anthropic',
+        date: 'Certifié',
+        imageUrl: '/Certifs_image/IBM_Certifs/Antropic_Completion.png',
+        credentialUrl: 'https://verify.skilljar.com/c/67ojdwuubbv9',
+        skills: ['Anthropic', 'MCP', 'Model Context Protocol', 'Intégration d\'IA'],
+      },
       {
         id: 'cert-1',
         title: 'IBM Data Science Professional Certificate',
@@ -563,15 +572,6 @@ export class PortfolioDataService {
         imageUrl: '/Certifs_image/IBM_Certifs/Google_certif.png',
         credentialUrl: 'https://www.coursera.org/account/accomplishments/professional-cert/certificate/7HDM657JEEQF',
         skills: ['Data Analysis', 'Spreadsheets', 'SQL', 'Tableau', 'R Programming'],
-      },
-      {
-        id: 'cert-4',
-        title: 'Introduction au Model Context Protocol',
-        issuer: 'Anthropic',
-        date: 'Certifié',
-        imageUrl: '/Certifs_image/IBM_Certifs/Antropic_Completion.png',
-        credentialUrl: 'https://verify.skilljar.com/c/67ojdwuubbv9',
-        skills: ['Anthropic', 'MCP', 'Model Context Protocol', 'Intégration d\'IA'],
       },
     ]);
   }
