@@ -551,7 +551,7 @@ export class PortfolioDataService {
     return of([
       {
         id: 'cert-4',
-        title: 'Introduction to Agent skills',
+        title: "Introduction aux compétences d'Agent",
         issuer: 'Anthropic',
         date: 'Certifié',
         imageUrl: '/Certifs_image/IBM_Certifs/Antropic_Completion_AI_Agent.png',
