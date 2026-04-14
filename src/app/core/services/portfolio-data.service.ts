@@ -437,7 +437,7 @@ export class PortfolioDataService {
         },
         {
           title: 'Tools & Platforms',
-          skills: ['Docker', 'Trello', 'GitLab & GitHub', 'Figma', 'Google BigQuery', 'Excel', 'Google Sheets'],
+          skills: ['Docker', 'Trello', 'GitLab & GitHub', 'Figma', 'Google BigQuery', 'Excel', 'Google Sheets', 'Model Context Protocol (MCP)'],
         },
       ]);
     }
@@ -457,7 +457,7 @@ export class PortfolioDataService {
       },
       {
         title: 'Outils & Plateformes',
-        skills: ['Docker', 'Trello', 'GitLab & GitHub', 'Figma', 'Google BigQuery', 'Excel', 'Google Sheets'],
+        skills: ['Docker', 'Trello', 'GitLab & GitHub', 'Figma', 'Google BigQuery', 'Excel', 'Google Sheets', 'Model Context Protocol (MCP)'],
       },
     ]);
   }
@@ -542,6 +542,15 @@ export class PortfolioDataService {
           credentialUrl: 'https://www.credly.com/badges/e39ff19f-0de4-4c61-b14d-c7420685b1d0/public_url',
           skills: ['Microsoft Word', 'Document Formatting', 'Office 2019', 'Productivity'],
         },
+        {
+          id: 'cert-4',
+          title: 'Introduction to Model Context Protocol',
+          issuer: 'Anthropic',
+          date: 'Certified',
+          imageUrl: '/Certifs_image/IBM_Certifs/Antropic_Completion.png',
+          credentialUrl: 'https://verify.skilljar.com/c/67ojdwuubbv9',
+          skills: ['Anthropic', 'MCP', 'Model Context Protocol', 'AI Integration'],
+        },
       ]);
     }
 
@@ -572,6 +581,15 @@ export class PortfolioDataService {
         imageUrl: 'Certifs_image/IBM_Certifs/Microsoft_Badge_2019.png',
         credentialUrl: 'https://www.credly.com/badges/e39ff19f-0de4-4c61-b14d-c7420685b1d0/public_url',
         skills: ['Microsoft Word', 'Document Formatting', 'Office 2019', 'Productivity'],
+      },
+      {
+        id: 'cert-4',
+        title: 'Introduction au Model Context Protocol',
+        issuer: 'Anthropic',
+        date: 'Certifié',
+        imageUrl: '/Certifs_image/IBM_Certifs/Antropic_Completion.png',
+        credentialUrl: 'https://verify.skilljar.com/c/67ojdwuubbv9',
+        skills: ['Anthropic', 'MCP', 'Model Context Protocol', 'Intégration d\'IA'],
       },
     ]);
   }
