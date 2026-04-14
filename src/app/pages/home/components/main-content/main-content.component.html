@@ -393,6 +393,11 @@
                                 }
                             </div>
                             }
+                            @if (cert.description) {
+                            <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                                {{ cert.description }}
+                            </p>
+                            }
                             @if (cert.credentialUrl) {
                             <a [href]="cert.credentialUrl" target="_blank" rel="noopener noreferrer"
                                 class="inline-flex items-center text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 transition-colors text-sm">

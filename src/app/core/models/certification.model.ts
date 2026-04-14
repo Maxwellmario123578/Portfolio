@@ -7,5 +7,6 @@ export interface Certification {
   credentialUrl?: string;
   imageUrl?: string;
   skills?: string[];
+  description?: string;
 }
 

@@ -437,7 +437,7 @@ export class PortfolioDataService {
         },
         {
           title: 'Tools & Platforms',
-          skills: ['Docker', 'Trello', 'GitLab & GitHub', 'Figma', 'Google BigQuery', 'Excel', 'Google Sheets', 'Model Context Protocol (MCP)'],
+          skills: ['Docker', 'Trello', 'GitLab & GitHub', 'Figma', 'Google BigQuery', 'Excel', 'Google Sheets', 'Model Context Protocol (MCP)', 'Claude AI Agents'],
         },
       ]);
     }
@@ -457,7 +457,7 @@ export class PortfolioDataService {
       },
       {
         title: 'Outils & Plateformes',
-        skills: ['Docker', 'Trello', 'GitLab & GitHub', 'Figma', 'Google BigQuery', 'Excel', 'Google Sheets', 'Model Context Protocol (MCP)'],
+        skills: ['Docker', 'Trello', 'GitLab & GitHub', 'Figma', 'Google BigQuery', 'Excel', 'Google Sheets', 'Model Context Protocol (MCP)', 'Claude AI Agents'],
       },
     ]);
   }
@@ -517,12 +517,13 @@ export class PortfolioDataService {
       return of([
         {
           id: 'cert-4',
-          title: 'Introduction to Model Context Protocol',
+          title: 'Introduction to Agent skills',
           issuer: 'Anthropic',
           date: 'Certified',
-          imageUrl: '/Certifs_image/IBM_Certifs/Antropic_Completion.png',
-          credentialUrl: 'https://verify.skilljar.com/c/67ojdwuubbv9',
-          skills: ['Anthropic', 'MCP', 'Model Context Protocol', 'AI Integration'],
+          imageUrl: '/Certifs_image/IBM_Certifs/Antropic_Completion_AI_Agent.png',
+          credentialUrl: 'https://verify.skilljar.com/c/cmv7mvbzpr9w',
+          skills: ['Anthropic', 'Claude', 'AI Agents', 'Tool Use'],
+          description: "Learning the fundamental concepts to equip a Claude model with action capabilities. Training focused on the structure of a 'Skill': from name definition and technical description to input parameter configuration. Mastery of the iterative flow between the user, the model and the tool, allowing the AI to correctly select and formulate requests to external functions.",
         },
         {
           id: 'cert-1',
@@ -532,6 +533,7 @@ export class PortfolioDataService {
           imageUrl: '/Certifs_image/IBM_Certifs/IBM_image.png',
           credentialUrl: 'https://www.coursera.org/account/accomplishments/professional-cert/certificate/FZE10YBKGRUL',
           skills: ['Data Science', 'Python', 'SQL', 'Data Analysis', 'Machine Learning'],
+          description: "Intensive training covering the entire data lifecycle: from extraction (SQL) to predictive modeling (Machine Learning with Python). Mastery of Pandas, Scikit-learn libraries and data visualization to translate raw data into strategic decisions.",
         },
         {
           id: 'cert-2',
@@ -541,6 +543,7 @@ export class PortfolioDataService {
           imageUrl: '/Certifs_image/IBM_Certifs/Google_certif.png',
           credentialUrl: 'https://www.coursera.org/account/accomplishments/professional-cert/certificate/7HDM657JEEQF',
           skills: ['Data Analysis', 'Spreadsheets', 'SQL', 'Tableau', 'R Programming'],
+          description: "Certification focused on results-oriented data analysis. Proficiency in data cleaning, statistical analysis and visual communication (Tableau). Mastery of analytical thinking to identify trends and optimize business processes from complex datasets.",
         },
       ]);
     }
@@ -548,12 +551,13 @@ export class PortfolioDataService {
     return of([
       {
         id: 'cert-4',
-        title: 'Introduction au Model Context Protocol',
+        title: 'Introduction to Agent skills',
         issuer: 'Anthropic',
         date: 'Certifié',
-        imageUrl: '/Certifs_image/IBM_Certifs/Antropic_Completion.png',
-        credentialUrl: 'https://verify.skilljar.com/c/67ojdwuubbv9',
-        skills: ['Anthropic', 'MCP', 'Model Context Protocol', 'Intégration d\'IA'],
+        imageUrl: '/Certifs_image/IBM_Certifs/Antropic_Completion_AI_Agent.png',
+        credentialUrl: 'https://verify.skilljar.com/c/cmv7mvbzpr9w',
+        skills: ['Anthropic', 'Claude', 'Agents IA', 'Tool Use'],
+        description: "Apprentissage des concepts fondamentaux pour doter un modèle Claude de capacités d'action. Formation axée sur la structure d'un \"Skill\" (compétence) : de la définition du nom et de la description technique à la configuration des paramètres d'entrée. Maîtrise du flux itératif entre l'utilisateur, le modèle et l'outil, permettant à l'IA de sélectionner et de formuler correctement des requêtes vers des fonctions externes.",
       },
       {
         id: 'cert-1',
@@ -563,6 +567,7 @@ export class PortfolioDataService {
         imageUrl: '/Certifs_image/IBM_Certifs/IBM_image.png',
         credentialUrl: 'https://www.coursera.org/account/accomplishments/professional-cert/certificate/FZE10YBKGRUL',
         skills: ['Data Science', 'Python', 'SQL', 'Data Analysis', 'Machine Learning'],
+        description: "Formation intensive couvrant l'ensemble du cycle de vie de la donnée : de l'extraction (SQL) à la modélisation prédictive (Machine Learning avec Python). Maîtrise des bibliothèques Pandas, Scikit-learn et de la visualisation de données pour traduire des données brutes en décisions stratégiques.",
       },
       {
         id: 'cert-2',
@@ -572,6 +577,7 @@ export class PortfolioDataService {
         imageUrl: '/Certifs_image/IBM_Certifs/Google_certif.png',
         credentialUrl: 'https://www.coursera.org/account/accomplishments/professional-cert/certificate/7HDM657JEEQF',
         skills: ['Data Analysis', 'Spreadsheets', 'SQL', 'Tableau', 'R Programming'],
+        description: "Certification axée sur l'analyse de données axée sur les résultats. Compétence en nettoyage de données, analyse statistique et communication visuelle (Tableau). Maîtrise de la pensée analytique pour identifier les tendances et optimiser les processus métiers à partir de jeux de données complexes.",
       },
     ]);
   }

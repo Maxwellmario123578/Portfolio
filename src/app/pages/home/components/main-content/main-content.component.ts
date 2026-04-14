@@ -185,7 +185,8 @@ export class MainContentComponent implements OnInit, OnDestroy {
             'Google BigQuery': 90,
             'Excel': 95,
             'Google Sheets': 95,
-            'Model Context Protocol (MCP)': 90
+            'Model Context Protocol (MCP)': 90,
+            'Claude AI Agents': 85
         };
 
         if (category === 'dataScience') {
