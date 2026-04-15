@@ -473,7 +473,7 @@ export class PortfolioDataService {
           organization: 'Saint Jean Ingénieur | Yaoundé',
           url: 'https://institutsaintjean.org/',
           period: "2022 - 2027",
-          description: "Engineering cycle in information systems design, focused on software development, data science and web architecture.",
+          description: "Engineering cycle in information systems design, focused on software development and web architecture.",
           position: 'right',
         },
         {
@@ -495,7 +495,7 @@ export class PortfolioDataService {
         organization: 'Saint Jean Ingénieur | Yaoundé',
         url: 'https://institutsaintjean.org/',
         period: "2022 - 2027",
-        description: "Cycle ingénieur en conception de systèmes d'information, focalisé sur le développement logiciel, la data science et l'architecture web.",
+        description: "Cycle ingénieur en conception de systèmes d'information, focalisé sur le développement logiciel et l'architecture web.",
         position: 'right',
       },
       {
@@ -516,16 +516,6 @@ export class PortfolioDataService {
     if (lang === 'en') {
       return of([
         {
-          id: 'cert-4',
-          title: 'Introduction to Agent skills',
-          issuer: 'Anthropic',
-          date: 'Certified',
-          imageUrl: '/Certifs_image/IBM_Certifs/Antropic_Completion_AI_Agent.png',
-          credentialUrl: 'https://verify.skilljar.com/c/cmv7mvbzpr9w',
-          skills: ['Anthropic', 'Claude', 'AI Agents', 'Tool Use'],
-          description: "Learning the fundamental concepts to equip a Claude model with action capabilities. Training focused on the structure of a 'Skill': from name definition and technical description to input parameter configuration. Mastery of the iterative flow between the user, the model and the tool, allowing the AI to correctly select and formulate requests to external functions.",
-        },
-        {
           id: 'cert-5',
           title: 'Model Context Protocol: Advanced Topics',
           issuer: 'Anthropic',
@@ -534,6 +524,16 @@ export class PortfolioDataService {
           credentialUrl: 'https://verify.skilljar.com/c/nb7ftfnact58',
           skills: ['MCP', 'Anthropic', 'AI Infrastructure', 'Sampling', 'Security'],
           description: "Exploration of advanced Model Context Protocol (MCP) features to build robust and secure AI integrations. Training focused on complex resource management, custom sampling techniques, and lifecycle orchestration. Mastery of security patterns and performance optimization to create seamless bridges between large language models and proprietary data systems.",
+        },
+        {
+          id: 'cert-4',
+          title: 'Introduction to Agent skills',
+          issuer: 'Anthropic',
+          date: 'Certified',
+          imageUrl: '/Certifs_image/IBM_Certifs/Antropic_Completion_AI_Agent.png',
+          credentialUrl: 'https://verify.skilljar.com/c/cmv7mvbzpr9w',
+          skills: ['Anthropic', 'Claude', 'AI Agents', 'Tool Use'],
+          description: "Learning the fundamental concepts to equip a Claude model with action capabilities. Training focused on the structure of a 'Skill': from name definition and technical description to input parameter configuration. Mastery of the iterative flow between the user, the model and the tool, allowing the AI to correctly select and formulate requests to external functions.",
         },
         {
           id: 'cert-1',
@@ -560,16 +560,6 @@ export class PortfolioDataService {
 
     return of([
       {
-        id: 'cert-4',
-        title: "Introduction aux compétences d'Agent",
-        issuer: 'Anthropic',
-        date: 'Certifié',
-        imageUrl: '/Certifs_image/IBM_Certifs/Antropic_Completion_AI_Agent.png',
-        credentialUrl: 'https://verify.skilljar.com/c/cmv7mvbzpr9w',
-        skills: ['Anthropic', 'Claude', 'Agents IA', 'Tool Use'],
-        description: "Apprentissage des concepts fondamentaux pour doter un modèle Claude de capacités d'action. Formation axée sur la structure d'un \"Skill\" (compétence) : de la définition du nom et de la description technique à la configuration des paramètres d'entrée. Maîtrise du flux itératif entre l'utilisateur, le modèle et l'outil, permettant à l'IA de sélectionner et de formuler correctement des requêtes vers des fonctions externes.",
-      },
-      {
         id: 'cert-5',
         title: 'Model Context Protocol: Advanced Topics',
         issuer: 'Anthropic',
@@ -578,6 +568,16 @@ export class PortfolioDataService {
         credentialUrl: 'https://verify.skilljar.com/c/nb7ftfnact58',
         skills: ['MCP', 'Anthropic', 'Infrastructure IA', 'Sampling', 'Sécurité'],
         description: "Exploration des fonctionnalités avancées du Model Context Protocol (MCP) pour construire des intégrations IA robustes et sécurisées. Formation axée sur la gestion complexe des ressources, les techniques d'échantillonnage (sampling) personnalisées et l'orchestration du cycle de vie. Maîtrise des schémas de sécurité et de l'optimisation des performances pour créer des ponts fluides entre les modèles de langage et les systèmes de données propriétaires.",
+      },
+      {
+        id: 'cert-4',
+        title: "Introduction aux compétences d'Agent",
+        issuer: 'Anthropic',
+        date: 'Certifié',
+        imageUrl: '/Certifs_image/IBM_Certifs/Antropic_Completion_AI_Agent.png',
+        credentialUrl: 'https://verify.skilljar.com/c/cmv7mvbzpr9w',
+        skills: ['Anthropic', 'Claude', 'Agents IA', 'Tool Use'],
+        description: "Apprentissage des concepts fondamentaux pour doter un modèle Claude de capacités d'action. Formation axée sur la structure d'un \"Skill\" (compétence) : de la définition du nom et de la description technique à la configuration des paramètres d'entrée. Maîtrise du flux itératif entre l'utilisateur, le modèle et l'outil, permettant à l'IA de sélectionner et de formuler correctement des requêtes vers des fonctions externes.",
       },
       {
         id: 'cert-1',
