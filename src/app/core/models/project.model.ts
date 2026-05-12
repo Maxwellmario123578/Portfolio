@@ -13,5 +13,6 @@ export interface Project {
   date?: string;
   status: 'en cours' | 'terminé';
   isConfidential?: boolean; // Pour les projets terminés mais sans accès aux images (affiche 403)
+  isHackathon?: boolean; // Pour identifier les projets de hackathon
 }
 

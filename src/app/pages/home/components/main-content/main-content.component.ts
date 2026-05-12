@@ -98,19 +98,19 @@ export class MainContentComponent implements OnInit, OnDestroy {
     }
 
     loadAllData(): void {
-        this.portfolioDataService.getTimeline().subscribe(data => this.education = data);
-        this.portfolioDataService.getCertifications().subscribe(data => this.certifications = data);
-        this.portfolioDataService.getSkills().subscribe(data => {
+        this.portfolioDataService.getTimeline().subscribe((data: TimelineItem[]) => this.education = data);
+        this.portfolioDataService.getCertifications().subscribe((data: Certification[]) => this.certifications = data);
+        this.portfolioDataService.getSkills().subscribe((data: SkillCategory[]) => {
             this.skills = data;
             this.filterSkillsByCategory(this.selectedSkillCategory);
         });
-        this.portfolioDataService.getProjects().subscribe(data => this.projects = data);
-        this.portfolioDataService.getVolunteers().subscribe(data => this.volunteers = data);
+        this.portfolioDataService.getProjects().subscribe((data: Project[]) => this.projects = data);
+        this.portfolioDataService.getVolunteers().subscribe((data: Volunteer[]) => this.volunteers = data);
     }
 
     loadEducationData(): void {
-        this.portfolioDataService.getTimeline().subscribe(data => this.education = data);
-        this.portfolioDataService.getCertifications().subscribe(data => this.certifications = data);
+        this.portfolioDataService.getTimeline().subscribe((data: TimelineItem[]) => this.education = data);
+        this.portfolioDataService.getCertifications().subscribe((data: Certification[]) => this.certifications = data);
     }
 
     setSkillCategory(category: string): void {

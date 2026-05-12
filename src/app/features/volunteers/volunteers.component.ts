@@ -17,7 +17,7 @@ export class VolunteersComponent implements OnInit {
 
   ngOnInit(): void {
     this.portfolioService.getVolunteers().subscribe(
-      data => this.volunteers = data
+      (data: Volunteer[]) => this.volunteers = data
     );
   }
 }

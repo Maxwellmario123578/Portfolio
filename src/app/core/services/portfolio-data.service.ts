@@ -14,6 +14,52 @@ export class PortfolioDataService {
     if (lang === 'en') {
       return [
         {
+          id: 'hackathon-1',
+          title: 'Data4Change Hackathon',
+          description: "Participation in the Data4Change hackathon, focused on using data and technology to drive positive social change.",
+          imageUrl: 'Hackaton/Data4Change_1.jpeg',
+          images: [
+            'Hackaton/Data4Change_1.jpeg',
+            'Hackaton/Data4Change_2.jpeg',
+            'Hackaton/Data4Change_3.jpeg',
+            'Hackaton/Certificat_Data4Change.png',
+          ],
+          technologies: ['Data Analysis', 'Problem Solving', 'Teamwork'],
+          fullDescription: "Participated in the Data4Change hackathon, an intensive event that brought together engineers and data scientists to tackle real-world challenges using data-driven solutions. The project involved extensive data cleaning and processing of CSV datasets to create meaningful insights. The hackathon focused on leveraging technology and analytical skills to create impactful solutions for social good.",
+          githubUrl: 'https://github.com/joanmelong/caremap-hackathon-2025',
+          liveUrl: 'https://caremap-cameroun.vercel.app/',
+          features: [
+            'Data cleaning and preprocessing of CSV datasets',
+            'Collaborative problem-solving in a competitive environment',
+            'Data-driven solution development',
+            'Presentation and pitching skills',
+            'Cross-functional teamwork',
+          ],
+          category: 'Hackathon / Data Science',
+          date: '2024',
+          status: 'terminé',
+          isHackathon: true,
+        },
+        {
+          id: 'hackathon-2',
+          title: 'WFEO Hackathon',
+          description: "Participation in the World Federation of Engineering Organizations hackathon, demonstrating engineering excellence and innovative problem-solving skills.",
+          imageUrl: 'Hackaton/Certificat_WFEO.png',
+          images: ['Hackaton/Certificat_WFEO.png'],
+          technologies: ['Engineering', 'Innovation', 'Collaboration'],
+          fullDescription: "Participated in the prestigious WFEO (World Federation of Engineering Organizations) hackathon, a global competition bringing together talented engineers from around the world. This event challenged participants to develop innovative engineering solutions to real-world problems, emphasizing creativity, technical excellence, and teamwork.",
+          features: [
+            'International engineering competition',
+            'Innovative solution development',
+            'Global networking with engineering professionals',
+            'Recognition from WFEO',
+          ],
+          category: 'Hackathon / Engineering',
+          date: '2024',
+          status: 'terminé',
+          isHackathon: true,
+        },
+        {
           id: '1',
           title: 'e-KIOSQUE Site Dashboard',
           description: "An interactive dashboard to visualize sales data, track key performance indicators and identify trends using real-time data streams.",
@@ -56,23 +102,6 @@ export class PortfolioDataService {
           status: 'terminé',
         },
         {
-          id: '3',
-          title: 'Equipment Management Application',
-          description: "Collaborative development (team of 3) of a web application for equipment lifecycle management, centralizing data, automating maintenance tracking and ensuring operation traceability.",
-          imageUrl: 'Projet_images/confidential-project.svg',
-          technologies: ['SpringBoot', 'Thymeleaf', 'GitHub'],
-          fullDescription: "Development of a web application to manage the lifecycle of equipment within an organization (IT equipment, vehicles, machines, etc.). The project aimed to centralize equipment information, automate maintenance tracking, and improve operation traceability. Team collaboration enabled task distribution between backend development, frontend, database design and functional testing.",
-          features: [
-            'Equipment management (Creation, deletion and modification)',
-            'Equipment inventory and traceability',
-            'Report generation on equipment tracking',
-          ],
-          category: 'Software Engineering',
-          date: '2024',
-          status: 'terminé',
-          isConfidential: true,
-        },
-        {
           id: '4',
           title: 'Grade Management Application',
           description: 'Intuitive Python grade management application, enabling input, updating and automatic student ranking, with interactive graphical visualization and results export.',
@@ -106,7 +135,7 @@ export class PortfolioDataService {
             'Projet_images/WillBank/willbank3.png',
             'Projet_images/WillBank/willbank4.png',
           ],
-          technologies: ['Java Spring Boot', 'Angular', 'Docker', 'MySQL', 'RabbitMQ', 'Redis', 'Microservices'],
+          technologies: ['Spring Boot', 'Angular', 'Docker', 'MySQL', 'RabbitMQ', 'Redis', 'Microservices'],
           fullDescription: "Design and implementation of a modern banking solution based on a distributed microservices architecture. The project integrates a robust backend developed with Spring Boot, where each service (Client, Transaction, Notification) operates autonomously and communicates via REST or RabbitMQ. The user interface is provided by an Angular web application and a mobile application, offering a smooth customer experience. The architecture integrates discovery services (Eureka) and an API Gateway for centralized and secure request management.",
           githubUrl: 'https://gitlab.com/Maxwellmario123578/WillBank_Project.git',
           features: [
@@ -148,7 +177,7 @@ export class PortfolioDataService {
             'Projet_images/EQuiz/Ecran_Accueil_2.png',
             'Projet_images/EQuiz/Ecran_tel_1.png',
           ],
-          technologies: ['React native', 'Node.js', 'Clean Architecture', 'GitLab', 'CI/CD', 'Trello', 'Agile Scrum'],
+          technologies: ['React native', 'Node.js', 'Clean Archi', 'GitLab', 'CI/CD', 'Trello', 'Scrum'],
           fullDescription: "Design and development of EQuizz, a platform for evaluating teaching quality through student feedback at the end of each semester. This project strictly follows Clean Architecture principles to ensure modularity and maintainability. As Lead Developer, I directed a team of 3 people, managing the creation of UI mockups, implementing a robust Node.js backend and an interactive React frontend. The analytical engine converts student responses into actionable insights for educational quality improvement.",
           githubUrl: 'https://gitlab.com/Maxwellmario123578/equizz',
           liveUrl: 'https://www.figma.com/design/A9xWzFaDcdB8UUTlVQT5N6/EQUIZZ?node-id=0-1&p=f&t=uzmEgUZbgJALT7Kr-0',
@@ -171,7 +200,7 @@ export class PortfolioDataService {
           description: "Development of a complete MLOps pipeline for fraud detection using AI, with Cloud architecture, Docker containerization, and real-time monitoring via Grafana dashboard.",
           imageUrl: 'Projet_images/En_cours/A_venir.jpg',
           images: ['Projet_images/En_cours/A_venir.jpg'],
-          technologies: ['Python', 'Docker', 'FastAPI', 'Grafana', 'MLOps', 'Cloud', 'Machine Learning', 'Prometheus'],
+          technologies: ['Python', 'Docker', 'FastAPI', 'Grafana', 'MLOps', 'Cloud', 'ML', 'Prometheus'],
           fullDescription: "Implementation of an end-to-end MLOps pipeline for AI-powered transaction fraud detection. The project combines Cloud services, virtualization, and machine learning to ensure model performance in production. Using Docker for process isolation and resource management, the system guarantees multiplatform deployment with low downtime. A Grafana dashboard provides real-time monitoring of system metrics and model performance, ensuring complete observability of the fraud detection pipeline.",
           features: [
             'Complete MLOps pipeline with versioning and CI/CD',
@@ -191,7 +220,7 @@ export class PortfolioDataService {
           title: 'AMNESCH – Secure Educational Digital Library',
           description: "Innovative platform designed to democratize access to educational resources while ensuring strict protection of authors' intellectual property through advanced DRM and SCRUM methodology.",
           imageUrl: 'Projet_images/En_cours/A_venir.jpg',
-          technologies: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'GitHub', 'SCRUM Methodology'],
+          technologies: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'GitHub', 'SCRUM'],
           fullDescription: "AMNESCH is an innovative platform designed to democratize access to educational resources while ensuring strict protection of authors' intellectual property. The project addresses a major issue: how to distribute quality educational content (books, courses, past exams) while preventing piracy and illegal redistribution. The workflow is managed following agile SCRUM methodology with regular sprints and iterative progress.\n\nTechnical highlights:\n- Mobile (Frontend): React Native with Expo and TypeScript, Expo Router for navigation, and Expo Secure Store for sensitive data.\n- Backend: Node.js/Express, PostgreSQL.\n- Proprietary DRM System: Dynamic watermarking to discourage illegal sharing and static file analysis (PDF scanner).",
           liveUrl: 'https://www.figma.com/design/pihjSiqFwqQ231T3g19ODP/Amnesh?node-id=0-1&p=f&t=B0fslg7pLDAzhAT5-0',
           features: [
@@ -208,6 +237,52 @@ export class PortfolioDataService {
     }
 
     return [
+      {
+        id: 'hackathon-1',
+        title: 'Hackathon Data4Change',
+        description: "Participation au hackathon Data4Change, axé sur l'utilisation des données et de la technologie pour générer un changement social positif.",
+        imageUrl: 'Hackaton/Data4Change_1.jpeg',
+        images: [
+          'Hackaton/Data4Change_1.jpeg',
+          'Hackaton/Data4Change_2.jpeg',
+          'Hackaton/Data4Change_3.jpeg',
+          'Hackaton/Certificat_Data4Change.png',
+        ],
+        technologies: ['Data', 'Résolution', 'Teamwork'],
+        fullDescription: "Participation au hackathon Data4Change, un événement intensif qui a réuni des ingénieurs et des data scientists pour relever des défis concrets en utilisant des solutions basées sur les données. Le projet a impliqué un nettoyage approfondi des données et le traitement de jeux de données CSV pour créer des insights significatifs. Le hackathon s'est concentré sur l'exploitation de la technologie et des compétences analytiques pour créer des solutions impactantes au service du bien social.",
+        githubUrl: 'https://github.com/joanmelong/caremap-hackathon-2025',
+        liveUrl: 'https://caremap-cameroun.vercel.app/',
+        features: [
+          'Nettoyage et prétraitement de données CSV',
+          'Résolution collaborative de problèmes dans un environnement compétitif',
+          'Développement de solutions basées sur les données',
+          'Compétences en présentation et pitch',
+          'Travail d\'équipe pluridisciplinaire',
+        ],
+        category: 'Hackathon / Data Science',
+        date: '2024',
+        status: 'terminé',
+        isHackathon: true,
+      },
+      {
+        id: 'hackathon-2',
+        title: 'Hackathon WFEO',
+        description: "Participation au hackathon de la Fédération Mondiale des Organisations d'Ingénieurs, démontrant l'excellence en ingénierie et des compétences innovantes en résolution de problèmes.",
+        imageUrl: 'Hackaton/Certificat_WFEO.png',
+        images: ['Hackaton/Certificat_WFEO.png'],
+        technologies: ['Ingénierie', 'Innovation', 'Team'],
+        fullDescription: "Participation au prestigieux hackathon de la WFEO (Fédération Mondiale des Organisations d'Ingénieurs), une compétition mondiale réunissant des ingénieurs talentueux du monde entier. Cet événement a mis au défi les participants de développer des solutions d'ingénierie innovantes à des problèmes réels, en mettant l'accent sur la créativité, l'excellence technique et le travail d'équipe.",
+        features: [
+          'Compétition internationale d\'ingénierie',
+          'Développement de solutions innovantes',
+          'Réseautage mondial avec des professionnels de l\'ingénierie',
+          'Reconnaissance de la WFEO',
+        ],
+        category: 'Hackathon / Ingénierie',
+        date: '2024',
+        status: 'terminé',
+        isHackathon: true,
+      },
       {
         id: '1',
         title: 'Tableau de bord du Site e-KIOSQUE',
@@ -238,7 +313,7 @@ export class PortfolioDataService {
         description: "Outil intelligent qui prédit si un film plaira à un public Afrodescendant en utilisant l'intelligence artificielle et l'analyse de données",
         imageUrl: 'Projet_images/ML_audiance/image.png',
         images: ['Projet_images/ML_audiance/image.png'],
-        technologies: ['Python', 'Intelligence Artificielle', 'Analyse de données'],
+        technologies: ['Python', 'IA', 'Data'],
         fullDescription: 'Un système intelligent qui aide à prédire quels films vont plaire à des audiences spécifiques. En utilisant l\'intelligence artificielle et l\'analyse de données, cet outil peut anticiper les préférences du public pour aider les cinéastes et distributeurs à prendre de meilleures décisions. Le système a été entraîné sur des données variées pour fournir des prédictions précises.',
         githubUrl: 'https://github.com/Maxwellmario123578/ml-prediction-film.git',
         features: [
@@ -249,23 +324,6 @@ export class PortfolioDataService {
         category: 'Intelligence Artificielle',
         date: '2025',
         status: 'terminé',
-      },
-      {
-        id: '3',
-        title: 'Application de Gestion des équipements',
-        description: "Développement collaboratif(En équipe de 3) d'une application web de gestion du cycle de vie des équipements, centralisant les données, automatisant le suivi des maintenances et assurant la traçabilité des opérations.",
-        imageUrl: 'Projet_images/confidential-project.svg',
-        technologies: ['SpringBoot', 'Thymeleaf', 'GitHub'],
-        fullDescription: "Développement venu après une longue période de modélisation et en équipe de 3 personnes, d'une application web permettant de gérer le cycle de vie des équipements au sein d'une organisation (matériel informatique, véhicules, machines, etc.). Le projet visait à centraliser les informations sur les équipements, automatiser le suivi des maintenances, et améliorer la traçabilité des opérations. La collaboration en équipe a permis de répartir les tâches entre le développement backend, frontend, la conception de la base de données et les tests fonctionnels.",
-        features: [
-          'Gestion des équipements(Création, suppression et modification des équipements)',
-          'Inventaire et tracabilité  des équipements',
-          'Génération des rapports sur le suivi des matériels',
-        ],
-        category: 'Génie Logiciel',
-        date: '2024',
-        status: 'terminé',
-        isConfidential: true,
       },
       {
         id: '4',
@@ -407,6 +465,11 @@ export class PortfolioDataService {
     const projects = this.getProjectsData(lang);
     return of(
       projects.sort((a, b) => {
+        // Les hackathons en premier
+        if (a.isHackathon && !b.isHackathon) return -1;
+        if (!a.isHackathon && b.isHackathon) return 1;
+        
+        // Ensuite, les projets terminés avant les projets en cours
         if (a.status === 'terminé' && b.status !== 'terminé') return -1;
         if (a.status !== 'terminé' && b.status === 'terminé') return 1;
         return 0;
