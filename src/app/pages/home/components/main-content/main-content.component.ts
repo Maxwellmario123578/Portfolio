@@ -43,6 +43,9 @@ export class MainContentComponent implements OnInit, OnDestroy {
     // Lightbox pour les images de certification
     selectedCertImage: string | null = null;
 
+    // Lightbox pour les images de bénévolat
+    selectedVolunteerImage: string | null = null;
+
     // Formulaire de contact
     contactFormData: ContactForm = {
         name: '',
@@ -355,6 +358,14 @@ export class MainContentComponent implements OnInit, OnDestroy {
 
     closeCertImage(): void {
         this.selectedCertImage = null;
+    }
+
+    openVolunteerImage(imageUrl: string): void {
+        this.selectedVolunteerImage = imageUrl;
+    }
+
+    closeVolunteerImage(): void {
+        this.selectedVolunteerImage = null;
     }
 
     onSubmitContact(): void {

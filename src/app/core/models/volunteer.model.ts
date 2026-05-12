@@ -4,6 +4,7 @@ export interface Volunteer {
   organization: string;
   period: string;
   description?: string;
+  imageUrl?: string;
   status: 'en cours' | 'terminé';
 }
 

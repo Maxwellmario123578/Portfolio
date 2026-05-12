@@ -5,27 +5,26 @@
       <p class="text-xl text-gray-400">Mes engagements associatifs et communautaires</p>
     </div>
 
-    <div class="max-w-4xl mx-auto space-y-6">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
       @for (volunteer of volunteers; track volunteer.id) {
-        <div class="bg-gray-800 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300 border-l-4 border-blue-500">
-          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-            <div class="flex-1">
-              <h3 class="text-xl font-bold text-gray-100 mb-2">{{ volunteer.title }}</h3>
-              <p class="text-lg text-blue-400 mb-2">{{ volunteer.organization }}</p>
-              @if (volunteer.description) {
-                <p class="text-gray-300 leading-relaxed">{{ volunteer.description }}</p>
-              }
+        <div class="bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
+          @if (volunteer.imageUrl) {
+            <div class="w-full h-48">
+              <img [src]="volunteer.imageUrl" [alt]="volunteer.title" class="w-full h-full object-cover">
             </div>
-            <div class="flex flex-col items-start md:items-end gap-2">
-              <span class="text-sm font-medium text-gray-400">{{ volunteer.period }}</span>
-              <span class="px-3 py-1 rounded-full text-xs font-semibold"
-                    [ngClass]="{
-                      'bg-green-100 text-green-800': volunteer.status === 'en cours',
-                      'bg-gray-100 text-gray-800': volunteer.status === 'terminé'
-                    }">
+          }
+          <div class="p-6">
+            <div class="flex items-start justify-between mb-4">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-orange-500 text-white">
                 {{ volunteer.status === 'en cours' ? 'En cours' : 'Terminé' }}
               </span>
+              <span class="text-sm font-medium text-gray-400">{{ volunteer.period }}</span>
             </div>
+            <h3 class="text-xl font-bold text-green-400 mb-2">{{ volunteer.title }}</h3>
+            <p class="text-lg text-gray-300 mb-3">{{ volunteer.organization }}</p>
+            @if (volunteer.description) {
+              <p class="text-gray-400 leading-relaxed text-sm">{{ volunteer.description }}</p>
+            }
           </div>
         </div>
       }

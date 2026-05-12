@@ -102,6 +102,23 @@ export class PortfolioDataService {
           status: 'terminé',
         },
         {
+          id: '3',
+          title: 'Equipment Management Application',
+          description: "Collaborative development (team of 3) of a web application for equipment lifecycle management, centralizing data, automating maintenance tracking and ensuring operation traceability.",
+          imageUrl: 'Projet_images/confidential-project.svg',
+          technologies: ['SpringBoot', 'Thymeleaf', 'GitHub'],
+          fullDescription: "Development of a web application to manage the lifecycle of equipment within an organization (IT equipment, vehicles, machines, etc.). The project aimed to centralize equipment information, automate maintenance tracking, and improve operation traceability. Team collaboration enabled task distribution between backend development, frontend, database design and functional testing.",
+          features: [
+            'Equipment management (Creation, deletion and modification)',
+            'Equipment inventory and traceability',
+            'Report generation on equipment tracking',
+          ],
+          category: 'Software Engineering',
+          date: '2024',
+          status: 'terminé',
+          isConfidential: true,
+        },
+        {
           id: '4',
           title: 'Grade Management Application',
           description: 'Intuitive Python grade management application, enabling input, updating and automatic student ranking, with interactive graphical visualization and results export.',
@@ -324,6 +341,23 @@ export class PortfolioDataService {
         category: 'Intelligence Artificielle',
         date: '2025',
         status: 'terminé',
+      },
+      {
+        id: '3',
+        title: 'Application de Gestion des équipements',
+        description: "Développement collaboratif(En équipe de 3) d'une application web de gestion du cycle de vie des équipements, centralisant les données, automatisant le suivi des maintenances et assurant la traçabilité des opérations.",
+        imageUrl: 'Projet_images/confidential-project.svg',
+        technologies: ['SpringBoot', 'Thymeleaf', 'GitHub'],
+        fullDescription: "Développement venu après une longue période de modélisation et en équipe de 3 personnes, d'une application web permettant de gérer le cycle de vie des équipements au sein d'une organisation (matériel informatique, véhicules, machines, etc.). Le projet visait à centraliser les informations sur les équipements, automatiser le suivi des maintenances, et améliorer la traçabilité des opérations. La collaboration en équipe a permis de répartir les tâches entre le développement backend, frontend, la conception de la base de données et les tests fonctionnels.",
+        features: [
+          'Gestion des équipements(Création, suppression et modification des équipements)',
+          'Inventaire et tracabilité  des équipements',
+          'Génération des rapports sur le suivi des matériels',
+        ],
+        category: 'Génie Logiciel',
+        date: '2024',
+        status: 'terminé',
+        isConfidential: true,
       },
       {
         id: '4',
@@ -684,6 +718,7 @@ export class PortfolioDataService {
           organization: "University Parish of Saint Jean University Institute",
           period: '2023 - Present',
           description: 'Active participation in liturgical and spiritual activities of the university parish',
+          imageUrl: '/Vie_associative/Club_liturgique.jpg',
           status: 'en cours',
         },
       ]);
@@ -704,6 +739,7 @@ export class PortfolioDataService {
         organization: "Paroisse Universitaire de l'Institut Universitaire de Saint Jean",
         period: '2023 - Présent',
         description: 'Participation active aux activités liturgiques et spirituelles de la paroisse universitaire',
+        imageUrl: '/Vie_associative/Club_liturgique.jpg',
         status: 'en cours',
       },
     ]);
