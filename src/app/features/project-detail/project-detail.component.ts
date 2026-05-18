@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject, effect } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Project } from '../../core/models';
 import { PortfolioDataService } from '../../core/services/portfolio-data.service';
 import { LanguageService } from '../../core/services/language.service';
@@ -22,6 +22,7 @@ export class ProjectDetailComponent implements OnInit {
   private skipFirstLoad = true;
   
   languageService = inject(LanguageService);
+  translateService = inject(TranslateService);
 
   constructor(
     private route: ActivatedRoute,

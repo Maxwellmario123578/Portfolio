@@ -9,6 +9,7 @@ export interface Project {
   features?: string[];
   githubUrl?: string;
   liveUrl?: string;
+  pdfUrl?: string; // Pour les projets avec rapport PDF
   category?: string;
   date?: string;
   status: 'en cours' | 'terminé';
