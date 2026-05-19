@@ -209,7 +209,7 @@ export class PortfolioDataService {
           pdfUrl: '/Cahier_projets/MLOps_1/Rapport_Final-2.pdf',
           technologies: ['Python', 'XGBoost', 'SMOTEENN', 'Docker', 'FastAPI', 'AWS (EC2, S3, ECR)', 'Nginx', 'Prometheus', 'Grafana', 'GitHub Actions'],
           fullDescription: "Complete MLOps platform for real-time banking fraud detection, deployed on AWS with a highly available cloud architecture. The system uses an XGBoost model with SMOTEENN rebalancing trained on 500,000 transactions from the Kaggle Credit Card Fraud 2025 dataset. The cloud infrastructure relies on EC2 for hosting, S3 for model versioning and automatic backups, and ECR as Docker registry. Deployment is fully automated via GitHub Actions with two FastAPI instances behind Nginx load balancing. Real-time monitoring is provided by Prometheus and Grafana, offering complete pipeline observability. Secure architecture with network isolation, HTTPS, and secrets management.",
-          githubUrl: 'https://github.com/Maxwellmario123578/MLOps_TP_Final',
+          githubUrl: 'https://github.com/Maxwellmario123578/mlops-project',
           features: [
             'XGBoost model with SMOTEENN rebalancing for imbalanced data',
             'Automated CI/CD pipeline with GitHub Actions',
@@ -446,7 +446,7 @@ export class PortfolioDataService {
         pdfUrl: '/Cahier_projets/MLOps_1/Rapport_Final-2.pdf',
         technologies: ['Python', 'XGBoost', 'SMOTEENN', 'Docker', 'FastAPI', 'AWS (EC2, S3, ECR)', 'Nginx', 'Prometheus', 'Grafana', 'GitHub Actions'],
         fullDescription: "Plateforme MLOps complète pour la détection de fraude bancaire en temps réel, déployée sur AWS avec une architecture cloud hautement disponible. Le système utilise un modèle XGBoost avec rééquilibrage SMOTEENN entraîné sur 500 000 transactions du dataset Kaggle Credit Card Fraud 2025. L'infrastructure cloud repose sur EC2 pour l'hébergement, S3 pour le versioning des modèles et backups automatiques, et ECR comme registre Docker. Le déploiement est entièrement automatisé via GitHub Actions avec deux instances FastAPI en load balancing Nginx. Le monitoring temps réel est assuré par Prometheus et Grafana, offrant une observabilité complète du pipeline. Architecture sécurisée avec isolation réseau, HTTPS et gestion des secrets.",
-        githubUrl: 'https://github.com/Maxwellmario123578/MLOps_TP_Final',
+        githubUrl: 'https://github.com/Maxwellmario123578/mlops-project',
         features: [
           'Modèle XGBoost avec rééquilibrage SMOTEENN pour données déséquilibrées',
           'Pipeline CI/CD automatisé avec GitHub Actions',
