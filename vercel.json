@@ -1,23 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/((?!Cahier_projets|Projet_images|CV|Certifs_image|Ecole|Hackaton|Vie_associative|.*\\.(pdf|png|jpg|jpeg|svg|ico|txt|xml)).*)",
+      "source": "/(.*)",
       "destination": "/index.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/Cahier_projets/(.*)",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/pdf"
-        },
-        {
-          "key": "Content-Disposition",
-          "value": "attachment"
-        }
-      ]
     }
   ]
 }
