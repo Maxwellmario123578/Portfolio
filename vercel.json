@@ -1,20 +1,23 @@
 {
-  "routes": [
+  "rewrites": [
     {
-      "src": "/Cahier_projets/(.*)",
-      "headers": {
-        "Content-Type": "application/pdf",
-        "Content-Disposition": "attachment"
-      },
-      "dest": "/Cahier_projets/$1"
-    },
+      "source": "/((?!Cahier_projets|Projet_images|CV|Certifs_image|Ecole|Hackaton|Vie_associative|.*\\.(pdf|png|jpg|jpeg|svg|ico|txt|xml)).*)",
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
     {
-      "src": "/(.*\\.(pdf|png|jpg|jpeg|svg|ico|txt|xml|gif|webp))",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/Cahier_projets/(.*)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/pdf"
+        },
+        {
+          "key": "Content-Disposition",
+          "value": "attachment"
+        }
+      ]
     }
   ]
 }
