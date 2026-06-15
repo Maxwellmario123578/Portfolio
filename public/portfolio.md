@@ -225,15 +225,31 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
 ### Application de gestion des Emplois du Temps dans un établissement
 - **ID:** 6
 - **URL:** https://portfoliomathurin.vercel.app/project/6
-- **Statut:** en cours
+- **Statut:** terminé
 - **Catégorie:** Génie Logiciel
-- **Date:** en cours
+- **Date:** 2025
 - **Technologies:** SpringBoot, Thymleaf, MySQL, Docker, GitHub
-- **Résumé:** Développement, en équipe de 3, d'une application web de gestion des emplois du temps, avec SCRUM, CI/CD et gestion des tâches sur Trello.
-- **Description complète:** Nous mettons en œuvre une architecture microservices, afin de garantir une meilleure scalabilité, une modularité du code et une maintenance facilitée. Chaque service (gestion des enseignants, des classes, des salles, des cours, etc.) est développé et déployé indépendamment, favorisant une grande flexibilité technique. Grâce à une approche CI/CD (Intégration et Déploiement Continus), les mises à jour et les tests sont automatisés, assurant un déploiement fluide et fiable. Le développement s'appuie sur un environnement Spring Boot / Thymeleaf pour le back-end et le front-end, avec MySQL pour la base de données, le tout conteneurisé via Docker et versionné sur GitHub. Un projet qui met en avant la rigueur technique, la collaboration agile et une architecture moderne basée sur les microservices.
+- **Résumé:** En tant que chef de projet d'une équipe de 3 personnes (moi inclus), j'ai piloté le développement d'une application web de gestion des emplois du temps. J'ai également assuré le rôle d'intégrateur pour la liaison backend-frontend, avec SCRUM, CI/CD et gestion des tâches sur Trello.
+- **Description complète:** En tant que chef de projet d'une équipe de 3 personnes (moi inclus), j'ai coordonné le développement de cette application de gestion des emplois du temps. J'ai également endossé le rôle d'intégrateur, en assurant la liaison entre le backend et le frontend pour garantir la cohérence fonctionnelle de l'application. Le projet met en œuvre une architecture microservices afin de garantir une meilleure scalabilité, une modularité du code et une maintenance facilitée. Chaque service (gestion des enseignants, des classes, des salles, des cours, etc.) est développé et déployé indépendamment, favorisant une grande flexibilité technique. Grâce à une approche CI/CD (Intégration et Déploiement Continus), les mises à jour et les tests sont automatisés, assurant un déploiement fluide et fiable. Le développement s'appuie sur un environnement Spring Boot / Thymeleaf pour le back-end et le front-end, avec MySQL pour la base de données, le tout conteneurisé via Docker et versionné sur GitHub.
 - **Fonctionnalités:**
-  - A venir
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/En_cours/A_venir.jpg
+  - Chef de projet d'une équipe de 3 personnes (moi inclus)
+  - Intégrateur backend-frontend (liaison et cohérence des couches)
+  - Architecture microservices (enseignants, classes, salles, cours)
+  - Application web Spring Boot / Thymeleaf
+  - Pipeline CI/CD et gestion de projet agile (SCRUM, Trello)
+  - Base de données MySQL et déploiement Docker
+- **GitHub:** https://github.com/Maxwellmario123578/Planning_gest
+- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_1.jpeg
+- **Images:**
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_1.jpeg
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_2.jpeg
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_3.jpeg
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_4.jpeg
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_5.jpeg
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_6.jpeg
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_7.jpeg
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_8.jpeg
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_9.jpeg
 
 ### EQuizz – Plateforme d'évaluation de la qualité de l'enseignement
 - **ID:** 8
@@ -557,15 +573,31 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
 ### School Schedule Management Application
 - **ID:** 6
 - **URL:** https://portfoliomathurin.vercel.app/project/6
-- **Statut:** en cours
+- **Statut:** terminé
 - **Catégorie:** Software Engineering
-- **Date:** in progress
+- **Date:** 2025
 - **Technologies:** SpringBoot, Thymleaf, MySQL, Docker, GitHub
-- **Résumé:** Development, in a team of 3, of a web application for schedule management, with SCRUM, CI/CD and task management on Trello.
-- **Description complète:** Implementation of a microservices architecture to ensure better scalability, code modularity and easier maintenance. Each service (teacher management, classes, rooms, courses, etc.) is developed and deployed independently, promoting great technical flexibility. Thanks to a CI/CD (Continuous Integration and Deployment) approach, updates and tests are automated, ensuring smooth and reliable deployment. Development relies on a Spring Boot / Thymeleaf environment for backend and frontend, with MySQL for the database, all containerized via Docker and versioned on GitHub. A project that highlights technical rigor, agile collaboration and a modern architecture based on microservices.
+- **Résumé:** As project manager of a 3-person team (including myself), I led the development of a web application for schedule management. I also served as integrator for backend-frontend integration, using SCRUM, CI/CD and Trello for task management.
+- **Description complète:** As project manager of a 3-person team (including myself), I coordinated the development of this school schedule management application. I also took on the role of integrator, ensuring the connection between backend and frontend to guarantee functional consistency across the application. The project implements a microservices architecture to ensure better scalability, code modularity and easier maintenance. Each service (teacher management, classes, rooms, courses, etc.) is developed and deployed independently, promoting great technical flexibility. Thanks to a CI/CD (Continuous Integration and Deployment) approach, updates and tests are automated, ensuring smooth and reliable deployment. Development relies on a Spring Boot / Thymeleaf environment for backend and frontend, with MySQL for the database, all containerized via Docker and versioned on GitHub.
 - **Fonctionnalités:**
-  - Coming soon
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/En_cours/A_venir.jpg
+  - Project manager for a team of 3 (including myself)
+  - Backend-frontend integrator (layer integration and consistency)
+  - Microservices architecture (teachers, classes, rooms, courses)
+  - Spring Boot / Thymeleaf web application
+  - CI/CD pipeline and agile project management (SCRUM, Trello)
+  - MySQL database and Docker deployment
+- **GitHub:** https://github.com/Maxwellmario123578/Planning_gest
+- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_1.jpeg
+- **Images:**
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_1.jpeg
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_2.jpeg
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_3.jpeg
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_4.jpeg
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_5.jpeg
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_6.jpeg
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_7.jpeg
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_8.jpeg
+  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_9.jpeg
 
 ### EQuizz – Teaching Quality Evaluation Platform
 - **ID:** 8
