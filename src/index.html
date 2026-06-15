@@ -11,6 +11,12 @@
     content="Masewell Mathurin KONMENECK, Data Science, Intelligence Artificielle, Machine Learning, Python, Full Stack Developer, Ingénieur Informatique, Saint Jean Ingénieur" />
   <meta name="author" content="Masewell Mathurin KONMENECK" />
 
+  <!-- Fichiers machine-readable pour crawlers IA -->
+  <link rel="alternate" type="application/json" href="/portfolio.json" title="Portfolio JSON" />
+  <link rel="alternate" type="text/markdown" href="/portfolio.md" title="Portfolio Markdown" />
+  <link rel="alternate" type="text/html" href="/content.html" title="Portfolio HTML statique" />
+  <link rel="help" href="/llms.txt" title="Guide pour assistants IA" />
+
   <!-- Open Graph / LinkedIn -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Masewell Mathurin KONMENECK - Portfolio Data Science & Engineering" />
@@ -31,35 +37,28 @@
       "name": "Masewell-Mathurin KONMENECK",
       "jobTitle": "Étudiant en Ingénierie des Systèmes d'Information & Data Scientist",
       "url": "https://portfoliomathurin.vercel.app",
+      "image": "https://portfoliomathurin.vercel.app/Moi.png",
       "sameAs": [
         "https://linkedin.com/in/masewell-mathurin-konmeneck/",
-        "https://github.com/Maxwellmario123578"
+        "https://github.com/Maxwellmario123578",
+        "https://gitlab.com/Maxwellmario123578"
       ],
       "description": "Étudiant en ingénierie à Saint Jean Ingénieur, spécialisé en Data Science (Certifié IBM) et développement logiciel.",
-      "knowsAbout": ["Python", "Machine Learning", "Artificial Intelligence", "JavaScript", "Angular", "Spring Boot", "Data Analysis", "MLOps", "React Native", "Docker", "SQL", "Tableau"],
+      "knowsAbout": ["Python", "Machine Learning", "Artificial Intelligence", "JavaScript", "Angular", "Spring Boot", "Data Analysis", "MLOps", "React Native", "Docker", "SQL", "XGBoost", "FastAPI", "AWS"],
       "alumniOf": {
         "@type": "CollegeOrUniversity",
         "name": "Saint Jean Ingénieur | Yaoundé"
       },
       "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "IBM Data Science Professional Certificate",
-          "url": "https://www.credly.com/badges/cf1b2b0f-2c83-4cf8-af20-4862333cf5b2"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "Google Data Analytics Certificate"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "name": "Microsoft Office Specialist: Word Associate"
-        }
+        {"@type": "EducationalOccupationalCredential", "name": "IBM Data Science Professional Certificate"},
+        {"@type": "EducationalOccupationalCredential", "name": "Google Data Analytics Certificate"},
+        {"@type": "EducationalOccupationalCredential", "name": "Model Context Protocol: Advanced Topics (Anthropic)"},
+        {"@type": "EducationalOccupationalCredential", "name": "Introduction to Agent skills (Anthropic)"}
       ],
-      "workExample": [
-        {"@type": "CreativeWork", "name": "e-KIOSQUE Site Dashboard", "description": "Tableau de bord interactif pour visualiser les données de vente en temps réel."},
-        {"@type": "CreativeWork", "name": "Film Audience Prediction", "description": "Prédiction d'audience via Machine Learning pour films Afro-descendants."},
-        {"@type": "CreativeWork", "name": "WillBank Platform", "description": "Architecture microservices avec Spring Boot et Angular pour services bancaires."}
+      "subjectOf": [
+        {"@type": "CreativeWork", "name": "Portfolio JSON", "url": "https://portfoliomathurin.vercel.app/portfolio.json", "encodingFormat": "application/json"},
+        {"@type": "CreativeWork", "name": "Portfolio Markdown", "url": "https://portfoliomathurin.vercel.app/portfolio.md", "encodingFormat": "text/markdown"},
+        {"@type": "CreativeWork", "name": "Portfolio HTML statique", "url": "https://portfoliomathurin.vercel.app/content.html", "encodingFormat": "text/html"}
       ]
     }
   </script>
@@ -151,42 +150,20 @@
 <body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
   <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
-  <!-- IA & SEO Content Fallback (Full Profile Representation for scrapers) -->
-  <section class="sr-only" style="pointer-events: none; visibility: hidden;">
-    <h1>Masewell-Mathurin KONMENECK</h1>
-    <p>Ingénieur en Systèmes d'Information (Formation 2022-2027) - Saint Jean Ingénieur, Yaoundé.</p>
-
-    <h2>Expériences & Bénévolat</h2>
-    <ul>
-      <li>Stage KIAMAS : Développement d'un Tableau de Bord Dashboard e-KIOSQUE (Charts.js, Tailwind).</li>
-      <li>Responsable Atelier Machine Learning : Club Robotique (2025-présent).</li>
-      <li>Membre du club liturgique : Université de Saint Jean.</li>
-    </ul>
-
-    <h2>Compétences Techniques</h2>
-    <div>
-      <h3>Langages & Frameworks</h3>
-      <p>Python, JavaScript, Java, SQL, R, Angular, Spring Boot, Node.js, React Native, Tailwind CSS.</p>
-      <h3>Data Science & Tools</h3>
-      <p>Pandas, NumPy, Scikit-learn, Matplotlib, Docker, Git, GitLab, Figma, Google BigQuery, MLOps.</p>
+  <noscript>
+    <div style="max-width:800px;margin:2rem auto;padding:1rem;font-family:system-ui,sans-serif;">
+      <h1>Masewell-Mathurin KONMENECK — Portfolio</h1>
+      <p>Ce site nécessite JavaScript pour l'expérience interactive.</p>
+      <p><strong>Pour lire le contenu complet sans JavaScript :</strong></p>
+      <ul>
+        <li><a href="/content.html">Page HTML statique (recommandé pour les IA)</a></li>
+        <li><a href="/portfolio.json">Données JSON structurées</a></li>
+        <li><a href="/portfolio.md">Version Markdown</a></li>
+        <li><a href="/llms.txt">Guide llms.txt</a></li>
+        <li><a href="/CV/CV_KONMENECK.pdf">CV PDF</a></li>
+      </ul>
     </div>
-
-    <h2>Projets (Réalisés & En cours)</h2>
-    <ul>
-      <li><strong>Tableau de bord e-KIOSQUE</strong> : Visualisation KPI temps réel (HTML/CSS, JS).</li>
-      <li><strong>Prédiction d'audience de films</strong> : Modèle IA pour public Afro-descendant.</li>
-      <li><strong>WillBank</strong> : Plateforme bancaire distribuée (Java Spring Boot, Docker, RabbitMQ).</li>
-      <li><strong>Gestion des notes</strong> : Application Python/Matplotlib avec export CSV.</li>
-      <li><strong>MLOps Pipeline</strong> : Pipeline de détection de fraude avec Grafana et Prometheus.</li>
-    </ul>
-
-    <h2>Certifications</h2>
-    <ul>
-      <li>IBM Data Science Professional Certificate</li>
-      <li>Google Data Analytics Certificate</li>
-      <li>Microsoft Office Specialist: Word Associate</li>
-    </ul>
-  </section>
+  </noscript>
 
   <app-root></app-root>
 </body>

@@ -1,0 +1,28 @@
+# Masewell-Mathurin KONMENECK — Portfolio
+
+> Étudiant en Ingénierie des Systèmes d'Information & Data Scientist
+> Portfolio interactif (Angular SPA) — utilisez les fichiers statiques ci-dessous pour une lecture complète sans JavaScript.
+
+## Fichiers recommandés pour les IA
+
+- [Contenu HTML complet](/content.html) : page statique avec tout le texte et les images (sans JS)
+- [Données JSON structurées](/portfolio.json) : profil, projets, compétences, certifications (FR + EN)
+- [Version Markdown](/portfolio.md) : texte intégral lisible
+- [Données brutes](/portfolio-data.json) : source de vérité du portfolio
+- [CV PDF](/CV/CV_KONMENECK.pdf) : curriculum vitae
+
+## Pages du site
+
+- [Accueil](/portfolio) : portfolio interactif
+- [Sitemap](/sitemap.xml)
+
+## Contact
+
+- LinkedIn: https://www.linkedin.com/in/masewell-mathurin-konmeneck/
+- GitHub: https://github.com/Maxwellmario123578
+- GitLab: https://gitlab.com/Maxwellmario123578
+
+## Note technique
+
+Ce site est une Single Page Application Angular. Le contenu visible nécessite l'exécution de JavaScript.
+Pour un scraping fiable, préférez /content.html, /portfolio.json ou /portfolio.md.

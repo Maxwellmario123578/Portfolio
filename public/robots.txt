@@ -1,6 +1,14 @@
 User-agent: *
 Allow: /
-Allow: /portfolio
-Allow: /project/
+
+# Fichiers optimisés pour les crawlers et assistants IA
+Allow: /content.html
+Allow: /portfolio.json
+Allow: /portfolio.md
+Allow: /portfolio-data.json
+Allow: /llms.txt
+Allow: /CV/
 
 Sitemap: https://portfoliomathurin.vercel.app/sitemap.xml
+
+# Guide pour les LLM : https://portfoliomathurin.vercel.app/llms.txt
