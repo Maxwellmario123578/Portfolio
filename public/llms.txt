@@ -1,28 +1,76 @@
-# Masewell-Mathurin KONMENECK — Portfolio
+# Masewell Mathurin KONMENECK — Portfolio
 
 > Étudiant en Ingénierie des Systèmes d'Information & Data Scientist
-> Portfolio interactif (Angular SPA) — utilisez les fichiers statiques ci-dessous pour une lecture complète sans JavaScript.
+> Institut Saint Jean Ingénieur, Yaoundé, Cameroun — Promotion 2022-2027
+> Portfolio interactif Angular SPA — Utilisez les fichiers statiques ci-dessous pour une lecture complète sans JavaScript.
+
+## Profil
+
+**Nom complet :** Masewell Mathurin KONMENECK
+**Titre :** Étudiant Ingénieur en Systèmes d'Information | Data Scientist | Développeur Full-Stack
+**Formation :** Cycle ingénieur, Institut Saint Jean Ingénieur, Yaoundé (Cameroun), 2022–2027
+**Localisation :** Yaoundé, Cameroun
+
+## Certifications Professionnelles
+
+- **IBM Data Science Professional Certificate** — IBM via Coursera (Python, SQL, Machine Learning, Pandas, Scikit-learn) — [Vérifier](https://www.coursera.org/account/accomplishments/professional-cert/certificate/FZE10YBKGRUL)
+- **Google Data Analytics Certificate** — Google via Coursera (SQL, Tableau, R, Analyse de données) — [Vérifier](https://www.coursera.org/account/accomplishments/professional-cert/certificate/7HDM657JEEQF)
+- **Model Context Protocol: Advanced Topics** — Anthropic (MCP avancé, Sampling, Sécurité IA) — [Vérifier](https://verify.skilljar.com/c/nb7ftfnact58)
+- **Introduction to Agent Skills** — Anthropic (Agents IA, Tool Use, Claude) — [Vérifier](https://verify.skilljar.com/c/cmv7mvbzpr9w)
+
+## Compétences Techniques
+
+**Langages :** Python, JavaScript, TypeScript, Java, SQL, R
+**Frameworks :** Angular, Spring Boot, React Native, Node.js/Express, TailwindCSS
+**Data Science & ML :** XGBoost, Scikit-learn, Pandas, NumPy, Matplotlib, SMOTEENN, Analyse prédictive
+**MLOps & Cloud :** Docker, Docker Compose, AWS (EC2, S3, ECR), FastAPI, Nginx, Prometheus, Grafana, GitHub Actions CI/CD
+**IA Avancée :** Model Context Protocol (MCP), Agents IA Anthropic/Claude, Vision par ordinateur, Random Forest
+**Bases de données :** MySQL, PostgreSQL, Redis, Google BigQuery
+**Outils :** Figma, Trello, GitLab, GitHub, RabbitMQ, Eureka (Service Discovery)
+**Méthodologies :** Agile SCRUM, Microservices, Clean Architecture, CI/CD
+
+## Projets (10 projets)
+
+1. **Détection de Fraude MLOps End-to-End** (2026) — Pipeline MLOps AWS, XGBoost+SMOTEENN, 500k transactions, FastAPI, Prometheus/Grafana, GitHub Actions — [GitHub](https://github.com/Maxwellmario123578/mlops-project) | [Portfolio](https://portfoliomathurin.vercel.app/project/9)
+2. **Plateforme Bancaire WillBank** (2024-2025) — Microservices Spring Boot, Angular, Docker, MySQL, RabbitMQ, Redis — [GitLab](https://gitlab.com/Maxwellmario123578/WillBank_Project.git) | [Portfolio](https://portfoliomathurin.vercel.app/project/5)
+3. **EQuizz — Évaluation de l'enseignement** (2025) — React Native, Node.js, Clean Architecture, CI/CD GitLab, Lead Dev équipe 3 — [GitLab](https://gitlab.com/Maxwellmario123578/equizz) | [Portfolio](https://portfoliomathurin.vercel.app/project/8)
+4. **Hackathon Data4Change 2024** — CareMap Cameroun, nettoyage CSV, impact social — [GitHub](https://github.com/joanmelong/caremap-hackathon-2025) | [Portfolio](https://portfoliomathurin.vercel.app/project/hackathon-1)
+5. **Hackathon WFEO 2024** — Urban Resource Loop, IA+Blockchain+IoT, économie circulaire Yaoundé — [Portfolio](https://portfoliomathurin.vercel.app/project/hackathon-2)
+6. **Dashboard e-KIOSQUE** (2025) — Charts.js, KPIs temps réel, export PDF/Excel/CSV — [GitHub](https://github.com/Maxwellmario123578/eKIOSQUE_DASHBOARD.git) | [Portfolio](https://portfoliomathurin.vercel.app/project/1)
+7. **Prédiction d'audience Films par IA** (2025) — Machine Learning Python, Scikit-learn — [GitHub](https://github.com/Maxwellmario123578/ml-prediction-film.git) | [Portfolio](https://portfoliomathurin.vercel.app/project/2)
+8. **Gestion des Notes Python** (2024-2025) — Matplotlib, Pie/Spider Charts, export CSV/.exe — [Portfolio](https://portfoliomathurin.vercel.app/project/4)
+9. **PlanninGest — Emplois du Temps** (2025) — Spring Boot/Thymeleaf, microservices, Chef projet équipe 3 — [GitHub](https://github.com/Maxwellmario123578/Planning_gest) | [Portfolio](https://portfoliomathurin.vercel.app/project/6)
+10. **AMNESCH — Bibliothèque Numérique** (2025-présent) — React Native, Node.js, DRM propriétaire, Watermarking — [Portfolio](https://portfoliomathurin.vercel.app/project/10)
+
+## Bénévolats
+
+- **Responsable Atelier Machine Learning** — Club Robotique, Institut Saint Jean Ingénieur (2025–présent) — Formation des membres aux outils et concepts ML
+- **Membre du Club Liturgique** — Paroisse Universitaire de Saint Jean (2023–présent)
 
 ## Fichiers recommandés pour les IA
 
-- [Contenu HTML complet](/content.html) : page statique avec tout le texte et les images (sans JS)
+- [Contenu HTML complet](/content.html) : page statique avec tout le texte (sans JS requis)
 - [Données JSON structurées](/portfolio.json) : profil, projets, compétences, certifications (FR + EN)
 - [Version Markdown](/portfolio.md) : texte intégral lisible
 - [Données brutes](/portfolio-data.json) : source de vérité du portfolio
 - [CV PDF](/CV/CV_KONMENECK.pdf) : curriculum vitae
+- [Sitemap](/sitemap.xml) : liste des pages
 
 ## Pages du site
 
-- [Accueil](/portfolio) : portfolio interactif
-- [Sitemap](/sitemap.xml)
+- [Portfolio interactif](https://portfoliomathurin.vercel.app/) — SPA Angular
+- [Contenu statique](https://portfoliomathurin.vercel.app/content.html) — Recommandé pour crawlers IA
 
-## Contact
+## Contact & Réseaux
 
-- LinkedIn: https://www.linkedin.com/in/masewell-mathurin-konmeneck/
-- GitHub: https://github.com/Maxwellmario123578
-- GitLab: https://gitlab.com/Maxwellmario123578
+- **LinkedIn :** https://www.linkedin.com/in/masewell-mathurin-konmeneck/
+- **GitHub :** https://github.com/Maxwellmario123578
+- **GitLab :** https://gitlab.com/Maxwellmario123578
+- **Formulaire contact :** https://portfoliomathurin.vercel.app/#contact
 
 ## Note technique
 
 Ce site est une Single Page Application Angular. Le contenu visible nécessite l'exécution de JavaScript.
 Pour un scraping fiable, préférez /content.html, /portfolio.json ou /portfolio.md.
+
+*Dernière mise à jour : 2026-06-23*
