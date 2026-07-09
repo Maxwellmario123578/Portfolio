@@ -1,309 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Masewell Mathurin KONMENECK - Portfolio | Data Science & Engineering</title>
-  <meta name="description"
-    content="Portfolio de Masewell Mathurin KONMENECK - Étudiant en Ingénierie des Systèmes d'Information, certifié IBM Data Science. Spécialiste en IA, Machine Learning et développement Web." />
-  <meta name="keywords"
-    content="Masewell Mathurin KONMENECK, Data Science, Intelligence Artificielle, Machine Learning, Python, Full Stack Developer, Ingénieur Informatique, Saint Jean Ingénieur" />
-  <meta name="author" content="Masewell Mathurin KONMENECK" />
+  <meta charset="utf-8">
+  <title>Masewell Mathurin KONMENECK - Portfolio</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Masewell Mathurin KONMENECK — Étudiant Ingénieur en Systèmes d'Information, certifié IBM Data Science & Google Analytics. Spécialiste IA, MLOps, Angular, Spring Boot.">
+  <meta name="author" content="Masewell Mathurin KONMENECK">
+  <link rel="icon" type="image/x-icon" href="favicon.ico?v=2">
 
-  <!-- Fichiers machine-readable pour crawlers IA -->
-  <link rel="alternate" type="application/json" href="/portfolio.json" title="Portfolio JSON" />
-  <link rel="alternate" type="text/markdown" href="/portfolio.md" title="Portfolio Markdown" />
-  <link rel="alternate" type="text/html" href="/content.html" title="Portfolio HTML statique" />
-  <link rel="help" href="/llms.txt" title="Guide pour assistants IA" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Masewell Mathurin KONMENECK - Portfolio Data Science & Engineering">
+  <meta property="og:description" content="Étudiant Ingénieur à Saint Jean Ingénieur (Yaoundé). Certifié IBM Data Science & Google Analytics. Expertise : Python, XGBoost, Angular, Spring Boot, MLOps, AWS.">
+  <meta property="og:image" content="https://portfoliomathurin.vercel.app/Moi.png">
+  <meta property="og:url" content="https://portfoliomathurin.vercel.app/">
+  <link rel="canonical" href="https://portfoliomathurin.vercel.app/">
 
-  <!-- Open Graph / LinkedIn -->
-  <meta property="og:type" content="profile" />
-  <meta property="og:url" content="https://portfoliomathurin.vercel.app/" />
-  <meta property="og:locale" content="fr_FR" />
-  <meta property="og:locale:alternate" content="en_US" />
-  <meta property="og:title" content="Masewell Mathurin KONMENECK - Portfolio Data Science & Engineering" />
-  <meta property="og:description"
-    content="Portfolio de Masewell Mathurin KONMENECK — Étudiant en Ingénierie des Systèmes d'Information à Saint Jean Ingénieur (Yaoundé). Certifié IBM Data Science Professional & Google Data Analytics. Spécialiste IA, MLOps, Angular, Spring Boot." />
-  <meta property="og:image" content="https://portfoliomathurin.vercel.app/Moi.png" />
-  <meta property="og:image:alt" content="Photo de Masewell Mathurin KONMENECK, ingénieur logiciel et data scientist" />
-  <meta property="og:image:width" content="600" />
-  <meta property="og:image:height" content="600" />
-  <meta property="og:site_name" content="Portfolio Masewell Mathurin KONMENECK" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@400;700;900&family=Syne:wght@400;500;600;700;800&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Masewell Mathurin KONMENECK - Data Scientist & Ingénieur Logiciel" />
-  <meta name="twitter:description" content="Étudiant ingénieur à Saint Jean Ingénieur (Yaoundé). Certifié IBM Data Science & Google Analytics. Expertise : Python, XGBoost, Angular, Spring Boot, MLOps, AWS." />
-  <meta name="twitter:image" content="https://portfoliomathurin.vercel.app/Moi.png" />
-  <meta name="twitter:image:alt" content="Masewell Mathurin KONMENECK — Data Scientist & Ingénieur Logiciel" />
-
-  <!-- Canonical -->
-  <link rel="canonical" href="https://portfoliomathurin.vercel.app/" />
-
-  <!-- Structured Data for IA (JSON-LD) -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@graph": [
-        {
-          "@type": "Person",
-          "@id": "https://portfoliomathurin.vercel.app/#person",
-          "name": "Masewell Mathurin KONMENECK",
-          "alternateName": ["Masewell-Mathurin KONMENECK", "Maxwell KONMENECK"],
-          "givenName": "Masewell Mathurin",
-          "familyName": "KONMENECK",
-          "jobTitle": "Étudiant en Ingénierie des Systèmes d'Information & Data Scientist",
-          "url": "https://portfoliomathurin.vercel.app",
-          "image": {
-            "@type": "ImageObject",
-            "url": "https://portfoliomathurin.vercel.app/Moi.png",
-            "description": "Photo de profil de Masewell Mathurin KONMENECK"
-          },
-          "sameAs": [
-            "https://www.linkedin.com/in/masewell-mathurin-konmeneck/",
-            "https://github.com/Maxwellmario123578",
-            "https://gitlab.com/Maxwellmario123578"
-          ],
-          "description": "Étudiant en ingénierie de conception informatique à Saint Jean Ingénieur (Yaoundé, Cameroun). Certifié IBM Data Science Professional et Google Data Analytics. Spécialiste en Machine Learning (XGBoost, Scikit-learn), développement Full-stack (Angular, Spring Boot, React Native), MLOps (Docker, AWS, FastAPI, Prometheus/Grafana) et Intelligence Artificielle.",
-          "knowsAbout": [
-            "Python", "Machine Learning", "Artificial Intelligence", "Data Science",
-            "JavaScript", "TypeScript", "Angular", "Spring Boot", "React Native",
-            "MLOps", "Docker", "SQL", "XGBoost", "FastAPI", "AWS", "Node.js",
-            "SMOTEENN", "Prometheus", "Grafana", "GitHub Actions", "Microservices",
-            "Model Context Protocol (MCP)", "Claude AI Agents", "RabbitMQ"
-          ],
-          "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "Institut Saint Jean Ingénieur",
-            "address": { "@type": "PostalAddress", "addressLocality": "Yaoundé", "addressCountry": "CM" },
-            "url": "https://institutsaintjean.org/"
-          },
-          "hasCredential": [
-            {
-              "@type": "EducationalOccupationalCredential",
-              "name": "IBM Data Science Professional Certificate",
-              "credentialCategory": "Professional Certificate",
-              "recognizedBy": { "@type": "Organization", "name": "IBM" },
-              "url": "https://www.coursera.org/account/accomplishments/professional-cert/certificate/FZE10YBKGRUL"
-            },
-            {
-              "@type": "EducationalOccupationalCredential",
-              "name": "Google Data Analytics Certificate",
-              "credentialCategory": "Professional Certificate",
-              "recognizedBy": { "@type": "Organization", "name": "Google" },
-              "url": "https://www.coursera.org/account/accomplishments/professional-cert/certificate/7HDM657JEEQF"
-            },
-            {
-              "@type": "EducationalOccupationalCredential",
-              "name": "Model Context Protocol: Advanced Topics",
-              "credentialCategory": "Course Certificate",
-              "recognizedBy": { "@type": "Organization", "name": "Anthropic" },
-              "url": "https://verify.skilljar.com/c/nb7ftfnact58"
-            },
-            {
-              "@type": "EducationalOccupationalCredential",
-              "name": "Introduction to Agent Skills",
-              "credentialCategory": "Course Certificate",
-              "recognizedBy": { "@type": "Organization", "name": "Anthropic" },
-              "url": "https://verify.skilljar.com/c/cmv7mvbzpr9w"
-            }
-          ]
-        },
-        {
-          "@type": "ProfilePage",
-          "@id": "https://portfoliomathurin.vercel.app/#webpage",
-          "name": "Portfolio de Masewell Mathurin KONMENECK — Data Scientist & Ingénieur Logiciel",
-          "url": "https://portfoliomathurin.vercel.app/",
-          "description": "Portfolio professionnel interactif présentant les projets, compétences et certifications de Masewell Mathurin KONMENECK.",
-          "about": { "@id": "https://portfoliomathurin.vercel.app/#person" },
-          "dateModified": "2026-06-23",
-          "inLanguage": ["fr", "en"]
-        },
-        {
-          "@type": "ItemList",
-          "name": "Projets de Masewell Mathurin KONMENECK",
-          "description": "Liste des projets réalisés en Data Science, MLOps, Développement Full-stack et Hackathons.",
-          "numberOfItems": 10,
-          "itemListElement": [
-            {
-              "@type": "ListItem", "position": 1,
-              "item": {
-                "@type": "SoftwareSourceCode",
-                "name": "Détection de Fraude MLOps End-to-End",
-                "description": "Pipeline MLOps complet pour détection de fraude bancaire en temps réel. Modèle XGBoost + SMOTEENN, déployé sur AWS EC2 avec FastAPI, Docker, Prometheus et Grafana. Pipeline CI/CD via GitHub Actions.",
-                "programmingLanguage": ["Python", "Docker", "YAML"],
-                "runtimePlatform": "AWS EC2",
-                "url": "https://portfoliomathurin.vercel.app/project/9",
-                "codeRepository": "https://github.com/Maxwellmario123578/mlops-project"
-              }
-            },
-            {
-              "@type": "ListItem", "position": 2,
-              "item": {
-                "@type": "SoftwareSourceCode",
-                "name": "Plateforme Bancaire Distribuée WillBank",
-                "description": "Solution bancaire microservices avec Spring Boot, Angular, Docker, MySQL, RabbitMQ et Redis. Gestion clients, comptes, transactions et notifications asynchrones.",
-                "programmingLanguage": ["Java", "TypeScript"],
-                "url": "https://portfoliomathurin.vercel.app/project/5",
-                "codeRepository": "https://gitlab.com/Maxwellmario123578/WillBank_Project.git"
-              }
-            },
-            {
-              "@type": "ListItem", "position": 3,
-              "item": {
-                "@type": "SoftwareSourceCode",
-                "name": "EQuizz – Évaluation de la qualité de l'enseignement",
-                "description": "Application mobile (React Native) et backend Node.js pour évaluation anonyme des enseignants. Clean Architecture, CI/CD GitLab, Agile SCRUM. Lead Developer d'une équipe de 3.",
-                "programmingLanguage": ["JavaScript", "TypeScript"],
-                "url": "https://portfoliomathurin.vercel.app/project/8",
-                "codeRepository": "https://gitlab.com/Maxwellmario123578/equizz"
-              }
-            },
-            {
-              "@type": "ListItem", "position": 4,
-              "item": {
-                "@type": "SoftwareSourceCode",
-                "name": "Hackathon Data4Change – CareMap Cameroun",
-                "description": "Application web développée lors du hackathon Data4Change 2024, intégrant nettoyage de données CSV et visualisation pour solutions à impact social.",
-                "programmingLanguage": ["Python", "JavaScript"],
-                "url": "https://portfoliomathurin.vercel.app/project/hackathon-1",
-                "codeRepository": "https://github.com/joanmelong/caremap-hackathon-2025"
-              }
-            },
-            {
-              "@type": "ListItem", "position": 5,
-              "item": {
-                "@type": "SoftwareSourceCode",
-                "name": "Hackathon WFEO – Urban Resource Loop",
-                "description": "Système d'infrastructure circulaire combinant IA, Blockchain IoT pour valorisation des plastiques à Yaoundé. Smart contracts, Random Forest, bornes intelligentes.",
-                "programmingLanguage": ["Python"],
-                "url": "https://portfoliomathurin.vercel.app/project/hackathon-2"
-              }
-            },
-            {
-              "@type": "ListItem", "position": 6,
-              "item": {
-                "@type": "SoftwareSourceCode",
-                "name": "Tableau de bord e-KIOSQUE",
-                "description": "Dashboard interactif avec Charts.js pour visualisation des KPIs en temps réel, exportation PDF/Excel/CSV, interface responsive.",
-                "programmingLanguage": ["JavaScript", "HTML", "CSS"],
-                "url": "https://portfoliomathurin.vercel.app/project/1",
-                "codeRepository": "https://github.com/Maxwellmario123578/eKIOSQUE_DASHBOARD.git"
-              }
-            },
-            {
-              "@type": "ListItem", "position": 7,
-              "item": {
-                "@type": "SoftwareSourceCode",
-                "name": "Prédiction d'audience de films par IA",
-                "description": "Système de Machine Learning prédicatif pour anticiper les préférences d'audience cinématographique, entraîné sur données variées avec Python.",
-                "programmingLanguage": ["Python"],
-                "url": "https://portfoliomathurin.vercel.app/project/2",
-                "codeRepository": "https://github.com/Maxwellmario123578/ml-prediction-film.git"
-              }
-            },
-            {
-              "@type": "ListItem", "position": 8,
-              "item": {
-                "@type": "SoftwareSourceCode",
-                "name": "Application de gestion des notes (Python)",
-                "description": "Application Python avec visualisations Matplotlib (Pie Chart, Spider Chart), exportation CSV et exécutable .exe. Gestion et classement des notes étudiantes.",
-                "programmingLanguage": ["Python"],
-                "url": "https://portfoliomathurin.vercel.app/project/4"
-              }
-            },
-            {
-              "@type": "ListItem", "position": 9,
-              "item": {
-                "@type": "SoftwareSourceCode",
-                "name": "Application de gestion des Emplois du Temps",
-                "description": "Application microservices Spring Boot/Thymeleaf pour gestion des emplois du temps scolaires. Chef de projet d'une équipe de 3. Pipeline CI/CD Docker.",
-                "programmingLanguage": ["Java"],
-                "url": "https://portfoliomathurin.vercel.app/project/6",
-                "codeRepository": "https://github.com/Maxwellmario123578/Planning_gest"
-              }
-            },
-            {
-              "@type": "ListItem", "position": 10,
-              "item": {
-                "@type": "SoftwareSourceCode",
-                "name": "AMNESCH – Bibliothèque Numérique Éducative",
-                "description": "Plateforme mobile (React Native + Expo) de diffusion de ressources éducatives avec DRM propriétaire, watermarking dynamique et backend Node.js/PostgreSQL.",
-                "programmingLanguage": ["TypeScript", "JavaScript"],
-                "url": "https://portfoliomathurin.vercel.app/project/10"
-              }
-            }
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Quelles sont les compétences principales de Masewell Mathurin KONMENECK ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Masewell Mathurin KONMENECK maîtrise la Data Science (Python, Machine Learning avec XGBoost/Scikit-learn, certifié IBM Data Science Professional), le développement Full-stack (Angular, Spring Boot, React Native, Node.js), le MLOps (Docker, AWS EC2/S3/ECR, FastAPI, Prometheus, Grafana, GitHub Actions CI/CD) et l'Intelligence Artificielle appliquée (Agents IA, MCP Anthropic)."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quelles certifications possède Masewell Mathurin KONMENECK ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Il possède 4 certifications professionnelles : IBM Data Science Professional Certificate (Coursera), Google Data Analytics Certificate (Coursera), Model Context Protocol Advanced Topics (Anthropic) et Introduction to Agent Skills (Anthropic). Toutes sont vérifiables en ligne."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Où Masewell Mathurin KONMENECK fait-il ses études ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Il est étudiant en Ingénierie des Systèmes d'Information à l'Institut Saint Jean Ingénieur (Yaoundé, Cameroun), une école d'ingénieurs reconnue. Il est en cycle ingénieur 2022-2027, avec une spécialisation en développement logiciel, Data Science et architecture web."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quels projets MLOps a réalisés Masewell Mathurin KONMENECK ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Son projet MLOps phare est un système de détection de fraude bancaire en temps réel déployé sur AWS. Il utilise XGBoost avec rééquilibrage SMOTEENN, entraîné sur 500 000 transactions. L'infrastructure comprend FastAPI avec load balancing Nginx, monitoring Prometheus/Grafana, CI/CD GitHub Actions et backup automatique S3 toutes les 6h."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quelle est l'expérience en hackathon de Masewell Mathurin KONMENECK ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Il a participé à deux hackathons : Data4Change 2024 (développement d'une application CareMap pour le Cameroun) et WFEO 2024 (développement d'Urban Resource Loop, un système d'infrastructure circulaire combinant IA, Blockchain et IoT pour la valorisation des déchets plastiques à Yaoundé)."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Comment contacter Masewell Mathurin KONMENECK ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Masewell Mathurin KONMENECK est joignable via LinkedIn (https://www.linkedin.com/in/masewell-mathurin-konmeneck/), GitHub (https://github.com/Maxwellmario123578), GitLab (https://gitlab.com/Maxwellmario123578), ou via le formulaire de contact de son portfolio (https://portfoliomathurin.vercel.app)."
-              }
-            }
-          ]
-        }
-      ]
-    }
-  </script>
-  <base href="/" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico?v=2" />
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -321,79 +43,22 @@
             grotesk: ['Space Grotesk', 'sans-serif'],
             mono: ['Fira Code', 'monospace'],
           },
-          borderRadius: {
-            DEFAULT: '0.25rem',
-            lg: '0.5rem',
-            xl: '0.75rem',
-            full: '9999px',
-          },
         },
       },
     };
   </script>
+
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      min-height: max(884px, 100dvh);
-    }
-
-    /* Amélioration du focus pour l'accessibilité */
-    *:focus-visible {
-      outline: 2px solid #22c55e;
-      outline-offset: 2px;
-    }
-
-    /* Skip to main content link */
-    .skip-link {
-      position: absolute;
-      top: -40px;
-      left: 0;
-      background: #22c55e;
-      color: white;
-      padding: 8px;
-      text-decoration: none;
-      z-index: 100;
-    }
-
-    .skip-link:focus {
-      top: 0;
-    }
-
-    /* Screen reader only content */
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
+    html { scroll-behavior: smooth; }
+    body { min-height: max(884px, 100dvh); }
+    *:focus-visible { outline: 2px solid #136dec; outline-offset: 2px; }
+    .skip-link { position: absolute; top: -40px; left: 0; background: #136dec; color: white; padding: 8px; text-decoration: none; z-index: 100; }
+    .skip-link:focus { top: 0; }
   </style>
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
   <a href="#main-content" class="skip-link">Aller au contenu principal</a>
-
-  <noscript>
-    <div style="max-width:800px;margin:2rem auto;padding:1rem;font-family:system-ui,sans-serif;">
-      <h1>Masewell-Mathurin KONMENECK — Portfolio</h1>
-      <p>Ce site nécessite JavaScript pour l'expérience interactive.</p>
-      <p><strong>Pour lire le contenu complet sans JavaScript :</strong></p>
-      <ul>
-        <li><a href="/content.html">Page HTML statique (recommandé pour les IA)</a></li>
-        <li><a href="/portfolio.json">Données JSON structurées</a></li>
-        <li><a href="/portfolio.md">Version Markdown</a></li>
-        <li><a href="/llms.txt">Guide llms.txt</a></li>
-        <li><a href="/CV/CV_KONMENECK.pdf">CV PDF</a></li>
-      </ul>
-    </div>
-  </noscript>
 
   <app-root></app-root>
 </body>
