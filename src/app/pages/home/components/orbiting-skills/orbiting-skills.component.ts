@@ -39,6 +39,8 @@ export class OrbitingSkillsComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   ngOnInit() {
+    // Animation uniquement dans le navigateur (pas pendant le pré-rendu)
+    if (typeof window === 'undefined') return;
     this.checkMobile();
     this.startAnimation();
     window.addEventListener('resize', () => this.checkMobile());
@@ -48,7 +50,7 @@ export class OrbitingSkillsComponent implements OnInit, OnDestroy, OnChanges {
     if (this.animationFrameId) {
       cancelAnimationFrame(this.animationFrameId);
     }
-    window.removeEventListener('resize', () => this.checkMobile());
+    if (typeof window !== 'undefined') window.removeEventListener('resize', () => this.checkMobile());
   }
 
   checkMobile() {
@@ -60,7 +62,7 @@ export class OrbitingSkillsComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   updateOrbits() {
-    if (this.isMobile || window.innerWidth < 768) {
+    if (this.isMobile || (typeof window !== 'undefined' && window.innerWidth < 768)) {
       this.orbits = [
         { radius: 80, speed: 0.5, glowColor: 'rgba(34, 197, 94, 0.3)' },
         { radius: 140, speed: -0.3, glowColor: 'rgba(34, 197, 94, 0.2)' }
