@@ -1,10 +1,10 @@
-# Portfolio — Masewell-Mathurin KONMENECK
+# Portfolio — Masewell Mathurin KONMENECK
 
-> Fichier généré automatiquement le 2026-06-15
+> Fichier généré automatiquement le 2026-10-05
 
 ---
 
-# Masewell-Mathurin KONMENECK
+# Masewell Mathurin KONMENECK
 
 > Étudiant en Ingénierie des Systèmes d'Information & Data Scientist
 
@@ -16,12 +16,12 @@ Mon objectif est de créer des applications performantes et utiles, tout en cont
 
 ## Liens
 
-- Portfolio: https://portfoliomathurin.vercel.app/portfolio
-- CV: https://portfoliomathurin.vercel.app/CV/CV_KONMENECK.pdf
+- Portfolio: https://www.masewellmathurin.fr/portfolio
+- CV: https://www.masewellmathurin.fr/CV/CV_KONMENECK.pdf
 - LinkedIn: https://www.linkedin.com/in/masewell-mathurin-konmeneck/
 - GitHub: https://github.com/Maxwellmario123578
 - GitLab: https://gitlab.com/Maxwellmario123578
-- Photo: https://portfoliomathurin.vercel.app/Moi.png
+- Photo: https://www.masewellmathurin.fr/Moi.webp
 
 ## Formations
 
@@ -45,7 +45,7 @@ Mon objectif est de créer des applications performantes et utiles, tout en cont
 - **Compétences:** MCP, Anthropic, Infrastructure IA, Sampling, Sécurité
 - **Description:** Exploration des fonctionnalités avancées du Model Context Protocol (MCP) pour construire des intégrations IA robustes et sécurisées. Formation axée sur la gestion complexe des ressources, les techniques d'échantillonnage (sampling) personnalisées et l'orchestration du cycle de vie. Maîtrise des schémas de sécurité et de l'optimisation des performances pour créer des ponts fluides entre les modèles de langage et les systèmes de données propriétaires.
 - **Vérification:** https://verify.skilljar.com/c/nb7ftfnact58
-- **Image:** https://portfoliomathurin.vercel.app/Certifs_image/IBM_Certifs/Antropic_Completion_MCP_Advanced.png
+- **Image:** https://www.masewellmathurin.fr/Certifs_image/IBM_Certifs/Antropic_Completion_MCP_Advanced.webp
 
 ### Introduction aux compétences d'Agent
 - **Émetteur:** Anthropic
@@ -53,7 +53,7 @@ Mon objectif est de créer des applications performantes et utiles, tout en cont
 - **Compétences:** Anthropic, Claude, Agents IA, Tool Use
 - **Description:** Apprentissage des concepts fondamentaux pour doter un modèle Claude de capacités d'action. Formation axée sur la structure d'un "Skill" (compétence) : de la définition du nom et de la description technique à la configuration des paramètres d'entrée. Maîtrise du flux itératif entre l'utilisateur, le modèle et l'outil, permettant à l'IA de sélectionner et de formuler correctement des requêtes vers des fonctions externes.
 - **Vérification:** https://verify.skilljar.com/c/cmv7mvbzpr9w
-- **Image:** https://portfoliomathurin.vercel.app/Certifs_image/IBM_Certifs/Antropic_Completion_AI_Agent.png
+- **Image:** https://www.masewellmathurin.fr/Certifs_image/IBM_Certifs/Antropic_Completion_AI_Agent.webp
 
 ### IBM Data Science Professional Certificate
 - **Émetteur:** IBM
@@ -61,7 +61,7 @@ Mon objectif est de créer des applications performantes et utiles, tout en cont
 - **Compétences:** Data Science, Python, SQL, Data Analysis, Machine Learning
 - **Description:** Formation intensive couvrant l'ensemble du cycle de vie de la donnée : de l'extraction (SQL) à la modélisation prédictive (Machine Learning avec Python). Maîtrise des bibliothèques Pandas, Scikit-learn et de la visualisation de données pour traduire des données brutes en décisions stratégiques.
 - **Vérification:** https://www.coursera.org/account/accomplishments/professional-cert/certificate/FZE10YBKGRUL
-- **Image:** https://portfoliomathurin.vercel.app/Certifs_image/IBM_Certifs/IBM_image.png
+- **Image:** https://www.masewellmathurin.fr/Certifs_image/IBM_Certifs/IBM_image.webp
 
 ### Google Data Analytics
 - **Émetteur:** Google
@@ -69,7 +69,7 @@ Mon objectif est de créer des applications performantes et utiles, tout en cont
 - **Compétences:** Data Analysis, Spreadsheets, SQL, Tableau, R Programming
 - **Description:** Certification axée sur l'analyse de données axée sur les résultats. Compétence en nettoyage de données, analyse statistique et communication visuelle (Tableau). Maîtrise de la pensée analytique pour identifier les tendances et optimiser les processus métiers à partir de jeux de données complexes.
 - **Vérification:** https://www.coursera.org/account/accomplishments/professional-cert/certificate/7HDM657JEEQF
-- **Image:** https://portfoliomathurin.vercel.app/Certifs_image/IBM_Certifs/Google_certif.png
+- **Image:** https://www.masewellmathurin.fr/Certifs_image/IBM_Certifs/Google_certif.webp
 
 ## Compétences
 
@@ -89,7 +89,7 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
 
 ### Hackathon Data4Change
 - **ID:** hackathon-1
-- **URL:** https://portfoliomathurin.vercel.app/project/hackathon-1
+- **URL:** https://www.masewellmathurin.fr/project/hackathon-1
 - **Statut:** terminé
 - **Catégorie:** Hackathon / Data Science
 - **Date:** 2024
@@ -104,16 +104,16 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - Travail d'équipe pluridisciplinaire
 - **GitHub:** https://github.com/joanmelong/caremap-hackathon-2025
 - **Démo/Maquette:** https://caremap-cameroun.vercel.app/
-- **Image principale:** https://portfoliomathurin.vercel.app/Hackaton/Data4Change_1.jpeg
+- **Image principale:** https://www.masewellmathurin.fr/Hackaton/Data4Change_1.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Hackaton/Data4Change_1.jpeg
-  - https://portfoliomathurin.vercel.app/Hackaton/Data4Change_2.jpeg
-  - https://portfoliomathurin.vercel.app/Hackaton/Data4Change_3.jpeg
-  - https://portfoliomathurin.vercel.app/Hackaton/Certificat_Data4Change.png
+  - https://www.masewellmathurin.fr/Hackaton/Data4Change_1.webp
+  - https://www.masewellmathurin.fr/Hackaton/Data4Change_2.webp
+  - https://www.masewellmathurin.fr/Hackaton/Data4Change_3.webp
+  - https://www.masewellmathurin.fr/Hackaton/Certificat_Data4Change.webp
 
 ### Hackathon WFEO - Urban Resource Loop
 - **ID:** hackathon-2
-- **URL:** https://portfoliomathurin.vercel.app/project/hackathon-2
+- **URL:** https://www.masewellmathurin.fr/project/hackathon-2
 - **Statut:** terminé
 - **Catégorie:** Hackathon / Durabilité / IA & Blockchain
 - **Date:** 2024
@@ -130,15 +130,15 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - Économie circulaire complète : transformation plastique-pavés
   - Durabilité financière via revente des matières
   - Impact direct sur ODD 6 (Eau propre), 11 (Villes durables) et 12 (Consommation responsable)
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/WFEO/Poubelle_1.jpeg
+- **Image principale:** https://www.masewellmathurin.fr/Projet_images/WFEO/Poubelle_1.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Projet_images/WFEO/Poubelle_1.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/WFEO/Poubelle_2.jpeg
-  - https://portfoliomathurin.vercel.app/Hackaton/Certificat_WFEO.png
+  - https://www.masewellmathurin.fr/Projet_images/WFEO/Poubelle_1.webp
+  - https://www.masewellmathurin.fr/Projet_images/WFEO/Poubelle_2.webp
+  - https://www.masewellmathurin.fr/Hackaton/Certificat_WFEO.webp
 
 ### Tableau de bord du Site e-KIOSQUE
 - **ID:** 1
-- **URL:** https://portfoliomathurin.vercel.app/project/1
+- **URL:** https://www.masewellmathurin.fr/project/1
 - **Statut:** terminé
 - **Catégorie:** Analyse de données
 - **Date:** Juin 2025 à Juillet 2025
@@ -151,16 +151,16 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - Exportation de rapports aux formats PDF, Excel et CSV
   - Interface responsive adaptée aux appareils mobiles
 - **GitHub:** https://github.com/Maxwellmario123578/eKIOSQUE_DASHBOARD.git
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_1.png
+- **Image principale:** https://www.masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_1.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_1.png
-  - https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_2.png
-  - https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_3.png
-  - https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_4.png
+  - https://www.masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_1.webp
+  - https://www.masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_2.webp
+  - https://www.masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_3.webp
+  - https://www.masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_4.webp
 
 ### Prédiction d'audience de films avec l'IA
 - **ID:** 2
-- **URL:** https://portfoliomathurin.vercel.app/project/2
+- **URL:** https://www.masewellmathurin.fr/project/2
 - **Statut:** terminé
 - **Catégorie:** Intelligence Artificielle
 - **Date:** 2025
@@ -172,13 +172,13 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - Résultats faciles à comprendre
   - Aide les cinéastes à cibler le bon public
 - **GitHub:** https://github.com/Maxwellmario123578/ml-prediction-film.git
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/ML_audiance/image.png
+- **Image principale:** https://www.masewellmathurin.fr/Projet_images/ML_audiance/image.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Projet_images/ML_audiance/image.png
+  - https://www.masewellmathurin.fr/Projet_images/ML_audiance/image.webp
 
 ### Application de gestion des notes
 - **ID:** 4
-- **URL:** https://portfoliomathurin.vercel.app/project/4
+- **URL:** https://www.masewellmathurin.fr/project/4
 - **Statut:** terminé
 - **Catégorie:** Developpement Python
 - **Date:** 2024-2025
@@ -190,16 +190,16 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - Classement par mérite avec une interface claire et moderne
   - Visualisation des données : Pie Chart et Spider Chart pour une analyse graphique dynamique
   - Exportation en CSV et création d'un exécutable (.exe) pour une utilisation facile
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Gestion_notes.png
+- **Image principale:** https://www.masewellmathurin.fr/Projet_images/Gestion_notes/Gestion_notes.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Gestion_notes.png
-  - https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Saisie_note.png
-  - https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Modifier_user.png
-  - https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Voir_note.png
+  - https://www.masewellmathurin.fr/Projet_images/Gestion_notes/Gestion_notes.webp
+  - https://www.masewellmathurin.fr/Projet_images/Gestion_notes/Saisie_note.webp
+  - https://www.masewellmathurin.fr/Projet_images/Gestion_notes/Modifier_user.webp
+  - https://www.masewellmathurin.fr/Projet_images/Gestion_notes/Voir_note.webp
 
 ### Plateforme Bancaire Distribuée WillBank
 - **ID:** 5
-- **URL:** https://portfoliomathurin.vercel.app/project/5
+- **URL:** https://www.masewellmathurin.fr/project/5
 - **Statut:** terminé
 - **Catégorie:** Développement Full-stack/ Finance
 - **Date:** 2024-2025
@@ -215,16 +215,16 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - Orchestration et conteneurisation via Docker et Docker Compose
   - Interfaces Web (Angular) et Mobile intuitives et responsives
 - **GitHub:** https://gitlab.com/Maxwellmario123578/WillBank_Project.git
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank1.png
+- **Image principale:** https://www.masewellmathurin.fr/Projet_images/WillBank/willbank1.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank1.png
-  - https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank2.png
-  - https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank3.png
-  - https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank4.png
+  - https://www.masewellmathurin.fr/Projet_images/WillBank/willbank1.webp
+  - https://www.masewellmathurin.fr/Projet_images/WillBank/willbank2.webp
+  - https://www.masewellmathurin.fr/Projet_images/WillBank/willbank3.webp
+  - https://www.masewellmathurin.fr/Projet_images/WillBank/willbank4.webp
 
 ### Application de gestion des Emplois du Temps dans un établissement
 - **ID:** 6
-- **URL:** https://portfoliomathurin.vercel.app/project/6
+- **URL:** https://www.masewellmathurin.fr/project/6
 - **Statut:** terminé
 - **Catégorie:** Génie Logiciel
 - **Date:** 2025
@@ -239,21 +239,21 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - Pipeline CI/CD et gestion de projet agile (SCRUM, Trello)
   - Base de données MySQL et déploiement Docker
 - **GitHub:** https://github.com/Maxwellmario123578/Planning_gest
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_1.jpeg
+- **Image principale:** https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_1.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_1.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_2.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_3.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_4.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_5.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_6.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_7.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_8.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_9.jpeg
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_1.webp
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_2.webp
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_3.webp
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_4.webp
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_5.webp
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_6.webp
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_7.webp
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_8.webp
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_9.webp
 
 ### EQuizz – Plateforme d'évaluation de la qualité de l'enseignement
 - **ID:** 8
-- **URL:** https://portfoliomathurin.vercel.app/project/8
+- **URL:** https://www.masewellmathurin.fr/project/8
 - **Statut:** terminé
 - **Catégorie:** Développement Web / Éducation
 - **Date:** 2025
@@ -270,18 +270,18 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - CI/CD pour tests automatisés et déploiements continus
 - **GitHub:** https://gitlab.com/Maxwellmario123578/equizz
 - **Démo/Maquette:** https://www.figma.com/design/A9xWzFaDcdB8UUTlVQT5N6/EQUIZZ?node-id=0-1&p=f&t=uzmEgUZbgJALT7Kr-0
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_login.png
+- **Image principale:** https://www.masewellmathurin.fr/Projet_images/EQuiz/Admin_login.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_login.png
-  - https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_Creer_Eval.png
-  - https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_Creer_Formul.png
-  - https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_gest_utilisateur.png
-  - https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Ecran_Accueil_2.png
-  - https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Ecran_tel_1.png
+  - https://www.masewellmathurin.fr/Projet_images/EQuiz/Admin_login.webp
+  - https://www.masewellmathurin.fr/Projet_images/EQuiz/Admin_Creer_Eval.webp
+  - https://www.masewellmathurin.fr/Projet_images/EQuiz/Admin_Creer_Formul.webp
+  - https://www.masewellmathurin.fr/Projet_images/EQuiz/Admin_gest_utilisateur.webp
+  - https://www.masewellmathurin.fr/Projet_images/EQuiz/Ecran_Accueil_2.webp
+  - https://www.masewellmathurin.fr/Projet_images/EQuiz/Ecran_tel_1.webp
 
 ### Détection de Fraude aux Transactions par IA : Pipeline MLOps End-to-End et Monitoring Temps Réel
 - **ID:** 9
-- **URL:** https://portfoliomathurin.vercel.app/project/9
+- **URL:** https://www.masewellmathurin.fr/project/9
 - **Statut:** terminé
 - **Catégorie:** MLOps / Architecture Cloud / Data Science
 - **Date:** Février 2026 - Avril 2026
@@ -303,16 +303,16 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - Security Groups et principe du moindre privilège
 - **GitHub:** https://github.com/Maxwellmario123578/mlops-project
 - **Rapport PDF:** https://github.com/Maxwellmario123578/Portfolio/raw/main/public/Cahier_projets/MLOps_1/Rapport_Final-2.pdf
-- **Image principale:** https://portfoliomathurin.vercel.app/Cahier_projets/MLOps_1/Architecture_Systeme.png
+- **Image principale:** https://www.masewellmathurin.fr/Cahier_projets/MLOps_1/Architecture_Systeme.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Cahier_projets/MLOps_1/Architecture_Systeme.png
-  - https://portfoliomathurin.vercel.app/Cahier_projets/MLOps_1/Architecture_Reseau.png
-  - https://portfoliomathurin.vercel.app/Projet_images/MLops_1/Illustration.png
-  - https://portfoliomathurin.vercel.app/Projet_images/MLops_1/Illustration_1.png
+  - https://www.masewellmathurin.fr/Cahier_projets/MLOps_1/Architecture_Systeme.webp
+  - https://www.masewellmathurin.fr/Cahier_projets/MLOps_1/Architecture_Reseau.webp
+  - https://www.masewellmathurin.fr/Projet_images/MLops_1/Illustration.webp
+  - https://www.masewellmathurin.fr/Projet_images/MLops_1/Illustration_1.webp
 
 ### AMNESCH – Bibliothèque Numérique Éducative Sécurisée
 - **ID:** 10
-- **URL:** https://portfoliomathurin.vercel.app/project/10
+- **URL:** https://www.masewellmathurin.fr/project/10
 - **Statut:** en cours
 - **Catégorie:** Mobile Full-stack / Sécurité
 - **Date:** 2025 - Présent
@@ -330,7 +330,7 @@ Points forts techniques :
   - Gestion de projet agile SCRUM
   - Dashboard d'administration pour le pilotage et analytique
 - **Démo/Maquette:** https://www.figma.com/design/pihjSiqFwqQ231T3g19ODP/Amnesh?node-id=0-1&p=f&t=B0fslg7pLDAzhAT5-0
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/En_cours/A_venir.jpg
+- **Image principale:** https://www.masewellmathurin.fr/og-image.jpg
 
 ## Bénévolats
 
@@ -345,14 +345,14 @@ Points forts techniques :
 - **Période:** 2023 - Présent
 - **Statut:** en cours
 - **Description:** Participation active aux activités liturgiques et spirituelles de la paroisse universitaire
-- **Image:** https://portfoliomathurin.vercel.app/Vie_associative/Club_liturgique.jpg
+- **Image:** https://www.masewellmathurin.fr/Vie_associative/Club_liturgique.webp
 
 
 ---
 
 # English Version
 
-# Masewell-Mathurin KONMENECK
+# Masewell Mathurin KONMENECK
 
 > Information Systems Engineering Student & Data Scientist
 
@@ -364,12 +364,12 @@ My goal is to create efficient and useful applications, while continuing to lear
 
 ## Liens
 
-- Portfolio: https://portfoliomathurin.vercel.app/portfolio
-- CV: https://portfoliomathurin.vercel.app/CV/CV_KONMENECK.pdf
+- Portfolio: https://www.masewellmathurin.fr/portfolio
+- CV: https://www.masewellmathurin.fr/CV/CV_KONMENECK.pdf
 - LinkedIn: https://www.linkedin.com/in/masewell-mathurin-konmeneck/
 - GitHub: https://github.com/Maxwellmario123578
 - GitLab: https://gitlab.com/Maxwellmario123578
-- Photo: https://portfoliomathurin.vercel.app/Moi.png
+- Photo: https://www.masewellmathurin.fr/Moi.webp
 
 ## Formations
 
@@ -393,7 +393,7 @@ My goal is to create efficient and useful applications, while continuing to lear
 - **Compétences:** MCP, Anthropic, AI Infrastructure, Sampling, Security
 - **Description:** Exploration of advanced Model Context Protocol (MCP) features to build robust and secure AI integrations. Training focused on complex resource management, custom sampling techniques, and lifecycle orchestration. Mastery of security patterns and performance optimization to create seamless bridges between large language models and proprietary data systems.
 - **Vérification:** https://verify.skilljar.com/c/nb7ftfnact58
-- **Image:** https://portfoliomathurin.vercel.app/Certifs_image/IBM_Certifs/Antropic_Completion_MCP_Advanced.png
+- **Image:** https://www.masewellmathurin.fr/Certifs_image/IBM_Certifs/Antropic_Completion_MCP_Advanced.webp
 
 ### Introduction to Agent skills
 - **Émetteur:** Anthropic
@@ -401,7 +401,7 @@ My goal is to create efficient and useful applications, while continuing to lear
 - **Compétences:** Anthropic, Claude, AI Agents, Tool Use
 - **Description:** Learning the fundamental concepts to equip a Claude model with action capabilities. Training focused on the structure of a 'Skill': from name definition and technical description to input parameter configuration. Mastery of the iterative flow between the user, the model and the tool, allowing the AI to correctly select and formulate requests to external functions.
 - **Vérification:** https://verify.skilljar.com/c/cmv7mvbzpr9w
-- **Image:** https://portfoliomathurin.vercel.app/Certifs_image/IBM_Certifs/Antropic_Completion_AI_Agent.png
+- **Image:** https://www.masewellmathurin.fr/Certifs_image/IBM_Certifs/Antropic_Completion_AI_Agent.webp
 
 ### IBM Data Science Professional Certificate
 - **Émetteur:** IBM
@@ -409,7 +409,7 @@ My goal is to create efficient and useful applications, while continuing to lear
 - **Compétences:** Data Science, Python, SQL, Data Analysis, Machine Learning
 - **Description:** Intensive training covering the entire data lifecycle: from extraction (SQL) to predictive modeling (Machine Learning with Python). Mastery of Pandas, Scikit-learn libraries and data visualization to translate raw data into strategic decisions.
 - **Vérification:** https://www.coursera.org/account/accomplishments/professional-cert/certificate/FZE10YBKGRUL
-- **Image:** https://portfoliomathurin.vercel.app/Certifs_image/IBM_Certifs/IBM_image.png
+- **Image:** https://www.masewellmathurin.fr/Certifs_image/IBM_Certifs/IBM_image.webp
 
 ### Google Data Analytics
 - **Émetteur:** Google
@@ -417,7 +417,7 @@ My goal is to create efficient and useful applications, while continuing to lear
 - **Compétences:** Data Analysis, Spreadsheets, SQL, Tableau, R Programming
 - **Description:** Certification focused on results-oriented data analysis. Proficiency in data cleaning, statistical analysis and visual communication (Tableau). Mastery of analytical thinking to identify trends and optimize business processes from complex datasets.
 - **Vérification:** https://www.coursera.org/account/accomplishments/professional-cert/certificate/7HDM657JEEQF
-- **Image:** https://portfoliomathurin.vercel.app/Certifs_image/IBM_Certifs/Google_certif.png
+- **Image:** https://www.masewellmathurin.fr/Certifs_image/IBM_Certifs/Google_certif.webp
 
 ## Compétences
 
@@ -437,7 +437,7 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
 
 ### Data4Change Hackathon
 - **ID:** hackathon-1
-- **URL:** https://portfoliomathurin.vercel.app/project/hackathon-1
+- **URL:** https://www.masewellmathurin.fr/project/hackathon-1
 - **Statut:** terminé
 - **Catégorie:** Hackathon / Data Science
 - **Date:** 2024
@@ -452,16 +452,16 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - Cross-functional teamwork
 - **GitHub:** https://github.com/joanmelong/caremap-hackathon-2025
 - **Démo/Maquette:** https://caremap-cameroun.vercel.app/
-- **Image principale:** https://portfoliomathurin.vercel.app/Hackaton/Data4Change_1.jpeg
+- **Image principale:** https://www.masewellmathurin.fr/Hackaton/Data4Change_1.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Hackaton/Data4Change_1.jpeg
-  - https://portfoliomathurin.vercel.app/Hackaton/Data4Change_2.jpeg
-  - https://portfoliomathurin.vercel.app/Hackaton/Data4Change_3.jpeg
-  - https://portfoliomathurin.vercel.app/Hackaton/Certificat_Data4Change.png
+  - https://www.masewellmathurin.fr/Hackaton/Data4Change_1.webp
+  - https://www.masewellmathurin.fr/Hackaton/Data4Change_2.webp
+  - https://www.masewellmathurin.fr/Hackaton/Data4Change_3.webp
+  - https://www.masewellmathurin.fr/Hackaton/Certificat_Data4Change.webp
 
 ### WFEO Hackathon - Urban Resource Loop
 - **ID:** hackathon-2
-- **URL:** https://portfoliomathurin.vercel.app/project/hackathon-2
+- **URL:** https://www.masewellmathurin.fr/project/hackathon-2
 - **Statut:** terminé
 - **Catégorie:** Hackathon / Sustainability / AI & Blockchain
 - **Date:** 2024
@@ -478,15 +478,15 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - Complete circular economy: plastic-to-pavement transformation
   - Financial sustainability through material resale
   - Direct impact on SDGs 6 (Clean Water), 11 (Sustainable Cities), and 12 (Responsible Consumption)
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/WFEO/Poubelle_1.jpeg
+- **Image principale:** https://www.masewellmathurin.fr/Projet_images/WFEO/Poubelle_1.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Projet_images/WFEO/Poubelle_1.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/WFEO/Poubelle_2.jpeg
-  - https://portfoliomathurin.vercel.app/Hackaton/Certificat_WFEO.png
+  - https://www.masewellmathurin.fr/Projet_images/WFEO/Poubelle_1.webp
+  - https://www.masewellmathurin.fr/Projet_images/WFEO/Poubelle_2.webp
+  - https://www.masewellmathurin.fr/Hackaton/Certificat_WFEO.webp
 
 ### e-KIOSQUE Site Dashboard
 - **ID:** 1
-- **URL:** https://portfoliomathurin.vercel.app/project/1
+- **URL:** https://www.masewellmathurin.fr/project/1
 - **Statut:** terminé
 - **Catégorie:** Data Analysis
 - **Date:** June 2025 to July 2025
@@ -499,16 +499,16 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - Report export in PDF, Excel and CSV formats
   - Responsive interface adapted to mobile devices
 - **GitHub:** https://github.com/Maxwellmario123578/eKIOSQUE_DASHBOARD.git
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_1.png
+- **Image principale:** https://www.masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_1.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_1.png
-  - https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_2.png
-  - https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_3.png
-  - https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_4.png
+  - https://www.masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_1.webp
+  - https://www.masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_2.webp
+  - https://www.masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_3.webp
+  - https://www.masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_4.webp
 
 ### Film Audience Prediction with AI
 - **ID:** 2
-- **URL:** https://portfoliomathurin.vercel.app/project/2
+- **URL:** https://www.masewellmathurin.fr/project/2
 - **Statut:** terminé
 - **Catégorie:** Artificial Intelligence
 - **Date:** 2025
@@ -520,13 +520,13 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - Easy-to-understand results and insights
   - Helps filmmakers target the right audience
 - **GitHub:** https://github.com/Maxwellmario123578/ml-prediction-film.git
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/ML_audiance/image.png
+- **Image principale:** https://www.masewellmathurin.fr/Projet_images/ML_audiance/image.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Projet_images/ML_audiance/image.png
+  - https://www.masewellmathurin.fr/Projet_images/ML_audiance/image.webp
 
 ### Grade Management Application
 - **ID:** 4
-- **URL:** https://portfoliomathurin.vercel.app/project/4
+- **URL:** https://www.masewellmathurin.fr/project/4
 - **Statut:** terminé
 - **Catégorie:** Python Development
 - **Date:** 2024-2025
@@ -538,16 +538,16 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - Merit-based ranking with a clear and modern interface
   - Data visualization: Pie Chart and Spider Chart for dynamic graphical analysis
   - CSV export and creation of an executable (.exe) for easy use
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Gestion_notes.png
+- **Image principale:** https://www.masewellmathurin.fr/Projet_images/Gestion_notes/Gestion_notes.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Gestion_notes.png
-  - https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Saisie_note.png
-  - https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Modifier_user.png
-  - https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Voir_note.png
+  - https://www.masewellmathurin.fr/Projet_images/Gestion_notes/Gestion_notes.webp
+  - https://www.masewellmathurin.fr/Projet_images/Gestion_notes/Saisie_note.webp
+  - https://www.masewellmathurin.fr/Projet_images/Gestion_notes/Modifier_user.webp
+  - https://www.masewellmathurin.fr/Projet_images/Gestion_notes/Voir_note.webp
 
 ### WillBank Distributed Banking Platform
 - **ID:** 5
-- **URL:** https://portfoliomathurin.vercel.app/project/5
+- **URL:** https://www.masewellmathurin.fr/project/5
 - **Statut:** terminé
 - **Catégorie:** Full-stack Development / Finance
 - **Date:** 2024-2025
@@ -563,16 +563,16 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - Orchestration and containerization via Docker and Docker Compose
   - Intuitive and responsive Web (Angular) and Mobile interfaces
 - **GitHub:** https://gitlab.com/Maxwellmario123578/WillBank_Project.git
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank1.png
+- **Image principale:** https://www.masewellmathurin.fr/Projet_images/WillBank/willbank1.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank1.png
-  - https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank2.png
-  - https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank3.png
-  - https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank4.png
+  - https://www.masewellmathurin.fr/Projet_images/WillBank/willbank1.webp
+  - https://www.masewellmathurin.fr/Projet_images/WillBank/willbank2.webp
+  - https://www.masewellmathurin.fr/Projet_images/WillBank/willbank3.webp
+  - https://www.masewellmathurin.fr/Projet_images/WillBank/willbank4.webp
 
 ### School Schedule Management Application
 - **ID:** 6
-- **URL:** https://portfoliomathurin.vercel.app/project/6
+- **URL:** https://www.masewellmathurin.fr/project/6
 - **Statut:** terminé
 - **Catégorie:** Software Engineering
 - **Date:** 2025
@@ -587,21 +587,21 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - CI/CD pipeline and agile project management (SCRUM, Trello)
   - MySQL database and Docker deployment
 - **GitHub:** https://github.com/Maxwellmario123578/Planning_gest
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_1.jpeg
+- **Image principale:** https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_1.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_1.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_2.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_3.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_4.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_5.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_6.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_7.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_8.jpeg
-  - https://portfoliomathurin.vercel.app/Projet_images/PlanninGest/Tutore_9.jpeg
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_1.webp
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_2.webp
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_3.webp
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_4.webp
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_5.webp
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_6.webp
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_7.webp
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_8.webp
+  - https://www.masewellmathurin.fr/Projet_images/PlanninGest/Tutore_9.webp
 
 ### EQuizz – Teaching Quality Evaluation Platform
 - **ID:** 8
-- **URL:** https://portfoliomathurin.vercel.app/project/8
+- **URL:** https://www.masewellmathurin.fr/project/8
 - **Statut:** terminé
 - **Catégorie:** Web Development / Education
 - **Date:** 2025
@@ -618,18 +618,18 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - CI/CD for automated testing and continuous deployment
 - **GitHub:** https://gitlab.com/Maxwellmario123578/equizz
 - **Démo/Maquette:** https://www.figma.com/design/A9xWzFaDcdB8UUTlVQT5N6/EQUIZZ?node-id=0-1&p=f&t=uzmEgUZbgJALT7Kr-0
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_login.png
+- **Image principale:** https://www.masewellmathurin.fr/Projet_images/EQuiz/Admin_login.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_login.png
-  - https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_Creer_Eval.png
-  - https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_Creer_Formul.png
-  - https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_gest_utilisateur.png
-  - https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Ecran_Accueil_2.png
-  - https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Ecran_tel_1.png
+  - https://www.masewellmathurin.fr/Projet_images/EQuiz/Admin_login.webp
+  - https://www.masewellmathurin.fr/Projet_images/EQuiz/Admin_Creer_Eval.webp
+  - https://www.masewellmathurin.fr/Projet_images/EQuiz/Admin_Creer_Formul.webp
+  - https://www.masewellmathurin.fr/Projet_images/EQuiz/Admin_gest_utilisateur.webp
+  - https://www.masewellmathurin.fr/Projet_images/EQuiz/Ecran_Accueil_2.webp
+  - https://www.masewellmathurin.fr/Projet_images/EQuiz/Ecran_tel_1.webp
 
 ### AI-Powered Transaction Fraud Detection: End-to-End MLOps Pipeline and Real-Time Monitoring
 - **ID:** 9
-- **URL:** https://portfoliomathurin.vercel.app/project/9
+- **URL:** https://www.masewellmathurin.fr/project/9
 - **Statut:** terminé
 - **Catégorie:** MLOps / Cloud Architecture / Data Science
 - **Date:** February 2026 - April 2026
@@ -651,16 +651,16 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - Security Groups and least privilege principle
 - **GitHub:** https://github.com/Maxwellmario123578/mlops-project
 - **Rapport PDF:** https://github.com/Maxwellmario123578/Portfolio/raw/main/public/Cahier_projets/MLOps_1/Rapport_Final-2.pdf
-- **Image principale:** https://portfoliomathurin.vercel.app/Cahier_projets/MLOps_1/Architecture_Systeme.png
+- **Image principale:** https://www.masewellmathurin.fr/Cahier_projets/MLOps_1/Architecture_Systeme.webp
 - **Images:**
-  - https://portfoliomathurin.vercel.app/Cahier_projets/MLOps_1/Architecture_Systeme.png
-  - https://portfoliomathurin.vercel.app/Cahier_projets/MLOps_1/Architecture_Reseau.png
-  - https://portfoliomathurin.vercel.app/Projet_images/MLops_1/Illustration.png
-  - https://portfoliomathurin.vercel.app/Projet_images/MLops_1/Illustration_1.png
+  - https://www.masewellmathurin.fr/Cahier_projets/MLOps_1/Architecture_Systeme.webp
+  - https://www.masewellmathurin.fr/Cahier_projets/MLOps_1/Architecture_Reseau.webp
+  - https://www.masewellmathurin.fr/Projet_images/MLops_1/Illustration.webp
+  - https://www.masewellmathurin.fr/Projet_images/MLops_1/Illustration_1.webp
 
 ### AMNESCH – Secure Educational Digital Library
 - **ID:** 10
-- **URL:** https://portfoliomathurin.vercel.app/project/10
+- **URL:** https://www.masewellmathurin.fr/project/10
 - **Statut:** en cours
 - **Catégorie:** Mobile Full-stack / Security
 - **Date:** 2025 - Present
@@ -678,7 +678,7 @@ Technical highlights:
   - Agile SCRUM workflow management
   - Administrative Dashboard for monitoring and analytics
 - **Démo/Maquette:** https://www.figma.com/design/pihjSiqFwqQ231T3g19ODP/Amnesh?node-id=0-1&p=f&t=B0fslg7pLDAzhAT5-0
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/En_cours/A_venir.jpg
+- **Image principale:** https://www.masewellmathurin.fr/og-image.jpg
 
 ## Bénévolats
 
@@ -693,4 +693,4 @@ Technical highlights:
 - **Période:** 2023 - Present
 - **Statut:** en cours
 - **Description:** Active participation in liturgical and spiritual activities of the university parish
-- **Image:** https://portfoliomathurin.vercel.app/Vie_associative/Club_liturgique.jpg
+- **Image:** https://www.masewellmathurin.fr/Vie_associative/Club_liturgique.webp

@@ -1,28 +1,46 @@
-# Masewell-Mathurin KONMENECK — Portfolio
+# Masewell Mathurin KONMENECK
 
-> Étudiant en Ingénierie des Systèmes d'Information & Data Scientist
-> Portfolio interactif (Angular SPA) — utilisez les fichiers statiques ci-dessous pour une lecture complète sans JavaScript.
+> Masewell Mathurin KONMENECK est étudiant ingénieur en systèmes d'information à Saint Jean Ingénieur (Yaoundé, Cameroun) et data scientist. Certifié IBM Data Science Professional et Google Data Analytics. Il réalise des projets en Machine Learning, MLOps et développement full-stack (Angular, Spring Boot, React Native).
 
-## Fichiers recommandés pour les IA
+Etudiant en ingénierie de conception en informatique à Saint Jean Ingénieur, passionné par le développement logiciel et l'architecture web. J'aime concevoir des solutions intelligentes mêlant IA et les technologies web modernes. Mon objectif est de créer des applications performantes et utiles, tout en continuant à apprendre et à innover.
 
-- [Contenu HTML complet](/content.html) : page statique avec tout le texte et les images (sans JS)
-- [Données JSON structurées](/portfolio.json) : profil, projets, compétences, certifications (FR + EN)
-- [Version Markdown](/portfolio.md) : texte intégral lisible
-- [Données brutes](/portfolio-data.json) : source de vérité du portfolio
-- [CV PDF](/CV/CV_KONMENECK.pdf) : curriculum vitae
+Également connu sous les noms : Masewell-Mathurin KONMENECK, KONMENECK PESSUE Masewell-Mathurin, Masewell Mathurin KONMENECK PESSUE, Maxwell KONMENECK.
+Site officiel : https://www.masewellmathurin.fr
 
-## Pages du site
+## Pages principales
 
-- [Accueil](/portfolio) : portfolio interactif
-- [Sitemap](/sitemap.xml)
+- [Portfolio complet](https://www.masewellmathurin.fr/portfolio) : présentation, formations, certifications, compétences, projets, bénévolat, FAQ
+- [CV (PDF)](https://www.masewellmathurin.fr/CV/CV_KONMENECK.pdf) : curriculum vitae
+- [Contenu complet en HTML statique](https://www.masewellmathurin.fr/content.html) : tout le portfolio sur une seule page
 
-## Contact
+## Projets
 
-- LinkedIn: https://www.linkedin.com/in/masewell-mathurin-konmeneck/
-- GitHub: https://github.com/Maxwellmario123578
-- GitLab: https://gitlab.com/Maxwellmario123578
+- [Hackathon Data4Change](https://www.masewellmathurin.fr/project/hackathon-1) : Participation au hackathon Data4Change, axé sur l'utilisation des données et de la technologie pour générer un changement social positif. (Data, Résolution, Teamwork)
+- [Hackathon WFEO - Urban Resource Loop](https://www.masewellmathurin.fr/project/hackathon-2) : Infrastructure circulaire intelligente pilotée par IA et Blockchain pour la valorisation des flux plastiques et hydriques à Yaoundé, répondant à l'ODD 11 : Villes et Communautés Durables. (IA, Blockchain, IoT, Smart Contracts, Vision par Ordinateur, CAO 3D)
+- [Tableau de bord du Site e-KIOSQUE](https://www.masewellmathurin.fr/project/1) : Un tableau de bord interactif pour visualiser les données de vente, suivre les indicateurs clés de performance et identifier les tendances à l'aide de flux de données en temps réel. (Charts.js, HTML/CSS, Tailwindcss, JavaScript)
+- [Prédiction d'audience de films avec l'IA](https://www.masewellmathurin.fr/project/2) : Outil intelligent qui prédit si un film plaira à un public Afrodescendant en utilisant l'intelligence artificielle et l'analyse de données (Python, IA, Data)
+- [Application de gestion des notes](https://www.masewellmathurin.fr/project/4) : Application Python intuitive de gestion des notes, permettant la saisie, la mise à jour et le classement automatique des étudiants, avec visualisation graphique interactive et exportation des résultats. (Python, Matplotlib, csv)
+- [Plateforme Bancaire Distribuée WillBank](https://www.masewellmathurin.fr/project/5) : Développement d'une application bancaire complète(en équipe de 4) basée sur une architecture microservices, incluant backend Spring Boot, frontend Angular, application mobile et infrastructure Dockerisée. (Java Spring Boot, Angular, Docker, MySQL, RabbitMQ, Redis)
+- [Application de gestion des Emplois du Temps dans un établissement](https://www.masewellmathurin.fr/project/6) : En tant que chef de projet d'une équipe de 3 personnes (moi inclus), j'ai piloté le développement d'une application web de gestion des emplois du temps. J'ai également assuré le rôle d'intégrateur pour la liaison backend-frontend, avec SCRUM, CI/CD et gestion des tâches sur Trello. (SpringBoot, Thymleaf, MySQL, Docker, GitHub)
+- [EQuizz – Plateforme d'évaluation de la qualité de l'enseignement](https://www.masewellmathurin.fr/project/8) : En tant que Lead Developpeur, j'ai dirigé une équipe de 3 personnes pour le développement d'EQuizz, une application permettant aux étudiants d'évaluer les enseignants en fin de semestre afin de mesurer la qualité de l'enseignement et leur satisfaction. (React native, Node.js, Clean Architecture, GitLab, CI/CD, Trello)
+- [Détection de Fraude aux Transactions par IA : Pipeline MLOps End-to-End et Monitoring Temps Réel](https://www.masewellmathurin.fr/project/9) : Plateforme MLOps complète de détection de fraude bancaire utilisant XGBoost, déployée sur AWS avec Docker, FastAPI, load balancing Nginx, et monitoring temps réel via Prometheus/Grafana. (Python, XGBoost, SMOTEENN, Docker, FastAPI, AWS (EC2, S3, ECR))
+- [AMNESCH – Bibliothèque Numérique Éducative Sécurisée](https://www.masewellmathurin.fr/project/10) : Plateforme innovante conçue pour démocratiser l’accès aux ressources éducatives tout en garantissant une protection stricte de la propriété intellectuelle des auteurs via SCRUM. (React Native, Expo, TypeScript, Node.js, Express, PostgreSQL)
 
-## Note technique
+## Certifications
 
-Ce site est une Single Page Application Angular. Le contenu visible nécessite l'exécution de JavaScript.
-Pour un scraping fiable, préférez /content.html, /portfolio.json ou /portfolio.md.
+- Model Context Protocol: Advanced Topics (Anthropic) : https://verify.skilljar.com/c/nb7ftfnact58
+- Introduction aux compétences d'Agent (Anthropic) : https://verify.skilljar.com/c/cmv7mvbzpr9w
+- IBM Data Science Professional Certificate (IBM) : https://www.coursera.org/account/accomplishments/professional-cert/certificate/FZE10YBKGRUL
+- Google Data Analytics (Google) : https://www.coursera.org/account/accomplishments/professional-cert/certificate/7HDM657JEEQF
+
+## Profils
+
+- LinkedIn : https://www.linkedin.com/in/masewell-mathurin-konmeneck/
+- GitHub : https://github.com/Maxwellmario123578
+- GitLab : https://gitlab.com/Maxwellmario123578
+
+## Optional
+
+- [Données JSON structurées](https://www.masewellmathurin.fr/portfolio.json) : profil, projets, compétences, certifications (FR + EN)
+- [Version Markdown](https://www.masewellmathurin.fr/portfolio.md) : texte intégral FR + EN
+- [Sitemap](https://www.masewellmathurin.fr/sitemap.xml)
