@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { IntroComponent } from './features/intro/intro.component';
+import { NotFoundComponent } from './features/not-found/not-found.component';
 
 export const routes: Routes = [
   {
@@ -19,8 +20,13 @@ export const routes: Routes = [
       ),
   },
   {
+    // Pré-rendue en 404.html (servie par Vercel avec un statut 404)
+    path: '404',
+    component: NotFoundComponent,
+  },
+  {
     path: '**',
-    redirectTo: '',
+    component: NotFoundComponent,
   },
 ];
 

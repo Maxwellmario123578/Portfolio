@@ -1,8 +1,10 @@
-import { Component, ElementRef, ViewChild, AfterViewInit, OnDestroy, inject } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, OnDestroy, OnInit, inject } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ThemeService } from '../../core/services/theme.service';
 import { LanguageService } from '../../core/services/language.service';
+import { PERSON_NAME, SeoService } from '../../core/services/seo.service';
+import { profilePage } from '../../core/services/structured-data';
 
 @Component({
   selector: 'app-intro',
@@ -11,7 +13,7 @@ import { LanguageService } from '../../core/services/language.service';
   templateUrl: './intro.component.html',
   styleUrls: ['./intro.component.scss']
 })
-export class IntroComponent implements AfterViewInit, OnDestroy {
+export class IntroComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild('waveContainer', { static: false }) waveContainer!: ElementRef;
 
   mouseX: number = 0;
@@ -20,10 +22,24 @@ export class IntroComponent implements AfterViewInit, OnDestroy {
 
   themeService = inject(ThemeService);
   languageService = inject(LanguageService);
+  private seo = inject(SeoService);
 
   constructor(private router: Router) { }
 
+  ngOnInit(): void {
+    const description = `${PERSON_NAME}, étudiant ingénieur et data scientist à Yaoundé, certifié IBM et Google : Machine Learning, MLOps, Angular, Spring Boot.`;
+    this.seo.setPage({
+      title: `${PERSON_NAME} | Data Scientist & Ingénieur Logiciel`,
+      description,
+      path: '/',
+      type: 'profile',
+      jsonLd: [profilePage('/', `${PERSON_NAME}, Data Scientist & Ingénieur Logiciel`, description)],
+    });
+  }
+
   ngAfterViewInit(): void {
+    // Animation uniquement dans le navigateur (pas pendant le pré-rendu)
+    if (typeof requestAnimationFrame === 'undefined') return;
     this.initWaveEffect();
   }
 

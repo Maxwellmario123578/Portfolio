@@ -6,6 +6,8 @@ import { Project } from '../../core/models';
 import { PortfolioDataService } from '../../core/services/portfolio-data.service';
 import { LanguageService } from '../../core/services/language.service';
 import { HeaderComponent } from '../../layout/header/header.component';
+import { PERSON_NAME, SeoService, absoluteUrl, truncate } from '../../core/services/seo.service';
+import { breadcrumb, projectSchema } from '../../core/services/structured-data';
 
 @Component({
   selector: 'app-project-detail',
@@ -23,6 +25,7 @@ export class ProjectDetailComponent implements OnInit {
   
   languageService = inject(LanguageService);
   translateService = inject(TranslateService);
+  private seo = inject(SeoService);
 
   constructor(
     private route: ActivatedRoute,
@@ -61,6 +64,7 @@ export class ProjectDetailComponent implements OnInit {
         next: (project) => {
           this.project = project;
           this.loading = false;
+          if (project) this.updateSeo(project);
           console.log('Project loaded:', project?.title, 'Category:', project?.category);
           if (!project) {
             this.router.navigate(['/']);
@@ -72,6 +76,31 @@ export class ProjectDetailComponent implements OnInit {
         }
       });
     }
+  }
+
+  private updateSeo(project: Project): void {
+    const path = `/project/${project.id}`;
+    // Les projets en cours ou confidentiels affichent une page d'attente : on ne les indexe pas
+    const hidden = project.status !== 'terminé' || !!project.isConfidential;
+    const image = !hidden && project.imageUrl ? project.imageUrl : '/og-image.jpg';
+    this.seo.setPage({
+      title: `${project.title} | ${PERSON_NAME}`,
+      description: truncate(project.description),
+      path,
+      image,
+      type: 'article',
+      noindex: hidden,
+      jsonLd: hidden
+        ? []
+        : [
+            projectSchema(project, absoluteUrl(image)),
+            breadcrumb([
+              { name: 'Accueil', path: '/' },
+              { name: 'Portfolio', path: '/portfolio' },
+              { name: project.title, path },
+            ]),
+          ],
+    });
   }
 
   goBack(): void {
