@@ -18,11 +18,17 @@ function absUrl(path) {
   return `${meta.baseUrl}/${path.replace(/^\//, '')}`;
 }
 
+// Une image absente de public/ (ex. projet en cours) est remplacée par l'image de partage du site
+function existingImage(p) {
+  if (!p || p.startsWith('http')) return p;
+  return fs.existsSync(path.join(root, 'public', p.replace(/^\//, ''))) ? p : '/og-image.jpg';
+}
+
 function enrichProject(p) {
   return {
     ...p,
     url: `${meta.baseUrl}/project/${p.id}`,
-    imageUrl: absUrl(p.imageUrl),
+    imageUrl: absUrl(existingImage(p.imageUrl)),
     images: (p.images || []).map(absUrl),
   };
 }
@@ -212,7 +218,7 @@ function buildContentHtml() {
       <h2>Présentation</h2>
       ${fr.intro.map((p) => `<p>${p}</p>`).join('\n')}
       <figure>
-        <img src="Moi.png" alt="Photo de ${meta.name}" width="300" />
+        <img src="/Moi.webp" alt="Photo de ${meta.name}" width="300" height="300" />
         <figcaption>${meta.name}</figcaption>
       </figure>
       <p><a href="/CV/CV_KONMENECK.pdf">Télécharger le CV (PDF)</a></p>
@@ -273,34 +279,79 @@ function buildContentHtml() {
 }
 
 function buildLlmsTxt() {
-  return `# ${meta.name} — Portfolio
+  const fr = profile.fr;
+  const projs = projects.fr.map(enrichProject);
+  return `# ${meta.name}
 
-> Étudiant en Ingénierie des Systèmes d'Information & Data Scientist
-> Portfolio interactif (Angular SPA) — utilisez les fichiers statiques ci-dessous pour une lecture complète sans JavaScript.
+> ${meta.name} est étudiant ingénieur en systèmes d'information à Saint Jean Ingénieur (Yaoundé, Cameroun) et data scientist. Certifié IBM Data Science Professional et Google Data Analytics. Il réalise des projets en Machine Learning, MLOps et développement full-stack (Angular, Spring Boot, React Native).
 
-## Fichiers recommandés pour les IA
+${fr.intro.join(' ')}
 
-- [Contenu HTML complet](/content.html) : page statique avec tout le texte et les images (sans JS)
-- [Données JSON structurées](/portfolio.json) : profil, projets, compétences, certifications (FR + EN)
-- [Version Markdown](/portfolio.md) : texte intégral lisible
-- [Données brutes](/portfolio-data.json) : source de vérité du portfolio
-- [CV PDF](/CV/CV_KONMENECK.pdf) : curriculum vitae
+Également connu sous les noms : ${meta.alternateNames.join(', ')}.
+Site officiel : ${meta.baseUrl}
 
-## Pages du site
+## Pages principales
 
-- [Accueil](/portfolio) : portfolio interactif
-- [Sitemap](/sitemap.xml)
+- [Portfolio complet](${meta.baseUrl}/portfolio) : présentation, formations, certifications, compétences, projets, bénévolat, FAQ
+- [CV (PDF)](${meta.cv}) : curriculum vitae
+- [Contenu complet en HTML statique](${meta.baseUrl}/content.html) : tout le portfolio sur une seule page
 
-## Contact
+## Projets
 
-- LinkedIn: ${meta.links.linkedin}
-- GitHub: ${meta.links.github}
-- GitLab: ${meta.links.gitlab}
+${projs.map((p) => `- [${p.title}](${p.url}) : ${p.description} (${p.technologies.slice(0, 6).join(', ')})`).join('\n')}
 
-## Note technique
+## Certifications
 
-Ce site est une Single Page Application Angular. Le contenu visible nécessite l'exécution de JavaScript.
-Pour un scraping fiable, préférez /content.html, /portfolio.json ou /portfolio.md.
+${certifications.fr.map((c) => `- ${c.title} (${c.issuer})${c.credentialUrl ? ` : ${c.credentialUrl}` : ''}`).join('\n')}
+
+## Profils
+
+- LinkedIn : ${meta.links.linkedin}
+- GitHub : ${meta.links.github}
+- GitLab : ${meta.links.gitlab}
+
+## Optional
+
+- [Données JSON structurées](${meta.baseUrl}/portfolio.json) : profil, projets, compétences, certifications (FR + EN)
+- [Version Markdown](${meta.baseUrl}/portfolio.md) : texte intégral FR + EN
+- [Sitemap](${meta.baseUrl}/sitemap.xml)
+`;
+}
+
+// sitemap.xml — uniquement les pages HTML indexables
+function buildSitemap() {
+  const pages = [
+    { loc: '/', priority: '1.0' },
+    { loc: '/portfolio', priority: '0.9' },
+    // Les projets en cours ou confidentiels n'ont pas encore de contenu public : non indexés
+    ...projects.fr
+      .filter((p) => p.status === 'terminé' && !p.isConfidential)
+      .map((p) => ({ loc: `/project/${p.id}`, priority: '0.7' })),
+    { loc: '/content.html', priority: '0.5' },
+  ];
+  const urls = pages
+    .map(
+      (p) => `  <url>
+    <loc>${meta.baseUrl}${p.loc}</loc>
+    <lastmod>${meta.lastUpdated}</lastmod>
+    <priority>${p.priority}</priority>
+  </url>`
+    )
+    .join('\n');
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
+</urlset>
+`;
+}
+
+function buildRobotsTxt() {
+  return `User-agent: *
+Allow: /
+
+Sitemap: ${meta.baseUrl}/sitemap.xml
+
+# Guide pour les assistants IA : ${meta.baseUrl}/llms.txt
 `;
 }
 
@@ -324,9 +375,13 @@ fs.writeFileSync(path.join(root, 'public/portfolio.json'), JSON.stringify(portfo
 fs.writeFileSync(path.join(root, 'public/portfolio.md'), portfolioMd);
 fs.writeFileSync(path.join(root, 'public/llms.txt'), buildLlmsTxt());
 fs.writeFileSync(path.join(root, 'public/content.html'), buildContentHtml());
+fs.writeFileSync(path.join(root, 'public/sitemap.xml'), buildSitemap());
+fs.writeFileSync(path.join(root, 'public/robots.txt'), buildRobotsTxt());
 
 console.log('✅ Fichiers IA générés:');
 console.log('   - public/portfolio.json');
 console.log('   - public/portfolio.md');
 console.log('   - public/llms.txt');
 console.log('   - public/content.html');
+console.log('   - public/sitemap.xml');
+console.log('   - public/robots.txt');

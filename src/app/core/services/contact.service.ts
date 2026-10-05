@@ -20,7 +20,7 @@ export interface ContactResponse {
 export class ContactService {
   // Détection automatique: si on est sur localhost, utiliser le serveur local
   // Sinon, utiliser l'API Vercel
-  private apiUrl = window.location.hostname === 'localhost' 
+  private apiUrl = typeof window !== 'undefined' && window.location.hostname === 'localhost'
     ? 'http://localhost:3000/api/contact'
     : '/api/contact';
 

@@ -1,6 +1,6 @@
-import { Component, OnInit, inject, effect, OnDestroy } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
+import { Component, OnInit, inject, effect, OnDestroy, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { PortfolioDataService } from '../../../../core/services/portfolio-data.service';
 import { ContactService, ContactForm } from '../../../../core/services/contact.service';
@@ -11,11 +11,14 @@ import { ThemeService } from '../../../../core/services/theme.service';
 import { LanguageService } from '../../../../core/services/language.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { OrbitingSkillsComponent } from '../orbiting-skills/orbiting-skills.component';
+import { FAQ_FR } from '../../../../core/data/faq.data';
+import { SeoService, PERSON_NAME } from '../../../../core/services/seo.service';
+import { faqPage, profilePage, projectList } from '../../../../core/services/structured-data';
 
 @Component({
     selector: 'app-main-content',
     standalone: true,
-    imports: [CommonModule, HttpClientModule, TranslateModule, OrbitingSkillsComponent, FormsModule],
+    imports: [CommonModule, HttpClientModule, TranslateModule, OrbitingSkillsComponent, FormsModule, RouterLink],
     templateUrl: './main-content.component.html',
     styleUrls: ['./main-content.component.scss']
 })
@@ -59,10 +62,13 @@ export class MainContentComponent implements OnInit, OnDestroy {
 
     themeService = inject(ThemeService);
     languageService = inject(LanguageService);
+    private seo = inject(SeoService);
+    private isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
+
+    readonly faq = FAQ_FR;
 
     constructor(
         private portfolioDataService: PortfolioDataService,
-        private router: Router,
         private contactService: ContactService,
         private formSecurityService: FormSecurityService
     ) {
@@ -80,6 +86,10 @@ export class MainContentComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
         this.loadAllData();
+        this.updateSeo();
+
+        // Pas d'animations pendant le pré-rendu : elles empêcheraient la page de se stabiliser
+        if (!this.isBrowser) return;
 
         // Attendre que les traductions soient chargées
         setTimeout(() => {
@@ -88,6 +98,21 @@ export class MainContentComponent implements OnInit, OnDestroy {
 
         // Démarrer le slideshow automatique
         this.startSchoolImageSlideshow();
+    }
+
+    private updateSeo(): void {
+        const description = 'Projets Machine Learning, MLOps (AWS, Docker), Angular et Spring Boot, certifications IBM et Google : le portfolio de Masewell Mathurin KONMENECK.';
+        this.seo.setPage({
+            title: `Portfolio de ${PERSON_NAME} | Projets, compétences et CV`,
+            description,
+            path: '/portfolio',
+            type: 'profile',
+            jsonLd: [
+                profilePage('/portfolio', `Portfolio de ${PERSON_NAME}`, description),
+                ...(this.projects.length ? [projectList(this.projects)] : []),
+                faqPage(this.faq),
+            ],
+        });
     }
 
     ngOnDestroy(): void {
@@ -107,7 +132,10 @@ export class MainContentComponent implements OnInit, OnDestroy {
             this.skills = data;
             this.filterSkillsByCategory(this.selectedSkillCategory);
         });
-        this.portfolioDataService.getProjects().subscribe((data: Project[]) => this.projects = data);
+        this.portfolioDataService.getProjects().subscribe((data: Project[]) => {
+            this.projects = data;
+            this.updateSeo();
+        });
         this.portfolioDataService.getVolunteers().subscribe((data: Volunteer[]) => this.volunteers = data);
     }
 
@@ -223,6 +251,15 @@ export class MainContentComponent implements OnInit, OnDestroy {
         
         // Réinitialiser le texte affiché
         this.displayedText = '';
+
+        // Pendant le pré-rendu, écrire le texte complet d'un coup pour qu'il figure dans le HTML
+        if (!this.isBrowser) {
+            this.languageService.translate.get('whoami.intro3').subscribe((text: string) => {
+                this.fullText = text;
+                this.displayedText = text;
+            });
+            return;
+        }
         
         // Attendre un peu pour que la traduction soit chargée
         setTimeout(() => {
@@ -326,10 +363,6 @@ export class MainContentComponent implements OnInit, OnDestroy {
 
     t(key: string): string {
         return key;
-    }
-
-    navigateToProject(projectId: string): void {
-        this.router.navigate(['/project', projectId]);
     }
 
     startSchoolImageSlideshow(): void {
