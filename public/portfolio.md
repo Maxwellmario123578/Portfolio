@@ -28,7 +28,7 @@ Mon objectif est de créer des applications performantes et utiles, tout en cont
 ### Cycle ingénieur – Majeure Data Science & IA (double diplôme)
 - **Organisation:** EFREI Paris | Villejuif
 - **Période:** 2026 - 2028
-- **Description:** Cycle ingénieur en double diplôme avec Saint Jean Ingénieur, majeure Data Science & Intelligence Artificielle. Matières clés : bases de données, Python pour les bases de données, analyse de données, calcul matriciel numérique, business English.
+- **Description:** Cycle ingénieur en double diplôme avec Saint Jean Ingénieur, majeure Data Science & Intelligence Artificielle.
 - **Site:** https://www.efrei.fr/
 
 ### Ingénierie des Systèmes d'Information
@@ -384,7 +384,7 @@ My goal is to create efficient and useful applications, while continuing to lear
 ### Engineering Degree – Data Science & AI Major (double degree)
 - **Organisation:** EFREI Paris | Villejuif
 - **Période:** 2026 - 2028
-- **Description:** Engineering cycle as a double degree with Saint Jean Ingénieur, majoring in Data Science & Artificial Intelligence. Key subjects: databases, Python for databases, data analysis, numerical matrix computation, business English.
+- **Description:** Engineering cycle as a double degree with Saint Jean Ingénieur, majoring in Data Science & Artificial Intelligence.
 - **Site:** https://www.efrei.fr/
 
 ### Information Systems Engineering
