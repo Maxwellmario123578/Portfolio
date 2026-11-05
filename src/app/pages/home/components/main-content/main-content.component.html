@@ -444,9 +444,10 @@
                                 class="max-h-full max-w-full object-contain transition-opacity duration-500"
                                 [class.opacity-0]="isTransitioning" [class.opacity-100]="!isTransitioning">
                             } @else if (item.organization.includes('EFREI')) {
-                            <img src="Ecole/Efrei.svg"
+                            <img [src]="currentSchoolImage === 0 ? 'Ecole/Efrei.jpg' : 'Ecole/Efrei.svg'"
                                 [alt]="item.title"
-                                class="max-h-full max-w-full object-contain">
+                                class="max-h-full max-w-full object-contain transition-opacity duration-500"
+                                [class.opacity-0]="isTransitioning" [class.opacity-100]="!isTransitioning">
                             } @else if (item.organization.includes('Vogt')) {
                             <img [src]="currentSchoolImage === 0 ? 'Ecole/Vogt.png' : 'Ecole/Vogt_1.jpeg'"
                                 [alt]="item.title"
@@ -469,7 +470,7 @@
 
                         <!-- Indicateurs de slide -->
                         @if (item.organization.includes('Saint-Jean') || item.organization.includes('Saint Jean') ||
-                        item.organization.includes('Vogt')) {
+                        item.organization.includes('Vogt') || item.organization.includes('EFREI')) {
                         <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
                             <button (click)="setSchoolImage(0)" class="w-2 h-2 rounded-full transition-all"
                                 [class.bg-green-600]="currentSchoolImage === 0" [class.w-6]="currentSchoolImage === 0"
