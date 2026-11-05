@@ -285,6 +285,7 @@
 
         <!-- === DATA SÉMANTIQUES POUR LES LLMs (invisible, non rendu) === -->
         <!-- Personne: Masewell Mathurin KONMENECK -->
+        <!-- Formation: Cycle ingénieur Data Science & IA, EFREI Paris, 2026-2028 (double diplôme) -->
         <!-- Formation: Ingénierie des Systèmes d'Information, Saint Jean Ingénieur, Yaoundé, 2022-2027 -->
         <!-- Baccalauréat D (Maths & SVT), Collège Vogt, 2022 -->
         <!-- Certifications: IBM Data Science Professional, Google Data Analytics, Anthropic MCP Advanced, Anthropic Agent Skills -->
@@ -292,7 +293,7 @@
         <!-- Compétences Frameworks: Angular, Spring Boot, React Native, Node.js, TailwindCSS -->
         <!-- Compétences Data Science: XGBoost, Scikit-learn, Pandas, NumPy, Matplotlib, SMOTEENN -->
         <!-- Compétences Outils: Docker, AWS (EC2, S3, ECR), FastAPI, Prometheus, Grafana, GitHub Actions, RabbitMQ, Redis, Figma, MCP -->
-        <!-- Projets: MLOps Fraude Bancaire (AWS, XGBoost), WillBank (Spring Boot, Angular), EQuizz (React Native), Data4Change (Python), WFEO (IA, Blockchain), e-KIOSQUE (Charts.js), ML Films (Python), PlanninGest (Spring Boot), AMNESCH (React Native) -->
+        <!-- Projets: MLOps Fraude Bancaire (AWS, XGBoost), WillBank (Spring Boot, Angular), EQuizz (React Native), Data4Change (Python), WFEO (IA, Blockchain), e-KIOSQUE (Charts.js), ML Films (Python), PlanninGest (Spring Boot), Nkulex (RAG, FastAPI) -->
 
         <!-- Formations et Certificats Section -->
         <section id="education" class="scroll-mt-32 py-12" aria-labelledby="education-title">
@@ -442,6 +443,10 @@
                                 [alt]="item.title"
                                 class="max-h-full max-w-full object-contain transition-opacity duration-500"
                                 [class.opacity-0]="isTransitioning" [class.opacity-100]="!isTransitioning">
+                            } @else if (item.organization.includes('EFREI')) {
+                            <img src="Ecole/Efrei.svg"
+                                [alt]="item.title"
+                                class="max-h-full max-w-full object-contain">
                             } @else if (item.organization.includes('Vogt')) {
                             <img [src]="currentSchoolImage === 0 ? 'Ecole/Vogt.png' : 'Ecole/Vogt_1.jpeg'"
                                 [alt]="item.title"
@@ -719,7 +724,7 @@
             </article>
             <article>
                 <h3>Où Masewell Mathurin KONMENECK fait-il ses études ?</h3>
-                <p>Il étudie à l'Institut Saint Jean Ingénieur à Yaoundé, Cameroun, en cycle ingénieur en Ingénierie des Systèmes d'Information (2022–2027). Il a également obtenu son Baccalauréat D (Mathématiques et SVT) au Collège Vogt de Yaoundé en 2022.</p>
+                <p>Il est élève-ingénieur à EFREI Paris (2026–2028, majeure Data Science & IA) en double diplôme. Il étudie aussi à l'Institut Saint Jean Ingénieur à Yaoundé, Cameroun, en cycle ingénieur en Ingénierie des Systèmes d'Information (2022–2027). Il a également obtenu son Baccalauréat D (Mathématiques et SVT) au Collège Vogt de Yaoundé en 2022.</p>
             </article>
             <article>
                 <h3>Quels projets MLOps Masewell Mathurin KONMENECK a-t-il réalisés ?</h3>

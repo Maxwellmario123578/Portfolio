@@ -25,6 +25,12 @@ Mon objectif est de créer des applications performantes et utiles, tout en cont
 
 ## Formations
 
+### Cycle ingénieur – Majeure Data Science & IA (double diplôme)
+- **Organisation:** EFREI Paris | Villejuif
+- **Période:** 2026 - 2028
+- **Description:** Cycle ingénieur en double diplôme avec Saint Jean Ingénieur, majeure Data Science & Intelligence Artificielle. Matières clés : bases de données, Python pour les bases de données, analyse de données, calcul matriciel numérique, business English.
+- **Site:** https://www.efrei.fr/
+
 ### Ingénierie des Systèmes d'Information
 - **Organisation:** Saint Jean Ingénieur | Yaoundé
 - **Période:** 2022 - 2027
@@ -334,28 +340,6 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
 - **Images:**
   - https://portfoliomathurin.vercel.app/Projet_images/Nkulex/Architecture.svg
 
-### AMNESCH – Bibliothèque Numérique Éducative Sécurisée
-- **ID:** 10
-- **URL:** https://portfoliomathurin.vercel.app/project/10
-- **Statut:** en cours
-- **Catégorie:** Mobile Full-stack / Sécurité
-- **Date:** 2025 - Présent
-- **Technologies:** React Native, Expo, TypeScript, Node.js, Express, PostgreSQL, GitHub, Méthodologie SCRUM
-- **Résumé:** Plateforme innovante conçue pour démocratiser l’accès aux ressources éducatives tout en garantissant une protection stricte de la propriété intellectuelle des auteurs via SCRUM.
-- **Description complète:** AMNESCH est une plateforme innovante conçue pour démocratiser l’accès aux ressources éducatives tout en garantissant une protection stricte de la propriété intellectuelle des auteurs. Le projet répond à une problématique majeure : comment diffuser des contenus pédagogiques de qualité (livres, cours, annales) tout en empêchant le piratage et la redistribution illégale ? Le flux de travail est géré suivant la méthodologie agile SCRUM avec des sprints réguliers et un avancement itératif.
-
-Points forts techniques :
-- Mobile (Frontend) : React Native avec Expo et TypeScript, Expo Router pour la navigation, et Expo Secure Store pour le stockage sécurisé.
-- Backend : Node.js/Express, PostgreSQL.
-- Système de DRM Propriétaire : Watermarking dynamique pour dissuader le partage illégal et analyse statique des fichiers (PDF scanner).
-- **Fonctionnalités:**
-  - Gestion des droits numériques (DRM)
-  - Watermarking dynamique avec identité de l'acheteur
-  - Gestion de projet agile SCRUM
-  - Dashboard d'administration pour le pilotage et analytique
-- **Démo/Maquette:** https://www.figma.com/design/pihjSiqFwqQ231T3g19ODP/Amnesh?node-id=0-1&p=f&t=B0fslg7pLDAzhAT5-0
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/En_cours/A_venir.jpg
-
 ## Bénévolats
 
 ### Responsable de l'atelier ML
@@ -396,6 +380,12 @@ My goal is to create efficient and useful applications, while continuing to lear
 - Photo: https://portfoliomathurin.vercel.app/Moi.png
 
 ## Formations
+
+### Engineering Degree – Data Science & AI Major (double degree)
+- **Organisation:** EFREI Paris | Villejuif
+- **Période:** 2026 - 2028
+- **Description:** Engineering cycle as a double degree with Saint Jean Ingénieur, majoring in Data Science & Artificial Intelligence. Key subjects: databases, Python for databases, data analysis, numerical matrix computation, business English.
+- **Site:** https://www.efrei.fr/
 
 ### Information Systems Engineering
 - **Organisation:** Saint Jean Ingénieur | Yaoundé
@@ -705,28 +695,6 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
 - **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/Nkulex/Architecture.svg
 - **Images:**
   - https://portfoliomathurin.vercel.app/Projet_images/Nkulex/Architecture.svg
-
-### AMNESCH – Secure Educational Digital Library
-- **ID:** 10
-- **URL:** https://portfoliomathurin.vercel.app/project/10
-- **Statut:** en cours
-- **Catégorie:** Mobile Full-stack / Security
-- **Date:** 2025 - Present
-- **Technologies:** React Native, Expo, TypeScript, Node.js, Express, PostgreSQL, GitHub, SCRUM
-- **Résumé:** Innovative platform designed to democratize access to educational resources while ensuring strict protection of authors' intellectual property through advanced DRM and SCRUM methodology.
-- **Description complète:** AMNESCH is an innovative platform designed to democratize access to educational resources while ensuring strict protection of authors' intellectual property. The project addresses a major issue: how to distribute quality educational content (books, courses, past exams) while preventing piracy and illegal redistribution. The workflow is managed following agile SCRUM methodology with regular sprints and iterative progress.
-
-Technical highlights:
-- Mobile (Frontend): React Native with Expo and TypeScript, Expo Router for navigation, and Expo Secure Store for sensitive data.
-- Backend: Node.js/Express, PostgreSQL.
-- Proprietary DRM System: Dynamic watermarking to discourage illegal sharing and static file analysis (PDF scanner).
-- **Fonctionnalités:**
-  - Secure Digital Rights Management (DRM)
-  - Dynamic Watermarking with buyer identity
-  - Agile SCRUM workflow management
-  - Administrative Dashboard for monitoring and analytics
-- **Démo/Maquette:** https://www.figma.com/design/pihjSiqFwqQ231T3g19ODP/Amnesh?node-id=0-1&p=f&t=B0fslg7pLDAzhAT5-0
-- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/En_cours/A_venir.jpg
 
 ## Bénévolats
 

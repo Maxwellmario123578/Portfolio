@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1f3a"/>
+      <stop offset="1" stop-color="#123a6b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <!-- Bâtiment stylisé -->
+  <g fill="none" stroke="#7dd3fc" stroke-width="3" opacity="0.55">
+    <rect x="760" y="250" width="320" height="420" rx="6"/>
+    <rect x="690" y="380" width="70" height="290"/>
+    <line x1="760" y1="320" x2="1080" y2="320"/>
+    <line x1="760" y1="390" x2="1080" y2="390"/>
+    <line x1="760" y1="460" x2="1080" y2="460"/>
+    <line x1="760" y1="530" x2="1080" y2="530"/>
+    <line x1="760" y1="600" x2="1080" y2="600"/>
+    <line x1="840" y1="250" x2="840" y2="670"/>
+    <line x1="920" y1="250" x2="920" y2="670"/>
+    <line x1="1000" y1="250" x2="1000" y2="670"/>
+  </g>
+  <line x1="80" y1="670" x2="1120" y2="670" stroke="#7dd3fc" stroke-width="3" opacity="0.55"/>
+
+  <text x="80" y="300" fill="#f8fafc" font-size="96" font-weight="700">EFREI Paris</text>
+  <text x="80" y="370" fill="#cbd5e1" font-size="34">Cycle ingénieur · 2026 – 2028</text>
+  <text x="80" y="440" fill="#7dd3fc" font-size="34" font-weight="600">Majeure Data Science &amp; IA</text>
+  <text x="80" y="490" fill="#cbd5e1" font-size="28">Double diplôme avec Saint Jean Ingénieur</text>
+  <text x="80" y="620" fill="#94a3b8" font-size="26">Villejuif · Île-de-France</text>
+</svg>
