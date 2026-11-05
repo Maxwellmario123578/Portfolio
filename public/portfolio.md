@@ -1,6 +1,6 @@
 # Portfolio — Masewell-Mathurin KONMENECK
 
-> Fichier généré automatiquement le 2026-06-15
+> Fichier généré automatiquement le 2026-11-05
 
 ---
 
@@ -309,6 +309,30 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - https://portfoliomathurin.vercel.app/Cahier_projets/MLOps_1/Architecture_Reseau.png
   - https://portfoliomathurin.vercel.app/Projet_images/MLops_1/Illustration.png
   - https://portfoliomathurin.vercel.app/Projet_images/MLops_1/Illustration_1.png
+
+### Nkulex – Assistant juridique OHADA basé sur le RAG
+- **ID:** 11
+- **URL:** https://portfoliomathurin.vercel.app/project/11
+- **Statut:** en cours
+- **Catégorie:** IA / NLP / RAG
+- **Date:** 2026 - Présent
+- **Technologies:** Python, FastAPI, RAG, ChromaDB, BM25, Sentence-Transformers, Mistral API, Angular 21, PostgreSQL, Docker, Nginx, GitHub Actions
+- **Résumé:** Assistant juridique IA qui répond aux questions de droit OHADA en s'appuyant sur plus de 3 000 décisions de jurisprudence, avec recherche hybride (vectorielle + BM25) et réponses sourcées en streaming.
+- **Description complète:** Nkulex est un assistant juridique spécialisé dans le droit OHADA, en production sur nkulex.com. Il repose sur une architecture en trois services : un frontend Angular 21 qui affiche les réponses en streaming (SSE), un backend BFF FastAPI qui gère l'authentification JWT et l'historique dans PostgreSQL, et un service ML FastAPI qui porte le pipeline RAG. Le corpus de 3 164 décisions (CCJA et juridictions nationales) est découpé en chunks parents/enfants puis indexé dans ChromaDB avec des embeddings MiniLM multilingues et un index BM25. À chaque question, un routage d'intention choisit entre une réponse rapide et la recherche documentaire ; celle-ci fusionne recherche dense, BM25 et rappel lexical forcé, construit un contexte borné puis génère la réponse avec Mistral sous un prompt anti-hallucination. Le système a été évalué selon les cadres BEIR et RAGAS (faithfulness d'environ 92 %, latence médiane d'environ 6 s), et les métadonnées du corpus ont été enrichies (date renseignée pour 99,7 % des décisions contre 31 % au départ).
+- **Fonctionnalités:**
+  - Pipeline RAG hybride : embeddings MiniLM multilingues, ChromaDB, BM25 et rappel lexical forcé
+  - Indexation hors ligne de 3 164 décisions OHADA en chunks parents/enfants
+  - Routage d'intention : réponse rapide ou recherche documentaire selon la question
+  - Prompt structuré anti-hallucination et réponses avec sources citées
+  - Streaming des réponses en SSE de bout en bout (keepalive et padding anti-buffer)
+  - Backend BFF FastAPI : authentification JWT et historique des conversations (PostgreSQL)
+  - Évaluation selon BEIR et RAGAS : Hit@k, MRR, faithfulness, latence p50/p95
+  - Enrichissement des métadonnées du corpus (pays, juridiction, date)
+  - Déploiement Docker Compose derrière nginx avec CI/CD GitHub Actions
+- **Démo/Maquette:** https://nkulex.com
+- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/Nkulex/Architecture.svg
+- **Images:**
+  - https://portfoliomathurin.vercel.app/Projet_images/Nkulex/Architecture.svg
 
 ### AMNESCH – Bibliothèque Numérique Éducative Sécurisée
 - **ID:** 10
@@ -657,6 +681,30 @@ Docker, Trello, GitLab & GitHub, Figma, Google BigQuery, Excel, Google Sheets, M
   - https://portfoliomathurin.vercel.app/Cahier_projets/MLOps_1/Architecture_Reseau.png
   - https://portfoliomathurin.vercel.app/Projet_images/MLops_1/Illustration.png
   - https://portfoliomathurin.vercel.app/Projet_images/MLops_1/Illustration_1.png
+
+### Nkulex – RAG-Based OHADA Legal Assistant
+- **ID:** 11
+- **URL:** https://portfoliomathurin.vercel.app/project/11
+- **Statut:** en cours
+- **Catégorie:** AI / NLP / RAG
+- **Date:** 2026 - Present
+- **Technologies:** Python, FastAPI, RAG, ChromaDB, BM25, Sentence-Transformers, Mistral API, Angular 21, PostgreSQL, Docker, Nginx, GitHub Actions
+- **Résumé:** AI legal assistant that answers OHADA law questions using over 3,000 case-law decisions, with hybrid retrieval (vector + BM25) and sourced, streamed answers.
+- **Description complète:** Nkulex is a legal assistant specialised in OHADA business law, running in production at nkulex.com. It is built as three services: an Angular 21 frontend that streams answers (SSE), a FastAPI BFF backend handling JWT authentication and conversation history in PostgreSQL, and a FastAPI ML service hosting the RAG pipeline. The corpus of 3,164 decisions (CCJA and national courts) is split into parent/child chunks and indexed in ChromaDB with multilingual MiniLM embeddings and a BM25 index. For each question, intent routing chooses between a fast answer and document retrieval; retrieval fuses dense search, BM25 and forced lexical recall, builds a bounded context, then generates the answer with Mistral under an anti-hallucination prompt. The system was evaluated with the BEIR and RAGAS frameworks (about 92% faithfulness, about 6 s median latency), and corpus metadata was enriched (dates filled for 99.7% of decisions, up from 31%).
+- **Fonctionnalités:**
+  - Hybrid RAG pipeline: multilingual MiniLM embeddings, ChromaDB, BM25 and forced lexical recall
+  - Offline indexing of 3,164 OHADA decisions into parent/child chunks
+  - Intent routing: fast answer or document retrieval depending on the question
+  - Structured anti-hallucination prompt and answers with cited sources
+  - End-to-end SSE streaming of answers (keepalive and anti-buffering padding)
+  - FastAPI BFF backend: JWT authentication and conversation history (PostgreSQL)
+  - Evaluation following BEIR and RAGAS: Hit@k, MRR, faithfulness, p50/p95 latency
+  - Corpus metadata enrichment (country, court, date)
+  - Docker Compose deployment behind nginx with GitHub Actions CI/CD
+- **Démo/Maquette:** https://nkulex.com
+- **Image principale:** https://portfoliomathurin.vercel.app/Projet_images/Nkulex/Architecture.svg
+- **Images:**
+  - https://portfoliomathurin.vercel.app/Projet_images/Nkulex/Architecture.svg
 
 ### AMNESCH – Secure Educational Digital Library
 - **ID:** 10

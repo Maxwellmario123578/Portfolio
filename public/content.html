@@ -75,7 +75,7 @@
     </section>
 
     <section id="projects">
-      <h2>Projets (10)</h2>
+      <h2>Projets (11)</h2>
       
     <article id="project-hackathon-1">
       <h3>Hackathon Data4Change</h3>
@@ -270,6 +270,25 @@
 <figure><img src="Projet_images/MLops_1/Illustration_1.png" alt="Détection de Fraude aux Transactions par IA : Pipeline MLOps End-to-End et Monitoring Temps Réel — image 4" width="400" loading="lazy" /><figcaption>Détection de Fraude aux Transactions par IA : Pipeline MLOps End-to-End et Monitoring Temps Réel — image 4</figcaption></figure>
     </article>
 
+    <article id="project-11">
+      <h3>Nkulex – Assistant juridique OHADA basé sur le RAG</h3>
+      <p><strong>Statut:</strong> en cours | <strong>Catégorie:</strong> IA / NLP / RAG | <strong>Date:</strong> 2026 - Présent</p>
+      <p>Nkulex est un assistant juridique spécialisé dans le droit OHADA, en production sur nkulex.com. Il repose sur une architecture en trois services : un frontend Angular 21 qui affiche les réponses en streaming (SSE), un backend BFF FastAPI qui gère l'authentification JWT et l'historique dans PostgreSQL, et un service ML FastAPI qui porte le pipeline RAG. Le corpus de 3 164 décisions (CCJA et juridictions nationales) est découpé en chunks parents/enfants puis indexé dans ChromaDB avec des embeddings MiniLM multilingues et un index BM25. À chaque question, un routage d'intention choisit entre une réponse rapide et la recherche documentaire ; celle-ci fusionne recherche dense, BM25 et rappel lexical forcé, construit un contexte borné puis génère la réponse avec Mistral sous un prompt anti-hallucination. Le système a été évalué selon les cadres BEIR et RAGAS (faithfulness d'environ 92 %, latence médiane d'environ 6 s), et les métadonnées du corpus ont été enrichies (date renseignée pour 99,7 % des décisions contre 31 % au départ).</p>
+      <p><strong>Technologies:</strong> Python, FastAPI, RAG, ChromaDB, BM25, Sentence-Transformers, Mistral API, Angular 21, PostgreSQL, Docker, Nginx, GitHub Actions</p>
+      <ul><li>Pipeline RAG hybride : embeddings MiniLM multilingues, ChromaDB, BM25 et rappel lexical forcé</li><li>Indexation hors ligne de 3 164 décisions OHADA en chunks parents/enfants</li><li>Routage d'intention : réponse rapide ou recherche documentaire selon la question</li><li>Prompt structuré anti-hallucination et réponses avec sources citées</li><li>Streaming des réponses en SSE de bout en bout (keepalive et padding anti-buffer)</li><li>Backend BFF FastAPI : authentification JWT et historique des conversations (PostgreSQL)</li><li>Évaluation selon BEIR et RAGAS : Hit@k, MRR, faithfulness, latence p50/p95</li><li>Enrichissement des métadonnées du corpus (pays, juridiction, date)</li><li>Déploiement Docker Compose derrière nginx avec CI/CD GitHub Actions</li></ul>
+      <p><strong>Liens:</strong>
+        
+        <a href="https://nkulex.com">Démo</a> 
+        
+        <a href="https://portfoliomathurin.vercel.app/project/11">Page projet</a>
+      </p>
+      <figure>
+        <img src="Projet_images/Nkulex/Architecture.svg" alt="Nkulex – Assistant juridique OHADA basé sur le RAG" width="600" loading="lazy" />
+        <figcaption>Nkulex – Assistant juridique OHADA basé sur le RAG — capture principale</figcaption>
+      </figure>
+      
+    </article>
+
     <article id="project-10">
       <h3>AMNESCH – Bibliothèque Numérique Éducative Sécurisée</h3>
       <p><strong>Statut:</strong> en cours | <strong>Catégorie:</strong> Mobile Full-stack / Sécurité | <strong>Date:</strong> 2025 - Présent</p>
@@ -312,7 +331,7 @@ Points forts techniques :
   </main>
 
   <footer>
-    <p>Dernière mise à jour : 2026-06-15 | <a href="/portfolio.json">JSON</a> | <a href="/portfolio.md">Markdown</a> | <a href="/llms.txt">llms.txt</a></p>
+    <p>Dernière mise à jour : 2026-11-05 | <a href="/portfolio.json">JSON</a> | <a href="/portfolio.md">Markdown</a> | <a href="/llms.txt">llms.txt</a></p>
   </footer>
 </body>
 </html>
