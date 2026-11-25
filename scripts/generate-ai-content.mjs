@@ -171,8 +171,8 @@ function buildContentHtml() {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>${meta.name} — Contenu complet du portfolio</title>
-  <meta name="description" content="Version HTML statique et lisible du portfolio de ${meta.name}, optimisée pour les crawlers et assistants IA." />
+  <title>${FULL_NAME} — Portfolio complet (Data Science & IA, EFREI Paris)</title>
+  <meta name="description" content="${esc(SUMMARY_FR)}" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="${meta.baseUrl}/content.html" />
   <link rel="alternate" type="application/json" href="/portfolio.json" title="Données structurées JSON" />
@@ -194,8 +194,9 @@ function buildContentHtml() {
   </div>
 
   <header>
-    <h1>${meta.name}</h1>
+    <h1>${FULL_NAME}</h1>
     <p>${fr.title}</p>
+    <p>${SUMMARY_FR}</p>
     <nav>
       <a href="#presentation">Présentation</a>
       <a href="#education">Formations</a>
@@ -272,36 +273,121 @@ function buildContentHtml() {
 </html>`;
 }
 
+function esc(t) {
+  return String(t ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+const FULL_NAME = 'Masewell Mathurin KONMENECK';
+const SUMMARY_FR = `${FULL_NAME} est élève-ingénieur en Data Science & Intelligence Artificielle à EFREI Paris (2026-2028), en double diplôme avec l'Institut Saint Jean Ingénieur de Yaoundé (Cameroun). Ingénieur logiciel et data scientist, certifié IBM Data Science Professional et Google Data Analytics, il recherche un stage Data / IA en France à partir d'août 2027.`;
+const SUMMARY_EN = `${FULL_NAME} is a Data Science & Artificial Intelligence engineering student at EFREI Paris (2026-2028), in a double degree with Institut Saint Jean Ingénieur in Yaoundé (Cameroon). A software engineer and data scientist, IBM Data Science Professional and Google Data Analytics certified, he is looking for a Data / AI internship in France starting August 2027.`;
+
 function buildLlmsTxt() {
-  return `# ${meta.name} — Portfolio
+  const projs = projects.en.map(enrichProject);
+  return `# ${FULL_NAME}
 
-> Étudiant en Ingénierie des Systèmes d'Information & Data Scientist
-> Portfolio interactif (Angular SPA) — utilisez les fichiers statiques ci-dessous pour une lecture complète sans JavaScript.
+> ${SUMMARY_EN}
 
-## Fichiers recommandés pour les IA
+Official website: ${meta.baseUrl}
+Also written: Masewell-Mathurin KONMENECK, Masewell Konmeneck, Mathurin Konmeneck, Maxwell KONMENECK.
 
-- [Contenu HTML complet](/content.html) : page statique avec tout le texte et les images (sans JS)
-- [Données JSON structurées](/portfolio.json) : profil, projets, compétences, certifications (FR + EN)
-- [Version Markdown](/portfolio.md) : texte intégral lisible
-- [Données brutes](/portfolio-data.json) : source de vérité du portfolio
-- [CV PDF](/CV/CV_KONMENECK.pdf) : curriculum vitae
+## Key facts
 
-## Pages du site
+- Name: ${FULL_NAME}
+- Current status: engineering student, Data Science & AI major, EFREI Paris (Villejuif, France), 2026-2028
+- Double degree: Institut Saint Jean Ingénieur, Yaoundé, Cameroon (Information Systems Engineering, 2022-2027)
+- Profile: software engineer & data scientist (Python, Machine Learning, MLOps, RAG, Angular, Spring Boot)
+- Looking for: Data / AI internship in France from August 2027
+- Certifications: ${certifications.en.map((c) => `${c.title} (${c.issuer})`).join('; ')}
+- Languages: French, English
 
-- [Accueil](/portfolio) : portfolio interactif
-- [Sitemap](/sitemap.xml)
+## Selected projects
 
-## Contact
+${projs.map((p) => `- [${p.title}](${p.url}): ${p.description}`).join('\n')}
+
+## Résumé (FR)
+
+${SUMMARY_FR}
+
+## Full content (no JavaScript needed)
+
+- [Full static HTML page](${meta.baseUrl}/content.html): all text, projects, skills, certifications
+- [Markdown version (FR + EN)](${meta.baseUrl}/portfolio.md)
+- [Structured JSON](${meta.baseUrl}/portfolio.json)
+- [CV (PDF)](${meta.cv})
+
+## Profiles
 
 - LinkedIn: ${meta.links.linkedin}
 - GitHub: ${meta.links.github}
 - GitLab: ${meta.links.gitlab}
-
-## Note technique
-
-Ce site est une Single Page Application Angular. Le contenu visible nécessite l'exécution de JavaScript.
-Pour un scraping fiable, préférez /content.html, /portfolio.json ou /portfolio.md.
+- Contact: contact form on ${meta.baseUrl}/portfolio
 `;
+}
+
+function buildSitemap() {
+  const today = meta.lastUpdated;
+  const urls = [
+    { loc: '/', priority: '1.0', freq: 'monthly' },
+    { loc: '/portfolio', priority: '0.9', freq: 'monthly' },
+    { loc: '/content.html', priority: '0.8', freq: 'monthly' },
+    ...projects.fr.map((p) => ({ loc: `/project/${p.id}`, priority: '0.7', freq: 'yearly' })),
+  ];
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls
+  .map(
+    (u) => `  <url>
+    <loc>${meta.baseUrl}${u.loc}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${u.freq}</changefreq>
+    <priority>${u.priority}</priority>
+  </url>`
+  )
+  .join('\n')}
+</urlset>
+`;
+}
+
+// Contenu statique injecté dans <app-root> : lisible par les robots qui n'exécutent pas
+// le JavaScript (Bing, ChatGPT, Claude, Perplexity…). Angular le remplace au démarrage.
+function buildPrerender() {
+  const projs = projects.fr.map(enrichProject);
+  return `<div style="max-width:860px;margin:0 auto;padding:2rem 1rem;font-family:system-ui,sans-serif;line-height:1.6">
+      <header>
+        <h1>${esc(FULL_NAME)}</h1>
+        <p><strong>${esc(profile.fr.title)}</strong></p>
+        <p>${esc(SUMMARY_FR)}</p>
+      </header>
+      <section>
+        <h2>Formations</h2>
+        <ul>${education.fr.map((e) => `<li><strong>${esc(e.title)}</strong> — ${esc(e.organization)} (${esc(e.period)})</li>`).join('')}</ul>
+      </section>
+      <section>
+        <h2>Certifications</h2>
+        <ul>${certifications.fr.map((c) => `<li>${esc(c.title)} — ${esc(c.issuer)}</li>`).join('')}</ul>
+      </section>
+      <section>
+        <h2>Compétences</h2>
+        <ul>${skills.fr.map((c) => `<li><strong>${esc(c.title)} :</strong> ${esc(c.skills.join(', '))}</li>`).join('')}</ul>
+      </section>
+      <section>
+        <h2>Projets</h2>
+        <ul>${projs.map((p) => `<li><a href="/project/${esc(p.id)}">${esc(p.title)}</a> — ${esc(p.description)}</li>`).join('')}</ul>
+      </section>
+      <section>
+        <h2>Contact</h2>
+        <p><a href="${meta.links.linkedin}">LinkedIn</a> · <a href="${meta.links.github}">GitHub</a> · <a href="${meta.links.gitlab}">GitLab</a> · <a href="/CV/CV_KONMENECK.pdf">CV (PDF)</a> · <a href="/content.html">Version complète</a></p>
+      </section>
+    </div>`;
+}
+
+function injectPrerender() {
+  const indexPath = path.join(root, 'src/index.html');
+  const html = fs.readFileSync(indexPath, 'utf8');
+  const block = `<app-root>\n    <!-- SEO-PRERENDER:START (généré par scripts/generate-ai-content.mjs, ne pas modifier à la main) -->\n    ${buildPrerender()}\n    <!-- SEO-PRERENDER:END -->\n  </app-root>`;
+  const out = html.replace(/<app-root>[\s\S]*?<\/app-root>/, block);
+  if (out === html && !html.includes('SEO-PRERENDER')) throw new Error('<app-root> introuvable dans src/index.html');
+  fs.writeFileSync(indexPath, out);
 }
 
 // portfolio.json — export optimisé pour les IA (URLs absolues)
@@ -324,9 +410,13 @@ fs.writeFileSync(path.join(root, 'public/portfolio.json'), JSON.stringify(portfo
 fs.writeFileSync(path.join(root, 'public/portfolio.md'), portfolioMd);
 fs.writeFileSync(path.join(root, 'public/llms.txt'), buildLlmsTxt());
 fs.writeFileSync(path.join(root, 'public/content.html'), buildContentHtml());
+fs.writeFileSync(path.join(root, 'public/sitemap.xml'), buildSitemap());
+injectPrerender();
 
 console.log('✅ Fichiers IA générés:');
 console.log('   - public/portfolio.json');
 console.log('   - public/portfolio.md');
 console.log('   - public/llms.txt');
 console.log('   - public/content.html');
+console.log('   - public/sitemap.xml');
+console.log('   - src/index.html (contenu pré-rendu)');

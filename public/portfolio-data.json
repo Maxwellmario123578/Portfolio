@@ -1,11 +1,11 @@
 {
   "meta": {
     "version": "1.0.0",
-    "lastUpdated": "2026-11-05",
+    "lastUpdated": "2026-11-25",
     "name": "Masewell-Mathurin KONMENECK",
-    "baseUrl": "https://portfoliomathurin.vercel.app",
-    "photo": "https://portfoliomathurin.vercel.app/Moi.png",
-    "cv": "https://portfoliomathurin.vercel.app/CV/CV_KONMENECK.pdf",
+    "baseUrl": "https://masewellmathurin.fr",
+    "photo": "https://masewellmathurin.fr/Moi.png",
+    "cv": "https://masewellmathurin.fr/CV/CV_KONMENECK.pdf",
     "links": {
       "linkedin": "https://www.linkedin.com/in/masewell-mathurin-konmeneck/",
       "github": "https://github.com/Maxwellmario123578",
@@ -14,17 +14,17 @@
   },
   "profile": {
     "fr": {
-      "title": "Étudiant en Ingénierie des Systèmes d'Information & Data Scientist",
+      "title": "Élève-ingénieur Data Science & IA à EFREI Paris — Ingénieur logiciel & Data Scientist",
       "intro": [
-        "Etudiant en ingénierie de conception en informatique à Saint Jean Ingénieur, passionné par le développement logiciel et l'architecture web.",
+        "Élève-ingénieur à EFREI Paris (majeure Data Science & IA), en double diplôme avec Saint Jean Ingénieur (Yaoundé), passionné par le développement logiciel et l'architecture web.",
         "J'aime concevoir des solutions intelligentes mêlant IA et les technologies web modernes.",
         "Mon objectif est de créer des applications performantes et utiles, tout en continuant à apprendre et à innover."
       ]
     },
     "en": {
-      "title": "Information Systems Engineering Student & Data Scientist",
+      "title": "Data Science & AI Engineering Student at EFREI Paris — Software Engineer & Data Scientist",
       "intro": [
-        "Computer Engineering student at Saint Jean Ingénieur, passionate about data science and software development.",
+        "Engineering student at EFREI Paris (Data Science & AI major), in a double degree with Saint Jean Ingénieur (Yaoundé), passionate about software development and web architecture.",
         "I love designing intelligent solutions combining data analysis, AI and modern web technology.",
         "My goal is to create efficient and useful applications, while continuing to learn and innovate."
       ]
@@ -36,12 +36,12 @@
         "id": "hackathon-1",
         "title": "Hackathon Data4Change",
         "description": "Participation au hackathon Data4Change, axé sur l'utilisation des données et de la technologie pour générer un changement social positif.",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Hackaton/Data4Change_1.jpeg",
+        "imageUrl": "https://masewellmathurin.fr/Hackaton/Data4Change_1.jpeg",
         "images": [
-          "https://portfoliomathurin.vercel.app/Hackaton/Data4Change_1.jpeg",
-          "https://portfoliomathurin.vercel.app/Hackaton/Data4Change_2.jpeg",
-          "https://portfoliomathurin.vercel.app/Hackaton/Data4Change_3.jpeg",
-          "https://portfoliomathurin.vercel.app/Hackaton/Certificat_Data4Change.png"
+          "https://masewellmathurin.fr/Hackaton/Data4Change_1.jpeg",
+          "https://masewellmathurin.fr/Hackaton/Data4Change_2.jpeg",
+          "https://masewellmathurin.fr/Hackaton/Data4Change_3.jpeg",
+          "https://masewellmathurin.fr/Hackaton/Certificat_Data4Change.png"
         ],
         "technologies": [
           "Data",
@@ -62,17 +62,17 @@
         "date": "2024",
         "status": "terminé",
         "isHackathon": true,
-        "url": "https://portfoliomathurin.vercel.app/project/hackathon-1"
+        "url": "https://masewellmathurin.fr/project/hackathon-1"
       },
       {
         "id": "hackathon-2",
         "title": "Hackathon WFEO - Urban Resource Loop",
         "description": "Infrastructure circulaire intelligente pilotée par IA et Blockchain pour la valorisation des flux plastiques et hydriques à Yaoundé, répondant à l'ODD 11 : Villes et Communautés Durables.",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Projet_images/WFEO/Poubelle_1.jpeg",
+        "imageUrl": "https://masewellmathurin.fr/Projet_images/WFEO/Poubelle_1.jpeg",
         "images": [
-          "https://portfoliomathurin.vercel.app/Projet_images/WFEO/Poubelle_1.jpeg",
-          "https://portfoliomathurin.vercel.app/Projet_images/WFEO/Poubelle_2.jpeg",
-          "https://portfoliomathurin.vercel.app/Hackaton/Certificat_WFEO.png"
+          "https://masewellmathurin.fr/Projet_images/WFEO/Poubelle_1.jpeg",
+          "https://masewellmathurin.fr/Projet_images/WFEO/Poubelle_2.jpeg",
+          "https://masewellmathurin.fr/Hackaton/Certificat_WFEO.png"
         ],
         "technologies": [
           "IA",
@@ -99,18 +99,18 @@
         "date": "2024",
         "status": "terminé",
         "isHackathon": true,
-        "url": "https://portfoliomathurin.vercel.app/project/hackathon-2"
+        "url": "https://masewellmathurin.fr/project/hackathon-2"
       },
       {
         "id": "1",
         "title": "Tableau de bord du Site e-KIOSQUE",
         "description": "Un tableau de bord interactif pour visualiser les données de vente, suivre les indicateurs clés de performance et identifier les tendances à l'aide de flux de données en temps réel.",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_1.png",
+        "imageUrl": "https://masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_1.png",
         "images": [
-          "https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_1.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_2.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_3.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_4.png"
+          "https://masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_1.png",
+          "https://masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_2.png",
+          "https://masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_3.png",
+          "https://masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_4.png"
         ],
         "technologies": [
           "Charts.js",
@@ -129,15 +129,15 @@
         "category": "Analyse de données",
         "date": "Juin 2025 à Juillet 2025",
         "status": "terminé",
-        "url": "https://portfoliomathurin.vercel.app/project/1"
+        "url": "https://masewellmathurin.fr/project/1"
       },
       {
         "id": "2",
         "title": "Prédiction d'audience de films avec l'IA",
         "description": "Outil intelligent qui prédit si un film plaira à un public Afrodescendant en utilisant l'intelligence artificielle et l'analyse de données",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Projet_images/ML_audiance/image.png",
+        "imageUrl": "https://masewellmathurin.fr/Projet_images/ML_audiance/image.png",
         "images": [
-          "https://portfoliomathurin.vercel.app/Projet_images/ML_audiance/image.png"
+          "https://masewellmathurin.fr/Projet_images/ML_audiance/image.png"
         ],
         "technologies": [
           "Python",
@@ -154,18 +154,18 @@
         "category": "Intelligence Artificielle",
         "date": "2025",
         "status": "terminé",
-        "url": "https://portfoliomathurin.vercel.app/project/2"
+        "url": "https://masewellmathurin.fr/project/2"
       },
       {
         "id": "4",
         "title": "Application de gestion des notes",
         "description": "Application Python intuitive de gestion des notes, permettant la saisie, la mise à jour et le classement automatique des étudiants, avec visualisation graphique interactive et exportation des résultats.",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Gestion_notes.png",
+        "imageUrl": "https://masewellmathurin.fr/Projet_images/Gestion_notes/Gestion_notes.png",
         "images": [
-          "https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Gestion_notes.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Saisie_note.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Modifier_user.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Voir_note.png"
+          "https://masewellmathurin.fr/Projet_images/Gestion_notes/Gestion_notes.png",
+          "https://masewellmathurin.fr/Projet_images/Gestion_notes/Saisie_note.png",
+          "https://masewellmathurin.fr/Projet_images/Gestion_notes/Modifier_user.png",
+          "https://masewellmathurin.fr/Projet_images/Gestion_notes/Voir_note.png"
         ],
         "technologies": [
           "Python",
@@ -182,18 +182,18 @@
         "category": "Developpement Python",
         "date": "2024-2025",
         "status": "terminé",
-        "url": "https://portfoliomathurin.vercel.app/project/4"
+        "url": "https://masewellmathurin.fr/project/4"
       },
       {
         "id": "5",
         "title": "Plateforme Bancaire Distribuée WillBank",
         "description": "Développement d'une application bancaire complète(en équipe de 4) basée sur une architecture microservices, incluant backend Spring Boot, frontend Angular, application mobile et infrastructure Dockerisée.",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank1.png",
+        "imageUrl": "https://masewellmathurin.fr/Projet_images/WillBank/willbank1.png",
         "images": [
-          "https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank1.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank2.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank3.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank4.png"
+          "https://masewellmathurin.fr/Projet_images/WillBank/willbank1.png",
+          "https://masewellmathurin.fr/Projet_images/WillBank/willbank2.png",
+          "https://masewellmathurin.fr/Projet_images/WillBank/willbank3.png",
+          "https://masewellmathurin.fr/Projet_images/WillBank/willbank4.png"
         ],
         "technologies": [
           "Java Spring Boot",
@@ -218,7 +218,7 @@
         "category": "Développement Full-stack/ Finance",
         "date": "2024-2025",
         "status": "terminé",
-        "url": "https://portfoliomathurin.vercel.app/project/5"
+        "url": "https://masewellmathurin.fr/project/5"
       },
       {
         "id": "6",
@@ -261,14 +261,14 @@
         "id": "8",
         "title": "EQuizz – Plateforme d'évaluation de la qualité de l'enseignement",
         "description": "En tant que Lead Developpeur, j'ai dirigé une équipe de 3 personnes pour le développement d'EQuizz, une application permettant aux étudiants d'évaluer les enseignants en fin de semestre afin de mesurer la qualité de l'enseignement et leur satisfaction.",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_login.png",
+        "imageUrl": "https://masewellmathurin.fr/Projet_images/EQuiz/Admin_login.png",
         "images": [
-          "https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_login.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_Creer_Eval.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_Creer_Formul.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_gest_utilisateur.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Ecran_Accueil_2.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Ecran_tel_1.png"
+          "https://masewellmathurin.fr/Projet_images/EQuiz/Admin_login.png",
+          "https://masewellmathurin.fr/Projet_images/EQuiz/Admin_Creer_Eval.png",
+          "https://masewellmathurin.fr/Projet_images/EQuiz/Admin_Creer_Formul.png",
+          "https://masewellmathurin.fr/Projet_images/EQuiz/Admin_gest_utilisateur.png",
+          "https://masewellmathurin.fr/Projet_images/EQuiz/Ecran_Accueil_2.png",
+          "https://masewellmathurin.fr/Projet_images/EQuiz/Ecran_tel_1.png"
         ],
         "technologies": [
           "React native",
@@ -294,18 +294,18 @@
         "category": "Développement Web / Éducation",
         "date": "2025",
         "status": "terminé",
-        "url": "https://portfoliomathurin.vercel.app/project/8"
+        "url": "https://masewellmathurin.fr/project/8"
       },
       {
         "id": "9",
         "title": "Détection de Fraude aux Transactions par IA : Pipeline MLOps End-to-End et Monitoring Temps Réel",
         "description": "Plateforme MLOps complète de détection de fraude bancaire utilisant XGBoost, déployée sur AWS avec Docker, FastAPI, load balancing Nginx, et monitoring temps réel via Prometheus/Grafana.",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Cahier_projets/MLOps_1/Architecture_Systeme.png",
+        "imageUrl": "https://masewellmathurin.fr/Cahier_projets/MLOps_1/Architecture_Systeme.png",
         "images": [
-          "https://portfoliomathurin.vercel.app/Cahier_projets/MLOps_1/Architecture_Systeme.png",
-          "https://portfoliomathurin.vercel.app/Cahier_projets/MLOps_1/Architecture_Reseau.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/MLops_1/Illustration.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/MLops_1/Illustration_1.png"
+          "https://masewellmathurin.fr/Cahier_projets/MLOps_1/Architecture_Systeme.png",
+          "https://masewellmathurin.fr/Cahier_projets/MLOps_1/Architecture_Reseau.png",
+          "https://masewellmathurin.fr/Projet_images/MLops_1/Illustration.png",
+          "https://masewellmathurin.fr/Projet_images/MLops_1/Illustration_1.png"
         ],
         "pdfUrl": "https://github.com/Maxwellmario123578/Portfolio/raw/main/public/Cahier_projets/MLOps_1/Rapport_Final-2.pdf",
         "technologies": [
@@ -339,7 +339,7 @@
         "category": "MLOps / Architecture Cloud / Data Science",
         "date": "Février 2026 - Avril 2026",
         "status": "terminé",
-        "url": "https://portfoliomathurin.vercel.app/project/9"
+        "url": "https://masewellmathurin.fr/project/9"
       },
       {
         "id": "11",
@@ -386,12 +386,12 @@
         "id": "hackathon-1",
         "title": "Data4Change Hackathon",
         "description": "Participation in the Data4Change hackathon, focused on using data and technology to drive positive social change.",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Hackaton/Data4Change_1.jpeg",
+        "imageUrl": "https://masewellmathurin.fr/Hackaton/Data4Change_1.jpeg",
         "images": [
-          "https://portfoliomathurin.vercel.app/Hackaton/Data4Change_1.jpeg",
-          "https://portfoliomathurin.vercel.app/Hackaton/Data4Change_2.jpeg",
-          "https://portfoliomathurin.vercel.app/Hackaton/Data4Change_3.jpeg",
-          "https://portfoliomathurin.vercel.app/Hackaton/Certificat_Data4Change.png"
+          "https://masewellmathurin.fr/Hackaton/Data4Change_1.jpeg",
+          "https://masewellmathurin.fr/Hackaton/Data4Change_2.jpeg",
+          "https://masewellmathurin.fr/Hackaton/Data4Change_3.jpeg",
+          "https://masewellmathurin.fr/Hackaton/Certificat_Data4Change.png"
         ],
         "technologies": [
           "Data Analysis",
@@ -412,17 +412,17 @@
         "date": "2024",
         "status": "terminé",
         "isHackathon": true,
-        "url": "https://portfoliomathurin.vercel.app/project/hackathon-1"
+        "url": "https://masewellmathurin.fr/project/hackathon-1"
       },
       {
         "id": "hackathon-2",
         "title": "WFEO Hackathon - Urban Resource Loop",
         "description": "AI and Blockchain-powered circular infrastructure for plastic and water resource recovery in Yaoundé, addressing SDG 11: Sustainable Cities and Communities.",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Projet_images/WFEO/Poubelle_1.jpeg",
+        "imageUrl": "https://masewellmathurin.fr/Projet_images/WFEO/Poubelle_1.jpeg",
         "images": [
-          "https://portfoliomathurin.vercel.app/Projet_images/WFEO/Poubelle_1.jpeg",
-          "https://portfoliomathurin.vercel.app/Projet_images/WFEO/Poubelle_2.jpeg",
-          "https://portfoliomathurin.vercel.app/Hackaton/Certificat_WFEO.png"
+          "https://masewellmathurin.fr/Projet_images/WFEO/Poubelle_1.jpeg",
+          "https://masewellmathurin.fr/Projet_images/WFEO/Poubelle_2.jpeg",
+          "https://masewellmathurin.fr/Hackaton/Certificat_WFEO.png"
         ],
         "technologies": [
           "AI",
@@ -449,18 +449,18 @@
         "date": "2024",
         "status": "terminé",
         "isHackathon": true,
-        "url": "https://portfoliomathurin.vercel.app/project/hackathon-2"
+        "url": "https://masewellmathurin.fr/project/hackathon-2"
       },
       {
         "id": "1",
         "title": "e-KIOSQUE Site Dashboard",
         "description": "An interactive dashboard to visualize sales data, track key performance indicators and identify trends using real-time data streams.",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_1.png",
+        "imageUrl": "https://masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_1.png",
         "images": [
-          "https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_1.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_2.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_3.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/Tableau_bord/Tableau_bord_4.png"
+          "https://masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_1.png",
+          "https://masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_2.png",
+          "https://masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_3.png",
+          "https://masewellmathurin.fr/Projet_images/Tableau_bord/Tableau_bord_4.png"
         ],
         "technologies": [
           "Charts.js",
@@ -479,15 +479,15 @@
         "category": "Data Analysis",
         "date": "June 2025 to July 2025",
         "status": "terminé",
-        "url": "https://portfoliomathurin.vercel.app/project/1"
+        "url": "https://masewellmathurin.fr/project/1"
       },
       {
         "id": "2",
         "title": "Film Audience Prediction with AI",
         "description": "Smart tool that predicts if a film will appeal to an Afro-descendant audience using artificial intelligence and data analysis",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Projet_images/ML_audiance/image.png",
+        "imageUrl": "https://masewellmathurin.fr/Projet_images/ML_audiance/image.png",
         "images": [
-          "https://portfoliomathurin.vercel.app/Projet_images/ML_audiance/image.png"
+          "https://masewellmathurin.fr/Projet_images/ML_audiance/image.png"
         ],
         "technologies": [
           "Python",
@@ -504,18 +504,18 @@
         "category": "Artificial Intelligence",
         "date": "2025",
         "status": "terminé",
-        "url": "https://portfoliomathurin.vercel.app/project/2"
+        "url": "https://masewellmathurin.fr/project/2"
       },
       {
         "id": "4",
         "title": "Grade Management Application",
         "description": "Intuitive Python grade management application, enabling input, updating and automatic student ranking, with interactive graphical visualization and results export.",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Gestion_notes.png",
+        "imageUrl": "https://masewellmathurin.fr/Projet_images/Gestion_notes/Gestion_notes.png",
         "images": [
-          "https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Gestion_notes.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Saisie_note.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Modifier_user.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/Gestion_notes/Voir_note.png"
+          "https://masewellmathurin.fr/Projet_images/Gestion_notes/Gestion_notes.png",
+          "https://masewellmathurin.fr/Projet_images/Gestion_notes/Saisie_note.png",
+          "https://masewellmathurin.fr/Projet_images/Gestion_notes/Modifier_user.png",
+          "https://masewellmathurin.fr/Projet_images/Gestion_notes/Voir_note.png"
         ],
         "technologies": [
           "Python",
@@ -532,18 +532,18 @@
         "category": "Python Development",
         "date": "2024-2025",
         "status": "terminé",
-        "url": "https://portfoliomathurin.vercel.app/project/4"
+        "url": "https://masewellmathurin.fr/project/4"
       },
       {
         "id": "5",
         "title": "WillBank Distributed Banking Platform",
         "description": "Development of a complete banking application (team of 4) based on microservices architecture, including Spring Boot backend, Angular frontend, mobile application and Dockerized infrastructure.",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank1.png",
+        "imageUrl": "https://masewellmathurin.fr/Projet_images/WillBank/willbank1.png",
         "images": [
-          "https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank1.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank2.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank3.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/WillBank/willbank4.png"
+          "https://masewellmathurin.fr/Projet_images/WillBank/willbank1.png",
+          "https://masewellmathurin.fr/Projet_images/WillBank/willbank2.png",
+          "https://masewellmathurin.fr/Projet_images/WillBank/willbank3.png",
+          "https://masewellmathurin.fr/Projet_images/WillBank/willbank4.png"
         ],
         "technologies": [
           "Spring Boot",
@@ -568,7 +568,7 @@
         "category": "Full-stack Development / Finance",
         "date": "2024-2025",
         "status": "terminé",
-        "url": "https://portfoliomathurin.vercel.app/project/5"
+        "url": "https://masewellmathurin.fr/project/5"
       },
       {
         "id": "6",
@@ -611,14 +611,14 @@
         "id": "8",
         "title": "EQuizz – Teaching Quality Evaluation Platform",
         "description": "Led a team of 3 as Lead Developer for this full-stack application that allows students to evaluate professors at the end of the semester, measuring teaching quality and student satisfaction.",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_login.png",
+        "imageUrl": "https://masewellmathurin.fr/Projet_images/EQuiz/Admin_login.png",
         "images": [
-          "https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_login.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_Creer_Eval.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_Creer_Formul.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Admin_gest_utilisateur.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Ecran_Accueil_2.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/EQuiz/Ecran_tel_1.png"
+          "https://masewellmathurin.fr/Projet_images/EQuiz/Admin_login.png",
+          "https://masewellmathurin.fr/Projet_images/EQuiz/Admin_Creer_Eval.png",
+          "https://masewellmathurin.fr/Projet_images/EQuiz/Admin_Creer_Formul.png",
+          "https://masewellmathurin.fr/Projet_images/EQuiz/Admin_gest_utilisateur.png",
+          "https://masewellmathurin.fr/Projet_images/EQuiz/Ecran_Accueil_2.png",
+          "https://masewellmathurin.fr/Projet_images/EQuiz/Ecran_tel_1.png"
         ],
         "technologies": [
           "React native",
@@ -644,18 +644,18 @@
         "category": "Web Development / Education",
         "date": "2025",
         "status": "terminé",
-        "url": "https://portfoliomathurin.vercel.app/project/8"
+        "url": "https://masewellmathurin.fr/project/8"
       },
       {
         "id": "9",
         "title": "AI-Powered Transaction Fraud Detection: End-to-End MLOps Pipeline and Real-Time Monitoring",
         "description": "Complete MLOps platform for banking fraud detection using XGBoost, deployed on AWS with Docker, FastAPI, Nginx load balancing, and real-time monitoring via Prometheus/Grafana.",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Cahier_projets/MLOps_1/Architecture_Systeme.png",
+        "imageUrl": "https://masewellmathurin.fr/Cahier_projets/MLOps_1/Architecture_Systeme.png",
         "images": [
-          "https://portfoliomathurin.vercel.app/Cahier_projets/MLOps_1/Architecture_Systeme.png",
-          "https://portfoliomathurin.vercel.app/Cahier_projets/MLOps_1/Architecture_Reseau.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/MLops_1/Illustration.png",
-          "https://portfoliomathurin.vercel.app/Projet_images/MLops_1/Illustration_1.png"
+          "https://masewellmathurin.fr/Cahier_projets/MLOps_1/Architecture_Systeme.png",
+          "https://masewellmathurin.fr/Cahier_projets/MLOps_1/Architecture_Reseau.png",
+          "https://masewellmathurin.fr/Projet_images/MLops_1/Illustration.png",
+          "https://masewellmathurin.fr/Projet_images/MLops_1/Illustration_1.png"
         ],
         "pdfUrl": "https://github.com/Maxwellmario123578/Portfolio/raw/main/public/Cahier_projets/MLOps_1/Rapport_Final-2.pdf",
         "technologies": [
@@ -689,7 +689,7 @@
         "category": "MLOps / Cloud Architecture / Data Science",
         "date": "February 2026 - April 2026",
         "status": "terminé",
-        "url": "https://portfoliomathurin.vercel.app/project/9"
+        "url": "https://masewellmathurin.fr/project/9"
       },
       {
         "id": "11",
@@ -889,7 +889,7 @@
         "title": "Model Context Protocol: Advanced Topics",
         "issuer": "Anthropic",
         "date": "Certifié",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Certifs_image/IBM_Certifs/Antropic_Completion_MCP_Advanced.png",
+        "imageUrl": "https://masewellmathurin.fr/Certifs_image/IBM_Certifs/Antropic_Completion_MCP_Advanced.png",
         "credentialUrl": "https://verify.skilljar.com/c/nb7ftfnact58",
         "skills": [
           "MCP",
@@ -905,7 +905,7 @@
         "title": "Introduction aux compétences d'Agent",
         "issuer": "Anthropic",
         "date": "Certifié",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Certifs_image/IBM_Certifs/Antropic_Completion_AI_Agent.png",
+        "imageUrl": "https://masewellmathurin.fr/Certifs_image/IBM_Certifs/Antropic_Completion_AI_Agent.png",
         "credentialUrl": "https://verify.skilljar.com/c/cmv7mvbzpr9w",
         "skills": [
           "Anthropic",
@@ -920,7 +920,7 @@
         "title": "IBM Data Science Professional Certificate",
         "issuer": "IBM",
         "date": "Certifié",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Certifs_image/IBM_Certifs/IBM_image.png",
+        "imageUrl": "https://masewellmathurin.fr/Certifs_image/IBM_Certifs/IBM_image.png",
         "credentialUrl": "https://www.coursera.org/account/accomplishments/professional-cert/certificate/FZE10YBKGRUL",
         "skills": [
           "Data Science",
@@ -936,7 +936,7 @@
         "title": "Google Data Analytics",
         "issuer": "Google",
         "date": "Certifié",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Certifs_image/IBM_Certifs/Google_certif.png",
+        "imageUrl": "https://masewellmathurin.fr/Certifs_image/IBM_Certifs/Google_certif.png",
         "credentialUrl": "https://www.coursera.org/account/accomplishments/professional-cert/certificate/7HDM657JEEQF",
         "skills": [
           "Data Analysis",
@@ -954,7 +954,7 @@
         "title": "Model Context Protocol: Advanced Topics",
         "issuer": "Anthropic",
         "date": "Certified",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Certifs_image/IBM_Certifs/Antropic_Completion_MCP_Advanced.png",
+        "imageUrl": "https://masewellmathurin.fr/Certifs_image/IBM_Certifs/Antropic_Completion_MCP_Advanced.png",
         "credentialUrl": "https://verify.skilljar.com/c/nb7ftfnact58",
         "skills": [
           "MCP",
@@ -970,7 +970,7 @@
         "title": "Introduction to Agent skills",
         "issuer": "Anthropic",
         "date": "Certified",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Certifs_image/IBM_Certifs/Antropic_Completion_AI_Agent.png",
+        "imageUrl": "https://masewellmathurin.fr/Certifs_image/IBM_Certifs/Antropic_Completion_AI_Agent.png",
         "credentialUrl": "https://verify.skilljar.com/c/cmv7mvbzpr9w",
         "skills": [
           "Anthropic",
@@ -985,7 +985,7 @@
         "title": "IBM Data Science Professional Certificate",
         "issuer": "IBM",
         "date": "Certified",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Certifs_image/IBM_Certifs/IBM_image.png",
+        "imageUrl": "https://masewellmathurin.fr/Certifs_image/IBM_Certifs/IBM_image.png",
         "credentialUrl": "https://www.coursera.org/account/accomplishments/professional-cert/certificate/FZE10YBKGRUL",
         "skills": [
           "Data Science",
@@ -1001,7 +1001,7 @@
         "title": "Google Data Analytics",
         "issuer": "Google",
         "date": "Certified",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Certifs_image/IBM_Certifs/Google_certif.png",
+        "imageUrl": "https://masewellmathurin.fr/Certifs_image/IBM_Certifs/Google_certif.png",
         "credentialUrl": "https://www.coursera.org/account/accomplishments/professional-cert/certificate/7HDM657JEEQF",
         "skills": [
           "Data Analysis",
@@ -1030,7 +1030,7 @@
         "organization": "Paroisse Universitaire de l'Institut Universitaire de Saint Jean",
         "period": "2023 - Présent",
         "description": "Participation active aux activités liturgiques et spirituelles de la paroisse universitaire",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Vie_associative/Club_liturgique.jpg",
+        "imageUrl": "https://masewellmathurin.fr/Vie_associative/Club_liturgique.jpg",
         "status": "en cours"
       }
     ],
@@ -1049,7 +1049,7 @@
         "organization": "University Parish of Saint Jean University Institute",
         "period": "2023 - Present",
         "description": "Active participation in liturgical and spiritual activities of the university parish",
-        "imageUrl": "https://portfoliomathurin.vercel.app/Vie_associative/Club_liturgique.jpg",
+        "imageUrl": "https://masewellmathurin.fr/Vie_associative/Club_liturgique.jpg",
         "status": "en cours"
       }
     ]

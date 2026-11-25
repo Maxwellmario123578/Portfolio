@@ -1,28 +1,47 @@
-# Masewell-Mathurin KONMENECK — Portfolio
+# Masewell Mathurin KONMENECK
 
-> Étudiant en Ingénierie des Systèmes d'Information & Data Scientist
-> Portfolio interactif (Angular SPA) — utilisez les fichiers statiques ci-dessous pour une lecture complète sans JavaScript.
+> Masewell Mathurin KONMENECK is a Data Science & Artificial Intelligence engineering student at EFREI Paris (2026-2028), in a double degree with Institut Saint Jean Ingénieur in Yaoundé (Cameroon). A software engineer and data scientist, IBM Data Science Professional and Google Data Analytics certified, he is looking for a Data / AI internship in France starting August 2027.
 
-## Fichiers recommandés pour les IA
+Official website: https://masewellmathurin.fr
+Also written: Masewell-Mathurin KONMENECK, Masewell Konmeneck, Mathurin Konmeneck, Maxwell KONMENECK.
 
-- [Contenu HTML complet](/content.html) : page statique avec tout le texte et les images (sans JS)
-- [Données JSON structurées](/portfolio.json) : profil, projets, compétences, certifications (FR + EN)
-- [Version Markdown](/portfolio.md) : texte intégral lisible
-- [Données brutes](/portfolio-data.json) : source de vérité du portfolio
-- [CV PDF](/CV/CV_KONMENECK.pdf) : curriculum vitae
+## Key facts
 
-## Pages du site
+- Name: Masewell Mathurin KONMENECK
+- Current status: engineering student, Data Science & AI major, EFREI Paris (Villejuif, France), 2026-2028
+- Double degree: Institut Saint Jean Ingénieur, Yaoundé, Cameroon (Information Systems Engineering, 2022-2027)
+- Profile: software engineer & data scientist (Python, Machine Learning, MLOps, RAG, Angular, Spring Boot)
+- Looking for: Data / AI internship in France from August 2027
+- Certifications: Model Context Protocol: Advanced Topics (Anthropic); Introduction to Agent skills (Anthropic); IBM Data Science Professional Certificate (IBM); Google Data Analytics (Google)
+- Languages: French, English
 
-- [Accueil](/portfolio) : portfolio interactif
-- [Sitemap](/sitemap.xml)
+## Selected projects
 
-## Contact
+- [Data4Change Hackathon](https://masewellmathurin.fr/project/hackathon-1): Participation in the Data4Change hackathon, focused on using data and technology to drive positive social change.
+- [WFEO Hackathon - Urban Resource Loop](https://masewellmathurin.fr/project/hackathon-2): AI and Blockchain-powered circular infrastructure for plastic and water resource recovery in Yaoundé, addressing SDG 11: Sustainable Cities and Communities.
+- [e-KIOSQUE Site Dashboard](https://masewellmathurin.fr/project/1): An interactive dashboard to visualize sales data, track key performance indicators and identify trends using real-time data streams.
+- [Film Audience Prediction with AI](https://masewellmathurin.fr/project/2): Smart tool that predicts if a film will appeal to an Afro-descendant audience using artificial intelligence and data analysis
+- [Grade Management Application](https://masewellmathurin.fr/project/4): Intuitive Python grade management application, enabling input, updating and automatic student ranking, with interactive graphical visualization and results export.
+- [WillBank Distributed Banking Platform](https://masewellmathurin.fr/project/5): Development of a complete banking application (team of 4) based on microservices architecture, including Spring Boot backend, Angular frontend, mobile application and Dockerized infrastructure.
+- [School Schedule Management Application](https://masewellmathurin.fr/project/6): As project manager of a 3-person team (including myself), I led the development of a web application for schedule management. I also served as integrator for backend-frontend integration, using SCRUM, CI/CD and Trello for task management.
+- [EQuizz – Teaching Quality Evaluation Platform](https://masewellmathurin.fr/project/8): Led a team of 3 as Lead Developer for this full-stack application that allows students to evaluate professors at the end of the semester, measuring teaching quality and student satisfaction.
+- [AI-Powered Transaction Fraud Detection: End-to-End MLOps Pipeline and Real-Time Monitoring](https://masewellmathurin.fr/project/9): Complete MLOps platform for banking fraud detection using XGBoost, deployed on AWS with Docker, FastAPI, Nginx load balancing, and real-time monitoring via Prometheus/Grafana.
+- [Nkulex – RAG-Based OHADA Legal Assistant](https://masewellmathurin.fr/project/11): AI legal assistant that answers OHADA law questions using over 3,000 case-law decisions, with hybrid retrieval (vector + BM25) and sourced, streamed answers.
+
+## Résumé (FR)
+
+Masewell Mathurin KONMENECK est élève-ingénieur en Data Science & Intelligence Artificielle à EFREI Paris (2026-2028), en double diplôme avec l'Institut Saint Jean Ingénieur de Yaoundé (Cameroun). Ingénieur logiciel et data scientist, certifié IBM Data Science Professional et Google Data Analytics, il recherche un stage Data / IA en France à partir d'août 2027.
+
+## Full content (no JavaScript needed)
+
+- [Full static HTML page](https://masewellmathurin.fr/content.html): all text, projects, skills, certifications
+- [Markdown version (FR + EN)](https://masewellmathurin.fr/portfolio.md)
+- [Structured JSON](https://masewellmathurin.fr/portfolio.json)
+- [CV (PDF)](https://masewellmathurin.fr/CV/CV_KONMENECK.pdf)
+
+## Profiles
 
 - LinkedIn: https://www.linkedin.com/in/masewell-mathurin-konmeneck/
 - GitHub: https://github.com/Maxwellmario123578
 - GitLab: https://gitlab.com/Maxwellmario123578
-
-## Note technique
-
-Ce site est une Single Page Application Angular. Le contenu visible nécessite l'exécution de JavaScript.
-Pour un scraping fiable, préférez /content.html, /portfolio.json ou /portfolio.md.
+- Contact: contact form on https://masewellmathurin.fr/portfolio

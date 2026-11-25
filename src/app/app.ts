@@ -3,6 +3,7 @@ import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { filter } from 'rxjs/operators';
 import { FooterComponent } from './layout/footer/footer.component';
+import { SeoService } from './core/services/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +26,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 export class App {
   showHeaderFooter = true;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, seo: SeoService) {
+    seo.init();
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((event: any) => {

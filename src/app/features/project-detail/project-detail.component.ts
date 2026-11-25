@@ -6,6 +6,7 @@ import { Project } from '../../core/models';
 import { PortfolioDataService } from '../../core/services/portfolio-data.service';
 import { LanguageService } from '../../core/services/language.service';
 import { HeaderComponent } from '../../layout/header/header.component';
+import { SeoService } from '../../core/services/seo.service';
 
 @Component({
   selector: 'app-project-detail',
@@ -23,6 +24,7 @@ export class ProjectDetailComponent implements OnInit {
   
   languageService = inject(LanguageService);
   translateService = inject(TranslateService);
+  private seo = inject(SeoService);
 
   constructor(
     private route: ActivatedRoute,
@@ -61,6 +63,12 @@ export class ProjectDetailComponent implements OnInit {
         next: (project) => {
           this.project = project;
           this.loading = false;
+          if (project) {
+            this.seo.setPage(
+              `${project.title} — Projet de Masewell Mathurin KONMENECK`,
+              project.description
+            );
+          }
           console.log('Project loaded:', project?.title, 'Category:', project?.category);
           if (!project) {
             this.router.navigate(['/']);

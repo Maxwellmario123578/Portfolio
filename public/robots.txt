@@ -1,14 +1,25 @@
+# Site officiel de Masewell Mathurin KONMENECK — https://masewellmathurin.fr
 User-agent: *
 Allow: /
 
-# Fichiers optimisés pour les crawlers et assistants IA
-Allow: /content.html
-Allow: /portfolio.json
-Allow: /portfolio.md
-Allow: /portfolio-data.json
-Allow: /llms.txt
-Allow: /CV/
+# Moteurs de recherche et assistants IA explicitement autorisés
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Google-Extended
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: CCBot
+User-agent: DuckAssistBot
+Allow: /
 
-Sitemap: https://portfoliomathurin.vercel.app/sitemap.xml
+Sitemap: https://masewellmathurin.fr/sitemap.xml
 
-# Guide pour les LLM : https://portfoliomathurin.vercel.app/llms.txt
+# Résumé pour les LLM : https://masewellmathurin.fr/llms.txt
