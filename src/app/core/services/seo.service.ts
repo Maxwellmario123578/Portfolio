@@ -4,7 +4,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
-const BASE_URL = 'https://masewellmathurin.fr';
+const BASE_URL = 'https://www.masewellmathurin.fr';
 const DEFAULT_TITLE =
   'Masewell Mathurin KONMENECK — Élève-ingénieur Data Science & IA (EFREI Paris) | Portfolio';
 const DEFAULT_DESCRIPTION =

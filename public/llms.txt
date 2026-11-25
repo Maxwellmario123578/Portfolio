@@ -2,7 +2,7 @@
 
 > Masewell Mathurin KONMENECK is a Data Science & Artificial Intelligence engineering student at EFREI Paris (2026-2028), in a double degree with Institut Saint Jean Ingénieur in Yaoundé (Cameroon). A software engineer and data scientist, IBM Data Science Professional and Google Data Analytics certified, he is looking for a Data / AI internship in France starting August 2027.
 
-Official website: https://masewellmathurin.fr
+Official website: https://www.masewellmathurin.fr
 Also written: Masewell-Mathurin KONMENECK, Masewell Konmeneck, Mathurin Konmeneck, Maxwell KONMENECK.
 
 ## Key facts
@@ -17,16 +17,16 @@ Also written: Masewell-Mathurin KONMENECK, Masewell Konmeneck, Mathurin Konmenec
 
 ## Selected projects
 
-- [Data4Change Hackathon](https://masewellmathurin.fr/project/hackathon-1): Participation in the Data4Change hackathon, focused on using data and technology to drive positive social change.
-- [WFEO Hackathon - Urban Resource Loop](https://masewellmathurin.fr/project/hackathon-2): AI and Blockchain-powered circular infrastructure for plastic and water resource recovery in Yaoundé, addressing SDG 11: Sustainable Cities and Communities.
-- [e-KIOSQUE Site Dashboard](https://masewellmathurin.fr/project/1): An interactive dashboard to visualize sales data, track key performance indicators and identify trends using real-time data streams.
-- [Film Audience Prediction with AI](https://masewellmathurin.fr/project/2): Smart tool that predicts if a film will appeal to an Afro-descendant audience using artificial intelligence and data analysis
-- [Grade Management Application](https://masewellmathurin.fr/project/4): Intuitive Python grade management application, enabling input, updating and automatic student ranking, with interactive graphical visualization and results export.
-- [WillBank Distributed Banking Platform](https://masewellmathurin.fr/project/5): Development of a complete banking application (team of 4) based on microservices architecture, including Spring Boot backend, Angular frontend, mobile application and Dockerized infrastructure.
-- [School Schedule Management Application](https://masewellmathurin.fr/project/6): As project manager of a 3-person team (including myself), I led the development of a web application for schedule management. I also served as integrator for backend-frontend integration, using SCRUM, CI/CD and Trello for task management.
-- [EQuizz – Teaching Quality Evaluation Platform](https://masewellmathurin.fr/project/8): Led a team of 3 as Lead Developer for this full-stack application that allows students to evaluate professors at the end of the semester, measuring teaching quality and student satisfaction.
-- [AI-Powered Transaction Fraud Detection: End-to-End MLOps Pipeline and Real-Time Monitoring](https://masewellmathurin.fr/project/9): Complete MLOps platform for banking fraud detection using XGBoost, deployed on AWS with Docker, FastAPI, Nginx load balancing, and real-time monitoring via Prometheus/Grafana.
-- [Nkulex – RAG-Based OHADA Legal Assistant](https://masewellmathurin.fr/project/11): AI legal assistant that answers OHADA law questions using over 3,000 case-law decisions, with hybrid retrieval (vector + BM25) and sourced, streamed answers.
+- [Data4Change Hackathon](https://www.masewellmathurin.fr/project/hackathon-1): Participation in the Data4Change hackathon, focused on using data and technology to drive positive social change.
+- [WFEO Hackathon - Urban Resource Loop](https://www.masewellmathurin.fr/project/hackathon-2): AI and Blockchain-powered circular infrastructure for plastic and water resource recovery in Yaoundé, addressing SDG 11: Sustainable Cities and Communities.
+- [e-KIOSQUE Site Dashboard](https://www.masewellmathurin.fr/project/1): An interactive dashboard to visualize sales data, track key performance indicators and identify trends using real-time data streams.
+- [Film Audience Prediction with AI](https://www.masewellmathurin.fr/project/2): Smart tool that predicts if a film will appeal to an Afro-descendant audience using artificial intelligence and data analysis
+- [Grade Management Application](https://www.masewellmathurin.fr/project/4): Intuitive Python grade management application, enabling input, updating and automatic student ranking, with interactive graphical visualization and results export.
+- [WillBank Distributed Banking Platform](https://www.masewellmathurin.fr/project/5): Development of a complete banking application (team of 4) based on microservices architecture, including Spring Boot backend, Angular frontend, mobile application and Dockerized infrastructure.
+- [School Schedule Management Application](https://www.masewellmathurin.fr/project/6): As project manager of a 3-person team (including myself), I led the development of a web application for schedule management. I also served as integrator for backend-frontend integration, using SCRUM, CI/CD and Trello for task management.
+- [EQuizz – Teaching Quality Evaluation Platform](https://www.masewellmathurin.fr/project/8): Led a team of 3 as Lead Developer for this full-stack application that allows students to evaluate professors at the end of the semester, measuring teaching quality and student satisfaction.
+- [AI-Powered Transaction Fraud Detection: End-to-End MLOps Pipeline and Real-Time Monitoring](https://www.masewellmathurin.fr/project/9): Complete MLOps platform for banking fraud detection using XGBoost, deployed on AWS with Docker, FastAPI, Nginx load balancing, and real-time monitoring via Prometheus/Grafana.
+- [Nkulex – RAG-Based OHADA Legal Assistant](https://www.masewellmathurin.fr/project/11): AI legal assistant that answers OHADA law questions using over 3,000 case-law decisions, with hybrid retrieval (vector + BM25) and sourced, streamed answers.
 
 ## Résumé (FR)
 
@@ -34,14 +34,14 @@ Masewell Mathurin KONMENECK est élève-ingénieur en Data Science & Intelligenc
 
 ## Full content (no JavaScript needed)
 
-- [Full static HTML page](https://masewellmathurin.fr/content.html): all text, projects, skills, certifications
-- [Markdown version (FR + EN)](https://masewellmathurin.fr/portfolio.md)
-- [Structured JSON](https://masewellmathurin.fr/portfolio.json)
-- [CV (PDF)](https://masewellmathurin.fr/CV/CV_KONMENECK.pdf)
+- [Full static HTML page](https://www.masewellmathurin.fr/content.html): all text, projects, skills, certifications
+- [Markdown version (FR + EN)](https://www.masewellmathurin.fr/portfolio.md)
+- [Structured JSON](https://www.masewellmathurin.fr/portfolio.json)
+- [CV (PDF)](https://www.masewellmathurin.fr/CV/CV_KONMENECK.pdf)
 
 ## Profiles
 
 - LinkedIn: https://www.linkedin.com/in/masewell-mathurin-konmeneck/
 - GitHub: https://github.com/Maxwellmario123578
 - GitLab: https://gitlab.com/Maxwellmario123578
-- Contact: contact form on https://masewellmathurin.fr/portfolio
+- Contact: contact form on https://www.masewellmathurin.fr/portfolio

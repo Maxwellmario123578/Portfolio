@@ -70,7 +70,7 @@ function getVolunteers(lang) {
   return fn(lang);
 }
 
-const BASE_URL = 'https://masewellmathurin.fr';
+const BASE_URL = 'https://www.masewellmathurin.fr';
 
 const portfolioData = {
   meta: {

@@ -1,4 +1,4 @@
-# Site officiel de Masewell Mathurin KONMENECK — https://masewellmathurin.fr
+# Site officiel de Masewell Mathurin KONMENECK — https://www.masewellmathurin.fr
 User-agent: *
 Allow: /
 
@@ -20,6 +20,6 @@ User-agent: CCBot
 User-agent: DuckAssistBot
 Allow: /
 
-Sitemap: https://masewellmathurin.fr/sitemap.xml
+Sitemap: https://www.masewellmathurin.fr/sitemap.xml
 
-# Résumé pour les LLM : https://masewellmathurin.fr/llms.txt
+# Résumé pour les LLM : https://www.masewellmathurin.fr/llms.txt
